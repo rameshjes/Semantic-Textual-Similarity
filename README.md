@@ -1,2 +1,3 @@
-# nlp
-This repository is to do exercises about natural language processing, starting from basic concepts 
+# Semantic Textual Similarity using Natural Language Processing(NLP)
+
+Here, I will update exercises of NLP basics terms
