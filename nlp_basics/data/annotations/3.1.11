@@ -1,0 +1,208 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+0	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:argument:NNS:12
+0	0:ROOT:ROOT:0	1:function:NN:6
+2	0:ROOT:ROOT:0	1:include:VBZ:1
+0	0:ROOT:ROOT:0	1:its:PRP$:11
+0	0:ROOT:ROOT:0	1:name:NN:3
+0	0:ROOT:ROOT:0	1:the:DT:2
+0	0:ROOT:ROOT:0	1:the:DT:5
+0	0:ROOT:ROOT:0	1:the:DT:8
+0	0:ROOT:ROOT:0	1:type:NNS:9
+
+0	1:function:NN:5	0:ROOT:ROOT:0
+0	1:function:NN:5	1:argument:NNS:12
+2	1:function:NN:5	1:function:NN:6
+0	1:function:NN:5	1:include:VBZ:1
+2	1:function:NN:5	1:its:PRP$:11
+0	1:function:NN:5	1:name:NN:3
+0	1:function:NN:5	1:the:DT:2
+0	1:function:NN:5	1:the:DT:5
+0	1:function:NN:5	1:the:DT:8
+0	1:function:NN:5	1:type:NNS:9
+
+0	1:name:NN:2	0:ROOT:ROOT:0
+0	1:name:NN:2	1:argument:NNS:12
+0	1:name:NN:2	1:function:NN:6
+0	1:name:NN:2	1:include:VBZ:1
+1	1:name:NN:2	1:its:PRP$:11
+2	1:name:NN:2	1:name:NN:3
+0	1:name:NN:2	1:the:DT:2
+0	1:name:NN:2	1:the:DT:5
+0	1:name:NN:2	1:the:DT:8
+0	1:name:NN:2	1:type:NNS:9
+
+0	1:parameter:NNS:11	0:ROOT:ROOT:0
+2	1:parameter:NNS:11	1:argument:NNS:12
+0	1:parameter:NNS:11	1:function:NN:6
+0	1:parameter:NNS:11	1:include:VBZ:1
+1	1:parameter:NNS:11	1:its:PRP$:11
+0	1:parameter:NNS:11	1:name:NN:3
+0	1:parameter:NNS:11	1:the:DT:2
+0	1:parameter:NNS:11	1:the:DT:5
+0	1:parameter:NNS:11	1:the:DT:8
+0	1:parameter:NNS:11	1:type:NNS:9
+
+0	1:the:DT:1	0:ROOT:ROOT:0
+0	1:the:DT:1	1:argument:NNS:12
+0	1:the:DT:1	1:function:NN:6
+0	1:the:DT:1	1:include:VBZ:1
+0	1:the:DT:1	1:its:PRP$:11
+0	1:the:DT:1	1:name:NN:3
+2	1:the:DT:1	1:the:DT:2
+1	1:the:DT:1	1:the:DT:5
+1	1:the:DT:1	1:the:DT:8
+0	1:the:DT:1	1:type:NNS:9
+
+0	1:the:DT:10	0:ROOT:ROOT:0
+0	1:the:DT:10	1:argument:NNS:12
+0	1:the:DT:10	1:function:NN:6
+0	1:the:DT:10	1:include:VBZ:1
+0	1:the:DT:10	1:its:PRP$:11
+0	1:the:DT:10	1:name:NN:3
+1	1:the:DT:10	1:the:DT:2
+1	1:the:DT:10	1:the:DT:5
+1	1:the:DT:10	1:the:DT:8
+0	1:the:DT:10	1:type:NNS:9
+
+0	1:the:DT:4	0:ROOT:ROOT:0
+0	1:the:DT:4	1:argument:NNS:12
+0	1:the:DT:4	1:function:NN:6
+0	1:the:DT:4	1:include:VBZ:1
+0	1:the:DT:4	1:its:PRP$:11
+0	1:the:DT:4	1:name:NN:3
+1	1:the:DT:4	1:the:DT:2
+2	1:the:DT:4	1:the:DT:5
+1	1:the:DT:4	1:the:DT:8
+0	1:the:DT:4	1:type:NNS:9
+
+0	1:the:DT:7	0:ROOT:ROOT:0
+0	1:the:DT:7	1:argument:NNS:12
+0	1:the:DT:7	1:function:NN:6
+0	1:the:DT:7	1:include:VBZ:1
+0	1:the:DT:7	1:its:PRP$:11
+0	1:the:DT:7	1:name:NN:3
+1	1:the:DT:7	1:the:DT:2
+1	1:the:DT:7	1:the:DT:5
+2	1:the:DT:7	1:the:DT:8
+0	1:the:DT:7	1:type:NNS:9
+
+0	1:type:NNS:8	0:ROOT:ROOT:0
+0	1:type:NNS:8	1:argument:NNS:12
+0	1:type:NNS:8	1:function:NN:6
+0	1:type:NNS:8	1:include:VBZ:1
+0	1:type:NNS:8	1:its:PRP$:11
+0	1:type:NNS:8	1:name:NN:3
+0	1:type:NNS:8	1:the:DT:2
+0	1:type:NNS:8	1:the:DT:5
+0	1:type:NNS:8	1:the:DT:8
+2	1:type:NNS:8	1:type:NNS:9
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	conj_and(1:name:NN:3, 1:type:NNS:9)
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	det(1:function:NN:6, 1:the:DT:5)
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	det(1:name:NN:3, 1:the:DT:2)
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	det(1:type:NNS:9, 1:the:DT:8)
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	dobj(1:include:VBZ:1, 1:name:NN:3)
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	dobj(1:include:VBZ:1, 1:type:NNS:9)
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	poss(1:argument:NNS:12, 1:its:PRP$:11)
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	prep_of(1:name:NN:3, 1:function:NN:6)
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	prep_of(1:type:NNS:9, 1:argument:NNS:12)
+0	conj_and(1:function:NN:5, 1:type:NNS:8)	root(0:ROOT:ROOT:0, 1:include:VBZ:1)
+0	det(1:function:NN:5, 1:the:DT:4)	conj_and(1:name:NN:3, 1:type:NNS:9)
+1	det(1:function:NN:5, 1:the:DT:4)	det(1:function:NN:6, 1:the:DT:5)
+0	det(1:function:NN:5, 1:the:DT:4)	det(1:name:NN:3, 1:the:DT:2)
+0	det(1:function:NN:5, 1:the:DT:4)	det(1:type:NNS:9, 1:the:DT:8)
+0	det(1:function:NN:5, 1:the:DT:4)	dobj(1:include:VBZ:1, 1:name:NN:3)
+0	det(1:function:NN:5, 1:the:DT:4)	dobj(1:include:VBZ:1, 1:type:NNS:9)
+0	det(1:function:NN:5, 1:the:DT:4)	poss(1:argument:NNS:12, 1:its:PRP$:11)
+0	det(1:function:NN:5, 1:the:DT:4)	prep_of(1:name:NN:3, 1:function:NN:6)
+0	det(1:function:NN:5, 1:the:DT:4)	prep_of(1:type:NNS:9, 1:argument:NNS:12)
+0	det(1:function:NN:5, 1:the:DT:4)	root(0:ROOT:ROOT:0, 1:include:VBZ:1)
+0	det(1:name:NN:2, 1:the:DT:1)	conj_and(1:name:NN:3, 1:type:NNS:9)
+0	det(1:name:NN:2, 1:the:DT:1)	det(1:function:NN:6, 1:the:DT:5)
+1	det(1:name:NN:2, 1:the:DT:1)	det(1:name:NN:3, 1:the:DT:2)
+0	det(1:name:NN:2, 1:the:DT:1)	det(1:type:NNS:9, 1:the:DT:8)
+0	det(1:name:NN:2, 1:the:DT:1)	dobj(1:include:VBZ:1, 1:name:NN:3)
+0	det(1:name:NN:2, 1:the:DT:1)	dobj(1:include:VBZ:1, 1:type:NNS:9)
+0	det(1:name:NN:2, 1:the:DT:1)	poss(1:argument:NNS:12, 1:its:PRP$:11)
+0	det(1:name:NN:2, 1:the:DT:1)	prep_of(1:name:NN:3, 1:function:NN:6)
+0	det(1:name:NN:2, 1:the:DT:1)	prep_of(1:type:NNS:9, 1:argument:NNS:12)
+0	det(1:name:NN:2, 1:the:DT:1)	root(0:ROOT:ROOT:0, 1:include:VBZ:1)
+0	det(1:parameter:NNS:11, 1:the:DT:10)	conj_and(1:name:NN:3, 1:type:NNS:9)
+0	det(1:parameter:NNS:11, 1:the:DT:10)	det(1:function:NN:6, 1:the:DT:5)
+0	det(1:parameter:NNS:11, 1:the:DT:10)	det(1:name:NN:3, 1:the:DT:2)
+0	det(1:parameter:NNS:11, 1:the:DT:10)	det(1:type:NNS:9, 1:the:DT:8)
+0	det(1:parameter:NNS:11, 1:the:DT:10)	dobj(1:include:VBZ:1, 1:name:NN:3)
+0	det(1:parameter:NNS:11, 1:the:DT:10)	dobj(1:include:VBZ:1, 1:type:NNS:9)
+1	det(1:parameter:NNS:11, 1:the:DT:10)	poss(1:argument:NNS:12, 1:its:PRP$:11)
+0	det(1:parameter:NNS:11, 1:the:DT:10)	prep_of(1:name:NN:3, 1:function:NN:6)
+0	det(1:parameter:NNS:11, 1:the:DT:10)	prep_of(1:type:NNS:9, 1:argument:NNS:12)
+0	det(1:parameter:NNS:11, 1:the:DT:10)	root(0:ROOT:ROOT:0, 1:include:VBZ:1)
+0	det(1:type:NNS:8, 1:the:DT:7)	conj_and(1:name:NN:3, 1:type:NNS:9)
+0	det(1:type:NNS:8, 1:the:DT:7)	det(1:function:NN:6, 1:the:DT:5)
+0	det(1:type:NNS:8, 1:the:DT:7)	det(1:name:NN:3, 1:the:DT:2)
+1	det(1:type:NNS:8, 1:the:DT:7)	det(1:type:NNS:9, 1:the:DT:8)
+0	det(1:type:NNS:8, 1:the:DT:7)	dobj(1:include:VBZ:1, 1:name:NN:3)
+0	det(1:type:NNS:8, 1:the:DT:7)	dobj(1:include:VBZ:1, 1:type:NNS:9)
+0	det(1:type:NNS:8, 1:the:DT:7)	poss(1:argument:NNS:12, 1:its:PRP$:11)
+0	det(1:type:NNS:8, 1:the:DT:7)	prep_of(1:name:NN:3, 1:function:NN:6)
+0	det(1:type:NNS:8, 1:the:DT:7)	prep_of(1:type:NNS:9, 1:argument:NNS:12)
+0	det(1:type:NNS:8, 1:the:DT:7)	root(0:ROOT:ROOT:0, 1:include:VBZ:1)
+0	prep_of(1:name:NN:2, 1:function:NN:5)	conj_and(1:name:NN:3, 1:type:NNS:9)
+0	prep_of(1:name:NN:2, 1:function:NN:5)	det(1:function:NN:6, 1:the:DT:5)
+0	prep_of(1:name:NN:2, 1:function:NN:5)	det(1:name:NN:3, 1:the:DT:2)
+0	prep_of(1:name:NN:2, 1:function:NN:5)	det(1:type:NNS:9, 1:the:DT:8)
+0	prep_of(1:name:NN:2, 1:function:NN:5)	dobj(1:include:VBZ:1, 1:name:NN:3)
+0	prep_of(1:name:NN:2, 1:function:NN:5)	dobj(1:include:VBZ:1, 1:type:NNS:9)
+0	prep_of(1:name:NN:2, 1:function:NN:5)	poss(1:argument:NNS:12, 1:its:PRP$:11)
+1	prep_of(1:name:NN:2, 1:function:NN:5)	prep_of(1:name:NN:3, 1:function:NN:6)
+0	prep_of(1:name:NN:2, 1:function:NN:5)	prep_of(1:type:NNS:9, 1:argument:NNS:12)
+0	prep_of(1:name:NN:2, 1:function:NN:5)	root(0:ROOT:ROOT:0, 1:include:VBZ:1)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	conj_and(1:name:NN:3, 1:type:NNS:9)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	det(1:function:NN:6, 1:the:DT:5)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	det(1:name:NN:3, 1:the:DT:2)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	det(1:type:NNS:9, 1:the:DT:8)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	dobj(1:include:VBZ:1, 1:name:NN:3)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	dobj(1:include:VBZ:1, 1:type:NNS:9)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	poss(1:argument:NNS:12, 1:its:PRP$:11)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	prep_of(1:name:NN:3, 1:function:NN:6)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	prep_of(1:type:NNS:9, 1:argument:NNS:12)
+0	prep_of(1:name:NN:2, 1:parameter:NNS:11)	root(0:ROOT:ROOT:0, 1:include:VBZ:1)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	conj_and(1:name:NN:3, 1:type:NNS:9)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	det(1:function:NN:6, 1:the:DT:5)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	det(1:name:NN:3, 1:the:DT:2)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	det(1:type:NNS:9, 1:the:DT:8)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	dobj(1:include:VBZ:1, 1:name:NN:3)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	dobj(1:include:VBZ:1, 1:type:NNS:9)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	poss(1:argument:NNS:12, 1:its:PRP$:11)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	prep_of(1:name:NN:3, 1:function:NN:6)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	prep_of(1:type:NNS:9, 1:argument:NNS:12)
+0	prep_of(1:name:NN:2, 1:type:NNS:8)	root(0:ROOT:ROOT:0, 1:include:VBZ:1)
+0	root(0:ROOT:ROOT:0, 1:name:NN:2)	conj_and(1:name:NN:3, 1:type:NNS:9)
+0	root(0:ROOT:ROOT:0, 1:name:NN:2)	det(1:function:NN:6, 1:the:DT:5)
+0	root(0:ROOT:ROOT:0, 1:name:NN:2)	det(1:name:NN:3, 1:the:DT:2)
+0	root(0:ROOT:ROOT:0, 1:name:NN:2)	det(1:type:NNS:9, 1:the:DT:8)
+1	root(0:ROOT:ROOT:0, 1:name:NN:2)	dobj(1:include:VBZ:1, 1:name:NN:3)
+0	root(0:ROOT:ROOT:0, 1:name:NN:2)	dobj(1:include:VBZ:1, 1:type:NNS:9)
+0	root(0:ROOT:ROOT:0, 1:name:NN:2)	poss(1:argument:NNS:12, 1:its:PRP$:11)
+0	root(0:ROOT:ROOT:0, 1:name:NN:2)	prep_of(1:name:NN:3, 1:function:NN:6)
+0	root(0:ROOT:ROOT:0, 1:name:NN:2)	prep_of(1:type:NNS:9, 1:argument:NNS:12)
+0	root(0:ROOT:ROOT:0, 1:name:NN:2)	root(0:ROOT:ROOT:0, 1:include:VBZ:1)

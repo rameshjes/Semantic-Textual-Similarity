@@ -1,0 +1,174 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:can:MD:2
+0	0:ROOT:ROOT:0	1:private:JJ:4
+0	0:ROOT:ROOT:0	1:remain:VB:3
+0	0:ROOT:ROOT:0	1:variable:NNS:1
+0	0:ROOT:ROOT:0	2:be:VBZ:3
+0	0:ROOT:ROOT:0	2:code:NN:2
+0	0:ROOT:ROOT:0	2:easily:RB:12
+0	0:ROOT:ROOT:0	2:easily:RB:4
+0	0:ROOT:ROOT:0	2:implement:VBN:13
+0	0:ROOT:ROOT:0	2:modify:VBN:5
+0	0:ROOT:ROOT:0	2:reusable:VBN:7
+0	0:ROOT:ROOT:0	2:the:DT:1
+0	0:ROOT:ROOT:0	3:a:DT:11
+0	0:ROOT:ROOT:0	3:along:RP:9
+0	0:ROOT:ROOT:0	3:easier:JJR:4
+0	0:ROOT:ROOT:0	3:follow:VB:8
+1	0:ROOT:ROOT:0	3:mention:VB:3
+0	0:ROOT:ROOT:0	3:not:RB:1
+0	0:ROOT:ROOT:0	3:observer:NN:12
+0	0:ROOT:ROOT:0	3:read:VB:6
+0	0:ROOT:ROOT:0	3:to:TO:2
+0	0:ROOT:ROOT:0	3:to:TO:5
+
+0	1:abstraction:JJ:1	0:ROOT:ROOT:0
+0	1:abstraction:JJ:1	1:can:MD:2
+0	1:abstraction:JJ:1	1:private:JJ:4
+0	1:abstraction:JJ:1	1:remain:VB:3
+0	1:abstraction:JJ:1	1:variable:NNS:1
+0	1:abstraction:JJ:1	2:be:VBZ:3
+0	1:abstraction:JJ:1	2:code:NN:2
+0	1:abstraction:JJ:1	2:easily:RB:12
+0	1:abstraction:JJ:1	2:easily:RB:4
+0	1:abstraction:JJ:1	2:implement:VBN:13
+0	1:abstraction:JJ:1	2:modify:VBN:5
+0	1:abstraction:JJ:1	2:reusable:VBN:7
+0	1:abstraction:JJ:1	2:the:DT:1
+0	1:abstraction:JJ:1	3:a:DT:11
+0	1:abstraction:JJ:1	3:along:RP:9
+0	1:abstraction:JJ:1	3:easier:JJR:4
+0	1:abstraction:JJ:1	3:follow:VB:8
+2	1:abstraction:JJ:1	3:mention:VB:3
+0	1:abstraction:JJ:1	3:not:RB:1
+0	1:abstraction:JJ:1	3:observer:NN:12
+0	1:abstraction:JJ:1	3:read:VB:6
+0	1:abstraction:JJ:1	3:to:TO:2
+0	1:abstraction:JJ:1	3:to:TO:5
+
+0	1:reusability:JJ:3	0:ROOT:ROOT:0
+0	1:reusability:JJ:3	1:can:MD:2
+0	1:reusability:JJ:3	1:private:JJ:4
+0	1:reusability:JJ:3	1:remain:VB:3
+0	1:reusability:JJ:3	1:variable:NNS:1
+0	1:reusability:JJ:3	2:be:VBZ:3
+0	1:reusability:JJ:3	2:code:NN:2
+0	1:reusability:JJ:3	2:easily:RB:12
+0	1:reusability:JJ:3	2:easily:RB:4
+0	1:reusability:JJ:3	2:implement:VBN:13
+0	1:reusability:JJ:3	2:modify:VBN:5
+2	1:reusability:JJ:3	2:reusable:VBN:7
+0	1:reusability:JJ:3	2:the:DT:1
+0	1:reusability:JJ:3	3:a:DT:11
+0	1:reusability:JJ:3	3:along:RP:9
+0	1:reusability:JJ:3	3:easier:JJR:4
+0	1:reusability:JJ:3	3:follow:VB:8
+0	1:reusability:JJ:3	3:mention:VB:3
+0	1:reusability:JJ:3	3:not:RB:1
+0	1:reusability:JJ:3	3:observer:NN:12
+0	1:reusability:JJ:3	3:read:VB:6
+0	1:reusability:JJ:3	3:to:TO:2
+0	1:reusability:JJ:3	3:to:TO:5
+
+
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	acomp(3:mention:VB:3, 3:easier:JJR:4)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	advmod(2:implement:VBN:13, 2:easily:RB:12)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	advmod(2:modify:VBN:5, 2:easily:RB:4)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	aux(1:private:JJ:4, 1:can:MD:2)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	aux(2:modify:VBN:5, 2:be:VBZ:3)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	aux(3:mention:VB:3, 3:to:TO:2)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	aux(3:read:VB:6, 3:to:TO:5)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	conj_and(2:modify:VBN:5, 2:implement:VBN:13)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	conj_and(2:modify:VBN:5, 2:reusable:VBN:7)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	conj_and(3:read:VB:6, 3:follow:VB:8)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	cop(1:private:JJ:4, 1:remain:VB:3)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	dep(3:not:RB:1, 3:mention:VB:3)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	det(2:code:NN:2, 2:the:DT:1)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	det(3:observer:NN:12, 3:a:DT:11)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	nsubj(1:private:JJ:4, 1:variable:NNS:1)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	nsubj(2:implement:VBN:13, 2:code:NN:2)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	nsubj(2:modify:VBN:5, 2:code:NN:2)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	nsubj(2:reusable:VBN:7, 2:code:NN:2)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	prep_as(3:follow:VB:8, 3:observer:NN:12)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	prt(3:follow:VB:8, 3:along:RP:9)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 1:private:JJ:4)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 2:implement:VBN:13)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 2:modify:VBN:5)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 2:reusable:VBN:7)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 3:not:RB:1)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	xcomp(3:mention:VB:3, 3:follow:VB:8)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	xcomp(3:mention:VB:3, 3:read:VB:6)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	acomp(3:mention:VB:3, 3:easier:JJR:4)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	advmod(2:implement:VBN:13, 2:easily:RB:12)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	advmod(2:modify:VBN:5, 2:easily:RB:4)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	aux(1:private:JJ:4, 1:can:MD:2)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	aux(2:modify:VBN:5, 2:be:VBZ:3)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	aux(3:mention:VB:3, 3:to:TO:2)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	aux(3:read:VB:6, 3:to:TO:5)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	conj_and(2:modify:VBN:5, 2:implement:VBN:13)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	conj_and(2:modify:VBN:5, 2:reusable:VBN:7)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	conj_and(3:read:VB:6, 3:follow:VB:8)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	cop(1:private:JJ:4, 1:remain:VB:3)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	dep(3:not:RB:1, 3:mention:VB:3)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	det(2:code:NN:2, 2:the:DT:1)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	det(3:observer:NN:12, 3:a:DT:11)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	nsubj(1:private:JJ:4, 1:variable:NNS:1)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	nsubj(2:implement:VBN:13, 2:code:NN:2)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	nsubj(2:modify:VBN:5, 2:code:NN:2)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	nsubj(2:reusable:VBN:7, 2:code:NN:2)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	prep_as(3:follow:VB:8, 3:observer:NN:12)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	prt(3:follow:VB:8, 3:along:RP:9)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	root(0:ROOT:ROOT:0, 1:private:JJ:4)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	root(0:ROOT:ROOT:0, 2:implement:VBN:13)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	root(0:ROOT:ROOT:0, 2:modify:VBN:5)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	root(0:ROOT:ROOT:0, 2:reusable:VBN:7)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	root(0:ROOT:ROOT:0, 3:not:RB:1)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	xcomp(3:mention:VB:3, 3:follow:VB:8)
+1	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	xcomp(3:mention:VB:3, 3:read:VB:6)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	acomp(3:mention:VB:3, 3:easier:JJR:4)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	advmod(2:implement:VBN:13, 2:easily:RB:12)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	advmod(2:modify:VBN:5, 2:easily:RB:4)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	aux(1:private:JJ:4, 1:can:MD:2)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	aux(2:modify:VBN:5, 2:be:VBZ:3)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	aux(3:mention:VB:3, 3:to:TO:2)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	aux(3:read:VB:6, 3:to:TO:5)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	conj_and(2:modify:VBN:5, 2:implement:VBN:13)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	conj_and(2:modify:VBN:5, 2:reusable:VBN:7)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	conj_and(3:read:VB:6, 3:follow:VB:8)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	cop(1:private:JJ:4, 1:remain:VB:3)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	dep(3:not:RB:1, 3:mention:VB:3)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	det(2:code:NN:2, 2:the:DT:1)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	det(3:observer:NN:12, 3:a:DT:11)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	nsubj(1:private:JJ:4, 1:variable:NNS:1)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	nsubj(2:implement:VBN:13, 2:code:NN:2)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	nsubj(2:modify:VBN:5, 2:code:NN:2)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	nsubj(2:reusable:VBN:7, 2:code:NN:2)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	prep_as(3:follow:VB:8, 3:observer:NN:12)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	prt(3:follow:VB:8, 3:along:RP:9)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 1:private:JJ:4)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 2:implement:VBN:13)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 2:modify:VBN:5)
+1	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 2:reusable:VBN:7)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 3:not:RB:1)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	xcomp(3:mention:VB:3, 3:follow:VB:8)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	xcomp(3:mention:VB:3, 3:read:VB:6)

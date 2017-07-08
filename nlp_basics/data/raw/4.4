@@ -1,0 +1,30 @@
+4.4 a static array will store the new values that were assigned to each of its elements. meaning if you call a function twice it will use the last values that were returned the first time.  if you don't declare it static then the new values will not be stored and will be reset to their original value
+4.4 a static array can only be referenced not accessed. Also static arrays can be used without creating an object.
+4.4 An array declared as static is not created and and initialized each time the function and it is also not destroyed when the function terminates.
+4.4 A program intializes static local arrays when their declarations are first encountered.  If a static array is not initialized explicityly by the programmer, earch element of that array is intialized to zero by the compiler when the array is created.  Non-static array members cannot be initialized at all in C++.
+4.4 Arrays that are static remain the same size throughout the program execution.
+4.4 a static array will only be initilized once, a non static array will be re-initilized once the program reaches the initilization line again.
+4.4 An array declared as static is available from beginning of program to end. One w/o static declaration disappears if it is not accessed within the right scope.
+4.4 a static array has pre-runtime size and that size cannot be changed. A dynamic array gets its size at runtime.
+4.4 If an array is declared as static, it is not created each time the array is called.
+4.4 An array that is not declared as static will re-initialize every time the function declaring it is called. A static array will initialize only once, at the declaration, and will store the values in it's elements throughout the duration of the program, even if the same function is called multiple times, a static array will only initialize once.
+4.4 All elements are initialized to zero if not explicitly initialized, this does not happen for automatic local arrays<br><br>
+4.4 All elements are initialized to zero if not explicitly initialized for a static array, while a non-static array is not initialized to zero.
+4.4 static cannot be changed
+4.4 A static array has a set size that cannot change. The data may not need all of the space assigned, or could go beyond the size.
+4.4 A static member prevents naming conflicts (not put into global namespace) while allowing for information hiding (private, public).
+4.4 A static local array exists for the duration of the program and its elements are initialized to 0 if not explicitly initialized. So a static local array's elements will still be the same when called later unless specifically initialized to something else.  This doesn't happen for automatic arrays.
+4.4 Static arrays are those with a declared size, that is known to the program, whereas non-static arrays leave the size undeclared and open so it can be assigned later. Usually used for input purposes. 
+4.4 static arrays keep the values after the end of a function, while non static reinitialize every time.
+4.4 Static arrays are created and initialized only once, and the values aren't destroyed <br>when the function terminates in the program.<br>Automatic arrays reset everytime the function is called.
+4.4 its not created and initialized each time program calls the function, and is not destroyed every time the function ends in the program.
+4.4 When we declare it static the array is not destroyed after the function is over.  When an array is not declared as static, the array is created and initialized every time a function calls it.
+4.4 the static array exists for the duration of the program<br>
+4.4 an array declared as static can only be declared once
+4.4 A static array exists in memory until the program terminates, whereas an automatic (or normal) array is removed when the function that created it terminates
+4.4 not answered
+4.4 Only constants can be used to declare the size of automatic and static arrays<br>Exists for the duration of the program<br>Is initialized when its declaration is first encountered<br>All elements are initialized to zero if not explicitly initialized<br>
+4.4 A static array cannot be changed in the program.
+4.4 static arrays are available throughout the program
+4.4 a static array is allocated when the program starts and is freed when the program exits but has limited scope, while an array that is not declared static is allocated and freed when it comes into and out of scope.
+4.4 if they are declared fixed or static that means they can't change size once their storage has been allocated, however one that is not or dynamic arrarys can be resized.   

@@ -1,0 +1,698 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:development:NN:11
+0	0:ROOT:ROOT:0	1:early:JJ:3
+0	0:ROOT:ROOT:0	1:early:JJ:8
+0	0:ROOT:ROOT:0	1:feedback:NN:4
+0	0:ROOT:ROOT:0	1:get:VB:2
+0	0:ROOT:ROOT:0	1:stage:NNS:9
+0	0:ROOT:ROOT:0	1:to:TO:1
+0	0:ROOT:ROOT:0	1:user:NNS:6
+0	0:ROOT:ROOT:0	2:a:DT:4
+0	0:ROOT:ROOT:0	2:do:VB:12
+0	0:ROOT:ROOT:0	2:first:JJ:5
+0	0:ROOT:ROOT:0	2:idea:NN:6
+0	0:ROOT:ROOT:0	2:like:VBP:15
+0	0:ROOT:ROOT:0	2:look:VB:14
+0	0:ROOT:ROOT:0	2:program:NN:10
+0	0:ROOT:ROOT:0	2:show:VB:2
+0	0:ROOT:ROOT:0	2:the:DT:9
+0	0:ROOT:ROOT:0	2:to:TO:1
+0	0:ROOT:ROOT:0	2:user:NNS:3
+0	0:ROOT:ROOT:0	2:what:WP:8
+0	0:ROOT:ROOT:0	2:will:MD:11
+0	0:ROOT:ROOT:0	3:before:IN:9
+0	0:ROOT:ROOT:0	3:begin:VBZ:12
+0	0:ROOT:ROOT:0	3:intense:JJ:10
+0	0:ROOT:ROOT:0	3:make:VB:2
+0	0:ROOT:ROOT:0	3:meet:VB:7
+0	0:ROOT:ROOT:0	3:program:NN:5
+0	0:ROOT:ROOT:0	3:programming:NN:11
+0	0:ROOT:ROOT:0	3:requirement:NNS:8
+0	0:ROOT:ROOT:0	3:sure:JJ:3
+0	0:ROOT:ROOT:0	3:the:DT:4
+0	0:ROOT:ROOT:0	3:to:TO:1
+0	0:ROOT:ROOT:0	3:will:MD:6
+
+0	1:behavior:NN:4	0:ROOT:ROOT:0
+0	1:behavior:NN:4	1:development:NN:11
+0	1:behavior:NN:4	1:early:JJ:3
+0	1:behavior:NN:4	1:early:JJ:8
+0	1:behavior:NN:4	1:feedback:NN:4
+0	1:behavior:NN:4	1:get:VB:2
+0	1:behavior:NN:4	1:stage:NNS:9
+0	1:behavior:NN:4	1:to:TO:1
+0	1:behavior:NN:4	1:user:NNS:6
+0	1:behavior:NN:4	2:a:DT:4
+1	1:behavior:NN:4	2:do:VB:12
+0	1:behavior:NN:4	2:first:JJ:5
+2	1:behavior:NN:4	2:idea:NN:6
+0	1:behavior:NN:4	2:like:VBP:15
+1	1:behavior:NN:4	2:look:VB:14
+1	1:behavior:NN:4	2:program:NN:10
+0	1:behavior:NN:4	2:show:VB:2
+0	1:behavior:NN:4	2:the:DT:9
+0	1:behavior:NN:4	2:to:TO:1
+0	1:behavior:NN:4	2:user:NNS:3
+0	1:behavior:NN:4	2:what:WP:8
+0	1:behavior:NN:4	2:will:MD:11
+0	1:behavior:NN:4	3:before:IN:9
+0	1:behavior:NN:4	3:begin:VBZ:12
+0	1:behavior:NN:4	3:intense:JJ:10
+0	1:behavior:NN:4	3:make:VB:2
+0	1:behavior:NN:4	3:meet:VB:7
+1	1:behavior:NN:4	3:program:NN:5
+0	1:behavior:NN:4	3:programming:NN:11
+0	1:behavior:NN:4	3:requirement:NNS:8
+0	1:behavior:NN:4	3:sure:JJ:3
+0	1:behavior:NN:4	3:the:DT:4
+0	1:behavior:NN:4	3:to:TO:1
+0	1:behavior:NN:4	3:will:MD:6
+
+0	1:desire:VBN:9	0:ROOT:ROOT:0
+0	1:desire:VBN:9	1:development:NN:11
+0	1:desire:VBN:9	1:early:JJ:3
+0	1:desire:VBN:9	1:early:JJ:8
+0	1:desire:VBN:9	1:feedback:NN:4
+0	1:desire:VBN:9	1:get:VB:2
+0	1:desire:VBN:9	1:stage:NNS:9
+0	1:desire:VBN:9	1:to:TO:1
+0	1:desire:VBN:9	1:user:NNS:6
+0	1:desire:VBN:9	2:a:DT:4
+0	1:desire:VBN:9	2:do:VB:12
+0	1:desire:VBN:9	2:first:JJ:5
+0	1:desire:VBN:9	2:idea:NN:6
+0	1:desire:VBN:9	2:like:VBP:15
+0	1:desire:VBN:9	2:look:VB:14
+0	1:desire:VBN:9	2:program:NN:10
+0	1:desire:VBN:9	2:show:VB:2
+0	1:desire:VBN:9	2:the:DT:9
+0	1:desire:VBN:9	2:to:TO:1
+0	1:desire:VBN:9	2:user:NNS:3
+0	1:desire:VBN:9	2:what:WP:8
+0	1:desire:VBN:9	2:will:MD:11
+0	1:desire:VBN:9	3:before:IN:9
+0	1:desire:VBN:9	3:begin:VBZ:12
+0	1:desire:VBN:9	3:intense:JJ:10
+0	1:desire:VBN:9	3:make:VB:2
+0	1:desire:VBN:9	3:meet:VB:7
+0	1:desire:VBN:9	3:program:NN:5
+0	1:desire:VBN:9	3:programming:NN:11
+0	1:desire:VBN:9	3:requirement:NNS:8
+0	1:desire:VBN:9	3:sure:JJ:3
+0	1:desire:VBN:9	3:the:DT:4
+0	1:desire:VBN:9	3:to:TO:1
+0	1:desire:VBN:9	3:will:MD:6
+
+0	1:portion:NNS:6	0:ROOT:ROOT:0
+0	1:portion:NNS:6	1:development:NN:11
+0	1:portion:NNS:6	1:early:JJ:3
+0	1:portion:NNS:6	1:early:JJ:8
+0	1:portion:NNS:6	1:feedback:NN:4
+0	1:portion:NNS:6	1:get:VB:2
+0	1:portion:NNS:6	1:stage:NNS:9
+0	1:portion:NNS:6	1:to:TO:1
+0	1:portion:NNS:6	1:user:NNS:6
+0	1:portion:NNS:6	2:a:DT:4
+0	1:portion:NNS:6	2:do:VB:12
+0	1:portion:NNS:6	2:first:JJ:5
+0	1:portion:NNS:6	2:idea:NN:6
+0	1:portion:NNS:6	2:like:VBP:15
+0	1:portion:NNS:6	2:look:VB:14
+1	1:portion:NNS:6	2:program:NN:10
+0	1:portion:NNS:6	2:show:VB:2
+0	1:portion:NNS:6	2:the:DT:9
+0	1:portion:NNS:6	2:to:TO:1
+0	1:portion:NNS:6	2:user:NNS:3
+0	1:portion:NNS:6	2:what:WP:8
+0	1:portion:NNS:6	2:will:MD:11
+0	1:portion:NNS:6	3:before:IN:9
+0	1:portion:NNS:6	3:begin:VBZ:12
+0	1:portion:NNS:6	3:intense:JJ:10
+0	1:portion:NNS:6	3:make:VB:2
+0	1:portion:NNS:6	3:meet:VB:7
+1	1:portion:NNS:6	3:program:NN:5
+0	1:portion:NNS:6	3:programming:NN:11
+0	1:portion:NNS:6	3:requirement:NNS:8
+0	1:portion:NNS:6	3:sure:JJ:3
+0	1:portion:NNS:6	3:the:DT:4
+0	1:portion:NNS:6	3:to:TO:1
+0	1:portion:NNS:6	3:will:MD:6
+
+0	1:product:NN:11	0:ROOT:ROOT:0
+0	1:product:NN:11	1:development:NN:11
+0	1:product:NN:11	1:early:JJ:3
+0	1:product:NN:11	1:early:JJ:8
+0	1:product:NN:11	1:feedback:NN:4
+0	1:product:NN:11	1:get:VB:2
+0	1:product:NN:11	1:stage:NNS:9
+0	1:product:NN:11	1:to:TO:1
+0	1:product:NN:11	1:user:NNS:6
+0	1:product:NN:11	2:a:DT:4
+0	1:product:NN:11	2:do:VB:12
+0	1:product:NN:11	2:first:JJ:5
+0	1:product:NN:11	2:idea:NN:6
+0	1:product:NN:11	2:like:VBP:15
+0	1:product:NN:11	2:look:VB:14
+2	1:product:NN:11	2:program:NN:10
+0	1:product:NN:11	2:show:VB:2
+0	1:product:NN:11	2:the:DT:9
+0	1:product:NN:11	2:to:TO:1
+0	1:product:NN:11	2:user:NNS:3
+0	1:product:NN:11	2:what:WP:8
+0	1:product:NN:11	2:will:MD:11
+0	1:product:NN:11	3:before:IN:9
+0	1:product:NN:11	3:begin:VBZ:12
+0	1:product:NN:11	3:intense:JJ:10
+0	1:product:NN:11	3:make:VB:2
+0	1:product:NN:11	3:meet:VB:7
+1	1:product:NN:11	3:program:NN:5
+0	1:product:NN:11	3:programming:NN:11
+0	1:product:NN:11	3:requirement:NNS:8
+0	1:product:NN:11	3:sure:JJ:3
+0	1:product:NN:11	3:the:DT:4
+0	1:product:NN:11	3:to:TO:1
+0	1:product:NN:11	3:will:MD:6
+
+0	1:simulate:VBP:2	0:ROOT:ROOT:0
+0	1:simulate:VBP:2	1:development:NN:11
+0	1:simulate:VBP:2	1:early:JJ:3
+0	1:simulate:VBP:2	1:early:JJ:8
+0	1:simulate:VBP:2	1:feedback:NN:4
+0	1:simulate:VBP:2	1:get:VB:2
+0	1:simulate:VBP:2	1:stage:NNS:9
+0	1:simulate:VBP:2	1:to:TO:1
+0	1:simulate:VBP:2	1:user:NNS:6
+0	1:simulate:VBP:2	2:a:DT:4
+0	1:simulate:VBP:2	2:do:VB:12
+0	1:simulate:VBP:2	2:first:JJ:5
+0	1:simulate:VBP:2	2:idea:NN:6
+0	1:simulate:VBP:2	2:like:VBP:15
+0	1:simulate:VBP:2	2:look:VB:14
+0	1:simulate:VBP:2	2:program:NN:10
+2	1:simulate:VBP:2	2:show:VB:2
+0	1:simulate:VBP:2	2:the:DT:9
+0	1:simulate:VBP:2	2:to:TO:1
+0	1:simulate:VBP:2	2:user:NNS:3
+0	1:simulate:VBP:2	2:what:WP:8
+0	1:simulate:VBP:2	2:will:MD:11
+0	1:simulate:VBP:2	3:before:IN:9
+0	1:simulate:VBP:2	3:begin:VBZ:12
+0	1:simulate:VBP:2	3:intense:JJ:10
+0	1:simulate:VBP:2	3:make:VB:2
+0	1:simulate:VBP:2	3:meet:VB:7
+0	1:simulate:VBP:2	3:program:NN:5
+0	1:simulate:VBP:2	3:programming:NN:11
+0	1:simulate:VBP:2	3:requirement:NNS:8
+0	1:simulate:VBP:2	3:sure:JJ:3
+0	1:simulate:VBP:2	3:the:DT:4
+0	1:simulate:VBP:2	3:to:TO:1
+0	1:simulate:VBP:2	3:will:MD:6
+
+0	1:software:NN:10	0:ROOT:ROOT:0
+0	1:software:NN:10	1:development:NN:11
+0	1:software:NN:10	1:early:JJ:3
+0	1:software:NN:10	1:early:JJ:8
+0	1:software:NN:10	1:feedback:NN:4
+0	1:software:NN:10	1:get:VB:2
+0	1:software:NN:10	1:stage:NNS:9
+0	1:software:NN:10	1:to:TO:1
+0	1:software:NN:10	1:user:NNS:6
+0	1:software:NN:10	2:a:DT:4
+0	1:software:NN:10	2:do:VB:12
+0	1:software:NN:10	2:first:JJ:5
+0	1:software:NN:10	2:idea:NN:6
+0	1:software:NN:10	2:like:VBP:15
+0	1:software:NN:10	2:look:VB:14
+1	1:software:NN:10	2:program:NN:10
+0	1:software:NN:10	2:show:VB:2
+0	1:software:NN:10	2:the:DT:9
+0	1:software:NN:10	2:to:TO:1
+0	1:software:NN:10	2:user:NNS:3
+0	1:software:NN:10	2:what:WP:8
+0	1:software:NN:10	2:will:MD:11
+0	1:software:NN:10	3:before:IN:9
+0	1:software:NN:10	3:begin:VBZ:12
+0	1:software:NN:10	3:intense:JJ:10
+0	1:software:NN:10	3:make:VB:2
+0	1:software:NN:10	3:meet:VB:7
+1	1:software:NN:10	3:program:NN:5
+0	1:software:NN:10	3:programming:NN:11
+0	1:software:NN:10	3:requirement:NNS:8
+0	1:software:NN:10	3:sure:JJ:3
+0	1:software:NN:10	3:the:DT:4
+0	1:software:NN:10	3:to:TO:1
+0	1:software:NN:10	3:will:MD:6
+
+0	1:the:DT:3	0:ROOT:ROOT:0
+0	1:the:DT:3	1:development:NN:11
+0	1:the:DT:3	1:early:JJ:3
+0	1:the:DT:3	1:early:JJ:8
+0	1:the:DT:3	1:feedback:NN:4
+0	1:the:DT:3	1:get:VB:2
+0	1:the:DT:3	1:stage:NNS:9
+0	1:the:DT:3	1:to:TO:1
+0	1:the:DT:3	1:user:NNS:6
+2	1:the:DT:3	2:a:DT:4
+0	1:the:DT:3	2:do:VB:12
+0	1:the:DT:3	2:first:JJ:5
+0	1:the:DT:3	2:idea:NN:6
+0	1:the:DT:3	2:like:VBP:15
+0	1:the:DT:3	2:look:VB:14
+0	1:the:DT:3	2:program:NN:10
+0	1:the:DT:3	2:show:VB:2
+1	1:the:DT:3	2:the:DT:9
+0	1:the:DT:3	2:to:TO:1
+0	1:the:DT:3	2:user:NNS:3
+0	1:the:DT:3	2:what:WP:8
+0	1:the:DT:3	2:will:MD:11
+0	1:the:DT:3	3:before:IN:9
+0	1:the:DT:3	3:begin:VBZ:12
+0	1:the:DT:3	3:intense:JJ:10
+0	1:the:DT:3	3:make:VB:2
+0	1:the:DT:3	3:meet:VB:7
+0	1:the:DT:3	3:program:NN:5
+0	1:the:DT:3	3:programming:NN:11
+0	1:the:DT:3	3:requirement:NNS:8
+0	1:the:DT:3	3:sure:JJ:3
+1	1:the:DT:3	3:the:DT:4
+0	1:the:DT:3	3:to:TO:1
+0	1:the:DT:3	3:will:MD:6
+
+0	1:the:DT:8	0:ROOT:ROOT:0
+0	1:the:DT:8	1:development:NN:11
+0	1:the:DT:8	1:early:JJ:3
+0	1:the:DT:8	1:early:JJ:8
+0	1:the:DT:8	1:feedback:NN:4
+0	1:the:DT:8	1:get:VB:2
+0	1:the:DT:8	1:stage:NNS:9
+0	1:the:DT:8	1:to:TO:1
+0	1:the:DT:8	1:user:NNS:6
+1	1:the:DT:8	2:a:DT:4
+0	1:the:DT:8	2:do:VB:12
+0	1:the:DT:8	2:first:JJ:5
+0	1:the:DT:8	2:idea:NN:6
+0	1:the:DT:8	2:like:VBP:15
+0	1:the:DT:8	2:look:VB:14
+0	1:the:DT:8	2:program:NN:10
+0	1:the:DT:8	2:show:VB:2
+2	1:the:DT:8	2:the:DT:9
+0	1:the:DT:8	2:to:TO:1
+0	1:the:DT:8	2:user:NNS:3
+0	1:the:DT:8	2:what:WP:8
+0	1:the:DT:8	2:will:MD:11
+0	1:the:DT:8	3:before:IN:9
+0	1:the:DT:8	3:begin:VBZ:12
+0	1:the:DT:8	3:intense:JJ:10
+0	1:the:DT:8	3:make:VB:2
+0	1:the:DT:8	3:meet:VB:7
+0	1:the:DT:8	3:program:NN:5
+0	1:the:DT:8	3:programming:NN:11
+0	1:the:DT:8	3:requirement:NNS:8
+0	1:the:DT:8	3:sure:JJ:3
+1	1:the:DT:8	3:the:DT:4
+0	1:the:DT:8	3:to:TO:1
+0	1:the:DT:8	3:will:MD:6
+
+0	1:to:TO:1	0:ROOT:ROOT:0
+0	1:to:TO:1	1:development:NN:11
+0	1:to:TO:1	1:early:JJ:3
+0	1:to:TO:1	1:early:JJ:8
+0	1:to:TO:1	1:feedback:NN:4
+0	1:to:TO:1	1:get:VB:2
+0	1:to:TO:1	1:stage:NNS:9
+1	1:to:TO:1	1:to:TO:1
+0	1:to:TO:1	1:user:NNS:6
+0	1:to:TO:1	2:a:DT:4
+0	1:to:TO:1	2:do:VB:12
+0	1:to:TO:1	2:first:JJ:5
+0	1:to:TO:1	2:idea:NN:6
+0	1:to:TO:1	2:like:VBP:15
+0	1:to:TO:1	2:look:VB:14
+0	1:to:TO:1	2:program:NN:10
+0	1:to:TO:1	2:show:VB:2
+0	1:to:TO:1	2:the:DT:9
+2	1:to:TO:1	2:to:TO:1
+0	1:to:TO:1	2:user:NNS:3
+0	1:to:TO:1	2:what:WP:8
+0	1:to:TO:1	2:will:MD:11
+0	1:to:TO:1	3:before:IN:9
+0	1:to:TO:1	3:begin:VBZ:12
+0	1:to:TO:1	3:intense:JJ:10
+0	1:to:TO:1	3:make:VB:2
+0	1:to:TO:1	3:meet:VB:7
+0	1:to:TO:1	3:program:NN:5
+0	1:to:TO:1	3:programming:NN:11
+0	1:to:TO:1	3:requirement:NNS:8
+0	1:to:TO:1	3:sure:JJ:3
+0	1:to:TO:1	3:the:DT:4
+1	1:to:TO:1	3:to:TO:1
+0	1:to:TO:1	3:will:MD:6
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge 
+
+0	amod(1:product:NN:11, 1:desire:VBN:9)	acomp(3:make:VB:2, 3:sure:JJ:3)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	advcl(3:meet:VB:7, 3:begin:VBZ:12)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	amod(1:feedback:NN:4, 1:early:JJ:3)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	amod(1:stage:NNS:9, 1:early:JJ:8)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	amod(2:idea:NN:6, 2:first:JJ:5)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	amod(3:programming:NN:11, 3:intense:JJ:10)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	aux(1:get:VB:2, 1:to:TO:1)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	aux(2:do:VB:12, 2:will:MD:11)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	aux(2:show:VB:2, 2:to:TO:1)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	aux(3:make:VB:2, 3:to:TO:1)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	aux(3:meet:VB:7, 3:will:MD:6)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	conj_or(2:do:VB:12, 2:look:VB:14)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	csubj(2:like:VBP:15, 2:show:VB:2)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	dep(3:meet:VB:7, 3:make:VB:2)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	det(2:idea:NN:6, 2:a:DT:4)
+1	amod(1:product:NN:11, 1:desire:VBN:9)	det(2:program:NN:10, 2:the:DT:9)
+1	amod(1:product:NN:11, 1:desire:VBN:9)	det(3:program:NN:5, 3:the:DT:4)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	dobj(1:get:VB:2, 1:feedback:NN:4)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	dobj(2:do:VB:12, 2:what:WP:8)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	dobj(2:look:VB:14, 2:what:WP:8)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	dobj(2:show:VB:2, 2:idea:NN:6)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	dobj(3:meet:VB:7, 3:requirement:NNS:8)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	iobj(2:show:VB:2, 2:user:NNS:3)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	mark(3:begin:VBZ:12, 3:before:IN:9)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	nsubj(2:do:VB:12, 2:program:NN:10)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	nsubj(2:look:VB:14, 2:program:NN:10)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	nsubj(3:begin:VBZ:12, 3:programming:NN:11)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	nsubj(3:meet:VB:7, 3:program:NN:5)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	prep_from(1:get:VB:2, 1:user:NNS:6)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	prep_in(1:user:NNS:6, 1:stage:NNS:9)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	prep_of(1:stage:NNS:9, 1:development:NN:11)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	prepc_of(2:idea:NN:6, 2:do:VB:12)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	prepc_of(2:idea:NN:6, 2:look:VB:14)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	root(0:ROOT:ROOT:0, 1:get:VB:2)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	root(0:ROOT:ROOT:0, 2:like:VBP:15)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	root(0:ROOT:ROOT:0, 3:meet:VB:7)
+
+0	det(1:behavior:NN:4, 1:the:DT:3)	acomp(3:make:VB:2, 3:sure:JJ:3)
+0	det(1:behavior:NN:4, 1:the:DT:3)	advcl(3:meet:VB:7, 3:begin:VBZ:12)
+0	det(1:behavior:NN:4, 1:the:DT:3)	amod(1:feedback:NN:4, 1:early:JJ:3)
+0	det(1:behavior:NN:4, 1:the:DT:3)	amod(1:stage:NNS:9, 1:early:JJ:8)
+1	det(1:behavior:NN:4, 1:the:DT:3)	amod(2:idea:NN:6, 2:first:JJ:5)
+0	det(1:behavior:NN:4, 1:the:DT:3)	amod(3:programming:NN:11, 3:intense:JJ:10)
+0	det(1:behavior:NN:4, 1:the:DT:3)	aux(1:get:VB:2, 1:to:TO:1)
+0	det(1:behavior:NN:4, 1:the:DT:3)	aux(2:do:VB:12, 2:will:MD:11)
+0	det(1:behavior:NN:4, 1:the:DT:3)	aux(2:show:VB:2, 2:to:TO:1)
+0	det(1:behavior:NN:4, 1:the:DT:3)	aux(3:make:VB:2, 3:to:TO:1)
+0	det(1:behavior:NN:4, 1:the:DT:3)	aux(3:meet:VB:7, 3:will:MD:6)
+0	det(1:behavior:NN:4, 1:the:DT:3)	conj_or(2:do:VB:12, 2:look:VB:14)
+0	det(1:behavior:NN:4, 1:the:DT:3)	csubj(2:like:VBP:15, 2:show:VB:2)
+0	det(1:behavior:NN:4, 1:the:DT:3)	dep(3:meet:VB:7, 3:make:VB:2)
+1	det(1:behavior:NN:4, 1:the:DT:3)	det(2:idea:NN:6, 2:a:DT:4)
+1	det(1:behavior:NN:4, 1:the:DT:3)	det(2:program:NN:10, 2:the:DT:9)
+1	det(1:behavior:NN:4, 1:the:DT:3)	det(3:program:NN:5, 3:the:DT:4)
+0	det(1:behavior:NN:4, 1:the:DT:3)	dobj(1:get:VB:2, 1:feedback:NN:4)
+0	det(1:behavior:NN:4, 1:the:DT:3)	dobj(2:do:VB:12, 2:what:WP:8)
+0	det(1:behavior:NN:4, 1:the:DT:3)	dobj(2:look:VB:14, 2:what:WP:8)
+0	det(1:behavior:NN:4, 1:the:DT:3)	dobj(2:show:VB:2, 2:idea:NN:6)
+0	det(1:behavior:NN:4, 1:the:DT:3)	dobj(3:meet:VB:7, 3:requirement:NNS:8)
+0	det(1:behavior:NN:4, 1:the:DT:3)	iobj(2:show:VB:2, 2:user:NNS:3)
+0	det(1:behavior:NN:4, 1:the:DT:3)	mark(3:begin:VBZ:12, 3:before:IN:9)
+0	det(1:behavior:NN:4, 1:the:DT:3)	nsubj(2:do:VB:12, 2:program:NN:10)
+0	det(1:behavior:NN:4, 1:the:DT:3)	nsubj(2:look:VB:14, 2:program:NN:10)
+0	det(1:behavior:NN:4, 1:the:DT:3)	nsubj(3:begin:VBZ:12, 3:programming:NN:11)
+0	det(1:behavior:NN:4, 1:the:DT:3)	nsubj(3:meet:VB:7, 3:program:NN:5)
+0	det(1:behavior:NN:4, 1:the:DT:3)	prep_from(1:get:VB:2, 1:user:NNS:6)
+0	det(1:behavior:NN:4, 1:the:DT:3)	prep_in(1:user:NNS:6, 1:stage:NNS:9)
+0	det(1:behavior:NN:4, 1:the:DT:3)	prep_of(1:stage:NNS:9, 1:development:NN:11)
+0	det(1:behavior:NN:4, 1:the:DT:3)	prepc_of(2:idea:NN:6, 2:do:VB:12)
+0	det(1:behavior:NN:4, 1:the:DT:3)	prepc_of(2:idea:NN:6, 2:look:VB:14)
+0	det(1:behavior:NN:4, 1:the:DT:3)	root(0:ROOT:ROOT:0, 1:get:VB:2)
+0	det(1:behavior:NN:4, 1:the:DT:3)	root(0:ROOT:ROOT:0, 2:like:VBP:15)
+0	det(1:behavior:NN:4, 1:the:DT:3)	root(0:ROOT:ROOT:0, 3:meet:VB:7)
+
+0	det(1:product:NN:11, 1:the:DT:8)	acomp(3:make:VB:2, 3:sure:JJ:3)
+0	det(1:product:NN:11, 1:the:DT:8)	advcl(3:meet:VB:7, 3:begin:VBZ:12)
+0	det(1:product:NN:11, 1:the:DT:8)	amod(1:feedback:NN:4, 1:early:JJ:3)
+0	det(1:product:NN:11, 1:the:DT:8)	amod(1:stage:NNS:9, 1:early:JJ:8)
+0	det(1:product:NN:11, 1:the:DT:8)	amod(2:idea:NN:6, 2:first:JJ:5)
+0	det(1:product:NN:11, 1:the:DT:8)	amod(3:programming:NN:11, 3:intense:JJ:10)
+0	det(1:product:NN:11, 1:the:DT:8)	aux(1:get:VB:2, 1:to:TO:1)
+0	det(1:product:NN:11, 1:the:DT:8)	aux(2:do:VB:12, 2:will:MD:11)
+0	det(1:product:NN:11, 1:the:DT:8)	aux(2:show:VB:2, 2:to:TO:1)
+0	det(1:product:NN:11, 1:the:DT:8)	aux(3:make:VB:2, 3:to:TO:1)
+0	det(1:product:NN:11, 1:the:DT:8)	aux(3:meet:VB:7, 3:will:MD:6)
+0	det(1:product:NN:11, 1:the:DT:8)	conj_or(2:do:VB:12, 2:look:VB:14)
+0	det(1:product:NN:11, 1:the:DT:8)	csubj(2:like:VBP:15, 2:show:VB:2)
+0	det(1:product:NN:11, 1:the:DT:8)	dep(3:meet:VB:7, 3:make:VB:2)
+0	det(1:product:NN:11, 1:the:DT:8)	det(2:idea:NN:6, 2:a:DT:4)
+1	det(1:product:NN:11, 1:the:DT:8)	det(2:program:NN:10, 2:the:DT:9)
+1	det(1:product:NN:11, 1:the:DT:8)	det(3:program:NN:5, 3:the:DT:4)
+0	det(1:product:NN:11, 1:the:DT:8)	dobj(1:get:VB:2, 1:feedback:NN:4)
+0	det(1:product:NN:11, 1:the:DT:8)	dobj(2:do:VB:12, 2:what:WP:8)
+0	det(1:product:NN:11, 1:the:DT:8)	dobj(2:look:VB:14, 2:what:WP:8)
+0	det(1:product:NN:11, 1:the:DT:8)	dobj(2:show:VB:2, 2:idea:NN:6)
+0	det(1:product:NN:11, 1:the:DT:8)	dobj(3:meet:VB:7, 3:requirement:NNS:8)
+0	det(1:product:NN:11, 1:the:DT:8)	iobj(2:show:VB:2, 2:user:NNS:3)
+0	det(1:product:NN:11, 1:the:DT:8)	mark(3:begin:VBZ:12, 3:before:IN:9)
+0	det(1:product:NN:11, 1:the:DT:8)	nsubj(2:do:VB:12, 2:program:NN:10)
+0	det(1:product:NN:11, 1:the:DT:8)	nsubj(2:look:VB:14, 2:program:NN:10)
+0	det(1:product:NN:11, 1:the:DT:8)	nsubj(3:begin:VBZ:12, 3:programming:NN:11)
+0	det(1:product:NN:11, 1:the:DT:8)	nsubj(3:meet:VB:7, 3:program:NN:5)
+0	det(1:product:NN:11, 1:the:DT:8)	prep_from(1:get:VB:2, 1:user:NNS:6)
+0	det(1:product:NN:11, 1:the:DT:8)	prep_in(1:user:NNS:6, 1:stage:NNS:9)
+0	det(1:product:NN:11, 1:the:DT:8)	prep_of(1:stage:NNS:9, 1:development:NN:11)
+0	det(1:product:NN:11, 1:the:DT:8)	prepc_of(2:idea:NN:6, 2:do:VB:12)
+0	det(1:product:NN:11, 1:the:DT:8)	prepc_of(2:idea:NN:6, 2:look:VB:14)
+0	det(1:product:NN:11, 1:the:DT:8)	root(0:ROOT:ROOT:0, 1:get:VB:2)
+0	det(1:product:NN:11, 1:the:DT:8)	root(0:ROOT:ROOT:0, 2:like:VBP:15)
+0	det(1:product:NN:11, 1:the:DT:8)	root(0:ROOT:ROOT:0, 3:meet:VB:7)
+
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	acomp(3:make:VB:2, 3:sure:JJ:3)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	advcl(3:meet:VB:7, 3:begin:VBZ:12)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	amod(1:feedback:NN:4, 1:early:JJ:3)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	amod(1:stage:NNS:9, 1:early:JJ:8)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	amod(2:idea:NN:6, 2:first:JJ:5)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	amod(3:programming:NN:11, 3:intense:JJ:10)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	aux(1:get:VB:2, 1:to:TO:1)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	aux(2:do:VB:12, 2:will:MD:11)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	aux(2:show:VB:2, 2:to:TO:1)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	aux(3:make:VB:2, 3:to:TO:1)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	aux(3:meet:VB:7, 3:will:MD:6)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	conj_or(2:do:VB:12, 2:look:VB:14)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	csubj(2:like:VBP:15, 2:show:VB:2)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	dep(3:meet:VB:7, 3:make:VB:2)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	det(2:idea:NN:6, 2:a:DT:4)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	det(2:program:NN:10, 2:the:DT:9)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	det(3:program:NN:5, 3:the:DT:4)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	dobj(1:get:VB:2, 1:feedback:NN:4)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	dobj(2:do:VB:12, 2:what:WP:8)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	dobj(2:look:VB:14, 2:what:WP:8)
+1	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	dobj(2:show:VB:2, 2:idea:NN:6)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	dobj(3:meet:VB:7, 3:requirement:NNS:8)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	iobj(2:show:VB:2, 2:user:NNS:3)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	mark(3:begin:VBZ:12, 3:before:IN:9)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	nsubj(2:do:VB:12, 2:program:NN:10)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	nsubj(2:look:VB:14, 2:program:NN:10)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	nsubj(3:begin:VBZ:12, 3:programming:NN:11)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	nsubj(3:meet:VB:7, 3:program:NN:5)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	prep_from(1:get:VB:2, 1:user:NNS:6)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	prep_in(1:user:NNS:6, 1:stage:NNS:9)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	prep_of(1:stage:NNS:9, 1:development:NN:11)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	prepc_of(2:idea:NN:6, 2:do:VB:12)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	prepc_of(2:idea:NN:6, 2:look:VB:14)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	root(0:ROOT:ROOT:0, 1:get:VB:2)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	root(0:ROOT:ROOT:0, 2:like:VBP:15)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	root(0:ROOT:ROOT:0, 3:meet:VB:7)
+
+0	nn(1:product:NN:11, 1:software:NN:10)	acomp(3:make:VB:2, 3:sure:JJ:3)
+0	nn(1:product:NN:11, 1:software:NN:10)	advcl(3:meet:VB:7, 3:begin:VBZ:12)
+0	nn(1:product:NN:11, 1:software:NN:10)	amod(1:feedback:NN:4, 1:early:JJ:3)
+0	nn(1:product:NN:11, 1:software:NN:10)	amod(1:stage:NNS:9, 1:early:JJ:8)
+0	nn(1:product:NN:11, 1:software:NN:10)	amod(2:idea:NN:6, 2:first:JJ:5)
+0	nn(1:product:NN:11, 1:software:NN:10)	amod(3:programming:NN:11, 3:intense:JJ:10)
+0	nn(1:product:NN:11, 1:software:NN:10)	aux(1:get:VB:2, 1:to:TO:1)
+0	nn(1:product:NN:11, 1:software:NN:10)	aux(2:do:VB:12, 2:will:MD:11)
+0	nn(1:product:NN:11, 1:software:NN:10)	aux(2:show:VB:2, 2:to:TO:1)
+0	nn(1:product:NN:11, 1:software:NN:10)	aux(3:make:VB:2, 3:to:TO:1)
+0	nn(1:product:NN:11, 1:software:NN:10)	aux(3:meet:VB:7, 3:will:MD:6)
+0	nn(1:product:NN:11, 1:software:NN:10)	conj_or(2:do:VB:12, 2:look:VB:14)
+0	nn(1:product:NN:11, 1:software:NN:10)	csubj(2:like:VBP:15, 2:show:VB:2)
+0	nn(1:product:NN:11, 1:software:NN:10)	dep(3:meet:VB:7, 3:make:VB:2)
+0	nn(1:product:NN:11, 1:software:NN:10)	det(2:idea:NN:6, 2:a:DT:4)
+0	nn(1:product:NN:11, 1:software:NN:10)	det(2:program:NN:10, 2:the:DT:9)
+0	nn(1:product:NN:11, 1:software:NN:10)	det(3:program:NN:5, 3:the:DT:4)
+0	nn(1:product:NN:11, 1:software:NN:10)	dobj(1:get:VB:2, 1:feedback:NN:4)
+0	nn(1:product:NN:11, 1:software:NN:10)	dobj(2:do:VB:12, 2:what:WP:8)
+0	nn(1:product:NN:11, 1:software:NN:10)	dobj(2:look:VB:14, 2:what:WP:8)
+0	nn(1:product:NN:11, 1:software:NN:10)	dobj(2:show:VB:2, 2:idea:NN:6)
+0	nn(1:product:NN:11, 1:software:NN:10)	dobj(3:meet:VB:7, 3:requirement:NNS:8)
+0	nn(1:product:NN:11, 1:software:NN:10)	iobj(2:show:VB:2, 2:user:NNS:3)
+0	nn(1:product:NN:11, 1:software:NN:10)	mark(3:begin:VBZ:12, 3:before:IN:9)
+0	nn(1:product:NN:11, 1:software:NN:10)	nsubj(2:do:VB:12, 2:program:NN:10)
+0	nn(1:product:NN:11, 1:software:NN:10)	nsubj(2:look:VB:14, 2:program:NN:10)
+0	nn(1:product:NN:11, 1:software:NN:10)	nsubj(3:begin:VBZ:12, 3:programming:NN:11)
+0	nn(1:product:NN:11, 1:software:NN:10)	nsubj(3:meet:VB:7, 3:program:NN:5)
+0	nn(1:product:NN:11, 1:software:NN:10)	prep_from(1:get:VB:2, 1:user:NNS:6)
+0	nn(1:product:NN:11, 1:software:NN:10)	prep_in(1:user:NNS:6, 1:stage:NNS:9)
+0	nn(1:product:NN:11, 1:software:NN:10)	prep_of(1:stage:NNS:9, 1:development:NN:11)
+0	nn(1:product:NN:11, 1:software:NN:10)	prepc_of(2:idea:NN:6, 2:do:VB:12)
+0	nn(1:product:NN:11, 1:software:NN:10)	prepc_of(2:idea:NN:6, 2:look:VB:14)
+0	nn(1:product:NN:11, 1:software:NN:10)	root(0:ROOT:ROOT:0, 1:get:VB:2)
+0	nn(1:product:NN:11, 1:software:NN:10)	root(0:ROOT:ROOT:0, 2:like:VBP:15)
+0	nn(1:product:NN:11, 1:software:NN:10)	root(0:ROOT:ROOT:0, 3:meet:VB:7)
+
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	acomp(3:make:VB:2, 3:sure:JJ:3)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	advcl(3:meet:VB:7, 3:begin:VBZ:12)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	amod(1:feedback:NN:4, 1:early:JJ:3)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	amod(1:stage:NNS:9, 1:early:JJ:8)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	amod(2:idea:NN:6, 2:first:JJ:5)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	amod(3:programming:NN:11, 3:intense:JJ:10)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	aux(1:get:VB:2, 1:to:TO:1)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	aux(2:do:VB:12, 2:will:MD:11)
+1	nsubj(1:simulate:VBP:2, 1:to:TO:1)	aux(2:show:VB:2, 2:to:TO:1)
+1	nsubj(1:simulate:VBP:2, 1:to:TO:1)	aux(3:make:VB:2, 3:to:TO:1)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	aux(3:meet:VB:7, 3:will:MD:6)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	conj_or(2:do:VB:12, 2:look:VB:14)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	csubj(2:like:VBP:15, 2:show:VB:2)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	dep(3:meet:VB:7, 3:make:VB:2)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	det(2:idea:NN:6, 2:a:DT:4)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	det(2:program:NN:10, 2:the:DT:9)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	det(3:program:NN:5, 3:the:DT:4)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	dobj(1:get:VB:2, 1:feedback:NN:4)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	dobj(2:do:VB:12, 2:what:WP:8)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	dobj(2:look:VB:14, 2:what:WP:8)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	dobj(2:show:VB:2, 2:idea:NN:6)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	dobj(3:meet:VB:7, 3:requirement:NNS:8)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	iobj(2:show:VB:2, 2:user:NNS:3)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	mark(3:begin:VBZ:12, 3:before:IN:9)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	nsubj(2:do:VB:12, 2:program:NN:10)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	nsubj(2:look:VB:14, 2:program:NN:10)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	nsubj(3:begin:VBZ:12, 3:programming:NN:11)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	nsubj(3:meet:VB:7, 3:program:NN:5)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	prep_from(1:get:VB:2, 1:user:NNS:6)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	prep_in(1:user:NNS:6, 1:stage:NNS:9)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	prep_of(1:stage:NNS:9, 1:development:NN:11)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	prepc_of(2:idea:NN:6, 2:do:VB:12)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	prepc_of(2:idea:NN:6, 2:look:VB:14)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	root(0:ROOT:ROOT:0, 1:get:VB:2)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	root(0:ROOT:ROOT:0, 2:like:VBP:15)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	root(0:ROOT:ROOT:0, 3:meet:VB:7)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	acomp(3:make:VB:2, 3:sure:JJ:3)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	advcl(3:meet:VB:7, 3:begin:VBZ:12)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	amod(1:feedback:NN:4, 1:early:JJ:3)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	amod(1:stage:NNS:9, 1:early:JJ:8)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	amod(2:idea:NN:6, 2:first:JJ:5)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	amod(3:programming:NN:11, 3:intense:JJ:10)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	aux(1:get:VB:2, 1:to:TO:1)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	aux(2:do:VB:12, 2:will:MD:11)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	aux(2:show:VB:2, 2:to:TO:1)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	aux(3:make:VB:2, 3:to:TO:1)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	aux(3:meet:VB:7, 3:will:MD:6)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	conj_or(2:do:VB:12, 2:look:VB:14)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	csubj(2:like:VBP:15, 2:show:VB:2)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	dep(3:meet:VB:7, 3:make:VB:2)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	det(2:idea:NN:6, 2:a:DT:4)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	det(2:program:NN:10, 2:the:DT:9)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	det(3:program:NN:5, 3:the:DT:4)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	dobj(1:get:VB:2, 1:feedback:NN:4)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	dobj(2:do:VB:12, 2:what:WP:8)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	dobj(2:look:VB:14, 2:what:WP:8)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	dobj(2:show:VB:2, 2:idea:NN:6)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	dobj(3:meet:VB:7, 3:requirement:NNS:8)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	iobj(2:show:VB:2, 2:user:NNS:3)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	mark(3:begin:VBZ:12, 3:before:IN:9)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	nsubj(2:do:VB:12, 2:program:NN:10)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	nsubj(2:look:VB:14, 2:program:NN:10)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	nsubj(3:begin:VBZ:12, 3:programming:NN:11)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	nsubj(3:meet:VB:7, 3:program:NN:5)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	prep_from(1:get:VB:2, 1:user:NNS:6)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	prep_in(1:user:NNS:6, 1:stage:NNS:9)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	prep_of(1:stage:NNS:9, 1:development:NN:11)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	prepc_of(2:idea:NN:6, 2:do:VB:12)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	prepc_of(2:idea:NN:6, 2:look:VB:14)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	root(0:ROOT:ROOT:0, 1:get:VB:2)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	root(0:ROOT:ROOT:0, 2:like:VBP:15)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	root(0:ROOT:ROOT:0, 3:meet:VB:7)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	acomp(3:make:VB:2, 3:sure:JJ:3)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	advcl(3:meet:VB:7, 3:begin:VBZ:12)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	amod(1:feedback:NN:4, 1:early:JJ:3)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	amod(1:stage:NNS:9, 1:early:JJ:8)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	amod(2:idea:NN:6, 2:first:JJ:5)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	amod(3:programming:NN:11, 3:intense:JJ:10)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	aux(1:get:VB:2, 1:to:TO:1)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	aux(2:do:VB:12, 2:will:MD:11)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	aux(2:show:VB:2, 2:to:TO:1)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	aux(3:make:VB:2, 3:to:TO:1)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	aux(3:meet:VB:7, 3:will:MD:6)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	conj_or(2:do:VB:12, 2:look:VB:14)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	csubj(2:like:VBP:15, 2:show:VB:2)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	dep(3:meet:VB:7, 3:make:VB:2)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	det(2:idea:NN:6, 2:a:DT:4)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	det(2:program:NN:10, 2:the:DT:9)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	det(3:program:NN:5, 3:the:DT:4)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	dobj(1:get:VB:2, 1:feedback:NN:4)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	dobj(2:do:VB:12, 2:what:WP:8)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	dobj(2:look:VB:14, 2:what:WP:8)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	dobj(2:show:VB:2, 2:idea:NN:6)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	dobj(3:meet:VB:7, 3:requirement:NNS:8)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	iobj(2:show:VB:2, 2:user:NNS:3)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	mark(3:begin:VBZ:12, 3:before:IN:9)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	nsubj(2:do:VB:12, 2:program:NN:10)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	nsubj(2:look:VB:14, 2:program:NN:10)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	nsubj(3:begin:VBZ:12, 3:programming:NN:11)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	nsubj(3:meet:VB:7, 3:program:NN:5)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	prep_from(1:get:VB:2, 1:user:NNS:6)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	prep_in(1:user:NNS:6, 1:stage:NNS:9)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	prep_of(1:stage:NNS:9, 1:development:NN:11)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	prepc_of(2:idea:NN:6, 2:do:VB:12)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	prepc_of(2:idea:NN:6, 2:look:VB:14)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	root(0:ROOT:ROOT:0, 1:get:VB:2)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	root(0:ROOT:ROOT:0, 2:like:VBP:15)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	root(0:ROOT:ROOT:0, 3:meet:VB:7)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	acomp(3:make:VB:2, 3:sure:JJ:3)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	advcl(3:meet:VB:7, 3:begin:VBZ:12)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	amod(1:feedback:NN:4, 1:early:JJ:3)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	amod(1:stage:NNS:9, 1:early:JJ:8)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	amod(2:idea:NN:6, 2:first:JJ:5)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	amod(3:programming:NN:11, 3:intense:JJ:10)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	aux(1:get:VB:2, 1:to:TO:1)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	aux(2:do:VB:12, 2:will:MD:11)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	aux(2:show:VB:2, 2:to:TO:1)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	aux(3:make:VB:2, 3:to:TO:1)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	aux(3:meet:VB:7, 3:will:MD:6)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	conj_or(2:do:VB:12, 2:look:VB:14)
+1	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	csubj(2:like:VBP:15, 2:show:VB:2)
+1	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	dep(3:meet:VB:7, 3:make:VB:2)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	det(2:idea:NN:6, 2:a:DT:4)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	det(2:program:NN:10, 2:the:DT:9)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	det(3:program:NN:5, 3:the:DT:4)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	dobj(1:get:VB:2, 1:feedback:NN:4)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	dobj(2:do:VB:12, 2:what:WP:8)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	dobj(2:look:VB:14, 2:what:WP:8)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	dobj(2:show:VB:2, 2:idea:NN:6)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	dobj(3:meet:VB:7, 3:requirement:NNS:8)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	iobj(2:show:VB:2, 2:user:NNS:3)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	mark(3:begin:VBZ:12, 3:before:IN:9)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	nsubj(2:do:VB:12, 2:program:NN:10)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	nsubj(2:look:VB:14, 2:program:NN:10)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	nsubj(3:begin:VBZ:12, 3:programming:NN:11)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	nsubj(3:meet:VB:7, 3:program:NN:5)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	prep_from(1:get:VB:2, 1:user:NNS:6)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	prep_in(1:user:NNS:6, 1:stage:NNS:9)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	prep_of(1:stage:NNS:9, 1:development:NN:11)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	prepc_of(2:idea:NN:6, 2:do:VB:12)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	prepc_of(2:idea:NN:6, 2:look:VB:14)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	root(0:ROOT:ROOT:0, 1:get:VB:2)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	root(0:ROOT:ROOT:0, 2:like:VBP:15)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	root(0:ROOT:ROOT:0, 3:meet:VB:7)

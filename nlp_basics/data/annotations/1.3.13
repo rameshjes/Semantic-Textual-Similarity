@@ -1,0 +1,92 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:Data:NNP:1
+0	0:ROOT:ROOT:0	1:concept:NN:3
+0	0:ROOT:ROOT:0	1:datum:NNS:13
+0	0:ROOT:ROOT:0	1:encapsulation:NN:2
+0	0:ROOT:ROOT:0	1:function:NNS:8
+0	0:ROOT:ROOT:0	1:manipulate:VB:12
+0	0:ROOT:ROOT:0	1:method:NNS:10
+0	0:ROOT:ROOT:0	1:the:DT:5
+0	0:ROOT:ROOT:0	1:to:TO:11
+0	0:ROOT:ROOT:0	1:use:NN:6
+
+0	1:abstraction:JJ:1	0:ROOT:ROOT:0
+0	1:abstraction:JJ:1	1:Data:NNP:1
+2	1:abstraction:JJ:1	1:concept:NN:3
+0	1:abstraction:JJ:1	1:datum:NNS:13
+1	1:abstraction:JJ:1	1:encapsulation:NN:2
+0	1:abstraction:JJ:1	1:function:NNS:8
+0	1:abstraction:JJ:1	1:manipulate:VB:12
+0	1:abstraction:JJ:1	1:method:NNS:10
+0	1:abstraction:JJ:1	1:the:DT:5
+0	1:abstraction:JJ:1	1:to:TO:11
+1	1:abstraction:JJ:1	1:use:NN:6
+
+0	1:reusability:JJ:3	0:ROOT:ROOT:0
+0	1:reusability:JJ:3	1:Data:NNP:1
+0	1:reusability:JJ:3	1:concept:NN:3
+0	1:reusability:JJ:3	1:datum:NNS:13
+0	1:reusability:JJ:3	1:encapsulation:NN:2
+0	1:reusability:JJ:3	1:function:NNS:8
+0	1:reusability:JJ:3	1:manipulate:VB:12
+0	1:reusability:JJ:3	1:method:NNS:10
+0	1:reusability:JJ:3	1:the:DT:5
+0	1:reusability:JJ:3	1:to:TO:11
+1	1:reusability:JJ:3	1:use:NN:6
+
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	appos(1:concept:NN:3, 1:use:NN:6)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	aux(1:manipulate:VB:12, 1:to:TO:11)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	conj_or(1:function:NNS:8, 1:method:NNS:10)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	det(1:use:NN:6, 1:the:DT:5)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	dobj(1:manipulate:VB:12, 1:datum:NNS:13)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	infmod(1:use:NN:6, 1:manipulate:VB:12)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	nn(1:concept:NN:3, 1:Data:NNP:1)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	nn(1:concept:NN:3, 1:encapsulation:NN:2)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	prep_of(1:use:NN:6, 1:function:NNS:8)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	prep_of(1:use:NN:6, 1:method:NNS:10)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 1:concept:NN:3)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 1:use:NN:6)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	appos(1:concept:NN:3, 1:use:NN:6)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	aux(1:manipulate:VB:12, 1:to:TO:11)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	conj_or(1:function:NNS:8, 1:method:NNS:10)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	det(1:use:NN:6, 1:the:DT:5)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	dobj(1:manipulate:VB:12, 1:datum:NNS:13)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	infmod(1:use:NN:6, 1:manipulate:VB:12)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	nn(1:concept:NN:3, 1:Data:NNP:1)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	nn(1:concept:NN:3, 1:encapsulation:NN:2)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	prep_of(1:use:NN:6, 1:function:NNS:8)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	prep_of(1:use:NN:6, 1:method:NNS:10)
+1	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	root(0:ROOT:ROOT:0, 1:concept:NN:3)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	root(0:ROOT:ROOT:0, 1:use:NN:6)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	appos(1:concept:NN:3, 1:use:NN:6)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	aux(1:manipulate:VB:12, 1:to:TO:11)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	conj_or(1:function:NNS:8, 1:method:NNS:10)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	det(1:use:NN:6, 1:the:DT:5)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	dobj(1:manipulate:VB:12, 1:datum:NNS:13)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	infmod(1:use:NN:6, 1:manipulate:VB:12)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	nn(1:concept:NN:3, 1:Data:NNP:1)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	nn(1:concept:NN:3, 1:encapsulation:NN:2)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	prep_of(1:use:NN:6, 1:function:NNS:8)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	prep_of(1:use:NN:6, 1:method:NNS:10)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 1:concept:NN:3)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 1:use:NN:6)

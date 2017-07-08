@@ -1,0 +1,285 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+1	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:!allow:VBN:4
+0	0:ROOT:ROOT:0	1:base:NN:9
+0	0:ROOT:ROOT:0	1:be:VBZ:2
+0	0:ROOT:ROOT:0	1:case:NN:10
+0	0:ROOT:ROOT:0	1:function:NN:1
+0	0:ROOT:ROOT:0	1:reach:VB:6
+0	0:ROOT:ROOT:0	1:the:DT:7
+0	0:ROOT:ROOT:0	1:to:TO:5
+
+0	1:!be:VBZ:14	0:ROOT:ROOT:0
+0	1:!be:VBZ:14	1:!allow:VBN:4
+0	1:!be:VBZ:14	1:base:NN:9
+0	1:!be:VBZ:14	1:be:VBZ:2
+0	1:!be:VBZ:14	1:case:NN:10
+0	1:!be:VBZ:14	1:function:NN:1
+2	1:!be:VBZ:14	1:reach:VB:6
+0	1:!be:VBZ:14	1:the:DT:7
+0	1:!be:VBZ:14	1:to:TO:5
+
+0	1:base:NN:12	0:ROOT:ROOT:0
+0	1:base:NN:12	1:!allow:VBN:4
+2	1:base:NN:12	1:base:NN:9
+0	1:base:NN:12	1:be:VBZ:2
+0	1:base:NN:12	1:case:NN:10
+0	1:base:NN:12	1:function:NN:1
+0	1:base:NN:12	1:reach:VB:6
+0	1:base:NN:12	1:the:DT:7
+0	1:base:NN:12	1:to:TO:5
+
+0	1:be:VBZ:5	0:ROOT:ROOT:0
+0	1:be:VBZ:5	1:!allow:VBN:4
+0	1:be:VBZ:5	1:base:NN:9
+1	1:be:VBZ:5	1:be:VBZ:2
+0	1:be:VBZ:5	1:case:NN:10
+0	1:be:VBZ:5	1:function:NN:1
+0	1:be:VBZ:5	1:reach:VB:6
+0	1:be:VBZ:5	1:the:DT:7
+0	1:be:VBZ:5	1:to:TO:5
+
+0	1:case:NN:13	0:ROOT:ROOT:0
+0	1:case:NN:13	1:!allow:VBN:4
+0	1:case:NN:13	1:base:NN:9
+0	1:case:NN:13	1:be:VBZ:2
+2	1:case:NN:13	1:case:NN:10
+0	1:case:NN:13	1:function:NN:1
+0	1:case:NN:13	1:reach:VB:6
+0	1:case:NN:13	1:the:DT:7
+0	1:case:NN:13	1:to:TO:5
+
+0	1:define:VBN:6	0:ROOT:ROOT:0
+0	1:define:VBN:6	1:!allow:VBN:4
+0	1:define:VBN:6	1:base:NN:9
+0	1:define:VBN:6	1:be:VBZ:2
+0	1:define:VBN:6	1:case:NN:10
+0	1:define:VBN:6	1:function:NN:1
+0	1:define:VBN:6	1:reach:VB:6
+0	1:define:VBN:6	1:the:DT:7
+0	1:define:VBN:6	1:to:TO:5
+
+0	1:if:IN:1	0:ROOT:ROOT:0
+0	1:if:IN:1	1:!allow:VBN:4
+0	1:if:IN:1	1:base:NN:9
+0	1:if:IN:1	1:be:VBZ:2
+0	1:if:IN:1	1:case:NN:10
+0	1:if:IN:1	1:function:NN:1
+0	1:if:IN:1	1:reach:VB:6
+0	1:if:IN:1	1:the:DT:7
+0	1:if:IN:1	1:to:TO:5
+
+0	1:if:IN:10	0:ROOT:ROOT:0
+0	1:if:IN:10	1:!allow:VBN:4
+0	1:if:IN:10	1:base:NN:9
+0	1:if:IN:10	1:be:VBZ:2
+0	1:if:IN:10	1:case:NN:10
+0	1:if:IN:10	1:function:NN:1
+0	1:if:IN:10	1:reach:VB:6
+0	1:if:IN:10	1:the:DT:7
+0	1:if:IN:10	1:to:TO:5
+
+0	1:include:VBD:16	0:ROOT:ROOT:0
+2	1:include:VBD:16	1:!allow:VBN:4
+0	1:include:VBD:16	1:base:NN:9
+0	1:include:VBD:16	1:be:VBZ:2
+0	1:include:VBD:16	1:case:NN:10
+0	1:include:VBD:16	1:function:NN:1
+0	1:include:VBD:16	1:reach:VB:6
+0	1:include:VBD:16	1:the:DT:7
+0	1:include:VBD:16	1:to:TO:5
+
+0	1:incorrectly:RB:7	0:ROOT:ROOT:0
+0	1:incorrectly:RB:7	1:!allow:VBN:4
+0	1:incorrectly:RB:7	1:base:NN:9
+0	1:incorrectly:RB:7	1:be:VBZ:2
+0	1:incorrectly:RB:7	1:case:NN:10
+0	1:incorrectly:RB:7	1:function:NN:1
+0	1:incorrectly:RB:7	1:reach:VB:6
+0	1:incorrectly:RB:7	1:the:DT:7
+0	1:incorrectly:RB:7	1:to:TO:5
+
+0	1:recursion:NN:3	0:ROOT:ROOT:0
+0	1:recursion:NN:3	1:!allow:VBN:4
+0	1:recursion:NN:3	1:base:NN:9
+0	1:recursion:NN:3	1:be:VBZ:2
+0	1:recursion:NN:3	1:case:NN:10
+0	1:recursion:NN:3	1:function:NN:1
+0	1:recursion:NN:3	1:reach:VB:6
+0	1:recursion:NN:3	1:the:DT:7
+0	1:recursion:NN:3	1:to:TO:5
+
+0	1:step:NN:4	0:ROOT:ROOT:0
+0	1:step:NN:4	1:!allow:VBN:4
+0	1:step:NN:4	1:base:NN:9
+0	1:step:NN:4	1:be:VBZ:2
+0	1:step:NN:4	1:case:NN:10
+0	1:step:NN:4	1:function:NN:1
+0	1:step:NN:4	1:reach:VB:6
+0	1:step:NN:4	1:the:DT:7
+0	1:step:NN:4	1:to:TO:5
+
+0	1:the:DT:11	0:ROOT:ROOT:0
+0	1:the:DT:11	1:!allow:VBN:4
+0	1:the:DT:11	1:base:NN:9
+0	1:the:DT:11	1:be:VBZ:2
+0	1:the:DT:11	1:case:NN:10
+0	1:the:DT:11	1:function:NN:1
+0	1:the:DT:11	1:reach:VB:6
+2	1:the:DT:11	1:the:DT:7
+0	1:the:DT:11	1:to:TO:5
+
+0	1:the:DT:2	0:ROOT:ROOT:0
+0	1:the:DT:2	1:!allow:VBN:4
+0	1:the:DT:2	1:base:NN:9
+0	1:the:DT:2	1:be:VBZ:2
+0	1:the:DT:2	1:case:NN:10
+0	1:the:DT:2	1:function:NN:1
+0	1:the:DT:2	1:reach:VB:6
+1	1:the:DT:2	1:the:DT:7
+0	1:the:DT:2	1:to:TO:5
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	advmod(1:define:VBN:6, 1:incorrectly:RB:7)	aux(1:reach:VB:6, 1:to:TO:5)
+0	advmod(1:define:VBN:6, 1:incorrectly:RB:7)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	advmod(1:define:VBN:6, 1:incorrectly:RB:7)	nn(1:case:NN:10, 1:base:NN:9)
+0	advmod(1:define:VBN:6, 1:incorrectly:RB:7)	nn(1:case:NN:10, 1:the:DT:7)
+0	advmod(1:define:VBN:6, 1:incorrectly:RB:7)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	advmod(1:define:VBN:6, 1:incorrectly:RB:7)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	advmod(1:define:VBN:6, 1:incorrectly:RB:7)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	advmod(1:define:VBN:6, 1:incorrectly:RB:7)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	advmod(1:define:VBN:6, 1:incorrectly:RB:7)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	auxpass(1:define:VBN:6, 1:be:VBZ:5)	aux(1:reach:VB:6, 1:to:TO:5)
+0	auxpass(1:define:VBN:6, 1:be:VBZ:5)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	auxpass(1:define:VBN:6, 1:be:VBZ:5)	nn(1:case:NN:10, 1:base:NN:9)
+0	auxpass(1:define:VBN:6, 1:be:VBZ:5)	nn(1:case:NN:10, 1:the:DT:7)
+0	auxpass(1:define:VBN:6, 1:be:VBZ:5)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	auxpass(1:define:VBN:6, 1:be:VBZ:5)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	auxpass(1:define:VBN:6, 1:be:VBZ:5)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	auxpass(1:define:VBN:6, 1:be:VBZ:5)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	auxpass(1:define:VBN:6, 1:be:VBZ:5)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	conj_or(1:define:VBN:6, 1:!be:VBZ:14)	aux(1:reach:VB:6, 1:to:TO:5)
+0	conj_or(1:define:VBN:6, 1:!be:VBZ:14)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	conj_or(1:define:VBN:6, 1:!be:VBZ:14)	nn(1:case:NN:10, 1:base:NN:9)
+0	conj_or(1:define:VBN:6, 1:!be:VBZ:14)	nn(1:case:NN:10, 1:the:DT:7)
+0	conj_or(1:define:VBN:6, 1:!be:VBZ:14)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	conj_or(1:define:VBN:6, 1:!be:VBZ:14)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	conj_or(1:define:VBN:6, 1:!be:VBZ:14)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	conj_or(1:define:VBN:6, 1:!be:VBZ:14)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	conj_or(1:define:VBN:6, 1:!be:VBZ:14)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	csubj(1:include:VBD:16, 1:!be:VBZ:14)	aux(1:reach:VB:6, 1:to:TO:5)
+0	csubj(1:include:VBD:16, 1:!be:VBZ:14)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	csubj(1:include:VBD:16, 1:!be:VBZ:14)	nn(1:case:NN:10, 1:base:NN:9)
+0	csubj(1:include:VBD:16, 1:!be:VBZ:14)	nn(1:case:NN:10, 1:the:DT:7)
+0	csubj(1:include:VBD:16, 1:!be:VBZ:14)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	csubj(1:include:VBD:16, 1:!be:VBZ:14)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	csubj(1:include:VBD:16, 1:!be:VBZ:14)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	csubj(1:include:VBD:16, 1:!be:VBZ:14)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	csubj(1:include:VBD:16, 1:!be:VBZ:14)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	csubj(1:include:VBD:16, 1:define:VBN:6)	aux(1:reach:VB:6, 1:to:TO:5)
+0	csubj(1:include:VBD:16, 1:define:VBN:6)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	csubj(1:include:VBD:16, 1:define:VBN:6)	nn(1:case:NN:10, 1:base:NN:9)
+0	csubj(1:include:VBD:16, 1:define:VBN:6)	nn(1:case:NN:10, 1:the:DT:7)
+0	csubj(1:include:VBD:16, 1:define:VBN:6)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	csubj(1:include:VBD:16, 1:define:VBN:6)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	csubj(1:include:VBD:16, 1:define:VBN:6)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	csubj(1:include:VBD:16, 1:define:VBN:6)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	csubj(1:include:VBD:16, 1:define:VBN:6)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	det(1:case:NN:13, 1:the:DT:11)	aux(1:reach:VB:6, 1:to:TO:5)
+0	det(1:case:NN:13, 1:the:DT:11)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	det(1:case:NN:13, 1:the:DT:11)	nn(1:case:NN:10, 1:base:NN:9)
+1	det(1:case:NN:13, 1:the:DT:11)	nn(1:case:NN:10, 1:the:DT:7)
+0	det(1:case:NN:13, 1:the:DT:11)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	det(1:case:NN:13, 1:the:DT:11)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	det(1:case:NN:13, 1:the:DT:11)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	det(1:case:NN:13, 1:the:DT:11)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	det(1:case:NN:13, 1:the:DT:11)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	det(1:step:NN:4, 1:the:DT:2)	aux(1:reach:VB:6, 1:to:TO:5)
+0	det(1:step:NN:4, 1:the:DT:2)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	det(1:step:NN:4, 1:the:DT:2)	nn(1:case:NN:10, 1:base:NN:9)
+0	det(1:step:NN:4, 1:the:DT:2)	nn(1:case:NN:10, 1:the:DT:7)
+0	det(1:step:NN:4, 1:the:DT:2)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	det(1:step:NN:4, 1:the:DT:2)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	det(1:step:NN:4, 1:the:DT:2)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	det(1:step:NN:4, 1:the:DT:2)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	det(1:step:NN:4, 1:the:DT:2)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	mark(1:!be:VBZ:14, 1:if:IN:10)	aux(1:reach:VB:6, 1:to:TO:5)
+0	mark(1:!be:VBZ:14, 1:if:IN:10)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	mark(1:!be:VBZ:14, 1:if:IN:10)	nn(1:case:NN:10, 1:base:NN:9)
+0	mark(1:!be:VBZ:14, 1:if:IN:10)	nn(1:case:NN:10, 1:the:DT:7)
+0	mark(1:!be:VBZ:14, 1:if:IN:10)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	mark(1:!be:VBZ:14, 1:if:IN:10)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	mark(1:!be:VBZ:14, 1:if:IN:10)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	mark(1:!be:VBZ:14, 1:if:IN:10)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	mark(1:!be:VBZ:14, 1:if:IN:10)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	mark(1:define:VBN:6, 1:if:IN:1)	aux(1:reach:VB:6, 1:to:TO:5)
+0	mark(1:define:VBN:6, 1:if:IN:1)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	mark(1:define:VBN:6, 1:if:IN:1)	nn(1:case:NN:10, 1:base:NN:9)
+0	mark(1:define:VBN:6, 1:if:IN:1)	nn(1:case:NN:10, 1:the:DT:7)
+0	mark(1:define:VBN:6, 1:if:IN:1)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	mark(1:define:VBN:6, 1:if:IN:1)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	mark(1:define:VBN:6, 1:if:IN:1)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	mark(1:define:VBN:6, 1:if:IN:1)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	mark(1:define:VBN:6, 1:if:IN:1)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	nn(1:case:NN:13, 1:base:NN:12)	aux(1:reach:VB:6, 1:to:TO:5)
+0	nn(1:case:NN:13, 1:base:NN:12)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+1	nn(1:case:NN:13, 1:base:NN:12)	nn(1:case:NN:10, 1:base:NN:9)
+0	nn(1:case:NN:13, 1:base:NN:12)	nn(1:case:NN:10, 1:the:DT:7)
+0	nn(1:case:NN:13, 1:base:NN:12)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	nn(1:case:NN:13, 1:base:NN:12)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	nn(1:case:NN:13, 1:base:NN:12)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	nn(1:case:NN:13, 1:base:NN:12)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	nn(1:case:NN:13, 1:base:NN:12)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	nn(1:step:NN:4, 1:recursion:NN:3)	aux(1:reach:VB:6, 1:to:TO:5)
+0	nn(1:step:NN:4, 1:recursion:NN:3)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	nn(1:step:NN:4, 1:recursion:NN:3)	nn(1:case:NN:10, 1:base:NN:9)
+0	nn(1:step:NN:4, 1:recursion:NN:3)	nn(1:case:NN:10, 1:the:DT:7)
+0	nn(1:step:NN:4, 1:recursion:NN:3)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	nn(1:step:NN:4, 1:recursion:NN:3)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	nn(1:step:NN:4, 1:recursion:NN:3)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	nn(1:step:NN:4, 1:recursion:NN:3)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	nn(1:step:NN:4, 1:recursion:NN:3)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	nsubj(1:!be:VBZ:14, 1:case:NN:13)	aux(1:reach:VB:6, 1:to:TO:5)
+0	nsubj(1:!be:VBZ:14, 1:case:NN:13)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	nsubj(1:!be:VBZ:14, 1:case:NN:13)	nn(1:case:NN:10, 1:base:NN:9)
+0	nsubj(1:!be:VBZ:14, 1:case:NN:13)	nn(1:case:NN:10, 1:the:DT:7)
+0	nsubj(1:!be:VBZ:14, 1:case:NN:13)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	nsubj(1:!be:VBZ:14, 1:case:NN:13)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	nsubj(1:!be:VBZ:14, 1:case:NN:13)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	nsubj(1:!be:VBZ:14, 1:case:NN:13)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	nsubj(1:!be:VBZ:14, 1:case:NN:13)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	nsubjpass(1:define:VBN:6, 1:step:NN:4)	aux(1:reach:VB:6, 1:to:TO:5)
+0	nsubjpass(1:define:VBN:6, 1:step:NN:4)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	nsubjpass(1:define:VBN:6, 1:step:NN:4)	nn(1:case:NN:10, 1:base:NN:9)
+0	nsubjpass(1:define:VBN:6, 1:step:NN:4)	nn(1:case:NN:10, 1:the:DT:7)
+0	nsubjpass(1:define:VBN:6, 1:step:NN:4)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	nsubjpass(1:define:VBN:6, 1:step:NN:4)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	nsubjpass(1:define:VBN:6, 1:step:NN:4)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	nsubjpass(1:define:VBN:6, 1:step:NN:4)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	nsubjpass(1:define:VBN:6, 1:step:NN:4)	xsubj(1:reach:VB:6, 1:function:NN:1)
+0	root(0:ROOT:ROOT:0, 1:include:VBD:16)	aux(1:reach:VB:6, 1:to:TO:5)
+0	root(0:ROOT:ROOT:0, 1:include:VBD:16)	auxpass(1:!allow:VBN:4, 1:be:VBZ:2)
+0	root(0:ROOT:ROOT:0, 1:include:VBD:16)	nn(1:case:NN:10, 1:base:NN:9)
+0	root(0:ROOT:ROOT:0, 1:include:VBD:16)	nn(1:case:NN:10, 1:the:DT:7)
+0	root(0:ROOT:ROOT:0, 1:include:VBD:16)	nsubjpass(1:!allow:VBN:4, 1:function:NN:1)
+0	root(0:ROOT:ROOT:0, 1:include:VBD:16)	root(0:ROOT:ROOT:0, 1:!allow:VBN:4)
+0	root(0:ROOT:ROOT:0, 1:include:VBD:16)	xcomp(1:!allow:VBN:4, 1:reach:VB:6)
+0	root(0:ROOT:ROOT:0, 1:include:VBD:16)	xcomp(1:reach:VB:6, 1:case:NN:10)
+0	root(0:ROOT:ROOT:0, 1:include:VBD:16)	xsubj(1:reach:VB:6, 1:function:NN:1)

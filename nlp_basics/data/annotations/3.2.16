@@ -1,0 +1,59 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:a:DT:8
+0	0:ROOT:ROOT:0	1:accessible:JJ:3
+0	0:ROOT:ROOT:0	1:all:DT:5
+0	0:ROOT:ROOT:0	1:be:VBZ:2
+0	0:ROOT:ROOT:0	1:function:NNS:6
+0	0:ROOT:ROOT:0	1:it:PRP:1
+0	0:ROOT:ROOT:0	1:program:NN:9
+
+0	1:file:JJ:1	0:ROOT:ROOT:0
+0	1:file:JJ:1	1:a:DT:8
+0	1:file:JJ:1	1:accessible:JJ:3
+0	1:file:JJ:1	1:all:DT:5
+0	1:file:JJ:1	1:be:VBZ:2
+2	1:file:JJ:1	1:function:NNS:6
+0	1:file:JJ:1	1:it:PRP:1
+1	1:file:JJ:1	1:program:NN:9
+
+0	1:scope:NN:2	0:ROOT:ROOT:0
+0	1:scope:NN:2	1:a:DT:8
+2	1:scope:NN:2	1:accessible:JJ:3
+0	1:scope:NN:2	1:all:DT:5
+0	1:scope:NN:2	1:be:VBZ:2
+0	1:scope:NN:2	1:function:NNS:6
+0	1:scope:NN:2	1:it:PRP:1
+0	1:scope:NN:2	1:program:NN:9
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	amod(1:scope:NN:2, 1:file:JJ:1)	cop(1:accessible:JJ:3, 1:be:VBZ:2)
+0	amod(1:scope:NN:2, 1:file:JJ:1)	det(1:function:NNS:6, 1:all:DT:5)
+0	amod(1:scope:NN:2, 1:file:JJ:1)	det(1:program:NN:9, 1:a:DT:8)
+0	amod(1:scope:NN:2, 1:file:JJ:1)	nsubj(1:accessible:JJ:3, 1:it:PRP:1)
+0	amod(1:scope:NN:2, 1:file:JJ:1)	prep_by(1:accessible:JJ:3, 1:function:NNS:6)
+0	amod(1:scope:NN:2, 1:file:JJ:1)	prep_within(1:function:NNS:6, 1:program:NN:9)
+0	amod(1:scope:NN:2, 1:file:JJ:1)	root(0:ROOT:ROOT:0, 1:accessible:JJ:3)
+0	root(0:ROOT:ROOT:0, 1:scope:NN:2)	cop(1:accessible:JJ:3, 1:be:VBZ:2)
+0	root(0:ROOT:ROOT:0, 1:scope:NN:2)	det(1:function:NNS:6, 1:all:DT:5)
+0	root(0:ROOT:ROOT:0, 1:scope:NN:2)	det(1:program:NN:9, 1:a:DT:8)
+0	root(0:ROOT:ROOT:0, 1:scope:NN:2)	nsubj(1:accessible:JJ:3, 1:it:PRP:1)
+1	root(0:ROOT:ROOT:0, 1:scope:NN:2)	prep_by(1:accessible:JJ:3, 1:function:NNS:6)
+0	root(0:ROOT:ROOT:0, 1:scope:NN:2)	prep_within(1:function:NNS:6, 1:program:NN:9)
+0	root(0:ROOT:ROOT:0, 1:scope:NN:2)	root(0:ROOT:ROOT:0, 1:accessible:JJ:3)

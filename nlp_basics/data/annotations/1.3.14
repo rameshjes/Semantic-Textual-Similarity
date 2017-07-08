@@ -1,0 +1,107 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+0	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:Modular:NNP:1
+0	0:ROOT:ROOT:0	1:a:DT:13
+0	0:ROOT:ROOT:0	1:a:DT:18
+0	0:ROOT:ROOT:0	1:allow:VBG:6
+0	0:ROOT:ROOT:0	1:code:NN:4
+0	0:ROOT:ROOT:0	1:deployment:NN:8
+0	0:ROOT:ROOT:0	1:faster:JJR:7
+0	0:ROOT:ROOT:0	1:general:JJ:15
+0	0:ROOT:ROOT:0	1:more:RBR:14
+0	0:ROOT:ROOT:0	1:reusable:JJ:3
+0	0:ROOT:ROOT:0	1:solution:NN:19
+0	0:ROOT:ROOT:0	1:solution:NNS:10
+0	0:ROOT:ROOT:0	1:view:NN:16
+
+0	1:abstraction:JJ:1	0:ROOT:ROOT:0
+0	1:abstraction:JJ:1	1:Modular:NNP:1
+0	1:abstraction:JJ:1	1:a:DT:13
+0	1:abstraction:JJ:1	1:a:DT:18
+0	1:abstraction:JJ:1	1:allow:VBG:6
+0	1:abstraction:JJ:1	1:code:NN:4
+0	1:abstraction:JJ:1	1:deployment:NN:8
+0	1:abstraction:JJ:1	1:faster:JJR:7
+1	1:abstraction:JJ:1	1:general:JJ:15
+0	1:abstraction:JJ:1	1:more:RBR:14
+0	1:abstraction:JJ:1	1:reusable:JJ:3
+0	1:abstraction:JJ:1	1:solution:NN:19
+0	1:abstraction:JJ:1	1:solution:NNS:10
+2	1:abstraction:JJ:1	1:view:NN:16
+
+0	1:reusability:JJ:3	0:ROOT:ROOT:0
+1	1:reusability:JJ:3	1:Modular:NNP:1
+0	1:reusability:JJ:3	1:a:DT:13
+0	1:reusability:JJ:3	1:a:DT:18
+0	1:reusability:JJ:3	1:allow:VBG:6
+2	1:reusability:JJ:3	1:code:NN:4
+0	1:reusability:JJ:3	1:deployment:NN:8
+0	1:reusability:JJ:3	1:faster:JJR:7
+0	1:reusability:JJ:3	1:general:JJ:15
+0	1:reusability:JJ:3	1:more:RBR:14
+1	1:reusability:JJ:3	1:reusable:JJ:3
+0	1:reusability:JJ:3	1:solution:NN:19
+0	1:reusability:JJ:3	1:solution:NNS:10
+0	1:reusability:JJ:3	1:view:NN:16
+
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	advmod(1:general:JJ:15, 1:more:RBR:14)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	amod(1:code:NN:4, 1:reusable:JJ:3)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	amod(1:deployment:NN:8, 1:faster:JJR:7)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	amod(1:view:NN:16, 1:general:JJ:15)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	appos(1:Modular:NNP:1, 1:code:NN:4)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	conj_and(1:deployment:NN:8, 1:view:NN:16)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	det(1:solution:NN:19, 1:a:DT:18)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	det(1:view:NN:16, 1:a:DT:13)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	dobj(1:allow:VBG:6, 1:deployment:NN:8)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	dobj(1:allow:VBG:6, 1:view:NN:16)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	partmod(1:Modular:NNP:1, 1:allow:VBG:6)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	prep_of(1:deployment:NN:8, 1:solution:NNS:10)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	prep_of(1:view:NN:16, 1:solution:NN:19)
+0	conj_and(1:abstraction:JJ:1, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 1:Modular:NNP:1)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	advmod(1:general:JJ:15, 1:more:RBR:14)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	amod(1:code:NN:4, 1:reusable:JJ:3)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	amod(1:deployment:NN:8, 1:faster:JJR:7)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	amod(1:view:NN:16, 1:general:JJ:15)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	appos(1:Modular:NNP:1, 1:code:NN:4)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	conj_and(1:deployment:NN:8, 1:view:NN:16)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	det(1:solution:NN:19, 1:a:DT:18)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	det(1:view:NN:16, 1:a:DT:13)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	dobj(1:allow:VBG:6, 1:deployment:NN:8)
+1	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	dobj(1:allow:VBG:6, 1:view:NN:16)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	partmod(1:Modular:NNP:1, 1:allow:VBG:6)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	prep_of(1:deployment:NN:8, 1:solution:NNS:10)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	prep_of(1:view:NN:16, 1:solution:NN:19)
+0	root(0:ROOT:ROOT:0, 1:abstraction:JJ:1)	root(0:ROOT:ROOT:0, 1:Modular:NNP:1)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	advmod(1:general:JJ:15, 1:more:RBR:14)
+1	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	amod(1:code:NN:4, 1:reusable:JJ:3)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	amod(1:deployment:NN:8, 1:faster:JJR:7)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	amod(1:view:NN:16, 1:general:JJ:15)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	appos(1:Modular:NNP:1, 1:code:NN:4)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	conj_and(1:deployment:NN:8, 1:view:NN:16)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	det(1:solution:NN:19, 1:a:DT:18)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	det(1:view:NN:16, 1:a:DT:13)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	dobj(1:allow:VBG:6, 1:deployment:NN:8)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	dobj(1:allow:VBG:6, 1:view:NN:16)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	partmod(1:Modular:NNP:1, 1:allow:VBG:6)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	prep_of(1:deployment:NN:8, 1:solution:NNS:10)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	prep_of(1:view:NN:16, 1:solution:NN:19)
+0	root(0:ROOT:ROOT:0, 1:reusability:JJ:3)	root(0:ROOT:ROOT:0, 1:Modular:NNP:1)

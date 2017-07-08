@@ -1,0 +1,692 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:!can:MD:16
+0	0:ROOT:ROOT:0	1:access:VBN:6
+0	0:ROOT:ROOT:0	1:be:VB:5
+0	0:ROOT:ROOT:0	1:can:MD:4
+0	0:ROOT:ROOT:0	1:class:NN:10
+0	0:ROOT:ROOT:0	1:datum:NN:2
+0	0:ROOT:ROOT:0	1:local:JJ:14
+0	0:ROOT:ROOT:0	1:member:NN:3
+0	0:ROOT:ROOT:0	1:the:DT:1
+0	0:ROOT:ROOT:0	1:the:DT:13
+0	0:ROOT:ROOT:0	1:the:DT:9
+0	0:ROOT:ROOT:0	1:variable:NN:15
+0	0:ROOT:ROOT:0	1:whereas:IN:12
+
+0	1:Data:NNP:1	0:ROOT:ROOT:0
+0	1:Data:NNP:1	1:!can:MD:16
+0	1:Data:NNP:1	1:access:VBN:6
+0	1:Data:NNP:1	1:be:VB:5
+0	1:Data:NNP:1	1:can:MD:4
+0	1:Data:NNP:1	1:class:NN:10
+2	1:Data:NNP:1	1:datum:NN:2
+0	1:Data:NNP:1	1:local:JJ:14
+1	1:Data:NNP:1	1:member:NN:3
+0	1:Data:NNP:1	1:the:DT:1
+0	1:Data:NNP:1	1:the:DT:13
+0	1:Data:NNP:1	1:the:DT:9
+0	1:Data:NNP:1	1:variable:NN:15
+0	1:Data:NNP:1	1:whereas:IN:12
+
+0	1:access:VBN:5	0:ROOT:ROOT:0
+1	1:access:VBN:5	1:!can:MD:16
+2	1:access:VBN:5	1:access:VBN:6
+0	1:access:VBN:5	1:be:VB:5
+0	1:access:VBN:5	1:can:MD:4
+0	1:access:VBN:5	1:class:NN:10
+0	1:access:VBN:5	1:datum:NN:2
+0	1:access:VBN:5	1:local:JJ:14
+0	1:access:VBN:5	1:member:NN:3
+0	1:access:VBN:5	1:the:DT:1
+0	1:access:VBN:5	1:the:DT:13
+0	1:access:VBN:5	1:the:DT:9
+0	1:access:VBN:5	1:variable:NN:15
+0	1:access:VBN:5	1:whereas:IN:12
+
+0	1:any:DT:7	0:ROOT:ROOT:0
+0	1:any:DT:7	1:!can:MD:16
+0	1:any:DT:7	1:access:VBN:6
+0	1:any:DT:7	1:be:VB:5
+0	1:any:DT:7	1:can:MD:4
+0	1:any:DT:7	1:class:NN:10
+0	1:any:DT:7	1:datum:NN:2
+0	1:any:DT:7	1:local:JJ:14
+0	1:any:DT:7	1:member:NN:3
+1	1:any:DT:7	1:the:DT:1
+1	1:any:DT:7	1:the:DT:13
+1	1:any:DT:7	1:the:DT:9
+0	1:any:DT:7	1:variable:NN:15
+0	1:any:DT:7	1:whereas:IN:12
+
+0	1:be:VB:4	0:ROOT:ROOT:0
+0	1:be:VB:4	1:!can:MD:16
+0	1:be:VB:4	1:access:VBN:6
+2	1:be:VB:4	1:be:VB:5
+0	1:be:VB:4	1:can:MD:4
+0	1:be:VB:4	1:class:NN:10
+0	1:be:VB:4	1:datum:NN:2
+0	1:be:VB:4	1:local:JJ:14
+0	1:be:VB:4	1:member:NN:3
+0	1:be:VB:4	1:the:DT:1
+0	1:be:VB:4	1:the:DT:13
+0	1:be:VB:4	1:the:DT:9
+0	1:be:VB:4	1:variable:NN:15
+0	1:be:VB:4	1:whereas:IN:12
+
+0	1:can:MD:3	0:ROOT:ROOT:0
+1	1:can:MD:3	1:!can:MD:16
+0	1:can:MD:3	1:access:VBN:6
+0	1:can:MD:3	1:be:VB:5
+2	1:can:MD:3	1:can:MD:4
+0	1:can:MD:3	1:class:NN:10
+0	1:can:MD:3	1:datum:NN:2
+0	1:can:MD:3	1:local:JJ:14
+0	1:can:MD:3	1:member:NN:3
+0	1:can:MD:3	1:the:DT:1
+0	1:can:MD:3	1:the:DT:13
+0	1:can:MD:3	1:the:DT:9
+0	1:can:MD:3	1:variable:NN:15
+0	1:can:MD:3	1:whereas:IN:12
+
+0	1:class:NN:12	0:ROOT:ROOT:0
+0	1:class:NN:12	1:!can:MD:16
+0	1:class:NN:12	1:access:VBN:6
+0	1:class:NN:12	1:be:VB:5
+0	1:class:NN:12	1:can:MD:4
+1	1:class:NN:12	1:class:NN:10
+0	1:class:NN:12	1:datum:NN:2
+0	1:class:NN:12	1:local:JJ:14
+0	1:class:NN:12	1:member:NN:3
+0	1:class:NN:12	1:the:DT:1
+0	1:class:NN:12	1:the:DT:13
+0	1:class:NN:12	1:the:DT:9
+0	1:class:NN:12	1:variable:NN:15
+0	1:class:NN:12	1:whereas:IN:12
+
+0	1:defintion:NN:13	0:ROOT:ROOT:0
+0	1:defintion:NN:13	1:!can:MD:16
+0	1:defintion:NN:13	1:access:VBN:6
+0	1:defintion:NN:13	1:be:VB:5
+0	1:defintion:NN:13	1:can:MD:4
+2	1:defintion:NN:13	1:class:NN:10
+0	1:defintion:NN:13	1:datum:NN:2
+0	1:defintion:NN:13	1:local:JJ:14
+0	1:defintion:NN:13	1:member:NN:3
+0	1:defintion:NN:13	1:the:DT:1
+0	1:defintion:NN:13	1:the:DT:13
+0	1:defintion:NN:13	1:the:DT:9
+0	1:defintion:NN:13	1:variable:NN:15
+0	1:defintion:NN:13	1:whereas:IN:12
+
+0	1:function:NNS:9	0:ROOT:ROOT:0
+0	1:function:NNS:9	1:!can:MD:16
+0	1:function:NNS:9	1:access:VBN:6
+0	1:function:NNS:9	1:be:VB:5
+0	1:function:NNS:9	1:can:MD:4
+0	1:function:NNS:9	1:class:NN:10
+0	1:function:NNS:9	1:datum:NN:2
+0	1:function:NNS:9	1:local:JJ:14
+0	1:function:NNS:9	1:member:NN:3
+0	1:function:NNS:9	1:the:DT:1
+0	1:function:NNS:9	1:the:DT:13
+0	1:function:NNS:9	1:the:DT:9
+0	1:function:NNS:9	1:variable:NN:15
+0	1:function:NNS:9	1:whereas:IN:12
+
+0	1:member:NN:8	0:ROOT:ROOT:0
+0	1:member:NN:8	1:!can:MD:16
+0	1:member:NN:8	1:access:VBN:6
+0	1:member:NN:8	1:be:VB:5
+0	1:member:NN:8	1:can:MD:4
+0	1:member:NN:8	1:class:NN:10
+0	1:member:NN:8	1:datum:NN:2
+0	1:member:NN:8	1:local:JJ:14
+0	1:member:NN:8	1:member:NN:3
+0	1:member:NN:8	1:the:DT:1
+0	1:member:NN:8	1:the:DT:13
+0	1:member:NN:8	1:the:DT:9
+0	1:member:NN:8	1:variable:NN:15
+0	1:member:NN:8	1:whereas:IN:12
+
+0	1:member:NNS:2	0:ROOT:ROOT:0
+0	1:member:NNS:2	1:!can:MD:16
+0	1:member:NNS:2	1:access:VBN:6
+0	1:member:NNS:2	1:be:VB:5
+0	1:member:NNS:2	1:can:MD:4
+0	1:member:NNS:2	1:class:NN:10
+1	1:member:NNS:2	1:datum:NN:2
+0	1:member:NNS:2	1:local:JJ:14
+2	1:member:NNS:2	1:member:NN:3
+0	1:member:NNS:2	1:the:DT:1
+0	1:member:NNS:2	1:the:DT:13
+0	1:member:NNS:2	1:the:DT:9
+0	1:member:NNS:2	1:variable:NN:15
+0	1:member:NNS:2	1:whereas:IN:12
+
+0	1:the:DT:11	0:ROOT:ROOT:0
+0	1:the:DT:11	1:!can:MD:16
+0	1:the:DT:11	1:access:VBN:6
+0	1:the:DT:11	1:be:VB:5
+0	1:the:DT:11	1:can:MD:4
+0	1:the:DT:11	1:class:NN:10
+0	1:the:DT:11	1:datum:NN:2
+0	1:the:DT:11	1:local:JJ:14
+0	1:the:DT:11	1:member:NN:3
+1	1:the:DT:11	1:the:DT:1
+2	1:the:DT:11	1:the:DT:13
+1	1:the:DT:11	1:the:DT:9
+0	1:the:DT:11	1:variable:NN:15
+0	1:the:DT:11	1:whereas:IN:12
+
+0	2:access:VBN:6	0:ROOT:ROOT:0
+2	2:access:VBN:6	1:!can:MD:16
+1	2:access:VBN:6	1:access:VBN:6
+0	2:access:VBN:6	1:be:VB:5
+0	2:access:VBN:6	1:can:MD:4
+0	2:access:VBN:6	1:class:NN:10
+0	2:access:VBN:6	1:datum:NN:2
+0	2:access:VBN:6	1:local:JJ:14
+0	2:access:VBN:6	1:member:NN:3
+0	2:access:VBN:6	1:the:DT:1
+0	2:access:VBN:6	1:the:DT:13
+0	2:access:VBN:6	1:the:DT:9
+0	2:access:VBN:6	1:variable:NN:15
+0	2:access:VBN:6	1:whereas:IN:12
+
+0	2:be:VB:5	0:ROOT:ROOT:0
+0	2:be:VB:5	1:!can:MD:16
+0	2:be:VB:5	1:access:VBN:6
+1	2:be:VB:5	1:be:VB:5
+0	2:be:VB:5	1:can:MD:4
+0	2:be:VB:5	1:class:NN:10
+0	2:be:VB:5	1:datum:NN:2
+0	2:be:VB:5	1:local:JJ:14
+0	2:be:VB:5	1:member:NN:3
+0	2:be:VB:5	1:the:DT:1
+0	2:be:VB:5	1:the:DT:13
+0	2:be:VB:5	1:the:DT:9
+0	2:be:VB:5	1:variable:NN:15
+0	2:be:VB:5	1:whereas:IN:12
+
+0	2:can:MD:3	0:ROOT:ROOT:0
+1	2:can:MD:3	1:!can:MD:16
+0	2:can:MD:3	1:access:VBN:6
+0	2:can:MD:3	1:be:VB:5
+1	2:can:MD:3	1:can:MD:4
+0	2:can:MD:3	1:class:NN:10
+0	2:can:MD:3	1:datum:NN:2
+0	2:can:MD:3	1:local:JJ:14
+0	2:can:MD:3	1:member:NN:3
+0	2:can:MD:3	1:the:DT:1
+0	2:can:MD:3	1:the:DT:13
+0	2:can:MD:3	1:the:DT:9
+0	2:can:MD:3	1:variable:NN:15
+0	2:can:MD:3	1:whereas:IN:12
+
+0	2:define:VBZ:12	0:ROOT:ROOT:0
+0	2:define:VBZ:12	1:!can:MD:16
+0	2:define:VBZ:12	1:access:VBN:6
+0	2:define:VBZ:12	1:be:VB:5
+0	2:define:VBZ:12	1:can:MD:4
+0	2:define:VBZ:12	1:class:NN:10
+0	2:define:VBZ:12	1:datum:NN:2
+0	2:define:VBZ:12	1:local:JJ:14
+0	2:define:VBZ:12	1:member:NN:3
+0	2:define:VBZ:12	1:the:DT:1
+0	2:define:VBZ:12	1:the:DT:13
+0	2:define:VBZ:12	1:the:DT:9
+0	2:define:VBZ:12	1:variable:NN:15
+0	2:define:VBZ:12	1:whereas:IN:12
+
+0	2:function:NN:10	0:ROOT:ROOT:0
+0	2:function:NN:10	1:!can:MD:16
+0	2:function:NN:10	1:access:VBN:6
+0	2:function:NN:10	1:be:VB:5
+0	2:function:NN:10	1:can:MD:4
+0	2:function:NN:10	1:class:NN:10
+0	2:function:NN:10	1:datum:NN:2
+0	2:function:NN:10	1:local:JJ:14
+0	2:function:NN:10	1:member:NN:3
+0	2:function:NN:10	1:the:DT:1
+0	2:function:NN:10	1:the:DT:13
+0	2:function:NN:10	1:the:DT:9
+0	2:function:NN:10	1:variable:NN:15
+0	2:function:NN:10	1:whereas:IN:12
+
+0	2:local:JJ:1	0:ROOT:ROOT:0
+0	2:local:JJ:1	1:!can:MD:16
+0	2:local:JJ:1	1:access:VBN:6
+0	2:local:JJ:1	1:be:VB:5
+0	2:local:JJ:1	1:can:MD:4
+0	2:local:JJ:1	1:class:NN:10
+0	2:local:JJ:1	1:datum:NN:2
+2	2:local:JJ:1	1:local:JJ:14
+0	2:local:JJ:1	1:member:NN:3
+0	2:local:JJ:1	1:the:DT:1
+0	2:local:JJ:1	1:the:DT:13
+0	2:local:JJ:1	1:the:DT:9
+0	2:local:JJ:1	1:variable:NN:15
+0	2:local:JJ:1	1:whereas:IN:12
+
+0	2:member:NN:9	0:ROOT:ROOT:0
+0	2:member:NN:9	1:!can:MD:16
+0	2:member:NN:9	1:access:VBN:6
+0	2:member:NN:9	1:be:VB:5
+0	2:member:NN:9	1:can:MD:4
+0	2:member:NN:9	1:class:NN:10
+0	2:member:NN:9	1:datum:NN:2
+0	2:member:NN:9	1:local:JJ:14
+0	2:member:NN:9	1:member:NN:3
+0	2:member:NN:9	1:the:DT:1
+0	2:member:NN:9	1:the:DT:13
+0	2:member:NN:9	1:the:DT:9
+0	2:member:NN:9	1:variable:NN:15
+0	2:member:NN:9	1:whereas:IN:12
+
+0	2:only:RB:4	0:ROOT:ROOT:0
+0	2:only:RB:4	1:!can:MD:16
+0	2:only:RB:4	1:access:VBN:6
+0	2:only:RB:4	1:be:VB:5
+0	2:only:RB:4	1:can:MD:4
+0	2:only:RB:4	1:class:NN:10
+0	2:only:RB:4	1:datum:NN:2
+0	2:only:RB:4	1:local:JJ:14
+0	2:only:RB:4	1:member:NN:3
+0	2:only:RB:4	1:the:DT:1
+0	2:only:RB:4	1:the:DT:13
+0	2:only:RB:4	1:the:DT:9
+0	2:only:RB:4	1:variable:NN:15
+0	2:only:RB:4	1:whereas:IN:12
+
+0	2:that:WDT:11	0:ROOT:ROOT:0
+0	2:that:WDT:11	1:!can:MD:16
+0	2:that:WDT:11	1:access:VBN:6
+0	2:that:WDT:11	1:be:VB:5
+0	2:that:WDT:11	1:can:MD:4
+0	2:that:WDT:11	1:class:NN:10
+0	2:that:WDT:11	1:datum:NN:2
+0	2:that:WDT:11	1:local:JJ:14
+0	2:that:WDT:11	1:member:NN:3
+0	2:that:WDT:11	1:the:DT:1
+0	2:that:WDT:11	1:the:DT:13
+0	2:that:WDT:11	1:the:DT:9
+0	2:that:WDT:11	1:variable:NN:15
+0	2:that:WDT:11	1:whereas:IN:12
+
+0	2:the:DT:8	0:ROOT:ROOT:0
+0	2:the:DT:8	1:!can:MD:16
+0	2:the:DT:8	1:access:VBN:6
+0	2:the:DT:8	1:be:VB:5
+0	2:the:DT:8	1:can:MD:4
+0	2:the:DT:8	1:class:NN:10
+0	2:the:DT:8	1:datum:NN:2
+0	2:the:DT:8	1:local:JJ:14
+0	2:the:DT:8	1:member:NN:3
+1	2:the:DT:8	1:the:DT:1
+1	2:the:DT:8	1:the:DT:13
+1	2:the:DT:8	1:the:DT:9
+0	2:the:DT:8	1:variable:NN:15
+0	2:the:DT:8	1:whereas:IN:12
+
+0	2:they:PRP:13	0:ROOT:ROOT:0
+0	2:they:PRP:13	1:!can:MD:16
+0	2:they:PRP:13	1:access:VBN:6
+0	2:they:PRP:13	1:be:VB:5
+0	2:they:PRP:13	1:can:MD:4
+0	2:they:PRP:13	1:class:NN:10
+1	2:they:PRP:13	1:datum:NN:2
+0	2:they:PRP:13	1:local:JJ:14
+1	2:they:PRP:13	1:member:NN:3
+0	2:they:PRP:13	1:the:DT:1
+0	2:they:PRP:13	1:the:DT:13
+0	2:they:PRP:13	1:the:DT:9
+1	2:they:PRP:13	1:variable:NN:15
+0	2:they:PRP:13	1:whereas:IN:12
+
+0	2:variable:NNS:2	0:ROOT:ROOT:0
+0	2:variable:NNS:2	1:!can:MD:16
+0	2:variable:NNS:2	1:access:VBN:6
+0	2:variable:NNS:2	1:be:VB:5
+0	2:variable:NNS:2	1:can:MD:4
+0	2:variable:NNS:2	1:class:NN:10
+0	2:variable:NNS:2	1:datum:NN:2
+0	2:variable:NNS:2	1:local:JJ:14
+0	2:variable:NNS:2	1:member:NN:3
+0	2:variable:NNS:2	1:the:DT:1
+0	2:variable:NNS:2	1:the:DT:13
+0	2:variable:NNS:2	1:the:DT:9
+2	2:variable:NNS:2	1:variable:NN:15
+0	2:variable:NNS:2	1:whereas:IN:12
+
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	advmod(2:access:VBN:6, 2:only:RB:4)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	aux(1:access:VBN:6, 1:can:MD:4)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	det(1:class:NN:10, 1:the:DT:9)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	det(1:member:NN:3, 1:the:DT:1)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	det(1:variable:NN:15, 1:the:DT:13)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	nn(1:member:NN:3, 1:datum:NN:2)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	advmod(2:access:VBN:6, 2:only:RB:4)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+1	amod(2:variable:NNS:2, 2:local:JJ:1)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	aux(1:access:VBN:6, 1:can:MD:4)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	det(1:class:NN:10, 1:the:DT:9)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	det(1:member:NN:3, 1:the:DT:1)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	det(1:variable:NN:15, 1:the:DT:13)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	nn(1:member:NN:3, 1:datum:NN:2)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	amod(2:variable:NNS:2, 2:local:JJ:1)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	aux(1:access:VBN:5, 1:can:MD:3)	amod(1:variable:NN:15, 1:local:JJ:14)
+1	aux(1:access:VBN:5, 1:can:MD:3)	aux(1:access:VBN:6, 1:can:MD:4)
+0	aux(1:access:VBN:5, 1:can:MD:3)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	aux(1:access:VBN:5, 1:can:MD:3)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	aux(1:access:VBN:5, 1:can:MD:3)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	aux(1:access:VBN:5, 1:can:MD:3)	det(1:class:NN:10, 1:the:DT:9)
+0	aux(1:access:VBN:5, 1:can:MD:3)	det(1:member:NN:3, 1:the:DT:1)
+0	aux(1:access:VBN:5, 1:can:MD:3)	det(1:variable:NN:15, 1:the:DT:13)
+0	aux(1:access:VBN:5, 1:can:MD:3)	nn(1:member:NN:3, 1:datum:NN:2)
+0	aux(1:access:VBN:5, 1:can:MD:3)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	aux(1:access:VBN:5, 1:can:MD:3)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	aux(1:access:VBN:5, 1:can:MD:3)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	aux(1:access:VBN:5, 1:can:MD:3)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	aux(2:access:VBN:6, 2:can:MD:3)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	aux(2:access:VBN:6, 2:can:MD:3)	aux(1:access:VBN:6, 1:can:MD:4)
+0	aux(2:access:VBN:6, 2:can:MD:3)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	aux(2:access:VBN:6, 2:can:MD:3)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	aux(2:access:VBN:6, 2:can:MD:3)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	aux(2:access:VBN:6, 2:can:MD:3)	det(1:class:NN:10, 1:the:DT:9)
+0	aux(2:access:VBN:6, 2:can:MD:3)	det(1:member:NN:3, 1:the:DT:1)
+0	aux(2:access:VBN:6, 2:can:MD:3)	det(1:variable:NN:15, 1:the:DT:13)
+0	aux(2:access:VBN:6, 2:can:MD:3)	nn(1:member:NN:3, 1:datum:NN:2)
+0	aux(2:access:VBN:6, 2:can:MD:3)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	aux(2:access:VBN:6, 2:can:MD:3)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	aux(2:access:VBN:6, 2:can:MD:3)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	aux(2:access:VBN:6, 2:can:MD:3)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	aux(1:access:VBN:6, 1:can:MD:4)
+1	auxpass(1:access:VBN:5, 1:be:VB:4)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	det(1:class:NN:10, 1:the:DT:9)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	det(1:member:NN:3, 1:the:DT:1)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	det(1:variable:NN:15, 1:the:DT:13)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	nn(1:member:NN:3, 1:datum:NN:2)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	auxpass(1:access:VBN:5, 1:be:VB:4)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	aux(1:access:VBN:6, 1:can:MD:4)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	det(1:class:NN:10, 1:the:DT:9)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	det(1:member:NN:3, 1:the:DT:1)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	det(1:variable:NN:15, 1:the:DT:13)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	nn(1:member:NN:3, 1:datum:NN:2)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	auxpass(2:access:VBN:6, 2:be:VB:5)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	det(1:defintion:NN:13, 1:the:DT:11)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	det(1:defintion:NN:13, 1:the:DT:11)	aux(1:access:VBN:6, 1:can:MD:4)
+0	det(1:defintion:NN:13, 1:the:DT:11)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	det(1:defintion:NN:13, 1:the:DT:11)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	det(1:defintion:NN:13, 1:the:DT:11)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	det(1:defintion:NN:13, 1:the:DT:11)	det(1:class:NN:10, 1:the:DT:9)
+0	det(1:defintion:NN:13, 1:the:DT:11)	det(1:member:NN:3, 1:the:DT:1)
+0	det(1:defintion:NN:13, 1:the:DT:11)	det(1:variable:NN:15, 1:the:DT:13)
+0	det(1:defintion:NN:13, 1:the:DT:11)	nn(1:member:NN:3, 1:datum:NN:2)
+0	det(1:defintion:NN:13, 1:the:DT:11)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	det(1:defintion:NN:13, 1:the:DT:11)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	det(1:defintion:NN:13, 1:the:DT:11)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	det(1:defintion:NN:13, 1:the:DT:11)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	det(1:function:NNS:9, 1:any:DT:7)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	det(1:function:NNS:9, 1:any:DT:7)	aux(1:access:VBN:6, 1:can:MD:4)
+0	det(1:function:NNS:9, 1:any:DT:7)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	det(1:function:NNS:9, 1:any:DT:7)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	det(1:function:NNS:9, 1:any:DT:7)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	det(1:function:NNS:9, 1:any:DT:7)	det(1:class:NN:10, 1:the:DT:9)
+0	det(1:function:NNS:9, 1:any:DT:7)	det(1:member:NN:3, 1:the:DT:1)
+0	det(1:function:NNS:9, 1:any:DT:7)	det(1:variable:NN:15, 1:the:DT:13)
+0	det(1:function:NNS:9, 1:any:DT:7)	nn(1:member:NN:3, 1:datum:NN:2)
+0	det(1:function:NNS:9, 1:any:DT:7)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	det(1:function:NNS:9, 1:any:DT:7)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	det(1:function:NNS:9, 1:any:DT:7)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	det(1:function:NNS:9, 1:any:DT:7)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	det(2:function:NN:10, 2:the:DT:8)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	det(2:function:NN:10, 2:the:DT:8)	aux(1:access:VBN:6, 1:can:MD:4)
+0	det(2:function:NN:10, 2:the:DT:8)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	det(2:function:NN:10, 2:the:DT:8)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	det(2:function:NN:10, 2:the:DT:8)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	det(2:function:NN:10, 2:the:DT:8)	det(1:class:NN:10, 1:the:DT:9)
+0	det(2:function:NN:10, 2:the:DT:8)	det(1:member:NN:3, 1:the:DT:1)
+0	det(2:function:NN:10, 2:the:DT:8)	det(1:variable:NN:15, 1:the:DT:13)
+0	det(2:function:NN:10, 2:the:DT:8)	nn(1:member:NN:3, 1:datum:NN:2)
+0	det(2:function:NN:10, 2:the:DT:8)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	det(2:function:NN:10, 2:the:DT:8)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	det(2:function:NN:10, 2:the:DT:8)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	det(2:function:NN:10, 2:the:DT:8)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	aux(1:access:VBN:6, 1:can:MD:4)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	det(1:class:NN:10, 1:the:DT:9)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	det(1:member:NN:3, 1:the:DT:1)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	det(1:variable:NN:15, 1:the:DT:13)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	nn(1:member:NN:3, 1:datum:NN:2)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	dobj(2:define:VBZ:12, 2:they:PRP:13)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	aux(1:access:VBN:6, 1:can:MD:4)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	det(1:class:NN:10, 1:the:DT:9)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	det(1:member:NN:3, 1:the:DT:1)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	det(1:variable:NN:15, 1:the:DT:13)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	nn(1:member:NN:3, 1:datum:NN:2)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	nn(1:defintion:NN:13, 1:class:NN:12)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	nn(1:function:NNS:9, 1:member:NN:8)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	nn(1:function:NNS:9, 1:member:NN:8)	aux(1:access:VBN:6, 1:can:MD:4)
+0	nn(1:function:NNS:9, 1:member:NN:8)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	nn(1:function:NNS:9, 1:member:NN:8)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	nn(1:function:NNS:9, 1:member:NN:8)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	nn(1:function:NNS:9, 1:member:NN:8)	det(1:class:NN:10, 1:the:DT:9)
+0	nn(1:function:NNS:9, 1:member:NN:8)	det(1:member:NN:3, 1:the:DT:1)
+0	nn(1:function:NNS:9, 1:member:NN:8)	det(1:variable:NN:15, 1:the:DT:13)
+0	nn(1:function:NNS:9, 1:member:NN:8)	nn(1:member:NN:3, 1:datum:NN:2)
+0	nn(1:function:NNS:9, 1:member:NN:8)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	nn(1:function:NNS:9, 1:member:NN:8)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	nn(1:function:NNS:9, 1:member:NN:8)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	nn(1:function:NNS:9, 1:member:NN:8)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	aux(1:access:VBN:6, 1:can:MD:4)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	det(1:class:NN:10, 1:the:DT:9)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	det(1:member:NN:3, 1:the:DT:1)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	det(1:variable:NN:15, 1:the:DT:13)
+1	nn(1:member:NNS:2, 1:Data:NNP:1)	nn(1:member:NN:3, 1:datum:NN:2)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	nn(1:member:NNS:2, 1:Data:NNP:1)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	nn(2:function:NN:10, 2:member:NN:9)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	nn(2:function:NN:10, 2:member:NN:9)	aux(1:access:VBN:6, 1:can:MD:4)
+0	nn(2:function:NN:10, 2:member:NN:9)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	nn(2:function:NN:10, 2:member:NN:9)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	nn(2:function:NN:10, 2:member:NN:9)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	nn(2:function:NN:10, 2:member:NN:9)	det(1:class:NN:10, 1:the:DT:9)
+0	nn(2:function:NN:10, 2:member:NN:9)	det(1:member:NN:3, 1:the:DT:1)
+0	nn(2:function:NN:10, 2:member:NN:9)	det(1:variable:NN:15, 1:the:DT:13)
+0	nn(2:function:NN:10, 2:member:NN:9)	nn(1:member:NN:3, 1:datum:NN:2)
+0	nn(2:function:NN:10, 2:member:NN:9)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	nn(2:function:NN:10, 2:member:NN:9)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	nn(2:function:NN:10, 2:member:NN:9)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	nn(2:function:NN:10, 2:member:NN:9)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	aux(1:access:VBN:6, 1:can:MD:4)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	det(1:class:NN:10, 1:the:DT:9)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	det(1:member:NN:3, 1:the:DT:1)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	det(1:variable:NN:15, 1:the:DT:13)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	nn(1:member:NN:3, 1:datum:NN:2)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	nsubj(2:define:VBZ:12, 2:function:NN:10)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	aux(1:access:VBN:6, 1:can:MD:4)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	det(1:class:NN:10, 1:the:DT:9)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	det(1:member:NN:3, 1:the:DT:1)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	det(1:variable:NN:15, 1:the:DT:13)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	nn(1:member:NN:3, 1:datum:NN:2)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+1	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	nsubjpass(1:access:VBN:5, 1:member:NNS:2)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	aux(1:access:VBN:6, 1:can:MD:4)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	det(1:class:NN:10, 1:the:DT:9)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	det(1:member:NN:3, 1:the:DT:1)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	det(1:variable:NN:15, 1:the:DT:13)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	nn(1:member:NN:3, 1:datum:NN:2)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	nsubjpass(2:access:VBN:6, 2:variable:NNS:2)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	aux(1:access:VBN:6, 1:can:MD:4)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	det(1:class:NN:10, 1:the:DT:9)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	det(1:member:NN:3, 1:the:DT:1)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	det(1:variable:NN:15, 1:the:DT:13)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	nn(1:member:NN:3, 1:datum:NN:2)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+1	prep_from(1:access:VBN:5, 1:function:NNS:9)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	prep_from(1:access:VBN:5, 1:function:NNS:9)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	aux(1:access:VBN:6, 1:can:MD:4)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	det(1:class:NN:10, 1:the:DT:9)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	det(1:member:NN:3, 1:the:DT:1)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	det(1:variable:NN:15, 1:the:DT:13)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	nn(1:member:NN:3, 1:datum:NN:2)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	prep_inside(1:function:NNS:9, 1:defintion:NN:13)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	aux(1:access:VBN:6, 1:can:MD:4)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	det(1:class:NN:10, 1:the:DT:9)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	det(1:member:NN:3, 1:the:DT:1)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	det(1:variable:NN:15, 1:the:DT:13)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	nn(1:member:NN:3, 1:datum:NN:2)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	prep_inside(2:access:VBN:6, 2:function:NN:10)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	aux(1:access:VBN:6, 1:can:MD:4)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	det(1:class:NN:10, 1:the:DT:9)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	det(1:member:NN:3, 1:the:DT:1)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	det(1:variable:NN:15, 1:the:DT:13)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	nn(1:member:NN:3, 1:datum:NN:2)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	rcmod(2:function:NN:10, 2:define:VBZ:12)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	aux(1:access:VBN:6, 1:can:MD:4)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	det(1:class:NN:10, 1:the:DT:9)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	det(1:member:NN:3, 1:the:DT:1)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	det(1:variable:NN:15, 1:the:DT:13)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	nn(1:member:NN:3, 1:datum:NN:2)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+0	rel(2:define:VBZ:12, 2:that:WDT:11)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	aux(1:access:VBN:6, 1:can:MD:4)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	det(1:class:NN:10, 1:the:DT:9)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	det(1:member:NN:3, 1:the:DT:1)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	det(1:variable:NN:15, 1:the:DT:13)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	nn(1:member:NN:3, 1:datum:NN:2)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	root(0:ROOT:ROOT:0, 1:access:VBN:5)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+1	root(0:ROOT:ROOT:0, 1:access:VBN:5)	root(0:ROOT:ROOT:0, 1:access:VBN:6)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	amod(1:variable:NN:15, 1:local:JJ:14)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	aux(1:access:VBN:6, 1:can:MD:4)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	auxpass(1:access:VBN:6, 1:be:VB:5)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	ccomp(1:access:VBN:6, 1:!can:MD:16)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	dep(1:access:VBN:6, 1:whereas:IN:12)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	det(1:class:NN:10, 1:the:DT:9)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	det(1:member:NN:3, 1:the:DT:1)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	det(1:variable:NN:15, 1:the:DT:13)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	nn(1:member:NN:3, 1:datum:NN:2)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	nsubj(1:!can:MD:16, 1:variable:NN:15)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	nsubjpass(1:access:VBN:6, 1:member:NN:3)
+0	root(0:ROOT:ROOT:0, 2:access:VBN:6)	prep_outside_of(1:access:VBN:6, 1:class:NN:10)
+1	root(0:ROOT:ROOT:0, 2:access:VBN:6)	root(0:ROOT:ROOT:0, 1:access:VBN:6)

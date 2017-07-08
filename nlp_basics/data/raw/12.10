@@ -1,0 +1,28 @@
+12.10 Log(n) where n is the number of nodes.
+12.10 log(n) steps
+12.10 The number of levels and the height of the tree
+12.10 It is the same as the height of the tree.
+12.10 Given n elements, it would take n/2 steps to find the search criteria.
+12.10 log n
+12.10 Depends on the location of the node you are looking for. If it is the root it is one step. <br>else<br>If it is smaller than the current you are on node you go to the left.  If it is larger than the current node you are on go to the right.
+12.10 2^n where n is the # of levels the binary tree has
+12.10 The number of steps to search a node is the function n-1.
+12.10 It would take n/2 elements, given n.
+12.10 log(n)
+12.10 O(log n)
+12.10 O( Log (n) )
+12.10 If the binary search tree is constructed efficiently, best case scenario is O(log n) time.  Where n is the number of items in the tree.<br><br>If the binary search tree is constructed poorly, with for instance the root of the tree being 1, and progressing downwards and to the right its children are each more than the last: you have a one-way linear linked list.  That worse case scenario would be a full traversal at O(n) time. Where n is the number of items in the tree.
+12.10 N, n being the number of nodes.
+12.10 depending on the way that the tree is ordered, it could be anywhere between log(n) and N steps.
+12.10 log(n)
+12.10 worst case scenario = the number of levels of the tree, ie: the node at the farthest position from the root node.  best case = 1 step if its the root node.
+12.10 3 steps at most.  There are 3 cases.
+12.10 log(n)    where n equals the total number of nodes in the tree.
+12.10 the same number of steps as the number of levels or generations in the tree
+12.10 to find a node in a binary search tree takes at most the same number of steps as there are levels of the tree.
+12.10 three steps<br>visit the root node, then go to right subtree, after visiting right subtree visit left subtree
+12.10 log n
+12.10 ( n(n-1) ) / 2<br><br>
+12.10 2n-1
+12.10 it takes at most h steps, where h is the height of the tree.
+12.10 it depends on the install search tree then from there for whatever the case is the it repeats it back along the case of the primary node

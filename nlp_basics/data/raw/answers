@@ -1,0 +1,87 @@
+1.1   To simulate the behaviour of portions of the desired software product. 
+1.2   The testing stage can influence both the coding stage (phase 5) and the solution refinement stage (phase 7) 
+1.3   Abstraction and reusability.
+1.4   At the main function.
+1.5   A location in memory that can store a value.
+1.6   Variables can be declared anywhere in a program. They can be declared inside a function (local variables) or outside the functions (global variables)
+1.7   The block inside a do...while statement will execute at least once.
+2.1   Data members (attributes) and member functions.
+2.2   Data members can be accessed from any member functions inside the class defintion. Local variables can only be accessed inside the member function that defines them.
+2.3   A constructor is called whenever an object is created, whereas a function needs to be called explicitely. Constructors do not have return type, but functions have to indicate a return type.
+2.4   If no constructor is provided, the compiler provides one by default. If a constructor is defined for a class, the compiler does not create a default constructor.
+2.5   Unlimited number.
+2.6   A function prototype includes the function signature, i.e., the name of the function, the return type, and the parameters' type. The function definition includes the actual body of the function. 
+2.7   To store a class interface, including data members and member function prototypes.
+3.1   The name of the function and the types of the parameters.
+3.2   File scope.
+3.3   It makes a copy of the function code in every place where a function call is made.
+3.4   It avoids making copies of large data structures when calling functions.
+3.5   Based on the function signature. When an overloaded function is called, the compiler will find the function whose signature is closest to the given function call.
+3.6   If the recursion step is defined incorrectly, or if the base case is not included.
+3.7   They both involve repetition; they both have termination tests; they can both occur infinitely.
+4.1   In the array declaration, or by using an initializer list.
+4.2   The strings declared using an array of characters have a null element added at the end of the array.
+4.3   by reference.
+4.4   The arrays declared as static live throughout the life of the program; that is, they are initialized only once, when the function that declares the array it is first called. 
+4.5   All the dimensions, except the first one. 
+4.6   Run-time error.
+4.7   By rows.
+5.1   Taking one array element at a time, from left to right, it inserts it in the right position among the already sorted elements on its left. 
+5.2   Taking one array element at a time, from left to right, it identifies the minimum from the remaining elements and swaps it with the current element.
+5.3   N (the length of the array) operations achieved for a sorted array.
+5.4   When the size of the array to be sorted is 1 (or 2)
+6.1   A variable that contains the address in memory of another variable.
+6.2   The memory address of its operand.
+6.3   An alias (synonym) for the name of the object that its operand points to in memory. It is the dereferencing operator.
+6.4   By initializing a pointer to point to the first element of the array, and then incrementing this pointer with the index of the array element.
+6.5   The size in bytes of its operand.
+6.6   There are four ways: nonconstant pointer to constant data, nonconstant pointer to nonconstant data, constant pointer to constant data, constant pointer to nonconstant data.
+6.7   The address of the location in memory where the function code resides.
+7.1   A collection of elements that can be allocated dynamically.
+7.2   The linked lists can be of variable length.
+7.3   The elements in an array can be accessed directly (as opposed to linked lists, which require iterative traversal).
+7.4   By reference.
+7.5   The last element in a circular linked list points to the head of the list.
+7.6   All the deletion and insertion operations can be performed in constant time, including those operations performed before a given location in the list or at the end of the list.
+7.7   Extra space required to store the back pointers.
+8.1   A data structure that can store elements, which has the property that the last item added will be the first to be removed (or last-in-first-out)
+8.2   push and pop
+8.3   Keep the top of the stack toward the end of the array, so the push and pop operations will add or remove elements from the right side of the array.
+8.4   Keep the top of the stack pointing to the head of the linked list, so the push and pop operations will add or remove elements at the beginning of the list.
+8.5   Link-based, because they are dynamic (no size constraints)
+8.6   First, they are converted into postfix form, followed by an evaluation of the postfix expression.
+8.7   Pop all the elements and store them on another stack until the element is found, then push back all the elements on the original stack.
+9.1   A data structure that can store elements, which has the property that the last item added will be the last to be removed (or first-in-first-out).
+9.2   enqueue and dequeue
+9.3   Use a circular array. Keep the rear of the queue toward the end of the array, and the front toward the beginning, and allow the rear pointer to wrap around.
+9.4   Keep the rear of the queue pointing to the tail of the linked list, so the enqueue operation is done at the end of the list, and keep the front of the queue pointing to the head of the linked list, so the dequeue operation is done at the beginning of the list.
+9.5   Link-based, because they are dynamic (no size constraints)
+9.6   push
+9.7   queue
+10.1  A collection of nodes, which has a special node called root, and the rest of the nodes are partitioned into one or more disjoint sets, each set being a tree.
+10.2  The length of the longest path from the root to any of its leaves.
+10.3  A node that has no children.
+10.4  A tree for which the maximum number of children per node is two.
+10.5  A binary tree that has the property that for any node the left child is smaller than the parent which in turn is smaller than the right child.
+10.6  Traverse the left subtree, then the root, then the right subtree.
+10.7  The height of the tree (or log of the number of elements in the tree).
+11.1  Function members and data members.
+11.2  Private and public.
+11.3  By using constructors.
+11.4  The name of the function and the list of parameters, including their types.
+11.5  A function that calls itself.
+11.6  Through iteration.
+11.7  The static arrays are intialized only once when the function is called.
+11.8  The char[] will automatically add a null \0 character at the end of the string.
+11.9  Divide a problem into smaller subproblems, solve them recursively, and then combine the solutions into a solution for the original problem.
+11.10 It splits the original array into two, sorts each of the two halves, and then merges the sorted arrays.
+12.1  The address of a location in memory.
+12.2  Implement the algorithm and measure the physical running time.
+12.3  log(log n);  2^(log n) ; n^2 ; n^3; n!
+12.4  It selects the minimum from an array and places it on the first position, then it selects the minimum from the rest of the array and places it on the second position, and so forth.
+12.5  Linked lists are dynamic structures, which allow for a variable number of elements to be stored.
+12.6  A data structure that stores elements following the first in first out principle. The main operations in a queue are enqueue and dequeue.
+12.7  push and pop
+12.8  A walk around the tree, starting with the root, where each node is seen three times: from the left, from below, from the right.
+12.9  Find the node, then replace it with the leftmost node from its right subtree (or the rightmost node from its left subtree).
+12.10 The height of the tree.

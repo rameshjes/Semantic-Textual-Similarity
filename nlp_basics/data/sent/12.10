@@ -1,0 +1,28 @@
+12.10 Log -LRB- n -RRB- where n is the number of nodes. <STOP>
+12.10 log -LRB- n -RRB- steps <STOP>
+12.10 The number of levels and the height of the tree <STOP>
+12.10 It is the same as the height of the tree. <STOP>
+12.10 Given n elements, it would take n divided by 2 steps to find the search criteria. <STOP>
+12.10 log n <STOP>
+12.10 Depends on the location of the node you are looking for. <STOP> If it is the root it is one step. else <STOP> If it is smaller than the current you are on node you go to the left. <STOP> If it is larger than the current node you are on go to the right. <STOP>
+12.10 2 to the power of n where n is the of levels the binary tree has <STOP>
+12.10 The number of steps to search a node is the function n minus 1. <STOP>
+12.10 It would take n divided by 2 elements, given n. <STOP>
+12.10 log -LRB- n -RRB- <STOP>
+12.10 O -LRB- log n -RRB- <STOP>
+12.10 O -LRB- Log -LRB- n -RRB- -RRB- <STOP>
+12.10 If the binary search tree is constructed efficiently, best case scenario is O -LRB- log n -RRB- time. <STOP> Where n is the number of items in the tree. <STOP> If the binary search tree is constructed poorly, with for instance the root of the tree being 1, and progressing downwards and to the right its children are each more than the last: you have a one-way linear linked list. <STOP> That worse case scenario would be a full traversal at O -LRB- n -RRB- time. <STOP> Where n is the number of items in the tree. <STOP>
+12.10 N, n being the number of nodes. <STOP>
+12.10 depending on the way that the tree is ordered, it could be anywhere between log -LRB- n -RRB- and N steps. <STOP>
+12.10 log -LRB- n -RRB- <STOP>
+12.10 worst case scenario equals the number of levels of the tree, ie: the node at the farthest position from the root node. best case equals 1 step if its the root node. <STOP>
+12.10 3 steps at most. <STOP> There are 3 cases. <STOP>
+12.10 log -LRB- n -RRB- where n equals the total number of nodes in the tree. <STOP>
+12.10 the same number of steps as the number of levels or generations in the tree <STOP>
+12.10 to find a node in a binary search tree takes at most the same number of steps as there are levels of the tree. <STOP>
+12.10 three steps visit the root node, then go to right subtree, after visiting right subtree visit left subtree <STOP>
+12.10 log n <STOP>
+12.10 -LRB- n -LRB- n minus 1 -RRB- -RRB- divided by 2 <STOP>
+12.10 2n-1 <STOP>
+12.10 it takes at most h steps, where h is the height of the tree. <STOP>
+12.10 it depends on the install search tree then from there for whatever the case is the it repeats it back along the case of the primary node <STOP>

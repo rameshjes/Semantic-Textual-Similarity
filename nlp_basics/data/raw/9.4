@@ -1,0 +1,27 @@
+9.4 A list can have unlimited elements in it.  You can push a node onto the end of the list and pop the one in the front.
+9.4 theoretically you could do it two ways one of which uses more processing power and memory no larger than the queue is ever at when full and the other which uses almost infinite memory. The more practical method would be two place the items in an array and remove the item in position one of the array after which you can shift the array and add another element if required. The other option which can use infinite memory when used for long term queues such as job scheduling that goes nonstop for extended periods. that is to implement an array and add the items read item one raise your counter value to two ecetera and continue adding more elements to the array. the downside to this method is after you use element one it is still in memory. or im crazy who knows
+9.4 By implementing a list in which a tail pointer points to the item most recently inserted onto the back of the list and a head pointer which points to the item least recently inserted onto the list. Also, items can only be removed from the front of the list and can only be added to the back of the list.
+9.4 You can use list to represent the items in a queue.
+9.4 Have a pointer to the last element in the list and then use enqueue to insert items there. Link the first and last elements together to dequeue the list.
+9.4 Enqueue to the end of the linked list... dequeue items from the beginning (head) of the list.
+9.4 you use the first element in the list as the remove point for the queue and insert items at the end of the list.
+9.4 Utilizing a front pointer and a back pointer.  The front poiner and back pointer points to the first item into the queue.  As you add items, the front remains the same but the back poiner 'next' points to the new item and the new item is assigned to become the 'new' back pointer.
+9.4 Implement a linked list that only allows nodes to be added to the tail and can only be retrieved from the head.
+9.4 Check if list is empty and add elements to the list.
+9.4 make a linked list and add on to the front and delete from the back, keep track of both to do so.
+9.4 by making the head of the list the beginning of the queue and the last listed item the insertion point of the queue
+9.4 throw in data at the head and take it out at the tail
+9.4 You create a list of nodes that had a head and a top pointer, and the functions are basically the same substituting pop and push with enqueue and dequeue
+9.4 fairly easy... singly linked list with a pointer to the head and tail of hte list.<br><br>deque first item in que, create temp pointer to next element, delete head, and then make head the temporary pointer.<br><br>enque new item, use pointer to end of list, add a new item to the next item of the tail, and make the tail the next item of the current tail.
+9.4 Use a linked list with 2 pointers, one to the front and one to the back. As long as back != front, the queue is not empty.
+9.4 create a node with the input data, continue to add to the list.  when dequeueing - get the first elements data and set the next element in the list as the new first element
+9.4 A linked list with Stack principles. The Queue's top element is the element that is always being removed first. Must use nodes to contain each element, with a pointer to the top element, which also could  be called the head pointer.
+9.4 linked list checking for front and rear.  Keep enqueueing elements until front equal to rear -1.
+9.4 a queue can be implemented in a list by keeping track of two pointers, a head and a tail
+9.4 each element of a queue can be allocated in the nodes of an linked list. New elements should be added to the head of the list, with each dequeued element coming off the tail.
+9.4 Implement the operation dequeue() as the list operation remove(1) and the operation getFront(queueFront) as the list operation retrieve(1, queueFront)
+9.4 remove the first element and reference the second element as the new head of the list. 
+9.4 By creating and adding nodes at the end of the list and removing the nodes from the beginning of the list.
+9.4 you would have your list and add a back pointer so that your program knows where the end is
+9.4 your queue storage class has a list, and for enqueue, you add the item to the end of the list, and for dequeue you return the first item in the list
+9.4       temp-&gt;next= NULL;<br>      if (front)  { (rear) -&gt; next= temp;}<br>      else front = temp;<br>      rear = temp;   }<br>

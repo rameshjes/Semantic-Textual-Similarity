@@ -1,0 +1,27 @@
+9.3 Make use of a front pointer and a tail pointer.  When the tail pointer reaches the end of an array it gets reset to the front of the array.  If the two pointers are equal then the queue is either full or just has one element.
+9.3 you create an array with the max size of your queue and adjust the items to make them follow FIFO procedure.
+9.3 By implementing an array and only adding items to the end of the array and only removing items from the beginning of the array.
+9.3 For applications in which a fixed-sized queue does not present a problem, you can use an array to represent a queue. 
+9.3 Keep track of the front and the back of the array as you increase and decrease the elements inside the array.
+9.3 Declare the size of an array, and have special conditional statements (pointers) to make sure you re-use ALL of the array. Say, you have an array of 20 elements, you load up 18, then dequeue 3, when you enqueue 4 more elements, you want to loop back to index 0 and continue from there... this process saves resources.
+9.3 you could use the first element of the list as the remove point and insert at the end f you do this you would have to shift the elements down each time you remove an item unless you make the array circular.
+9.3 Utilizing indexes for the front and the back.  Front is 0 and as you add items the back index is incremented.
+9.3 Declare two variables, â€œfrontâ€ and â€œrearâ€, to be used to denote which elements in the array can be accessed. Increment â€œrearâ€ whenever data is enqueued to the end and increment â€œfrontâ€ whenever data is dequeued.
+9.3 It is an array of fixed size. A queue of maximum N elements.
+9.3 make an array of a size, and add on to the front and delete from the back, keep track of the two so that you know when it is full and where to add or subtract from
+9.3 By using the beginning of the array as the removal point of the queue (or beginning of the queue) and the ith element as the end of the queue.
+9.3 add in data from the first element to the last, take out data from the first element to the last.
+9.3 you can take the array and put it in a queue stack or you can just traverse the list and keep track of top and bottom
+9.3 create a fixed array size, with with 2 integers to point to the beginning and the end of the que, and special cases to know when the que is empty or full.
+9.3 Keep track of the front and rear indexes. Either:<br>1)Dequeue items by shifting the array left<br>2)Use wrapped configuration
+9.3 add items into a fixed size array, pull the items out by calling on them with the starting index, increase starting index so when it calls again its now the next index element in the array.
+9.3 To use and array to implement a Queue, element or item 0, should be the top element in the array. Every time an element is inserted, all the items in the array are pushed back one space. The top element is always removed first.
+9.3 fixed size array with max N elements.  Need to keep track of front and rear of array.
+9.3 by keeping track of a front item and a rear item, or with a circular array that uses the modulo function
+9.3 Using an array for a queue, the size of the array allocated limits the size of the queue. An array based queue class must keep track of both the front and back of the queue, which may need to wrap around the array.
+9.3 A pointer based implementation of a queue could use a linear linked list with two external pointers, one to the front and one to the back
+9.3 remove the element then shift the elements one space back
+9.3 By having the head pointer point to the first or least current data entered and having the tail point to the most current data entered. A method must be created so that the tail pointer doesn't leave the array.
+9.3 an array is a type of queue with a fixed length
+9.3 your storage class has an array, and you keep track of the index of the first and last item in the array, and wrap around when end of the array is full
+9.3 Boolean isFullQ(queue) ::= rear == MAX_QUEUE_SIZE-1

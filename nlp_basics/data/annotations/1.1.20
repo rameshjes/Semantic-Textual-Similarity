@@ -1,0 +1,210 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:behavior:NN:4
+0	0:ROOT:ROOT:0	1:desire:VBN:9
+0	0:ROOT:ROOT:0	1:it:PRP:1
+0	0:ROOT:ROOT:0	1:portion:NNS:6
+0	0:ROOT:ROOT:0	1:product:NN:11
+0	0:ROOT:ROOT:0	1:simulate:VBZ:2
+0	0:ROOT:ROOT:0	1:software:NN:10
+0	0:ROOT:ROOT:0	1:the:DT:3
+0	0:ROOT:ROOT:0	1:the:DT:8
+
+0	1:behavior:NN:4	0:ROOT:ROOT:0
+2	1:behavior:NN:4	1:behavior:NN:4
+0	1:behavior:NN:4	1:desire:VBN:9
+1	1:behavior:NN:4	1:it:PRP:1
+1	1:behavior:NN:4	1:portion:NNS:6
+1	1:behavior:NN:4	1:product:NN:11
+0	1:behavior:NN:4	1:simulate:VBZ:2
+1	1:behavior:NN:4	1:software:NN:10
+0	1:behavior:NN:4	1:the:DT:3
+0	1:behavior:NN:4	1:the:DT:8
+
+0	1:desire:VBN:9	0:ROOT:ROOT:0
+0	1:desire:VBN:9	1:behavior:NN:4
+2	1:desire:VBN:9	1:desire:VBN:9
+0	1:desire:VBN:9	1:it:PRP:1
+0	1:desire:VBN:9	1:portion:NNS:6
+0	1:desire:VBN:9	1:product:NN:11
+0	1:desire:VBN:9	1:simulate:VBZ:2
+0	1:desire:VBN:9	1:software:NN:10
+0	1:desire:VBN:9	1:the:DT:3
+0	1:desire:VBN:9	1:the:DT:8
+
+0	1:portion:NNS:6	0:ROOT:ROOT:0
+1	1:portion:NNS:6	1:behavior:NN:4
+0	1:portion:NNS:6	1:desire:VBN:9
+1	1:portion:NNS:6	1:it:PRP:1
+2	1:portion:NNS:6	1:portion:NNS:6
+1	1:portion:NNS:6	1:product:NN:11
+0	1:portion:NNS:6	1:simulate:VBZ:2
+1	1:portion:NNS:6	1:software:NN:10
+0	1:portion:NNS:6	1:the:DT:3
+0	1:portion:NNS:6	1:the:DT:8
+
+0	1:product:NN:11	0:ROOT:ROOT:0
+1	1:product:NN:11	1:behavior:NN:4
+0	1:product:NN:11	1:desire:VBN:9
+1	1:product:NN:11	1:it:PRP:1
+1	1:product:NN:11	1:portion:NNS:6
+2	1:product:NN:11	1:product:NN:11
+0	1:product:NN:11	1:simulate:VBZ:2
+1	1:product:NN:11	1:software:NN:10
+0	1:product:NN:11	1:the:DT:3
+0	1:product:NN:11	1:the:DT:8
+
+0	1:simulate:VBP:2	0:ROOT:ROOT:0
+0	1:simulate:VBP:2	1:behavior:NN:4
+0	1:simulate:VBP:2	1:desire:VBN:9
+0	1:simulate:VBP:2	1:it:PRP:1
+0	1:simulate:VBP:2	1:portion:NNS:6
+0	1:simulate:VBP:2	1:product:NN:11
+2	1:simulate:VBP:2	1:simulate:VBZ:2
+0	1:simulate:VBP:2	1:software:NN:10
+0	1:simulate:VBP:2	1:the:DT:3
+0	1:simulate:VBP:2	1:the:DT:8
+
+0	1:software:NN:10	0:ROOT:ROOT:0
+1	1:software:NN:10	1:behavior:NN:4
+0	1:software:NN:10	1:desire:VBN:9
+1	1:software:NN:10	1:it:PRP:1
+1	1:software:NN:10	1:portion:NNS:6
+1	1:software:NN:10	1:product:NN:11
+0	1:software:NN:10	1:simulate:VBZ:2
+2	1:software:NN:10	1:software:NN:10
+0	1:software:NN:10	1:the:DT:3
+0	1:software:NN:10	1:the:DT:8
+
+0	1:the:DT:3	0:ROOT:ROOT:0
+0	1:the:DT:3	1:behavior:NN:4
+0	1:the:DT:3	1:desire:VBN:9
+0	1:the:DT:3	1:it:PRP:1
+0	1:the:DT:3	1:portion:NNS:6
+0	1:the:DT:3	1:product:NN:11
+0	1:the:DT:3	1:simulate:VBZ:2
+0	1:the:DT:3	1:software:NN:10
+2	1:the:DT:3	1:the:DT:3
+1	1:the:DT:3	1:the:DT:8
+
+0	1:the:DT:8	0:ROOT:ROOT:0
+0	1:the:DT:8	1:behavior:NN:4
+0	1:the:DT:8	1:desire:VBN:9
+0	1:the:DT:8	1:it:PRP:1
+0	1:the:DT:8	1:portion:NNS:6
+0	1:the:DT:8	1:product:NN:11
+0	1:the:DT:8	1:simulate:VBZ:2
+0	1:the:DT:8	1:software:NN:10
+1	1:the:DT:8	1:the:DT:3
+2	1:the:DT:8	1:the:DT:8
+
+0	1:to:TO:1	0:ROOT:ROOT:0
+0	1:to:TO:1	1:behavior:NN:4
+0	1:to:TO:1	1:desire:VBN:9
+0	1:to:TO:1	1:it:PRP:1
+0	1:to:TO:1	1:portion:NNS:6
+0	1:to:TO:1	1:product:NN:11
+0	1:to:TO:1	1:simulate:VBZ:2
+0	1:to:TO:1	1:software:NN:10
+0	1:to:TO:1	1:the:DT:3
+0	1:to:TO:1	1:the:DT:8
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge 
+
+1	amod(1:product:NN:11, 1:desire:VBN:9)	amod(1:product:NN:11, 1:desire:VBN:9)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	det(1:behavior:NN:4, 1:the:DT:3)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	det(1:product:NN:11, 1:the:DT:8)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	dobj(1:simulate:VBZ:2, 1:behavior:NN:4)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	nn(1:product:NN:11, 1:software:NN:10)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	nsubj(1:simulate:VBZ:2, 1:it:PRP:1)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	prep_of(1:behavior:NN:4, 1:portion:NNS:6)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	prep_of(1:portion:NNS:6, 1:product:NN:11)
+0	amod(1:product:NN:11, 1:desire:VBN:9)	root(0:ROOT:ROOT:0, 1:simulate:VBZ:2)
+0	det(1:behavior:NN:4, 1:the:DT:3)	amod(1:product:NN:11, 1:desire:VBN:9)
+1	det(1:behavior:NN:4, 1:the:DT:3)	det(1:behavior:NN:4, 1:the:DT:3)
+0	det(1:behavior:NN:4, 1:the:DT:3)	det(1:product:NN:11, 1:the:DT:8)
+0	det(1:behavior:NN:4, 1:the:DT:3)	dobj(1:simulate:VBZ:2, 1:behavior:NN:4)
+0	det(1:behavior:NN:4, 1:the:DT:3)	nn(1:product:NN:11, 1:software:NN:10)
+0	det(1:behavior:NN:4, 1:the:DT:3)	nsubj(1:simulate:VBZ:2, 1:it:PRP:1)
+0	det(1:behavior:NN:4, 1:the:DT:3)	prep_of(1:behavior:NN:4, 1:portion:NNS:6)
+0	det(1:behavior:NN:4, 1:the:DT:3)	prep_of(1:portion:NNS:6, 1:product:NN:11)
+0	det(1:behavior:NN:4, 1:the:DT:3)	root(0:ROOT:ROOT:0, 1:simulate:VBZ:2)
+0	det(1:product:NN:11, 1:the:DT:8)	amod(1:product:NN:11, 1:desire:VBN:9)
+0	det(1:product:NN:11, 1:the:DT:8)	det(1:behavior:NN:4, 1:the:DT:3)
+1	det(1:product:NN:11, 1:the:DT:8)	det(1:product:NN:11, 1:the:DT:8)
+0	det(1:product:NN:11, 1:the:DT:8)	dobj(1:simulate:VBZ:2, 1:behavior:NN:4)
+0	det(1:product:NN:11, 1:the:DT:8)	nn(1:product:NN:11, 1:software:NN:10)
+0	det(1:product:NN:11, 1:the:DT:8)	nsubj(1:simulate:VBZ:2, 1:it:PRP:1)
+0	det(1:product:NN:11, 1:the:DT:8)	prep_of(1:behavior:NN:4, 1:portion:NNS:6)
+0	det(1:product:NN:11, 1:the:DT:8)	prep_of(1:portion:NNS:6, 1:product:NN:11)
+0	det(1:product:NN:11, 1:the:DT:8)	root(0:ROOT:ROOT:0, 1:simulate:VBZ:2)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	amod(1:product:NN:11, 1:desire:VBN:9)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	det(1:behavior:NN:4, 1:the:DT:3)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	det(1:product:NN:11, 1:the:DT:8)
+1	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	dobj(1:simulate:VBZ:2, 1:behavior:NN:4)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	nn(1:product:NN:11, 1:software:NN:10)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	nsubj(1:simulate:VBZ:2, 1:it:PRP:1)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	prep_of(1:behavior:NN:4, 1:portion:NNS:6)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	prep_of(1:portion:NNS:6, 1:product:NN:11)
+0	dobj(1:simulate:VBP:2, 1:behavior:NN:4)	root(0:ROOT:ROOT:0, 1:simulate:VBZ:2)
+0	nn(1:product:NN:11, 1:software:NN:10)	amod(1:product:NN:11, 1:desire:VBN:9)
+0	nn(1:product:NN:11, 1:software:NN:10)	det(1:behavior:NN:4, 1:the:DT:3)
+0	nn(1:product:NN:11, 1:software:NN:10)	det(1:product:NN:11, 1:the:DT:8)
+0	nn(1:product:NN:11, 1:software:NN:10)	dobj(1:simulate:VBZ:2, 1:behavior:NN:4)
+1	nn(1:product:NN:11, 1:software:NN:10)	nn(1:product:NN:11, 1:software:NN:10)
+0	nn(1:product:NN:11, 1:software:NN:10)	nsubj(1:simulate:VBZ:2, 1:it:PRP:1)
+0	nn(1:product:NN:11, 1:software:NN:10)	prep_of(1:behavior:NN:4, 1:portion:NNS:6)
+0	nn(1:product:NN:11, 1:software:NN:10)	prep_of(1:portion:NNS:6, 1:product:NN:11)
+0	nn(1:product:NN:11, 1:software:NN:10)	root(0:ROOT:ROOT:0, 1:simulate:VBZ:2)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	amod(1:product:NN:11, 1:desire:VBN:9)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	det(1:behavior:NN:4, 1:the:DT:3)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	det(1:product:NN:11, 1:the:DT:8)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	dobj(1:simulate:VBZ:2, 1:behavior:NN:4)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	nn(1:product:NN:11, 1:software:NN:10)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	nsubj(1:simulate:VBZ:2, 1:it:PRP:1)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	prep_of(1:behavior:NN:4, 1:portion:NNS:6)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	prep_of(1:portion:NNS:6, 1:product:NN:11)
+0	nsubj(1:simulate:VBP:2, 1:to:TO:1)	root(0:ROOT:ROOT:0, 1:simulate:VBZ:2)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	amod(1:product:NN:11, 1:desire:VBN:9)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	det(1:behavior:NN:4, 1:the:DT:3)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	det(1:product:NN:11, 1:the:DT:8)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	dobj(1:simulate:VBZ:2, 1:behavior:NN:4)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	nn(1:product:NN:11, 1:software:NN:10)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	nsubj(1:simulate:VBZ:2, 1:it:PRP:1)
+1	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	prep_of(1:behavior:NN:4, 1:portion:NNS:6)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	prep_of(1:portion:NNS:6, 1:product:NN:11)
+0	prep_of(1:behavior:NN:4, 1:portion:NNS:6)	root(0:ROOT:ROOT:0, 1:simulate:VBZ:2)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	amod(1:product:NN:11, 1:desire:VBN:9)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	det(1:behavior:NN:4, 1:the:DT:3)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	det(1:product:NN:11, 1:the:DT:8)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	dobj(1:simulate:VBZ:2, 1:behavior:NN:4)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	nn(1:product:NN:11, 1:software:NN:10)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	nsubj(1:simulate:VBZ:2, 1:it:PRP:1)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	prep_of(1:behavior:NN:4, 1:portion:NNS:6)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	prep_of(1:portion:NNS:6, 1:product:NN:11)
+0	prep_of(1:portion:NNS:6, 1:product:NN:11)	root(0:ROOT:ROOT:0, 1:simulate:VBZ:2)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	amod(1:product:NN:11, 1:desire:VBN:9)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	det(1:behavior:NN:4, 1:the:DT:3)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	det(1:product:NN:11, 1:the:DT:8)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	dobj(1:simulate:VBZ:2, 1:behavior:NN:4)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	nn(1:product:NN:11, 1:software:NN:10)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	nsubj(1:simulate:VBZ:2, 1:it:PRP:1)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	prep_of(1:behavior:NN:4, 1:portion:NNS:6)
+0	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	prep_of(1:portion:NNS:6, 1:product:NN:11)
+1	root(0:ROOT:ROOT:0, 1:simulate:VBP:2)	root(0:ROOT:ROOT:0, 1:simulate:VBZ:2)

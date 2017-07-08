@@ -1,0 +1,66 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:Main:NNP:3
+0	0:ROOT:ROOT:0	1:function:NNP:4
+0	0:ROOT:ROOT:0	1:in:IN:1
+0	0:ROOT:ROOT:0	1:the:DT:2
+
+0	1:at:IN:1	0:ROOT:ROOT:0
+0	1:at:IN:1	1:Main:NNP:3
+0	1:at:IN:1	1:function:NNP:4
+2	1:at:IN:1	1:in:IN:1
+0	1:at:IN:1	1:the:DT:2
+
+0	1:function:NN:4	0:ROOT:ROOT:0
+0	1:function:NN:4	1:Main:NNP:3
+2	1:function:NN:4	1:function:NNP:4
+0	1:function:NN:4	1:in:IN:1
+0	1:function:NN:4	1:the:DT:2
+
+0	1:main:JJ:3	0:ROOT:ROOT:0
+2	1:main:JJ:3	1:Main:NNP:3
+0	1:main:JJ:3	1:function:NNP:4
+0	1:main:JJ:3	1:in:IN:1
+0	1:main:JJ:3	1:the:DT:2
+
+0	1:the:DT:2	0:ROOT:ROOT:0
+0	1:the:DT:2	1:Main:NNP:3
+0	1:the:DT:2	1:function:NNP:4
+0	1:the:DT:2	1:in:IN:1
+2	1:the:DT:2	1:the:DT:2
+
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	amod(1:function:NN:4, 1:main:JJ:3)	det(1:function:NNP:4, 1:the:DT:2)
+1	amod(1:function:NN:4, 1:main:JJ:3)	nn(1:function:NNP:4, 1:Main:NNP:3)
+0	amod(1:function:NN:4, 1:main:JJ:3)	pobj(1:in:IN:1, 1:function:NNP:4)
+0	amod(1:function:NN:4, 1:main:JJ:3)	root(0:ROOT:ROOT:0, 1:in:IN:1)
+1	det(1:function:NN:4, 1:the:DT:2)	det(1:function:NNP:4, 1:the:DT:2)
+0	det(1:function:NN:4, 1:the:DT:2)	nn(1:function:NNP:4, 1:Main:NNP:3)
+0	det(1:function:NN:4, 1:the:DT:2)	pobj(1:in:IN:1, 1:function:NNP:4)
+0	det(1:function:NN:4, 1:the:DT:2)	root(0:ROOT:ROOT:0, 1:in:IN:1)
+0	pobj(1:at:IN:1, 1:function:NN:4)	det(1:function:NNP:4, 1:the:DT:2)
+0	pobj(1:at:IN:1, 1:function:NN:4)	nn(1:function:NNP:4, 1:Main:NNP:3)
+1	pobj(1:at:IN:1, 1:function:NN:4)	pobj(1:in:IN:1, 1:function:NNP:4)
+0	pobj(1:at:IN:1, 1:function:NN:4)	root(0:ROOT:ROOT:0, 1:in:IN:1)
+0	root(0:ROOT:ROOT:0, 1:at:IN:1)	det(1:function:NNP:4, 1:the:DT:2)
+0	root(0:ROOT:ROOT:0, 1:at:IN:1)	nn(1:function:NNP:4, 1:Main:NNP:3)
+0	root(0:ROOT:ROOT:0, 1:at:IN:1)	pobj(1:in:IN:1, 1:function:NNP:4)
+1	root(0:ROOT:ROOT:0, 1:at:IN:1)	root(0:ROOT:ROOT:0, 1:in:IN:1)
