@@ -30,5 +30,6 @@ src
 *.swp
 *.map
 .idea/
+*.log
 Read the Docs
 config.rst
