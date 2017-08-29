@@ -1,5 +1,5 @@
 3.3 It expands the function's definition in that place.  Once the functions is called you can use it as many times as you need.  The compiler just expands on the function.
-3.3 When the compiler inline-expands a function call, the function's code gets inserted into the caller's code stream (conceptually similar to what happens with a #define macro). This can, depending on a zillion other things, improve performance, because the optimizer can procedurally integrate the called code â€” optimize the called code into the caller. <br><br>
+3.3 When the compiler inline-expands a function call, the function's code gets inserted into the caller's code stream (conceptually similar to what happens with a #define macro). This can, depending on a zillion other things, improve performance, because the optimizer can procedurally integrate the called code optimize the called code into the caller. 
 3.3 The inline keyword advises the compiler to copy the function's code in place to avoid function calls; however the compiler can and typically does ignore the inline qualifier for all but the smallest functions.
 3.3 The compiler can ignore the inline qualifier and typically does so for all but the smallest functions.
 3.3 Placing the qualifier inline before a function's return type in the function definition "advises" the compiler to generate a copy of the function's code in place to avoid a function call.
@@ -28,4 +28,4 @@
 3.3 Expands the function into the program
 3.3 it generates a copy of the functions code in place to avoid a function call
 3.3 the function call will be replaced by the code that was defined in the inline function
-3.3 When the compiler inline-expands a function call, the function's code gets inserted into the caller's code stream (conceptually similar to what happens with a #define macro). This can, depending on a zillion other things, improve performance, because the optimizer can procedurally integrate the called code â€” optimize the called code into the caller. 
+3.3 When the compiler inline-expands a function call, the function's code gets inserted into the caller's code stream (conceptually similar to what happens with a #define macro). This can, depending on a zillion other things, improve performance, because the optimizer can procedurally integrate the called code optimize the called code into the caller. 

@@ -28,3 +28,4 @@
 11.10 merge sort splits an array into two halves and then sorts the two smaller arrays, and then merges them back together to form a sorted array
 11.10 the merge sort continually divides the array (or set of containers) into halves, until it reaches the point where there is just one element left, then merges each of the sets of two sorted arrays (containers).
 11.10 merge sort splits an array of elements into smaller and smaller array's till the value of 1 is reached.
+11.10 no answer provided
