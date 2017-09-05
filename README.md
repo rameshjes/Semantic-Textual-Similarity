@@ -16,13 +16,13 @@ NLTK requires Python versions 2.7, 3.4, or 3.5
 
 Install NLTK library
 
-'''
+```
 sudo pip install -U nltk
-'''
+```
 
 In the notebook, install packages of NLTK
 
-'''
+```
 import nltk
 nltk.download()
-'''
+```
