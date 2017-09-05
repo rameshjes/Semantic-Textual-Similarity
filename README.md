@@ -12,7 +12,7 @@ This repository contains:
 
 ### Installation
 
-NLTK requires Python versions 2.7, 3.4, or 3.5
+#### NLTK requires Python versions 2.7, 3.4, or 3.5
 
 Install NLTK library
 
@@ -25,4 +25,45 @@ In the notebook, install packages of NLTK
 ```
 import nltk
 nltk.download()
+```
+
+#### SPACY is compatible with 64-bit CPYTHON 2.6+/3.3+ and runs on Unix/Linux, macOS/OS X and WINDOWS
+
+Install SPACY library
+
+```
+pip install -U spacy
+```
+
+After spacy installation you need to download a Language  model
+
+```
+python -m spacy download en
+```
+
+#### Nbgrader Installation
+
+```
+pip install nbgrader
+```
+
+if you are using Anaconda:
+
+```
+conda install jupyter
+conda install -c conda-forge nbgrader
+```
+
+To install nbgrader extensions:
+
+```
+jupyter nbextension install --user-prefix --py nbgrader --overwrite
+jupyter nbextension enable --user-prefix --py nbgrader
+jupyter serverextension enable --user-prefix --py nbgrader
+```
+
+For more docs about nbgrader:
+
+```
+http://nbgrader.readthedocs.io/en/stable/user_guide/installation.html
 ```
