@@ -2,7 +2,7 @@
 
 This repository contains:
 
-        Exercises related to textual similarity using NLTK and SPACY libraries
+        Exercises related to textual similarity using NLTK and SPACY libraries that can help for short answer grading
 
         Create jupyter notebooks for each student from Mohler data set for short questions and answers
 
