@@ -9,6 +9,8 @@ This repository contains:
         Create instructor version of assignments using nbgrader
 
         Create student version of assignments using nbgrader
+        
+        Wiki contains theoretically concepts: https://github.com/rameshjesswani/Semantic-Textual-Similarity/wiki
 
 ### Installation
 
