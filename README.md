@@ -3,6 +3,10 @@
 This repository contains:
 
         Exercises related to textual similarity using NLTK and SPACY libraries that can help for short answer grading
+        
+        Comparison of spell corrector approaches using:
+                        - Spell corrector using Ngrams,Jaccard coefficient and Minimum edit distance
+                        - Spell corrector using Minimum Edit Distance(MED)
 
         Create jupyter notebooks for each student from Mohler data set for short questions and answers
 
