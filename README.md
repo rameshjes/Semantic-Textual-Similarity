@@ -2,13 +2,15 @@
 
 This repository contains:
 
-        Exercises related to textual similarity using NLTK and SPACY libraries
+        Exercises related to textual similarity using NLTK and SPACY libraries that can help for short answer grading
 
         Create jupyter notebooks for each student from Mohler data set for short questions and answers
 
         Create instructor version of assignments using nbgrader
 
         Create student version of assignments using nbgrader
+        
+        Wiki contains theoretically concepts: https://github.com/rameshjesswani/Semantic-Textual-Similarity/wiki
 
 ### Installation
 
