@@ -73,3 +73,6 @@ For more docs about nbgrader:
 ```
 http://nbgrader.readthedocs.io/en/stable/user_guide/installation.html
 ```
+# MindMap
+
+![Mind map](https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/nlp_basics/NaturalLanguageProcessing_mindmap.png)
