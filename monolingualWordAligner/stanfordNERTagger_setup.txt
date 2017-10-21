@@ -1,0 +1,14 @@
+Guideline for setup stanford NER Tagger 
+
+Go to command line::
+	export STANFORDTOOLSDIR=$HOME
+	export CLASSPATH=$STANFORDTOOLSDIR/Documents/mas_course/second_semester/stanford-ner-2017-06-09/stanford-ner.jar
+	export STANFORD_MODELS=$STANFORDTOOLSDIR/Documents/mas_course/second_semester/stanford-ner-2017-06-09/classifiers
+
+import nltk
+from nltk.tag import StanfordNERTagger
+st = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
+st.tag('Rami Eid is studying at Stony Brook University in NY'.split())
+
+
+
