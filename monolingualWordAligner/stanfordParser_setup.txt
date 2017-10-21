@@ -1,0 +1,22 @@
+# Guidelines to use stanfordParser and stanfordDependencyParser in NLTK 
+
+Download stanford parser from here: 
+	https://nlp.stanford.edu/software/lex-parser.shtml
+
+Set environment value in bashrc
+	export STANFORDTOOLSDIR=$HOME
+	export CLASSPATH=$STANFORDTOOLSDIR/Documents/mas_course/second_semester/stanford-parser-full-2017-06-09/stanford-parser.jar
+	export STANFORD_MODELS=$STANFORDTOOLSDIR/Documents/mas_course/second_semester/stanford-parser-full-2017-06-09/stanford-parser-3.8.0-models.jar
+
+import nltk
+from nltk.parse.stanford import StanfordParser
+parser=StanfordParser(model_path="edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz")
+list(parser.raw_parse("the quick brown fox jumps over the lazy dog"))
+
+# to use dependency parser
+
+from nltk.parse.stanford import StanfordDependencyParser
+dep_parser=StanfordDependencyParser(model_path="edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz")
+print [parse.tree() for parse in dep_parser.raw_parse("The quick brown fox jumps over the lazy dog.")]
+
+============================================================================================================
