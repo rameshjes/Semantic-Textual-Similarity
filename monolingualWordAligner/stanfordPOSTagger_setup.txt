@@ -1,0 +1,6 @@
+Guidelines to use StanfordPOSTagger in NLTK
+
+from nltk.tag.stanford import StanfordPOSTagger
+s = StanfordPOSTagger('/home/ramesh/stanford-postagger-2017-06-09/models/english-bidirectional-distsim.tagger','/home/ramesh/stanford-postagger-2017-06-09/stanford-postagger-3.8.0.jar')
+
+s.tag('What is the airspeed of an unladen swallow ?'.split())
