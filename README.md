@@ -77,12 +77,13 @@ http://nbgrader.readthedocs.io/en/stable/user_guide/installation.html
 To use Stanford Parser, NER, PosTagger in NLTK check files:
 
 ```
-http://nbgrader.readthedocs.io/en/stable/user_guide/installation.html
-```
 https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/monolingualWordAligner/stanfordParser_setup.txt
+
 https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/monolingualWordAligner/stanfordNERTagger_setup.txt
+
 https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/monolingualWordAligner/stanfordPOSTagger_setup.txt
 
+```
 
 # MindMap
 
