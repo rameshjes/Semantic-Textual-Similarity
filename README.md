@@ -15,6 +15,8 @@ This repository contains:
         Create student version of assignments using nbgrader
         
         Wiki contains theoretically concepts: https://github.com/rameshjesswani/Semantic-Textual-Similarity/wiki
+        
+        #### Currently working on monolingual word-aligner in NLTK 
 
 ### Installation
 
