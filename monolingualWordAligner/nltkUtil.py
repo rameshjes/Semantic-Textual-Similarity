@@ -191,16 +191,95 @@ class Text_processing:
 
 
 	'''
-	Input: sentence
-	Returns: ner tag
+	Input : ParserResult
+	Returns : list containing NamedEntites
+	1. Group words in same list if they share same NE (Location), 
+    2. Save other words in list that have any entity
 	'''
+
 
 
 	def get_ner(self,sentence):
 
-		# print "inside get ner"
-		return self.ner.tag(sentence)
+		nerWordAnnotations = self.nerWordAnnotator(parserResult) #[[ [charbegin,charEnd], wordIndex, word, NE ]]
+		namedEntities = []
+		currentWord = []
+		currentCharacterOffSets = []
+		currentWordOffSets = []
 
+		for i in xrange(len(nerWordAnnotations)):
+
+			if i == 0:
+
+				currentWord.append(nerWordAnnotations[i][2]) # word having NE
+				currentCharacterOffSets.append(nerWordAnnotations[i][0]) # [begin,end]
+				currentWordOffSets.append(nerWordAnnotations[i][1]) # Word Index
+				# if there is only one ner Word tag
+				if (len(nerWordAnnotations) == 1):
+					namedEntities.append([ currentCharacterOffSets, currentWordOffSets, currentWord, nerWordAnnotations[i-1][3] ])
+					# print "named Entities ", namedEntities
+					break 
+				continue
+			# if consecutive tags have same NER Tag, save them in one list
+			if nerWordAnnotations[i][3] == nerWordAnnotations[i-1][3] and nerWordAnnotations[i][1] == nerWordAnnotations[i-1][1] + 1:
+				
+				currentWord.append(nerWordAnnotations[i][2]) # word having NE
+				currentCharacterOffSets.append(nerWordAnnotations[i][0]) # [begin,end]
+				currentWordOffSets.append(nerWordAnnotations[i][1]) # Word Index
+
+				if i == (len(nerWordAnnotations) - 1):
+					namedEntities.append([ currentCharacterOffSets, currentWordOffSets, currentWord, nerWordAnnotations[i][3] ])
+			# if consecutive tags do not match
+			else:
+
+				namedEntities.append([ currentCharacterOffSets, currentWordOffSets, currentWord, nerWordAnnotations[i-1][3] ])
+				currentWord = [nerWordAnnotations[i][2]]
+				# remove everything from currentCharacterOffSets and currentWordOffSets
+				currentCharacterOffSets = []
+				currentWordOffSets = []
+				# add charac offsets and currentWordOffSets of current word
+				currentCharacterOffSets.append(nerWordAnnotations[i][0])
+				currentWordOffSets.append(nerWordAnnotations[i][1])
+
+				# if it is last iteration then update named Entities
+				if i == len(nerWordAnnotations)-1:
+					namedEntities.append([ currentCharacterOffSets, currentWordOffSets, currentWord, nerWordAnnotations[i][3] ])
+		#sort out according to len of characters in ascending order
+		namedEntities = sorted(namedEntities, key=len)
+
+		return namedEntities
+
+
+	'''
+	Input: Word(Word whose NE is not found), NE(word already have NE Tag) 
+	Returns: Boolean; True if word is acronym
+					False if word is not acronym
+	'''
+
+	def is_Acronym(self,word,NE):
+
+
+		queryWord = word.replace('.','')
+		# If all words of queryWord is not capital or length of word != length of NE(word already have NE Tag) or 
+		   #  if word is 'a' or 'i' 
+		if not queryWord.isupper() or len(queryWord) != len(NE) or queryWord.lower() in ['a', 'i']:
+			return False
+
+		acronym = True
+
+		#we run for loop till length of query word(i.e 3)(if word is 'UAE')
+		#Compare 1st letter(U) of query word with first letter of first element in named entity(U = U(united))
+		# again we take second letter of canonical word (A) with second element in named entity(Arab)
+		# and so on 
+		for i in xrange(len(queryWord)):
+			# print "queryword[i], NE ", queryWord, NE
+			if queryWord[i] != NE[i][0]:
+				acronym = False
+				break
+
+		return acronym
+
+		
 	'''
 	Input: sentence, word(of which offset to determine)
 	Return: [CharacterOffsetEnd,CharacterOffsetBegin] for each word
@@ -229,7 +308,7 @@ class Text_processing:
 		words_list = [] 
 		tokenized_words = word_tokenize(sentence)
 		posTag = self.pos_tag.tag(tokenized_words)
-		ner = self.get_ner(tokenized_words)
+		ner = self.ner.tag(tokenized_words)
 
 		# if source sentence/target sentence has one sentence
 		if (self.count == 1):
@@ -257,7 +336,7 @@ class Text_processing:
 				end, begin = self.get_charOffset(sentence,tokenized_words[i])
 				end = end + self.CharacterOffsetEnd + 1
 				begin = begin + self.CharacterOffsetEnd + 1
-				word_posTag = posTag[i]
+				word_posTag = posTag[i][-1]
 
 				words_list.append([word, {"NamedEntityTag" : str(name_entity[1]),
 					"CharacterOffsetEnd" : str(end), "CharacterOffsetBegin" : str(begin) 
