@@ -286,7 +286,15 @@ class Aligner:
 
 		return LearnNE, ExtractWordsHavingNE
 
+
+	'''
+	Input: SourceNE, targetNE
+	Returns: alignment list of full matches
+	'''
+
+
 	def align_full_matches(self,sourceNE, targetNE):
+
 
 		# Align all full matches
 		sourceNamedEntitiesAlreadyAligned = []
