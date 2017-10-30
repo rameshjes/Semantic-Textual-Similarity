@@ -1,6 +1,8 @@
 import nltk 
 from nltkUtil import *
 from util import *
+from config import *
+
 class Aligner:
 
 	def __init__(self):
@@ -30,7 +32,13 @@ class Aligner:
 		self.targetPosTags = [item[4] for item in sentence2LemmasAndPosTags] 
 
 		myWordAlignments = self.alignWords(sentence1LemmasAndPosTags, sentence2LemmasAndPosTags, sentence1ParseResult, sentence2ParseResult)
+		
+		align = []
+		for i in myWordAlignments:
+			align.append([self.sourceWords[i[0]-1], self.targetWords[i[1]-1] ])
+		# print "align words ", align
 
+		return align
 
 	'''
 	sourceSent and targetSent is list of:
@@ -39,7 +47,7 @@ class Aligner:
 		Parse Tree(Constituency tree), Text, Dependencies, words(NE, CharacOffsetEn, CharOffsetBeg,
 			POS, Lemma)
 	1. Align the punctuations first
-	2. 
+	2. Align named entities
 	'''
 
 
@@ -50,26 +58,33 @@ class Aligner:
 		srcWordAlreadyAligned = [] #sourceWordAlreadyAligned
 		tarWordAlreadyAligned = [] #TargetWordAlreadyAligned
 
-		# print "source Lemma ", self.sourceLemmas
-		# print "target lemma ", self.targetLemmas
-
 		# align the punctuations
-		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = self.align_punctuations(self.sourceWords,self.targetWords, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned,sourceSent,targetSent)
-		# print "alignments ", alignments
-		# print "source Wrod Already Aligned ", srcWordAlreadyAligned
-		# print "target word Already Aligned ", tarWordAlreadyAligned
+		# alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = self.align_punctuations(self.sourceWords,self.targetWords, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned,sourceSent,targetSent)
+	
+		neAlignments = self.align_namedEntities(sourceSent, targetSent, sourceParseResult, targetParseResult, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
+		
+		for item in neAlignments:
+			if item not in alignments:
+				alignments.append(item)
+				if item[0] not in srcWordAlreadyAligned:
+					srcWordAlreadyAligned.append(item[0])
+				if item[1] not in tarWordAlreadyAligned:
+					tarWordAlreadyAligned.append(item[1])
 
-		neAlignments = self.align_namedEntities(sourceSent, targetSent, sourceParseResult, targetParseResult, alignments)
+		return alignments
+		
+        
 
 
-		'''
-		Align the sentence ending punctuation first
-		returns: list; alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
-		'''
+	'''
+	Align the sentence ending punctuation first
+	returns: list; alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
+	'''
 
 
 	def align_punctuations(self,sourceWords, targetWords, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned, sourceSent, targetSent):
 		
+		global punctuations
 
 		# if last word of source sentence is . or ! and last of target sent is . or ! or both are equal
 		if (sourceWords[len(sourceSent)-1] in ['.','!'] and targetWords[len(targetSent)-1] in ['.','!']) or (sourceWords[len(sourceSent)-1]==targetWords[len(targetSent)-1]):
@@ -95,25 +110,188 @@ class Aligner:
 		return alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
 
 
-	def align_namedEntities(self, sourceSent, targetSent, sourceParseResult, targetParseResult, alignments):
+	def align_namedEntities(self, sourceSent, targetSent, sourceParseResult, targetParseResult, existingAlignments, srcWordAlreadyAligned, tarWordAlreadyAligned):
 		
 		
 		sourceNE = self.text_nor.get_ner(sourceParseResult)
 		targetNE = self.text_nor.get_ner(targetParseResult)
-		print "Before source NR ", sourceNE
-		print "before target NE ", targetNE
-
-		sourceNE = self.learn_NamedEntities(sourceSent, sourceNE, targetNE)
-		targetNE = self.learn_NamedEntities(targetSent, targetNE, sourceNE)
-		print "After source Learn Entities ", sourceNE
-		print "After target Learn Entities ", targetNE
+		# print "before sourceNE ", sourceNE
+		sourceNE, sourceWords = self.learn_NamedEntities(sourceSent, sourceNE, targetNE)
+		targetNE, targetWords = self.learn_NamedEntities(targetSent, targetNE, sourceNE)
 
 		if (len(sourceNE) == 0 or len(targetNE) == 0):
 			return []
 
 		# Align all full matches
+		alignment_list, sourceNamedEntitiesAlreadyAligned, targetNamedEntitiesAlreadyAligned = self.align_full_matches(sourceNE, targetNE)
+		
+		# Align Acronyms
+		for item in sourceNE:
+			if item[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION']:
+				continue
+			for jtem in targetNE:
+				if jtem[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION']:
+					continue
+					
+				if len(item[2])==1 and self.text_nor.is_Acronym(item[2][0], jtem[2]):
+					for i in xrange(len(jtem[1])):
+						if [item[1][0], jtem[1][i]] not in alignment_list:
+							alignment_list.append([item[1][0], jtem[1][i]])
+							sourceNamedEntitiesAlreadyAligned.append(item[1][0])
+							targetNamedEntitiesAlreadyAligned.append(jtem[1][i])
+
+				elif len(jtem[2])==1 and self.text_nor.is_Acronym(jtem[2][0], item[2]):
+					for i in xrange(len(item[1])):
+						if [item[1][i], jtem[1][0]] not in alignment_list:
+							alignment_list.append([item[1][i], jtem[1][0]])
+							sourceNamedEntitiesAlreadyAligned.append(item[1][i])
+							targetNamedEntitiesAlreadyAligned.append(jtem[1][0])
+
+		# align subset matches
+		for item in sourceNE:
+			if item[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or item in sourceNamedEntitiesAlreadyAligned:
+				continue
+
+			# do not align if the current source entity is present more than once
+			count_words = 0
+			for ktem in sourceNE:
+				if ktem[2] == item[2]:
+					count_words += 1
+			if count_words > 1:
+				continue
+
+			for jtem in targetNE:
+				if jtem[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or jtem in targetNamedEntitiesAlreadyAligned:
+					continue
+
+				if item[3] != jtem[3]:
+					continue
+
+				# do not align if the current target entity is present more than once
+				count_words = 0
+				for ktem in sourceNE:
+					if ktem[2] == item[2]:
+						count_words += 1
+
+				if count_words > 1:
+					continue
+				
+				if isSublist(item[2], jtem[2]):
+					unalignedWordIndicesInTheLongerName = []
+					for ktem in jtem[1]:
+						unalignedWordIndicesInTheLongerName.append(ktem)
+					for k in xrange(len(item[2])):
+						for l in xrange(len(jtem[2])):
+							if item[2][k] == jtem[2][l] and [item[1][k], jtem[1][l]] not in alignment_list:
+								alignment_list.append([item[1][k], jtem[1][l]])
+								if jtem[1][l] in unalignedWordIndicesInTheLongerName:
+									unalignedWordIndicesInTheLongerName.remove(jtem[1][l])
+					for k in xrange(len(item[1])): # the shorter name
+						for l in xrange(len(jtem[1])):
+							alreadyInserted = False
+							for mtem in existingAlignments:
+								if mtem[1] == jtem[1][l]:
+									alreadyInserted = True
+									break
+							if jtem[1][l] not in unalignedWordIndicesInTheLongerName or alreadyInserted:
+								continue
+							if [item[1][k], jtem[1][l]] not in alignment_list  and targetSent[jtem[1][l]-1][2] not in sourceWords  and item[2][k] not in punctuations and jtem[2][l] not in punctuations:
+								alignment_list.append([item[1][k], jtem[1][l]])
+				 # else find if the second is a part of the first
+				elif isSublist(jtem[2], item[2]):
+					unalignedWordIndicesInTheLongerName = []
+					for ktem in item[1]:
+						unalignedWordIndicesInTheLongerName.append(ktem)
+					for k in xrange(len(jtem[2])):
+						for l in xrange(len(item[2])):
+							if jtem[2][k] == item[2][l] and [item[1][l], jtem[1][k]] not in alignment_list:
+								alignment_list.append([item[1][l], jtem[1][k]])
+								if item[1][l] in unalignedWordIndicesInTheLongerName:
+									unalignedWordIndicesInTheLongerName.remove(item[1][l])
+					for k in xrange(len(jtem[1])): 
+						for l in xrange(len(item[1])):
+							alreadyInserted = False
+							for mtem in existingAlignments:
+								if mtem[0] == item[1][k]:
+									alreadyInserted = True
+									break
+							if item[1][l] not in unalignedWordIndicesInTheLongerName or alreadyInserted:
+								continue
+							if [item[1][l], jtem[1][k]] not in alignment_list  and sourceSent[item[1][k]-1][2] not in targetWords  and item[2][l] not in punctuations and jtem[2][k] not in punctuations:
+								alignment_list.append([item[1][l], jtem[1][k]])
+		
+		return alignment_list
+					
+
+	'''
+	Input: sentParam is list of:
+	 	[[character begin offset, character end offset], word index, word, lemma, pos tag]
+	 LearnNE, KnownNE is list of:
+		[[[['charBegin', 'charEnd'], ['charBegin', 'charEnd']], [wordIndex1, wordIndex2], ['United', 'States'], 'LOCATION']]
+	LearnNE(e.g we want to find NE tags in sent1) determine unknown NE Tags from knownNE(e.g known NE tags in sent2) 
+	Returns: 
+	   List: LearnNE, ExtractWordsHavingNE 
+	'''
+
+
+	def learn_NamedEntities(self,SentParam, LearnNE, knownNE):
+
+		
+		ExtractWordsHavingNE = []
+
+		for i in SentParam:
+			alreadyIncluded = False
+			for j in LearnNE:
+				# check if word Index of source word is present in sourceNE(already has NE)
+				if i[1] in j[1]:
+					# print "matched ", i[1], j[1]
+					alreadyIncluded = True
+					break
+			'''
+			If sourceWord is already included or i[2](word length) is > 0 and 
+			 firstLetterOfWord is not upper(No Acronym or not any name)
+			 Then do nothing(do not append list)
+			'''
+			if alreadyIncluded or (len(i[2]) > 0 and not i[2][0].isupper()):
+				continue
+
+			#If sourceWord does not have any Named Entity learn from targetSent
+
+			for k in knownNE:
+				#check if sourceword(i[2]) is present in k[2](target Word)
+				
+				if i[2] in k[2]:
+					#construct new item([ [charbegin,charEnd], [sourceWordIndex], [sourceWord], [targetWordNE] ])
+					# we replace NE of sourceWord with NE of targetWord 
+					newItem = [[i[0]], [i[1]], [i[2]], k[3]]
+					print "matched"
+					partOfABiggerName = False
+					for p in xrange(len(LearnNE)):
+						if LearnNE[p][1][len(LearnNE[p][1])-1] == newItem[1][0] - 1:
+							LearnNE[p][0].append(newItem[0][0])
+							LearnNE[p][1].append(newItem[1][0])
+							LearnNE[p][2].append(newItem[2][0])
+							partOfABiggerName = True
+					if not partOfABiggerName:
+						LearnNE.append(newItem)
+
+				elif self.text_nor.is_Acronym(i[2], k[2]) and [[i[0]], [i[1]], [i[2]], k[3]] not in LearnNE:
+					LearnNE.append([[i[0]], [i[1]], [i[2]], k[3]])
+
+		for i in LearnNE:
+
+			for j in i[1]:
+				if i[3] in ['PERSON', 'ORGANIZATION', 'LOCATION']:
+					ExtractWordsHavingNE.append(SentParam[j-1][2])
+
+		return LearnNE, ExtractWordsHavingNE
+
+	def align_full_matches(self,sourceNE, targetNE):
+
+		# Align all full matches
 		sourceNamedEntitiesAlreadyAligned = []
 		targetNamedEntitiesAlreadyAligned = []
+		alignments = []
 
 		for item in sourceNE:
 			# print "item in sourceNE ", item
@@ -161,159 +339,8 @@ class Aligner:
 					sourceNamedEntitiesAlreadyAligned.append(item)
 					targetNamedEntitiesAlreadyAligned.append(jtem)
 
-		for item in sourceNE:
-			if item[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION']:
-				continue
-			for jtem in targetNE:
-				if jtem[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION']:
-					continue
-					
-				if len(item[2])==1 and self.text_nor.is_Acronym(item[2][0], jtem[2]):
-					for i in xrange(len(jtem[1])):
-						if [item[1][0], jtem[1][i]] not in alignments:
-							alignments.append([item[1][0], jtem[1][i]])
-							sourceNamedEntitiesAlreadyAligned.append(item[1][0])
-							targetNamedEntitiesAlreadyAligned.append(jtem[1][i])
+		return alignments, sourceNamedEntitiesAlreadyAligned, targetNamedEntitiesAlreadyAligned
 
-				elif len(jtem[2])==1 and self.text_nor.is_Acronym(jtem[2][0], item[2]):
-					for i in xrange(len(item[1])):
-						if [item[1][i], jtem[1][0]] not in alignments:
-							alignments.append([item[1][i], jtem[1][0]])
-							sourceNamedEntitiesAlreadyAligned.append(item[1][i])
-							targetNamedEntitiesAlreadyAligned.append(jtem[1][0])
-
-		# print "alignments ", alignments
-		# print "sourceNAmed Entites Aligned", sourceNamedEntitiesAlreadyAligned
-		# print "targetNAmed Entites Aligned", targetNamedEntitiesAlreadyAligned
-
-		# align subset matches
-		for item in sourceNE:
-			if item[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or item in sourceNamedEntitiesAlreadyAligned:
-				continue
-
-			# do not align if the current source entity is present more than once
-			count_words = 0
-			for ktem in sourceNE:
-				if ktem[2] == item[2]:
-					count_words += 1
-			if count_words > 1:
-				continue
-
-			for jtem in targetNE:
-				if jtem[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or jtem in targetNamedEntitiesAlreadyAligned:
-					continue
-
-				if item[3] != jtem[3]:
-					continue
-
-				# do not align if the current target entity is present more than once
-				count_words = 0
-				for ktem in sourceNE:
-					if ktem[2] == item[2]:
-						count_words += 1
-
-				if count_words > 1:
-					continue
-
-				if isSublist(item[2], jtem[2]):
-					unalignedWordIndicesInTheLongerName = []
-					for ktem in jtem[1]:
-						unalignedWordIndicesInTheLongerName.append(ktem)
-					for k in xrange(len(item[2])):
-						for l in xrange(len(jtem[2])):
-							if item[2][k] == jtem[2][l] and [item[1][k], jtem[1][l]] not in alignments:
-								alignments.append([item[1][k], jtem[1][l]])
-								if jtem[1][l] in unalignedWordIndicesInTheLongerName:
-									unalignedWordIndicesInTheLongerName.remove(jtem[1][l])
-					for k in xrange(len(item[1])): # the shorter name
-						for l in xrange(len(jtem[1])):
-							alreadyInserted = False
-							for mtem in existingAlignments:
-								if mtem[1] == jtem[1][l]:
-									alreadyInserted = True
-									break
-							if jtem[1][l] not in unalignedWordIndicesInTheLongerName or alreadyInserted:
-								continue
-							if [item[1][k], jtem[1][l]] not in alignments  and target[jtem[1][l]-1][2] not in sourceWords  and item[2][k] not in punctuations and jtem[2][l] not in punctuations:
-								alignments.append([item[1][k], jtem[1][l]])
-				 # else find if the second is a part of the first
-				elif isSublist(jtem[2], item[2]):
-					unalignedWordIndicesInTheLongerName = []
-					for ktem in item[1]:
-						unalignedWordIndicesInTheLongerName.append(ktem)
-					for k in xrange(len(jtem[2])):
-						for l in xrange(len(item[2])):
-							if jtem[2][k] == item[2][l] and [item[1][l], jtem[1][k]] not in alignments:
-								alignments.append([item[1][l], jtem[1][k]])
-								if item[1][l] in unalignedWordIndicesInTheLongerName:
-									unalignedWordIndicesInTheLongerName.remove(item[1][l])
-					for k in xrange(len(jtem[1])): 
-						for l in xrange(len(item[1])):
-							alreadyInserted = False
-							for mtem in existingAlignments:
-								if mtem[0] == item[1][k]:
-									alreadyInserted = True
-									break
-							if item[1][l] not in unalignedWordIndicesInTheLongerName or alreadyInserted:
-								continue
-							if [item[1][l], jtem[1][k]] not in alignments  and source[item[1][k]-1][2] not in targetWords  and item[2][l] not in punctuations and jtem[2][k] not in punctuations:
-								alignments.append([item[1][l], jtem[1][k]])
-		print "alignments ", alignments
-		return alignments
-
-	'''
-	Input: sentParam is list of:
-	 	[[character begin offset, character end offset], word index, word, lemma, pos tag]
-	 LearnNE, KnownNE is list of:
-		[[[['charBegin', 'charEnd'], ['charBegin', 'charEnd']], [wordIndex1, wordIndex2], ['United', 'States'], 'LOCATION']]
-	LearnNE(e.g we want to find NE tags in sent1) determine unknown NE Tags from knownNE(e.g known NE tags in sent2) 
-	Returns:  
-	'''
-	def learn_NamedEntities(self,SentParam, LearnNE, knownNE):
-		
-		for i in SentParam:
-			alreadyIncluded = False
-			for j in LearnNE:
-				# check if word Index of source word is present in sourceNE(already has NE)
-				if i[1] in j[1]:
-					# print "matched ", i[1], j[1]
-					alreadyIncluded = True
-					break
-			'''
-			If sourceWord is already included or i[2](word length) is > 0 and 
-			 firstLetterOfWord is not upper(No Acronym or not any name)
-			 Then do nothing(do not append list)
-			'''
-			if alreadyIncluded or (len(i[2]) > 0 and not i[2][0].isupper()):
-				continue
-
-			#If sourceWord does not have any Named Entity learn from targetSent
-
-			for k in knownNE:
-				#check if sourceword(i[2]) is present in k[2](target Word)
-				
-				if i[2] in k[2]:
-					#construct new item([ [charbegin,charEnd], [sourceWordIndex], [sourceWord], [targetWordNE] ])
-					# we replace NE of sourceWord with NE of targetWord 
-					newItem = [[i[0]], [i[1]], [i[2]], k[3]]
-					print "matched"
-					partOfABiggerName = False
-					for p in xrange(len(LearnNE)):
-						if LearnNE[p][1][len(LearnNE[p][1])-1] == newItem[1][0] - 1:
-							LearnNE[p][0].append(newItem[0][0])
-							LearnNE[p][1].append(newItem[1][0])
-							LearnNE[p][2].append(newItem[2][0])
-							partOfABiggerName = True
-					if not partOfABiggerName:
-						LearnNE.append(newItem)
-
-				elif self.text_nor.is_Acronym(i[2], k[2]) and [[i[0]], [i[1]], [i[2]], k[3]] not in LearnNE:
-					LearnNE.append([[i[0]], [i[1]], [i[2]], k[3]])
-
-		return LearnNE
-
-
-		
 
 
 
