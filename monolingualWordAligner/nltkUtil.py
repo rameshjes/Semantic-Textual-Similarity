@@ -16,15 +16,16 @@ class Text_processing:
 		self.home = '/home/ramesh'
 		self.ner = StanfordNERTagger(self.home + '/stanford-ner-2017-06-09/classifiers/english.all.3class.distsim.crf.ser.gz',self.home + '/stanford-ner-2017-06-09/stanford-ner.jar')
 		self.pos_tag = StanfordPOSTagger(self.home + '/stanford-postagger-2017-06-09/models/english-bidirectional-distsim.tagger',self.home + '/stanford-postagger-2017-06-09/stanford-postagger-3.8.0.jar')
-		# self.parseResult = {'parseTree':[], 'text':[], 'dependencies':[],'words':[] }
 		self.CharacterOffsetEnd = 0 
 		self.CharacterOffsetBegin = 0
-		self.count = 0 #count sentence number in source/target response
+
 
 	'''
 	Input: sentence
 	Returns: 
 	'''
+
+
 	def parser(self,sentence):
 
 
@@ -106,6 +107,7 @@ class Text_processing:
 	Returns: [[charBegin,charEnd], wordIndex(starts from 1), word, word_POS]] 
 	'''
 
+
 	def combine_lemmaAndPosTags(self,parserResult):
 
 		res = []
@@ -122,12 +124,135 @@ class Text_processing:
 		return res
 
 
+	'''
+	Input: parserResult
+	Returns: ([charOffsetBegin,charOffsetEnd], wordindex,word, NER ])
+	'''
+
+
+	def nerWordAnnotator(self,parserResult):
+
+		res = []
+		
+		wordIndex = 1
+		for i in xrange(len(parserResult['words'])):
+			
+			for j in xrange(len(parserResult['words'][i])):
+				
+				tag = [ [parserResult['words'][i][j][1]['CharacterOffsetBegin'], parserResult['words'][i][j][1]['CharacterOffsetEnd']], wordIndex,parserResult['words'][i][j][0] ,parserResult['words'][i][j][1]['NamedEntityTag'] ]
+				# print "tag ", tag
+				wordIndex += 1
+				# if there is valid named entity then add in list
+				if tag[3] != 'O':
+
+					res.append(tag)
+
+		return res
+
+
+	'''
+	Input : ParserResult
+	Returns : list containing NamedEntites
+	1. Group words in same list if they share same NE (Location), 
+    2. Save other words in list that have any entity
+	'''
+
+
+	def get_ner(self,parserResult):
+
+
+		nerWordAnnotations = self.nerWordAnnotator(parserResult) #[[ [charbegin,charEnd], wordIndex, word, NE ]]
+		namedEntities = []
+		currentWord = []
+		currentCharacterOffSets = []
+		currentWordOffSets = []
+
+		for i in xrange(len(nerWordAnnotations)):
+
+			if i == 0:
+
+				currentWord.append(nerWordAnnotations[i][2]) # word having NE
+				currentCharacterOffSets.append(nerWordAnnotations[i][0]) # [begin,end]
+				currentWordOffSets.append(nerWordAnnotations[i][1]) # Word Index
+				# if there is only one ner Word tag
+				if (len(nerWordAnnotations) == 1):
+					namedEntities.append([ currentCharacterOffSets, currentWordOffSets, \
+						currentWord, nerWordAnnotations[i-1][3] ])
+					# print "named Entities ", namedEntities
+					break 
+				continue
+			# if consecutive tags have same NER Tag, save them in one list
+			if nerWordAnnotations[i][3] == nerWordAnnotations[i-1][3] and \
+					nerWordAnnotations[i][1] == nerWordAnnotations[i-1][1] + 1:
+				
+				currentWord.append(nerWordAnnotations[i][2]) # word having NE
+				currentCharacterOffSets.append(nerWordAnnotations[i][0]) # [begin,end]
+				currentWordOffSets.append(nerWordAnnotations[i][1]) # Word Index
+
+				if i == (len(nerWordAnnotations) - 1):
+					namedEntities.append([ currentCharacterOffSets, \
+						currentWordOffSets, currentWord, nerWordAnnotations[i][3] ])
+			# if consecutive tags do not match
+			else:
+
+				namedEntities.append([ currentCharacterOffSets, \
+						currentWordOffSets, currentWord, nerWordAnnotations[i-1][3] ])
+				currentWord = [nerWordAnnotations[i][2]]
+				# remove everything from currentCharacterOffSets and currentWordOffSets
+				currentCharacterOffSets = []
+				currentWordOffSets = []
+				# add charac offsets and currentWordOffSets of current word
+				currentCharacterOffSets.append(nerWordAnnotations[i][0])
+				currentWordOffSets.append(nerWordAnnotations[i][1])
+
+				# if it is last iteration then update named Entities
+				if i == len(nerWordAnnotations)-1:
+					namedEntities.append([ currentCharacterOffSets, currentWordOffSets, \
+							currentWord, nerWordAnnotations[i][3] ])
+		#sort out according to len of characters in ascending order
+		namedEntities = sorted(namedEntities, key=len)
+
+		return namedEntities
+
+
+	'''
+	Input: Word(Word whose NE is not found), NE(word already have NE Tag) 
+	Returns: Boolean; True if word is acronym
+					False if word is not acronym
+	'''
+
+
+	def is_Acronym(self,word,NE):
+
+
+		queryWord = word.replace('.','')
+		# If all words of queryWord is not capital or length of word != 
+				#length of NE(word already have NE Tag) or 
+		   #  if word is 'a' or 'i' 
+		if not queryWord.isupper() or len(queryWord) != len(NE) or queryWord.lower() in ['a', 'i']:
+			return False
+
+		acronym = True
+
+		#we run for loop till length of query word(i.e 3)(if word is 'UAE')
+		#Compare 1st letter(U) of query word with first letter of first element in named entity(U = U(united))
+		# again we take second letter of canonical word (A) with second element in named entity(Arab)
+		# and so on 
+		for i in xrange(len(queryWord)):
+			# print "queryword[i], NE ", queryWord, NE
+			if queryWord[i] != NE[i][0]:
+				acronym = False
+				break
+
+		return acronym
+
+
 
 	def get_parseText(self,sentence):
 
-
-		tokenized_sentence = sent_tokenize(sentence)
 		self.count = 0
+		tokenized_sentence = sent_tokenize(sentence)
+		# print "len of tokenized ",len(tokenized_sentence)
 		if (len(tokenized_sentence) == 1):
 			self.count += 1
 			for i in tokenized_sentence:
@@ -136,8 +261,6 @@ class Text_processing:
 			for i in tokenized_sentence:
 				self.count += 1
 				parse = self.get_combine_words_param(i)
-
-		# self.total_sentences['sentences'].append(self.parseResult)
 
 		return parse,tokenized_sentence
 		
@@ -191,96 +314,6 @@ class Text_processing:
 
 
 	'''
-	Input : ParserResult
-	Returns : list containing NamedEntites
-	1. Group words in same list if they share same NE (Location), 
-    2. Save other words in list that have any entity
-	'''
-
-
-
-	def get_ner(self,sentence):
-
-		nerWordAnnotations = self.nerWordAnnotator(parserResult) #[[ [charbegin,charEnd], wordIndex, word, NE ]]
-		namedEntities = []
-		currentWord = []
-		currentCharacterOffSets = []
-		currentWordOffSets = []
-
-		for i in xrange(len(nerWordAnnotations)):
-
-			if i == 0:
-
-				currentWord.append(nerWordAnnotations[i][2]) # word having NE
-				currentCharacterOffSets.append(nerWordAnnotations[i][0]) # [begin,end]
-				currentWordOffSets.append(nerWordAnnotations[i][1]) # Word Index
-				# if there is only one ner Word tag
-				if (len(nerWordAnnotations) == 1):
-					namedEntities.append([ currentCharacterOffSets, currentWordOffSets, currentWord, nerWordAnnotations[i-1][3] ])
-					# print "named Entities ", namedEntities
-					break 
-				continue
-			# if consecutive tags have same NER Tag, save them in one list
-			if nerWordAnnotations[i][3] == nerWordAnnotations[i-1][3] and nerWordAnnotations[i][1] == nerWordAnnotations[i-1][1] + 1:
-				
-				currentWord.append(nerWordAnnotations[i][2]) # word having NE
-				currentCharacterOffSets.append(nerWordAnnotations[i][0]) # [begin,end]
-				currentWordOffSets.append(nerWordAnnotations[i][1]) # Word Index
-
-				if i == (len(nerWordAnnotations) - 1):
-					namedEntities.append([ currentCharacterOffSets, currentWordOffSets, currentWord, nerWordAnnotations[i][3] ])
-			# if consecutive tags do not match
-			else:
-
-				namedEntities.append([ currentCharacterOffSets, currentWordOffSets, currentWord, nerWordAnnotations[i-1][3] ])
-				currentWord = [nerWordAnnotations[i][2]]
-				# remove everything from currentCharacterOffSets and currentWordOffSets
-				currentCharacterOffSets = []
-				currentWordOffSets = []
-				# add charac offsets and currentWordOffSets of current word
-				currentCharacterOffSets.append(nerWordAnnotations[i][0])
-				currentWordOffSets.append(nerWordAnnotations[i][1])
-
-				# if it is last iteration then update named Entities
-				if i == len(nerWordAnnotations)-1:
-					namedEntities.append([ currentCharacterOffSets, currentWordOffSets, currentWord, nerWordAnnotations[i][3] ])
-		#sort out according to len of characters in ascending order
-		namedEntities = sorted(namedEntities, key=len)
-
-		return namedEntities
-
-
-	'''
-	Input: Word(Word whose NE is not found), NE(word already have NE Tag) 
-	Returns: Boolean; True if word is acronym
-					False if word is not acronym
-	'''
-
-	def is_Acronym(self,word,NE):
-
-
-		queryWord = word.replace('.','')
-		# If all words of queryWord is not capital or length of word != length of NE(word already have NE Tag) or 
-		   #  if word is 'a' or 'i' 
-		if not queryWord.isupper() or len(queryWord) != len(NE) or queryWord.lower() in ['a', 'i']:
-			return False
-
-		acronym = True
-
-		#we run for loop till length of query word(i.e 3)(if word is 'UAE')
-		#Compare 1st letter(U) of query word with first letter of first element in named entity(U = U(united))
-		# again we take second letter of canonical word (A) with second element in named entity(Arab)
-		# and so on 
-		for i in xrange(len(queryWord)):
-			# print "queryword[i], NE ", queryWord, NE
-			if queryWord[i] != NE[i][0]:
-				acronym = False
-				break
-
-		return acronym
-
-		
-	'''
 	Input: sentence, word(of which offset to determine)
 	Return: [CharacterOffsetEnd,CharacterOffsetBegin] for each word
 	'''
@@ -288,12 +321,12 @@ class Text_processing:
 
 	def get_charOffset(self,sentence, word):
 
-		CharacterOffsetBegin = []
-		CharacterOffsetEnd = []
+		# word containing '.' causes problem in counting
 		CharacterOffsetBegin = sentence.find(word)
 		CharacterOffsetEnd = CharacterOffsetBegin + len(word)
 		
 		return [CharacterOffsetEnd,CharacterOffsetBegin]
+
 
 	'''
 	Input: sentence
@@ -302,6 +335,7 @@ class Text_processing:
 	  #'word : [] NamedEntityTag, CharacterOffsetEnd, CharacterOffsetBegin, PartOfSpeech, Lemma}']}
 	'''
 
+
 	def get_combine_words_param(self,sentence):
 		
 		words_in_each_sentence = []
@@ -309,7 +343,6 @@ class Text_processing:
 		tokenized_words = word_tokenize(sentence)
 		posTag = self.pos_tag.tag(tokenized_words)
 		ner = self.ner.tag(tokenized_words)
-
 		# if source sentence/target sentence has one sentence
 		if (self.count == 1):
 			for i in xrange(len(tokenized_words)):
@@ -329,6 +362,7 @@ class Text_processing:
 			self.parseResult['words'] = [words_list]
 
 		else:
+			# print "self count inside else ", self.count
 			for i in xrange(len(tokenized_words)):
 				word = tokenized_words[i]
 				name_entity = ner[i] 
@@ -345,17 +379,5 @@ class Text_processing:
 			self.parseResult['text'].append(sentence)
 			self.parseResult['dependencies'].append(self.get_dependencies(sentence))
 			self.parseResult['words'].append(words_list)
-			
+
 		return self.parseResult   
-
-
-
-
-
-
-
-
-
-		
-
-
