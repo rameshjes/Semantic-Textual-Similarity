@@ -31,7 +31,8 @@ class Aligner:
 		self.sourcePosTags = [item[4] for item in sentence1LemmasAndPosTags]
 		self.targetPosTags = [item[4] for item in sentence2LemmasAndPosTags] 
 
-		myWordAlignments = self.alignWords(sentence1LemmasAndPosTags, sentence2LemmasAndPosTags, sentence1ParseResult, sentence2ParseResult)
+		myWordAlignments = self.alignWords(sentence1LemmasAndPosTags, sentence2LemmasAndPosTags, \
+							sentence1ParseResult, sentence2ParseResult)
 		
 		align = []
 		for i in myWordAlignments:
@@ -59,9 +60,12 @@ class Aligner:
 		tarWordAlreadyAligned = [] #TargetWordAlreadyAligned
 
 		# align the punctuations
-		# alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = self.align_punctuations(self.sourceWords,self.targetWords, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned,sourceSent,targetSent)
-	
-		neAlignments = self.align_namedEntities(sourceSent, targetSent, sourceParseResult, targetParseResult, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
+			self.align_punctuations(self.sourceWords,self.targetWords, \
+					alignments, srcWordAlreadyAligned, tarWordAlreadyAligned,sourceSent,targetSent)
+		# align named entities
+		neAlignments = self.align_namedEntities(sourceSent, targetSent, \
+			sourceParseResult, targetParseResult, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
 		
 		for item in neAlignments:
 			if item not in alignments:
@@ -73,8 +77,6 @@ class Aligner:
 
 		return alignments
 		
-        
-
 
 	'''
 	Align the sentence ending punctuation first
@@ -82,12 +84,15 @@ class Aligner:
 	'''
 
 
-	def align_punctuations(self,sourceWords, targetWords, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned, sourceSent, targetSent):
+	def align_punctuations(self,sourceWords, targetWords, alignments, \
+				srcWordAlreadyAligned, tarWordAlreadyAligned, sourceSent, targetSent):
 		
 		global punctuations
 
 		# if last word of source sentence is . or ! and last of target sent is . or ! or both are equal
-		if (sourceWords[len(sourceSent)-1] in ['.','!'] and targetWords[len(targetSent)-1] in ['.','!']) or (sourceWords[len(sourceSent)-1]==targetWords[len(targetSent)-1]):
+		if (sourceWords[len(sourceSent)-1] in ['.','!'] and targetWords[len(targetSent)-1]\
+				 in ['.','!']) or (sourceWords[len(sourceSent)-1]==targetWords[len(targetSent)-1]):
+			
 			alignments.append([len(sourceSent), len(targetSent)])
 			srcWordAlreadyAligned.append(len(sourceSent))
 			tarWordAlreadyAligned.append(len(targetSent))
@@ -110,12 +115,25 @@ class Aligner:
 		return alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
 
 
-	def align_namedEntities(self, sourceSent, targetSent, sourceParseResult, targetParseResult, existingAlignments, srcWordAlreadyAligned, tarWordAlreadyAligned):
+	'''
+	Input: source Sentence, target sentence, 
+	       sourceParseResult, targetParseResult,
+	       ExistingAlignments, srcWordAlreadyAligned, tarWordAlreadyAligner
+	       1. Learn Named Entities
+	       2. Align all full matches
+	       3. Align Acronyms
+	       4. Align subset matches
+	Returns: list of alignments
+	'''
+
+
+	def align_namedEntities(self, sourceSent, targetSent, sourceParseResult, \
+				targetParseResult, existingAlignments, srcWordAlreadyAligned, tarWordAlreadyAligned):
 		
 		
 		sourceNE = self.text_nor.get_ner(sourceParseResult)
 		targetNE = self.text_nor.get_ner(targetParseResult)
-		# print "before sourceNE ", sourceNE
+
 		sourceNE, sourceWords = self.learn_NamedEntities(sourceSent, sourceNE, targetNE)
 		targetNE, targetWords = self.learn_NamedEntities(targetSent, targetNE, sourceNE)
 
@@ -123,7 +141,8 @@ class Aligner:
 			return []
 
 		# Align all full matches
-		alignment_list, sourceNamedEntitiesAlreadyAligned, targetNamedEntitiesAlreadyAligned = self.align_full_matches(sourceNE, targetNE)
+		alignment_list, sourceNamedEntitiesAlreadyAligned, targetNamedEntitiesAlreadyAligned = \
+										self.align_full_matches(sourceNE, targetNE)
 		
 		# Align Acronyms
 		for item in sourceNE:
@@ -149,7 +168,8 @@ class Aligner:
 
 		# align subset matches
 		for item in sourceNE:
-			if item[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or item in sourceNamedEntitiesAlreadyAligned:
+			if item[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or item in \
+										sourceNamedEntitiesAlreadyAligned:
 				continue
 
 			# do not align if the current source entity is present more than once
@@ -161,7 +181,8 @@ class Aligner:
 				continue
 
 			for jtem in targetNE:
-				if jtem[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or jtem in targetNamedEntitiesAlreadyAligned:
+				if jtem[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or jtem in \
+									targetNamedEntitiesAlreadyAligned:
 					continue
 
 				if item[3] != jtem[3]:
@@ -195,7 +216,10 @@ class Aligner:
 									break
 							if jtem[1][l] not in unalignedWordIndicesInTheLongerName or alreadyInserted:
 								continue
-							if [item[1][k], jtem[1][l]] not in alignment_list  and targetSent[jtem[1][l]-1][2] not in sourceWords  and item[2][k] not in punctuations and jtem[2][l] not in punctuations:
+							if [item[1][k], jtem[1][l]] not in alignment_list  and \
+									targetSent[jtem[1][l]-1][2] not in sourceWords  and \
+										item[2][k] not in punctuations and jtem[2][l] not in punctuations:
+								
 								alignment_list.append([item[1][k], jtem[1][l]])
 				 # else find if the second is a part of the first
 				elif isSublist(jtem[2], item[2]):
@@ -217,7 +241,10 @@ class Aligner:
 									break
 							if item[1][l] not in unalignedWordIndicesInTheLongerName or alreadyInserted:
 								continue
-							if [item[1][l], jtem[1][k]] not in alignment_list  and sourceSent[item[1][k]-1][2] not in targetWords  and item[2][l] not in punctuations and jtem[2][k] not in punctuations:
+							if [item[1][l], jtem[1][k]] not in alignment_list  and \
+									sourceSent[item[1][k]-1][2] not in targetWords  and \
+										item[2][l] not in punctuations and jtem[2][k] not in punctuations:
+								
 								alignment_list.append([item[1][l], jtem[1][k]])
 		
 		return alignment_list
@@ -348,9 +375,3 @@ class Aligner:
 					targetNamedEntitiesAlreadyAligned.append(jtem)
 
 		return alignments, sourceNamedEntitiesAlreadyAligned, targetNamedEntitiesAlreadyAligned
-
-
-
-
-
-
