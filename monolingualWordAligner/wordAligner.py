@@ -7,16 +7,13 @@ class Aligner:
 
 	def __init__(self):
 		self.text_nor = Text_processing()
-
+		self.util = Util()
 	def align_sentences(self,sentence1,sentence2):
 
 		sentence1ParseResult = self.text_nor.parser(sentence1)
-		# print "sentence1 parse ", sentence1ParseResult 
-		# print ""
 		sentence2ParseResult = self.text_nor.parser(sentence2)
 
 		sentence1LemmasAndPosTags = self.text_nor.combine_lemmaAndPosTags(sentence1ParseResult)
-		# print "sentce1 ", sentence1LemmasAndPosTags
 		sentence2LemmasAndPosTags = self.text_nor.combine_lemmaAndPosTags(sentence2ParseResult)
 
 		self.sourceWordIndices = [i+1 for i in xrange(len(sentence1LemmasAndPosTags))]
@@ -31,15 +28,18 @@ class Aligner:
 		self.sourcePosTags = [item[4] for item in sentence1LemmasAndPosTags]
 		self.targetPosTags = [item[4] for item in sentence2LemmasAndPosTags] 
 
-		myWordAlignments = self.alignWords(sentence1LemmasAndPosTags, sentence2LemmasAndPosTags, \
-							sentence1ParseResult, sentence2ParseResult)
+
+		myWordAlignments = self.alignWords(sentence1LemmasAndPosTags, sentence2LemmasAndPosTags, 
+									sentence1ParseResult, sentence2ParseResult)
 		
+
 		align = []
 		for i in myWordAlignments:
 			align.append([self.sourceWords[i[0]-1], self.targetWords[i[1]-1] ])
-		# print "align words ", align
+		print "align words ", align
 
 		return align
+
 
 	'''
 	sourceSent and targetSent is list of:
@@ -48,7 +48,9 @@ class Aligner:
 		Parse Tree(Constituency tree), Text, Dependencies, words(NE, CharacOffsetEn, CharOffsetBeg,
 			POS, Lemma)
 	1. Align the punctuations first
-	2. Align named entities
+	2. Align common NeighboringWords(atleast bigram or more)
+	3. Align Hyphenated Words
+	4. Align named entitiesss
 	'''
 
 
@@ -59,14 +61,30 @@ class Aligner:
 		srcWordAlreadyAligned = [] #sourceWordAlreadyAligned
 		tarWordAlreadyAligned = [] #TargetWordAlreadyAligned
 
-		# align the punctuations
+		# 1. align the punctuations
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = self.align_punctuations(self.sourceWords,
+				self.targetWords, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned,sourceSent,targetSent)
+
+		#2. align commonNeighboringWords (atleast bigram, or more)
 		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
-			self.align_punctuations(self.sourceWords,self.targetWords, \
-					alignments, srcWordAlreadyAligned, tarWordAlreadyAligned,sourceSent,targetSent)
-		# align named entities
-		neAlignments = self.align_namedEntities(sourceSent, targetSent, \
-			sourceParseResult, targetParseResult, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
-		
+			self.align_commonNeighboringWords(self.sourceWords, self.targetWords, \
+							srcWordAlreadyAligned, tarWordAlreadyAligned, alignments)
+		#3. align Hyphenated words
+		checkSourceWordsInTarget = True # check if Source Words have any hyphen words
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
+							self.align_hyphenWords(self.sourceWordIndices, self.sourceWords,\
+									srcWordAlreadyAligned, alignments,\
+									tarWordAlreadyAligned, checkSourceWordsInTarget)
+
+		checkSourceWordsInTarget = False  # check if target Words have any hyphen words
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
+							self.align_hyphenWords(self.targetWordIndices, self.targetWords, tarWordAlreadyAligned, alignments, \
+									tarWordAlreadyAligned,checkSourceWordsInTarget)
+
+		#4. align named entities
+		neAlignments = self.align_namedEntities(sourceSent, targetSent, sourceParseResult, \
+			    targetParseResult, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned) 
+							
 		for item in neAlignments:
 			if item not in alignments:
 				alignments.append(item)
@@ -84,20 +102,22 @@ class Aligner:
 	'''
 
 
-	def align_punctuations(self,sourceWords, targetWords, alignments, \
+	def align_punctuations(self,sourceWords, targetWords, alignments, 
 				srcWordAlreadyAligned, tarWordAlreadyAligned, sourceSent, targetSent):
 		
 		global punctuations
 
 		# if last word of source sentence is . or ! and last of target sent is . or ! or both are equal
-		if (sourceWords[len(sourceSent)-1] in ['.','!'] and targetWords[len(targetSent)-1]\
-				 in ['.','!']) or (sourceWords[len(sourceSent)-1]==targetWords[len(targetSent)-1]):
+		if (sourceWords[len(sourceSent)-1] in ['.','!'] and targetWords[len(targetSent)-1] \
+			     in ['.','!']) or (sourceWords[len(sourceSent)-1]==targetWords[len(targetSent)-1]):
 			
 			alignments.append([len(sourceSent), len(targetSent)])
 			srcWordAlreadyAligned.append(len(sourceSent))
 			tarWordAlreadyAligned.append(len(targetSent))
 		# or if second last of source sent. is . or ! and last word of target sent is . or ! then append too
-		elif (sourceWords[len(sourceSent)-2] in ['.', '!'] and targetWords[len(targetSent)-1] in ['.', '!']):
+		elif (sourceWords[len(sourceSent)-2] in ['.', '!'] and \
+					targetWords[len(targetSent)-1] in ['.', '!']):
+
 			alignments.append([len(sourceSent), len(targetSent)])
 			srcWordAlreadyAligned.append(len(sourceSent))
 			tarWordAlreadyAligned.append(len(targetSent))
@@ -116,6 +136,92 @@ class Aligner:
 
 
 	'''
+	Input: sourceWords, targetWords
+	Returns: aligned words that are bigram, trigram,..(not unigram) 
+			of content words
+	'''
+
+
+	def align_commonNeighboringWords(self, sourceWords, targetWords, srcWordAlreadyAligned, 
+						tarWordAlreadyAligned, alignments):
+
+
+		commonNeighboringWords = self.util.get_commonNeighboringWords(sourceWords, targetWords)
+												
+		for commonWords in commonNeighboringWords:
+			stopWordsPresent = True
+			# print "common Words ", commonWords
+			for word in commonWords:
+				
+				if word not in stopwords and word not in punctuations:
+					stopWordsPresent = 	False
+					break
+			# print "asds ", (len(word[0]))
+			if len(commonWords[0]) >= 2 and not stopWordsPresent:
+
+				for j in xrange(len(commonWords[0])):
+					# print "common Word sss ", commonWords[0][j]+1
+					# print "target words ", commonWords[1][j]+1
+					if commonWords[0][j]+1 not in srcWordAlreadyAligned and commonWords[1][j]+1 not in \
+							tarWordAlreadyAligned and [commonWords[0][j]+1, commonWords[1][j]+1] not in alignments:
+
+						alignments.append([commonWords[0][j]+1, commonWords[1][j]+1])
+						srcWordAlreadyAligned.append(commonWords[0][j]+1)
+						tarWordAlreadyAligned.append(commonWords[1][j]+1)
+
+		return alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
+
+
+	'''
+	Input: wordIndices(srcWordIndices/tarWordIndices) depends upon whether we check sourceWords
+				in targetWords, or other way 
+			Words(srcWordIndices/tarWordIndices) 
+			srcWordAlreadyAligned, alignments, tarWordAlreadyAligned,
+			flag: true, then we check sourceWords in targetWords,
+					else we check targetWords in sourceWords
+	Returns: aligned hyphen Words(alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
+	'''
+
+
+	def align_hyphenWords(self, wordIndices, Words, srcWordAlreadyAligned, alignments,
+							tarWordAlreadyAligned, flag):
+
+		
+		for i in wordIndices:
+			if flag:
+				if i in srcWordAlreadyAligned:
+					continue
+			else:
+				if i in tarWordAlreadyAligned:
+					continue
+
+			if '-' in Words[i-1] and Words[i-1] != '-':
+				tokens = Words[i-1].split('-')
+				#if flag true(means we check source words in target Words)
+
+				if flag:
+					commonNeighboringWords = self.util.get_commonNeighboringWords(tokens, self.targetWords)
+
+				else:
+					commonNeighboringWords = self.util.get_commonNeighboringWords(tokens,self.sourceWords)
+				for pairs in commonNeighboringWords:
+
+					if len(pairs[0]) > 1:
+						for j in pairs[1]:
+							if[i, j+1] not in alignments:
+								if flag:
+									alignments.append([i,j+1])
+									srcWordAlreadyAligned.append(i)
+									tarWordAlreadyAligned.append(j+1)
+								else:
+									alignments.append([j+1,1])
+									srcWordAlreadyAligned.append(j+1)
+									tarWordAlreadyAligned.append(i)
+
+		return alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
+
+
+	'''
 	Input: source Sentence, target sentence, 
 	       sourceParseResult, targetParseResult,
 	       ExistingAlignments, srcWordAlreadyAligned, tarWordAlreadyAligner
@@ -127,13 +233,13 @@ class Aligner:
 	'''
 
 
-	def align_namedEntities(self, sourceSent, targetSent, sourceParseResult, \
-				targetParseResult, existingAlignments, srcWordAlreadyAligned, tarWordAlreadyAligned):
+	def align_namedEntities(self, sourceSent, targetSent, sourceParseResult, targetParseResult, 
+					existingAlignments, srcWordAlreadyAligned, tarWordAlreadyAligned):
 		
 		
 		sourceNE = self.text_nor.get_ner(sourceParseResult)
 		targetNE = self.text_nor.get_ner(targetParseResult)
-
+		# print "before sourceNE ", sourceNE
 		sourceNE, sourceWords = self.learn_NamedEntities(sourceSent, sourceNE, targetNE)
 		targetNE, targetWords = self.learn_NamedEntities(targetSent, targetNE, sourceNE)
 
@@ -142,7 +248,7 @@ class Aligner:
 
 		# Align all full matches
 		alignment_list, sourceNamedEntitiesAlreadyAligned, targetNamedEntitiesAlreadyAligned = \
-										self.align_full_matches(sourceNE, targetNE)
+						self.align_full_matches(sourceNE, targetNE)
 		
 		# Align Acronyms
 		for item in sourceNE:
@@ -169,7 +275,7 @@ class Aligner:
 		# align subset matches
 		for item in sourceNE:
 			if item[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or item in \
-										sourceNamedEntitiesAlreadyAligned:
+						sourceNamedEntitiesAlreadyAligned:
 				continue
 
 			# do not align if the current source entity is present more than once
@@ -182,7 +288,7 @@ class Aligner:
 
 			for jtem in targetNE:
 				if jtem[3] not in ['PERSON', 'ORGANIZATION', 'LOCATION'] or jtem in \
-									targetNamedEntitiesAlreadyAligned:
+								targetNamedEntitiesAlreadyAligned:
 					continue
 
 				if item[3] != jtem[3]:
@@ -197,7 +303,7 @@ class Aligner:
 				if count_words > 1:
 					continue
 				
-				if isSublist(item[2], jtem[2]):
+				if self.util.isSublist(item[2], jtem[2]):
 					unalignedWordIndicesInTheLongerName = []
 					for ktem in jtem[1]:
 						unalignedWordIndicesInTheLongerName.append(ktem)
@@ -216,13 +322,12 @@ class Aligner:
 									break
 							if jtem[1][l] not in unalignedWordIndicesInTheLongerName or alreadyInserted:
 								continue
-							if [item[1][k], jtem[1][l]] not in alignment_list  and \
-									targetSent[jtem[1][l]-1][2] not in sourceWords  and \
-										item[2][k] not in punctuations and jtem[2][l] not in punctuations:
-								
+							if [item[1][k], jtem[1][l]] not in alignment_list  and targetSent[jtem[1][l]-1][2] \
+										not in sourceWords  and item[2][k] not in punctuations and jtem[2][l] \
+											not in punctuations:
 								alignment_list.append([item[1][k], jtem[1][l]])
 				 # else find if the second is a part of the first
-				elif isSublist(jtem[2], item[2]):
+				elif self.util.isSublist(jtem[2], item[2]):
 					unalignedWordIndicesInTheLongerName = []
 					for ktem in item[1]:
 						unalignedWordIndicesInTheLongerName.append(ktem)
@@ -241,9 +346,9 @@ class Aligner:
 									break
 							if item[1][l] not in unalignedWordIndicesInTheLongerName or alreadyInserted:
 								continue
-							if [item[1][l], jtem[1][k]] not in alignment_list  and \
-									sourceSent[item[1][k]-1][2] not in targetWords  and \
-										item[2][l] not in punctuations and jtem[2][k] not in punctuations:
+							if [item[1][l], jtem[1][k]] not in alignment_list  and sourceSent[item[1][k]-1][2] \
+								not in targetWords  and item[2][l] not in punctuations and jtem[2][k] \
+								not in punctuations:
 								
 								alignment_list.append([item[1][l], jtem[1][k]])
 		
@@ -291,7 +396,7 @@ class Aligner:
 					#construct new item([ [charbegin,charEnd], [sourceWordIndex], [sourceWord], [targetWordNE] ])
 					# we replace NE of sourceWord with NE of targetWord 
 					newItem = [[i[0]], [i[1]], [i[2]], k[3]]
-					print "matched"
+					# print "matched"
 					partOfABiggerName = False
 					for p in xrange(len(LearnNE)):
 						if LearnNE[p][1][len(LearnNE[p][1])-1] == newItem[1][0] - 1:
@@ -321,7 +426,6 @@ class Aligner:
 
 
 	def align_full_matches(self,sourceNE, targetNE):
-
 
 		# Align all full matches
 		sourceNamedEntitiesAlreadyAligned = []
