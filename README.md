@@ -18,6 +18,15 @@ This repository contains:
         
         Currently working on monolingual word-aligner in NLTK 
 
+
+## Guidelines for Monolingual Word Aligner
+
+```
+Install nltk library(procedure given below)
+Setup Stanford Parser, NER, PosTagger(link to setup in nltk given below)
+
+
+```
 ### Installation
 
 #### NLTK requires Python versions 2.7, 3.4, or 3.5
