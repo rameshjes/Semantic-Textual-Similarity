@@ -18,6 +18,12 @@ class Util:
 		return flag
 
 
+	'''
+	Input: source and target Words
+	Return: list of commonNeighboringWords
+	'''
+
+
 	def get_commonNeighboringWords(self, sourceWords, targetWords, 
 							convertToLowerCase=True):
 
@@ -79,3 +85,195 @@ class Util:
 				item[0] = item[1]
 				item[1] = temp
 		return commonNeighboringWords 
+
+
+	'''
+	Input : parseResult of source/Target sentence
+	returns: list contains:
+		 (rel, parent{charStartOffset, charEndOffset, wordNumber}, 
+       	childs{charStartOffset, charEndOffset, wordNumber})
+	'''
+
+
+	def dependencyTreeWithOffSets(self,parseResult):
+
+
+		dependencies = parseResult['dependencies']
+		combine_dependencies = []
+		res = []
+		words_param = parseResult['words']
+		combine_wordsList = []
+
+		if(len(dependencies)) > 1:
+			for sublist in dependencies:
+				combine_dependencies +=  sublist
+		else:
+			combine_dependencies = dependencies
+
+		if (len(words_param) > 1):
+			for sublist in words_param:
+				combine_wordsList += sublist 
+		else:
+			combine_wordsList = words_param
+		# print "combine wordlist ", combine_wordsList
+		# print "combine Dependences ", combine_dependencies[0]
+
+		for dep in combine_dependencies[0]:
+			newItem  = []
+			# print "combine dependencies ", combine_dependencies
+			# dep(0) contains [root, Root-0, country-5]
+			# dep(1) contains ['nsubj', 'country-5', 'UAE-1']
+			# second element in dependency is parent
+			# third element is child
+			# print "dep ", dep
+			newItem.append(dep[0]) 
+			# rindex() returns the last index where the substring str is found
+
+			parent = dep[1][0:dep[1].rindex("-")]
+			
+			wordNumber = dep[1][dep[1].rindex("-") + 1:]
+			# print "word Number ", wordNumber
+
+			if wordNumber.isdigit() == False:
+				continue
+			
+			parent += '{' + combine_wordsList[0][int(wordNumber)-1][1]['CharacterOffsetBegin'] + \
+				' ' + combine_wordsList[0][int(wordNumber)-1][1]['CharacterOffsetEnd'] + ' ' + wordNumber + '}'
+			newItem.append(parent)
+
+			child = dep[2][0:dep[2].rindex("-")]
+			wordNumber = dep[2][dep[2].rindex("-")+1:]
+			if wordNumber.isdigit() == False:
+				continue
+			child += '{' + combine_wordsList[0][int(wordNumber)-1][1]['CharacterOffsetBegin'] + \
+				' ' + combine_wordsList[0][int(wordNumber)-1][1]['CharacterOffsetEnd'] + ' ' + wordNumber + '}'	
+			newItem.append(child)
+
+			res.append(newItem)
+
+		return res
+
+
+	'''
+	Input: dependencies, wordIndex, word
+	return : list(parents with Relation) : [[WordNumberOf parent, parent, relation]]
+	'''
+
+	def findParents(self, dependencies, wordIndex, word):
+
+
+		wordsWithIndices = ( (int(item[2].split('{')[1].split('}')[0].split(' ')[2]) ,\
+						item[2].split('{')[0])for item in dependencies)
+		wordsWithIndices = list(set(wordsWithIndices))
+		wordsWithIndices = sorted(wordsWithIndices, key=lambda item: item[0])
+		# print "words With Indices, word ", wordsWithIndices, wordIndex
+		# wordsWithIndices contain  [(1, 'UAE'), (2, 'is'), (3, 'really')]
+
+		wordIndexPresentInList = False
+		for i in wordsWithIndices:
+			if i[0] == wordIndex:
+				# print "came here ", i[0], wordIndex
+				wordIndexPresentInList = True
+				break
+				
+		parentsWithRelation = []
+
+		if wordIndexPresentInList:
+			# dependencies : [['root', 'Root{85 86 0}', 'country{28 35 5}']
+			for j in dependencies:
+
+				currentIndex = int(j[2].split('{')[1].split('}')[0].split(' ')[2])
+				# print currentIndex
+
+				if currentIndex == wordIndex:
+					# store [WordNumberOf parent, parent, relation]
+					# [0,Root, root]
+					parentsWithRelation.append([int(j[1].split('{')[1].split('}')[0].split(' ')[2]),\
+							 j[1].split('{')[0], j[0]])
+					# print "parents ", parentsWithRelation
+
+		# need to check for this section
+		else:
+
+			nextIndex = 0
+			for i in xrange(len(wordsWithIndices)):
+				if wordsWithIndices[i][0] > wordIndex:
+					nextIndex = wordsWithIndices[i][0]
+					break
+
+			if nextIndex == 0:
+				return []
+
+			for i in xrange(len(dependencies)):
+				if int(dependencies[i][2].split('{')[1].split('}')[0].split(' ')[2]) == nextIndex:
+					pos = i
+					break
+
+			for i in xrange(pos, len(dependencies)):
+				if '_' in dependencies[i][0] and word in dependencies[i][0]:
+					 parent = [int(dependencies[i][1].split('{')[1].split('}')[0].split(' ')[2]), \
+					 			dependencies[i][1].split('{')[0], dependencies[i][0]]
+					 parentsWithRelation.append(parent)
+					 break
+
+		return parentsWithRelation
+
+
+		'''
+		Input: dependencies; (rel, parent{charStartOffset, charEndOffset, wordNumber}, 
+       						childs{charStartOffset, charEndOffset, wordNumber})
+
+       		   wordIndex and word
+       	output: list of children 
+		'''
+
+
+	def findChildren(self, dependencies, wordIndex, word):
+
+
+		wordsWithIndices = ( (int(item[2].split('{')[1].split('}')[0].split(' ')[2]) ,\
+					item[2].split('{')[0])for item in dependencies)
+		wordsWithIndices = list(set(wordsWithIndices))
+		wordsWithIndices = sorted(wordsWithIndices, key=lambda item: item[0])
+		print "wordsWith Indices ", wordsWithIndices
+		print ""
+		childrenWithRelation = []
+		
+		wordIndexPresentInList = False
+		for i in wordsWithIndices:
+			if i[0] == wordIndex:
+				wordIndexPresentInList = True
+				break
+
+		if wordIndexPresentInList:
+			for j in dependencies:
+				currentIndex = int(j[1].split('{')[1].split('}')[0].split(' ')[2])
+				if currentIndex == wordIndex:
+					childrenWithRelation.append([int(j[2].split('{')[1].split('}')[0].split(' ')[2]),\
+						 j[2].split('{')[0], j[0]])
+
+		# find the closest following word index which is in the list
+		else:
+			nextIndex = 0
+
+			for i in xrange(len(wordsWithIndices)):
+				if wordsWithIndices[i][0] > wordIndex:
+					nextIndex = wordsWithIndices[i][0]
+					break
+
+			if nextIndex == 0:
+				return []
+
+			for i in xrange(len(dependencies)):
+				if int(dependencies[i][2].split('{')[1].split('}')[0].split(' ')[2]) == nextIndex:
+					pos = i
+					break
+
+			for i in xrange(pos, len(dependencies)):
+				if '_' in dependencies[i][0] and word in dependencies[i][0]:
+					 child = [int(dependencies[i][2].split('{')[1].split('}')[0].split(' ')[2]), \
+					 			dependencies[i][2].split('{')[0], dependencies[i][0]]
+					 childrenWithRelation.append(child)
+					 break
+
+		return childrenWithRelation
