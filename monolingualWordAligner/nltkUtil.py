@@ -4,6 +4,8 @@ from nltk.tag.stanford import StanfordPOSTagger
 from nltk.tag import StanfordNERTagger
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import wordnet
+from config import *
 
 class Text_processing:
 
@@ -11,7 +13,7 @@ class Text_processing:
 	def __init__(self):
 		
 		self.constituent_parse_tree = StanfordParser()
-		self.dependency_tree = StanfordDependencyParser()
+		self.stanford_dependency = StanfordDependencyParser()
 		self.lemma = WordNetLemmatizer()
 		self.home = '/home/ramesh'
 		self.ner = StanfordNERTagger(self.home + '/stanford-ner-2017-06-09/classifiers/english.all.3class.distsim.crf.ser.gz',self.home + '/stanford-ner-2017-06-09/stanford-ner.jar')
@@ -293,9 +295,9 @@ class Text_processing:
 
 
 		dependency_tree = []
-		dependency_parser = self.dependency_tree.raw_parse(sentence)
+		dependency_parser = self.stanford_dependency.raw_parse(sentence)
 		token = word_tokenize(sentence)
-		parsetree = list(self.dependency_tree.raw_parse(sentence))[0]
+		parsetree = list(self.stanford_dependency.raw_parse(sentence))[0]
 		# Find root(head) of the sentence 
 		for k in parsetree.nodes.values():
 			if k["head"] == 0:
@@ -343,14 +345,31 @@ class Text_processing:
 		tokenized_words = word_tokenize(sentence)
 		posTag = self.pos_tag.tag(tokenized_words)
 		ner = self.ner.tag(tokenized_words)
+		
 		# if source sentence/target sentence has one sentence
 		if (self.count == 1):
 			for i in xrange(len(tokenized_words)):
+				word_lemma = str()
 				word = tokenized_words[i]
-				name_entity = ner[i] 
-				word_lemma = self.lemma.lemmatize(tokenized_words[i])
-				self.CharacterOffsetEnd, self.CharacterOffsetBegin = self.get_charOffset(sentence,tokenized_words[i])
+				name_entity = ner[i]
 				word_posTag = posTag[i][-1]  # access tuple [(United, NNP),..]
+				# print "word and pos tag ", word, word_posTag[0]	
+				#wordNet lemmatizer needs pos tag with words else it considers noun
+				if (word_posTag[0] == 'V'):
+					word_lemma = self.lemma.lemmatize(tokenized_words[i], wordnet.VERB)
+					# print "word lemmmaam ", word_lemma	
+
+				elif (word_posTag[0] == 'J'):
+					word_lemma = self.lemma.lemmatize(tokenized_words[i], wordnet.ADJ)
+
+				elif (word_posTag[0:1] == 'RB'):
+					word_lemma = self.lemma.lemmatize(tokenized_words[i], wordnet.ADV)
+
+				else:
+					word_lemma = self.lemma.lemmatize(tokenized_words[i])
+				
+				self.CharacterOffsetEnd, self.CharacterOffsetBegin = self.get_charOffset(sentence,tokenized_words[i])
+				
 
 				words_list.append([word, {"NamedEntityTag" : str(name_entity[1]),
 					"CharacterOffsetEnd" : str(self.CharacterOffsetEnd), "CharacterOffsetBegin" : str(self.CharacterOffsetBegin) 
@@ -380,4 +399,4 @@ class Text_processing:
 			self.parseResult['dependencies'].append(self.get_dependencies(sentence))
 			self.parseResult['words'].append(words_list)
 
-		return self.parseResult   
+		return self.parseResult
