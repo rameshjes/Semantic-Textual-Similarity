@@ -37,7 +37,7 @@ Install NLTK library
 sudo pip install -U nltk
 ```
 
-In the notebook, install packages of NLTK
+Install packages of NLTK
 
 ```
 import nltk
