@@ -20,7 +20,7 @@ class Text_processing:
 		self.pos_tag = StanfordPOSTagger(self.home + '/stanford-postagger-2017-06-09/models/english-bidirectional-distsim.tagger',self.home + '/stanford-postagger-2017-06-09/stanford-postagger-3.8.0.jar')
 		self.CharacterOffsetEnd = 0 
 		self.CharacterOffsetBegin = 0
-
+		
 
 	'''
 	Input: sentence
@@ -33,7 +33,7 @@ class Text_processing:
 
 		self.parseResult = {'parseTree':[], 'text':[], 'dependencies':[],'words':[] }
 		parseText, sentences = self.get_parseText(sentence)
-		
+		# print "sentences ", sentences
 		# if source/target sent consist of 1 sentence 
 		if len(sentences) == 1:
 			return parseText
@@ -43,17 +43,13 @@ class Text_processing:
 		# if source/target sentence has more than 1 sentence
 
 		for i in xrange(len(parseText['text'])):
+			if i > 0:
 
-			if (i == 0):
-				wordOffSet += len(parseText['words'][i])
-				
-			else:
-				# modify word numbers in dependencies
 				for j in xrange(len(parseText['dependencies'][i])):
 					# [root, Root-0, dead-4]
 					for k in xrange(1,3):
 						tokens = parseText['dependencies'][i][j][k].split('-')
-						# [Root, 0]
+
 						if tokens[0] == 'Root':
 							newWordIndex = 0
 
@@ -66,7 +62,6 @@ class Text_processing:
 						if len(tokens) == 2:
 
 							 parseText['dependencies'][i][j][k] = tokens[0]+ '-' + str(newWordIndex)
-							 # print "parse Text ", parseText['dependencies'][i][j][k]
 												
 						else:
 							w = ''
@@ -76,6 +71,8 @@ class Text_processing:
 									w += '-'
 
 							parseText['dependencies'][i][j][k] = w + '-' + str(newWordIndex)
+
+			wordOffSet += len(parseText['words'][i])
 
 		return parseText
 
@@ -88,8 +85,8 @@ class Text_processing:
 
 	def get_lemma(self,parserResult):
 
-		res = []
-		
+
+		res = []		
 		wordIndex = 1
 		for i in xrange(len(parserResult['words'])):
 			
@@ -249,10 +246,19 @@ class Text_processing:
 		return acronym
 
 
+	'''
+	Input: sentence
+	Returns: parse(	{ParseTree, text, Dependencies, 
+	  'word : [] NamedEntityTag, CharacterOffsetEnd, 
+	  		CharacterOffsetBegin, PartOfSpeech, Lemma}']}) 
+	  		sentence and
+	'''
+
 
 	def get_parseText(self,sentence):
 
 		self.count = 0
+		self.length_of_sentence = [] # stores length of each sentence
 		tokenized_sentence = sent_tokenize(sentence)
 		# print "len of tokenized ",len(tokenized_sentence)
 		if (len(tokenized_sentence) == 1):
@@ -260,9 +266,13 @@ class Text_processing:
 			for i in tokenized_sentence:
 				parse = self.get_combine_words_param(i)
 		else:
+			tmp = 0
 			for i in tokenized_sentence:
 				self.count += 1
 				parse = self.get_combine_words_param(i)
+				s = len(i) + tmp
+				self.length_of_sentence.append(s)
+				tmp = s
 
 		return parse,tokenized_sentence
 		
@@ -309,8 +319,8 @@ class Text_processing:
 			for triple in dep.triples():
 				index_word = token.index(triple[0][0]) + 1 # because index starts from 0 
 				index2_word = token.index(triple[2][0]) + 1
-				# dependency_tree.append([str(triple[1]) + "(" + str(triple[0][0]) + "-" + str(index_word) + "," + str(triple[2][0]) + "-" + str(index2_word) + ")"])
-				dependency_tree.append([str(triple[1]),str(triple[0][0]) + "-" + str(index_word), str(triple[2][0]) + "-" + str(index2_word)])
+				dependency_tree.append([str(triple[1]),str(triple[0][0]) + "-" + str(index_word),\
+							 str(triple[2][0]) + "-" + str(index2_word)])
 
 		return dependency_tree
 
@@ -324,6 +334,7 @@ class Text_processing:
 	def get_charOffset(self,sentence, word):
 
 		# word containing '.' causes problem in counting
+
 		CharacterOffsetBegin = sentence.find(word)
 		CharacterOffsetEnd = CharacterOffsetBegin + len(word)
 		
@@ -340,6 +351,7 @@ class Text_processing:
 
 	def get_combine_words_param(self,sentence):
 		
+
 		words_in_each_sentence = []
 		words_list = [] 
 		tokenized_words = word_tokenize(sentence)
@@ -357,7 +369,6 @@ class Text_processing:
 				#wordNet lemmatizer needs pos tag with words else it considers noun
 				if (word_posTag[0] == 'V'):
 					word_lemma = self.lemma.lemmatize(tokenized_words[i], wordnet.VERB)
-					# print "word lemmmaam ", word_lemma	
 
 				elif (word_posTag[0] == 'J'):
 					word_lemma = self.lemma.lemmatize(tokenized_words[i], wordnet.ADJ)
@@ -367,7 +378,7 @@ class Text_processing:
 
 				else:
 					word_lemma = self.lemma.lemmatize(tokenized_words[i])
-				
+
 				self.CharacterOffsetEnd, self.CharacterOffsetBegin = self.get_charOffset(sentence,tokenized_words[i])
 				
 
@@ -381,16 +392,27 @@ class Text_processing:
 			self.parseResult['words'] = [words_list]
 
 		else:
-			# print "self count inside else ", self.count
+
 			for i in xrange(len(tokenized_words)):
 				word = tokenized_words[i]
 				name_entity = ner[i] 
-				word_lemma = self.lemma.lemmatize(tokenized_words[i])
-				end, begin = self.get_charOffset(sentence,tokenized_words[i])
-				end = end + self.CharacterOffsetEnd + 1
-				begin = begin + self.CharacterOffsetEnd + 1
 				word_posTag = posTag[i][-1]
 
+				if (word_posTag[0] == 'V'):
+					word_lemma = self.lemma.lemmatize(tokenized_words[i], wordnet.VERB)
+
+				elif (word_posTag[0] == 'J'):
+					word_lemma = self.lemma.lemmatize(tokenized_words[i], wordnet.ADJ)
+
+				elif (word_posTag[0:1] == 'RB'):
+					word_lemma = self.lemma.lemmatize(tokenized_words[i], wordnet.ADV)
+
+				else:
+					word_lemma = self.lemma.lemmatize(tokenized_words[i])
+
+				end, begin = self.get_charOffset(sentence,tokenized_words[i])
+				end = end + self.length_of_sentence[self.count-2] + 1
+				begin = begin + self.length_of_sentence[self.count-2] + 1	
 				words_list.append([word, {"NamedEntityTag" : str(name_entity[1]),
 					"CharacterOffsetEnd" : str(end), "CharacterOffsetBegin" : str(begin) 
 					,"PartOfSpeech" : str(word_posTag) , "Lemma" : str(word_lemma)}])
