@@ -1,4 +1,3 @@
-
 class Util:
 
 
@@ -55,17 +54,12 @@ class Util:
 			AIndices = [i for i in xrange(0, len(a)-size+1)] 
 			BIndices = [j for j in xrange(0, len(b)-size+1)] 
 
-			# print "sourceWordsIndices ", AIndices
-			# print "targetWordIndices ", BIndices
-			# print ""
 			for i in AIndices: 
 				for j in BIndices:
 
 					# check if a contiguous superset has already been inserted; 
 					#don't insert this one in that case
 					if a[i:i+size] == b[j:j+size]:
-						# print " equal ", a[i:i+size]
-						# print "equal ", b[j:j+size]
 						alreadyInserted = False
 						# take indices of equal words
 						currentAIndices = [item for item in xrange(i,i+size)]
@@ -108,26 +102,18 @@ class Util:
 			for sublist in dependencies:
 				combine_dependencies +=  sublist
 		else:
-			combine_dependencies = dependencies
+			combine_dependencies = dependencies[0]
 
 		if (len(words_param) > 1):
 			for sublist in words_param:
 				combine_wordsList += sublist 
 		else:
-			combine_wordsList = words_param
-		# print "combine wordlist ", combine_wordsList
-		# print "combine Dependences ", combine_dependencies[0]
+			combine_wordsList = words_param[0]
 
-		for dep in combine_dependencies[0]:
+		for dep in combine_dependencies:
+
 			newItem  = []
-			# print "combine dependencies ", combine_dependencies
-			# dep(0) contains [root, Root-0, country-5]
-			# dep(1) contains ['nsubj', 'country-5', 'UAE-1']
-			# second element in dependency is parent
-			# third element is child
-			# print "dep ", dep
 			newItem.append(dep[0]) 
-			# rindex() returns the last index where the substring str is found
 
 			parent = dep[1][0:dep[1].rindex("-")]
 			
@@ -137,16 +123,16 @@ class Util:
 			if wordNumber.isdigit() == False:
 				continue
 			
-			parent += '{' + combine_wordsList[0][int(wordNumber)-1][1]['CharacterOffsetBegin'] + \
-				' ' + combine_wordsList[0][int(wordNumber)-1][1]['CharacterOffsetEnd'] + ' ' + wordNumber + '}'
+			parent += '{' + combine_wordsList[int(wordNumber)-1][1]['CharacterOffsetBegin'] + \
+				' ' + combine_wordsList[int(wordNumber)-1][1]['CharacterOffsetEnd'] + ' ' + wordNumber + '}'
 			newItem.append(parent)
 
 			child = dep[2][0:dep[2].rindex("-")]
 			wordNumber = dep[2][dep[2].rindex("-")+1:]
 			if wordNumber.isdigit() == False:
 				continue
-			child += '{' + combine_wordsList[0][int(wordNumber)-1][1]['CharacterOffsetBegin'] + \
-				' ' + combine_wordsList[0][int(wordNumber)-1][1]['CharacterOffsetEnd'] + ' ' + wordNumber + '}'	
+			child += '{' + combine_wordsList[int(wordNumber)-1][1]['CharacterOffsetBegin'] + \
+				' ' + combine_wordsList[int(wordNumber)-1][1]['CharacterOffsetEnd'] + ' ' + wordNumber + '}'	
 			newItem.append(child)
 
 			res.append(newItem)
@@ -159,6 +145,7 @@ class Util:
 	return : list(parents with Relation) : [[WordNumberOf parent, parent, relation]]
 	'''
 
+
 	def findParents(self, dependencies, wordIndex, word):
 
 
@@ -166,8 +153,6 @@ class Util:
 						item[2].split('{')[0])for item in dependencies)
 		wordsWithIndices = list(set(wordsWithIndices))
 		wordsWithIndices = sorted(wordsWithIndices, key=lambda item: item[0])
-		# print "words With Indices, word ", wordsWithIndices, wordIndex
-		# wordsWithIndices contain  [(1, 'UAE'), (2, 'is'), (3, 'really')]
 
 		wordIndexPresentInList = False
 		for i in wordsWithIndices:
@@ -183,14 +168,12 @@ class Util:
 			for j in dependencies:
 
 				currentIndex = int(j[2].split('{')[1].split('}')[0].split(' ')[2])
-				# print currentIndex
 
 				if currentIndex == wordIndex:
 					# store [WordNumberOf parent, parent, relation]
 					# [0,Root, root]
 					parentsWithRelation.append([int(j[1].split('{')[1].split('}')[0].split(' ')[2]),\
 							 j[1].split('{')[0], j[0]])
-					# print "parents ", parentsWithRelation
 
 		# need to check for this section
 		else:
@@ -235,8 +218,6 @@ class Util:
 					item[2].split('{')[0])for item in dependencies)
 		wordsWithIndices = list(set(wordsWithIndices))
 		wordsWithIndices = sorted(wordsWithIndices, key=lambda item: item[0])
-		print "wordsWith Indices ", wordsWithIndices
-		print ""
 		childrenWithRelation = []
 		
 		wordIndexPresentInList = False
