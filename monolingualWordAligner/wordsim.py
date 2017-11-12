@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 from config import *
 from Resources import *
@@ -19,7 +20,7 @@ class WordSimilarity:
 	Append tokens with similarity score(0.9)
 	'''
 
-
+	
 	def load_paraphraseDatabase(self, FileName = 'Resources/ppdb-1.0-xxxl-lexical.extended.synonyms.uniquepairs'):
 
 		file = open(FileName,'r')
@@ -33,6 +34,7 @@ class WordSimilarity:
 			tokens[1] = tokens[1].strip()
 			self.ppdbDict[(tokens[0], tokens[1])] = self.ppdbSim
 			count += 1
+		# print count
 
 
 	'''
@@ -43,12 +45,11 @@ class WordSimilarity:
 
 	def checkWordPresentInDataBase(self, word1, word2):
 
-		if (word1.lower(), word2.lower()) in ppdbDict:
 
+		if (word1.lower(), word2.lower()) in self.ppdbDict:
 			return True
 
-		if (word1.lower(), word2.lower()) in ppdbDict:
-
+		if (word2.lower(), word1.lower()) in self.ppdbDict:
 			return True
 
 
@@ -64,6 +65,7 @@ class WordSimilarity:
 		vii. If both the words are present in PPDB then return then PPDBSim(similarity score)(0.9)
 
 	Returns: similarity score between two words
+
 	'''
 
 
@@ -82,11 +84,13 @@ class WordSimilarity:
 	    	modifiedWord2 = word2.replace(',','')
 	    else:
 	    	modifiedWord2 = word2
-
+	    
 	    if modifiedWord1.lower() == modifiedWord2.lower():
+	    	# print "words exactly equal "
 	    	return 1
 
 	    if self.stemmer.stem(word1).lower() == self.stemmer.stem(word2).lower():
+	    	# print "stemma exactly equal "
 	    	return 1
 
 	    if modifiedWord1.isdigit() and modifiedWord2.isdigit() and modifiedWord1 != modifiedWord2:
@@ -108,7 +112,7 @@ class WordSimilarity:
 	    #check words in database
 
 	    if self.checkWordPresentInDataBase(word1.lower(), word2.lower()):
-	    	return ppdbSim
+	    	return self.ppdbSim
 
 	    else:
 	    	return 0
