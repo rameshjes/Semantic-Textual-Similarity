@@ -15,26 +15,26 @@ class Aligner:
 
 		sentence1ParseResult = self.text_nor.parser(sentence1)
 		sentence2ParseResult = self.text_nor.parser(sentence2)
-		
+
 		sentence1LemmasAndPosTags = self.text_nor.combine_lemmaAndPosTags(sentence1ParseResult)
 		sentence2LemmasAndPosTags = self.text_nor.combine_lemmaAndPosTags(sentence2ParseResult)
 
 		self.sourceWordIndices = [i+1 for i in xrange(len(sentence1LemmasAndPosTags))]
 		self.targetWordIndices = [i+1 for i in xrange(len(sentence2LemmasAndPosTags))]
-		
+
 		self.sourceWords = [item[2] for item in sentence1LemmasAndPosTags]
 		self.targetWords = [item[2] for item in sentence2LemmasAndPosTags]
 
 		self.sourceLemmas = [item[3] for item in sentence1LemmasAndPosTags]
 		self.targetLemmas = [item[3] for item in sentence2LemmasAndPosTags]
 
-		
 		self.sourcePosTags = [item[4] for item in sentence1LemmasAndPosTags]
 		self.targetPosTags = [item[4] for item in sentence2LemmasAndPosTags] 
 
 		myWordAlignments = self.alignWords(sentence1LemmasAndPosTags, sentence2LemmasAndPosTags, 
 									sentence1ParseResult, sentence2ParseResult, self.sourceWords, self.targetWords)
 		
+		# # print "myWordAlignments ", myWordAlignments
 		align = []
 		for i in myWordAlignments:
 			align.append([self.sourceWords[i[0]-1], self.targetWords[i[1]-1] ])
@@ -49,11 +49,13 @@ class Aligner:
 	sourceParseResult and targetParseResult is list of:
 		Parse Tree(Constituency tree), Text, Dependencies, words(NE, CharacOffsetEn, CharOffsetBeg,
 			POS, Lemma)
-	1. Align the punctuations first
-	2. Align common NeighboringWords(atleast bigram or more)
+	1. Align punctuations
+	2. Align common NeighboringWords(at least bi-gram or more)
 	3. Align Hyphenated Words
-	4. Align named entitiesss
+	4. Align named entities
 	5. Align Main Verbs
+	6. Align Nouns
+	7. Align Adjective
 	'''
 
 
@@ -73,6 +75,12 @@ class Aligner:
 			self.align_commonNeighboringWords(sourceWords, targetWords, \
 							srcWordAlreadyAligned, tarWordAlreadyAligned, alignments)
 
+		print "**************************"
+		print "alignments in neighboring words ", alignments
+		print "source word aligned ", srcWordAlreadyAligned
+		print "target word aligned ", tarWordAlreadyAligned
+		print "**************************"
+		
 		#3. align Hyphenated words
 		# print "source Hyphenated Words"
 		checkSourceWordsInTarget = True # check if Source Words have any hyphen words
@@ -81,14 +89,30 @@ class Aligner:
 									srcWordAlreadyAligned, alignments,\
 									tarWordAlreadyAligned, checkSourceWordsInTarget)
 
+		print "********************************************"
+		print "alignments in hyphen source", alignments
+		print "source word aligned ", srcWordAlreadyAligned
+		print "target word aligned ", tarWordAlreadyAligned
+		print "********************************************"
+		print "target Hyphenated Words"
+		
 		checkSourceWordsInTarget = False  # check if target Words have any hyphen words
 		alignments, tarWordAlreadyAligned, srcWordAlreadyAligned = \
 							self.align_hyphenWords(self.targetWordIndices, targetWords, tarWordAlreadyAligned, alignments, \
 									srcWordAlreadyAligned,checkSourceWordsInTarget)
 		
+		print "********************************************"
+		print "alignments in hyphen words target", alignments
+		print "source word aligned ", srcWordAlreadyAligned
+		print "target word aligned ", tarWordAlreadyAligned
+		print "********************************************"
+
 		#4. align named entities
 		neAlignments = self.align_namedEntities(sourceSent, targetSent, sourceParseResult, \
 			    targetParseResult, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned) 
+		print "***********************************"
+		print "neAlignments ", neAlignments
+		print "***********************************"
 		
 		for item in neAlignments:
 			if item not in alignments:
@@ -97,11 +121,23 @@ class Aligner:
 					srcWordAlreadyAligned.append(item[0])
 				if item[1] not in tarWordAlreadyAligned:
 					tarWordAlreadyAligned.append(item[1])
-		
-		#5. Align Main Verbs
-		aligned_verbs = self.align_mainVerbs(self.sourceWordIndices, self.targetWordIndices, sourceWords, targetWords,
+
+		print "********************************************"
+		print "alignments in neighboring words NE", alignments
+		print "source word aligned ", srcWordAlreadyAligned
+		print "target word aligned ", tarWordAlreadyAligned
+		print "********************************************"
+
+		sourceDependencyParse = self.util.dependencyTreeWithOffSets(sourceParseResult)
+		targetDependencyParse = self.util.dependencyTreeWithOffSets(targetParseResult)
+
+		#. Align Main Verbs
+		aligned_verbs = self.alignMainVerbs(self.sourceWordIndices, self.targetWordIndices, sourceWords, targetWords,
 										self.sourceLemmas, self.targetLemmas, self.sourcePosTags, self.targetPosTags,
-											sourceParseResult, targetParseResult, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
+											sourceDependencyParse, targetDependencyParse, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
+		print "**********************************"
+		print "aligned Verbs ", aligned_verbs
+		print "**********************************"
 		
 		for item in aligned_verbs:
 			if item not in alignments:
@@ -111,13 +147,29 @@ class Aligner:
 				if item[1] not in tarWordAlreadyAligned:
 					tarWordAlreadyAligned.append(item[1])
 
-		aligned_nouns = self.align_Nouns(self.sourceWordIndices, self.targetWordIndices, sourceWords, targetWords,
+
+
+		aligned_nouns = self.alignNouns(self.sourceWordIndices, self.targetWordIndices, sourceWords, targetWords,
 										self.sourceLemmas, self.targetLemmas, self.sourcePosTags, self.targetPosTags,
-											sourceParseResult, targetParseResult, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
+											sourceDependencyParse, targetDependencyParse, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
 
 		print "aligned nouns ", aligned_nouns
 
 		for item in aligned_nouns:
+			if item not in alignments:
+				alignments.append(item)
+				if item[0] not in srcWordAlreadyAligned:
+					srcWordAlreadyAligned.append(item[0])
+				if item[1] not in tarWordAlreadyAligned:
+					tarWordAlreadyAligned.append(item[1])
+ 
+		aligned_adjectives = self.alignAdjective(self.sourceWordIndices, self.targetWordIndices, sourceWords, targetWords,
+										self.sourceLemmas, self.targetLemmas, self.sourcePosTags, self.targetPosTags,
+											sourceDependencyParse, targetDependencyParse, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
+
+		print "aligned adjectives ", aligned_adjectives
+
+		for item in aligned_adjectives:
 			if item not in alignments:
 				alignments.append(item)
 				if item[0] not in srcWordAlreadyAligned:
@@ -179,28 +231,29 @@ class Aligner:
 
 
 		commonNeighboringWords = self.util.get_commonNeighboringWords(sourceWords, targetWords)
-
+		# print "common NeighboringWords ", commonNeighboringWords
 
 		for commonWords in commonNeighboringWords:
 			stopWordsPresent = True
-
+			# print "common Words ", commonWords
 			for word in commonWords:
 				
 				if word not in stopwords and word not in punctuations:
 					stopWordsPresent = 	False
 					break
-
+			# print "asds ", (len(word[0]))
 			if len(commonWords[0]) >= 2 and not stopWordsPresent:
 
 				for j in xrange(len(commonWords[0])):
-
+					# print "common Word sss ", commonWords[0][j]+1
+					# print "target words ", commonWords[1][j]+1
 					if commonWords[0][j]+1 not in srcWordAlreadyAligned and commonWords[1][j]+1 not in \
 							tarWordAlreadyAligned and [commonWords[0][j]+1, commonWords[1][j]+1] not in alignments:
 
 						alignments.append([commonWords[0][j]+1, commonWords[1][j]+1])
 						srcWordAlreadyAligned.append(commonWords[0][j]+1)
 						tarWordAlreadyAligned.append(commonWords[1][j]+1)
-
+		
 		return alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
 
 
@@ -220,13 +273,12 @@ class Aligner:
 
 		
 		for i in wordIndices:
-
 			if flag:
-
+				# print "first if statement source"
 				if i in srcWordAlreadyAligned:
 					continue
 			else:
-
+				# print "i in target word ", tarWordAlreadyAligned
 				if i in tarWordAlreadyAligned:
 					continue
 
@@ -235,17 +287,17 @@ class Aligner:
 				#if flag true(means we check source words in target Words)
 
 				if flag:
-
+					# print "second if statement source"
 					commonNeighboringWords = self.util.get_commonNeighboringWords(tokens, self.targetWords)
 
 				else:
-
+					# print" second else statemetn"
 					commonNeighboringWords = self.util.get_commonNeighboringWords(tokens,self.sourceWords)
 
 				for pairs in commonNeighboringWords:
 
 					if len(pairs[0]) > 1:
-
+						# print "third if statement source"
 						for j in pairs[1]:
 							if flag:
 
@@ -255,7 +307,7 @@ class Aligner:
 									srcWordAlreadyAligned.append(i)
 									tarWordAlreadyAligned.append(j+1)
 							else:
-
+								# print"third else" 
 								if[j+1, i] not in alignments:
 
 									alignments.append([j+1,i])
@@ -283,7 +335,7 @@ class Aligner:
 		
 		sourceNE = self.text_nor.get_ner(sourceParseResult)
 		targetNE = self.text_nor.get_ner(targetParseResult)
-
+		# print "before sourceNE ", sourceNE
 		sourceNE, sourceWords = self.learn_NamedEntities(sourceSent, sourceNE, targetNE)
 		targetNE, targetWords = self.learn_NamedEntities(targetSent, targetNE, sourceNE)
 
@@ -531,44 +583,40 @@ class Aligner:
 	'''
 
 
-	def align_mainVerbs(self, srcWordIndices, tarWordIndices, srcWords, tarWords, srcLemmas,\
-			 tarLemmas,  srcPosTags, tarPosTags, sourceParseResult,targetParseResult, existingalignments, 
+	def alignMainVerbs(self, srcWordIndices, tarWordIndices, srcWords, tarWords, srcLemmas,\
+			 tarLemmas,  srcPosTags, tarPosTags, sourceDependencyParse,targetDependencyParse, existingalignments, 
 			 			srcWordAlreadyAligned, tarWordAlreadyAligned):
 		
+
 		AlignedVerbs = []
-		
 		numberofMainVerbsInSource = 0 
 		evidenceCountMatrix = {}
 		relativeAlignmentsMatrix = {} # contains aligned Verbs with their similar child/parents 
 		wordSimilarity = {} # dictionary contains similarity score of two word indices(src and tar)
 
-		sourceDependencyParse = self.util.dependencyTreeWithOffSets(sourceParseResult)
-		targetDependencyParse = self.util.dependencyTreeWithOffSets(targetParseResult)
-
 		#construct the two matrices in following loop
-		# print "tar word Indices ", tarWordIndices
-		# print "srcwordAlreadyAligned ", srcWordAlreadyAligned
 		for i in srcWordIndices:
-
+			
 			if i in srcWordAlreadyAligned or srcPosTags[i-1][0].lower() != 'v' or srcLemmas[i-1] in stopwords:
 				continue
-			
+
 			numberofMainVerbsInSource += 1
-			
+
 			for j in tarWordIndices:
 
 				if j in tarWordAlreadyAligned or tarPosTags[j-1][0].lower() != 'v' or tarLemmas[j-1] in stopwords:
 					continue
-
 				getSimilarityScore = max(self.word_similarity.computeWordSimilarityScore(srcWords[i-1], \
 						srcPosTags[i-1], tarWords[j-1], tarPosTags[j-1]), \
 								self.word_similarity.computeWordSimilarityScore(srcLemmas[i-1],\
 							 	srcPosTags[i-1], tarLemmas[j-1], tarPosTags[j-1]))
-
 				if getSimilarityScore < ppdbSim:
+					
+					# print "score less than 0.9 "
 					continue
 			
 				wordSimilarity[(i,j)] = getSimilarityScore
+
 				sourceWordParents = self.util.findParents(sourceDependencyParse, i, srcWords[i-1])
 				sourceWordChildren = self.util.findChildren(sourceDependencyParse, i, srcWords[i-1])
 				targetWordParents = self.util.findParents(targetDependencyParse, j, tarWords[j-1])
@@ -582,6 +630,7 @@ class Aligner:
 				groupOfSimilarRelationsForVerbChild = ['purpcl', 'xcomp']
 
 				for k in sourceWordChildren:
+
 					for l in targetWordChildren:
 						if (k[0], l[0]) in existingalignments+AlignedVerbs or \
 								max( self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], tarPosTags[l[0]-1]),\
@@ -602,16 +651,19 @@ class Aligner:
 								 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
 								 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
 
+								 # print "evidence Count Matrix first tie ", evidenceCountMatrix
+								 # relativeAlignmentsMatrix {(2, 3): [[1, 1]]} 
+								 # (2,3) are verbs, and [1,1] are their childrens that has similar relations
 								 if (i, j) in relativeAlignmentsMatrix:
 								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
 
 								 else:
 								 	relativeAlignmentsMatrix[(i,j)] = []
 								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+				
 				# considers only first orientation from paper
 				groupOfSimilarRelationsForNounParent = ['infmod', 'partmod', 'rcmod']
 				groupOfSimilarRelationsForVerbParent = ['purpcl', 'xcomp']
-
 				# if no parent(means it is only Root) then compare last words in sentence
 				for k in sourceWordParents:
 					for l in targetWordParents:
@@ -624,7 +676,7 @@ class Aligner:
 								 (k[2] == l[2]) or \
 								 (k[2] in groupOfSimilarRelationsForNounParent and l[2] in groupOfSimilarRelationsForNounParent) or \
 								 (k[2] in groupOfSimilarRelationsForVerbChild and l[2] in groupOfSimilarRelationsForVerbChild):
-								 print "here in common parents "
+
 								 if (i, j) in evidenceCountMatrix:
 
 								 	evidenceCountMatrix[(i, j)] += max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
@@ -644,45 +696,48 @@ class Aligner:
 								 	relativeAlignmentsMatrix[(i,j)] = []
 								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
 
-				# search for equivalent parent-child pairs
 				groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild = [['cop', 'csubj'], ['acomp']]
 				group1OfSimilarRelationsInOppositeDirectionForVerbParentAndChild = [['csubj'], ['csubjpass']]
 				group2OfSimilarRelationsInOppositeDirectionForVerbParentAndChild = [['conj_and'], ['conj_and']]
 				group3OfSimilarRelationsInOppositeDirectionForVerbParentAndChild = [['conj_or'], ['conj_or']]
 				group4OfSimilarRelationsInOppositeDirectionForVerbParentAndChild = [['conj_nor'], ['conj_nor']]
 
-				for k in sourceWordParents:
-					for l in targetWordChildren:
-						if (k[0], l[0]) in existingalignments+AlignedVerbs or \
-								max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1],
-									l[1], tarPosTags[l[0]-1]),\
-									self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], srcPosTags[k[0]-1], 
-										tarLemmas[l[0]-1], tarPosTags[l[0]-1])) >= ppdbSim and \
-								 (k[2] == l[2]) or \
-								 (k[2] in groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild and l[2] in groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild) or \
-								 (k[2] in group1OfSimilarRelationsInOppositeDirectionForVerbParentAndChild and l[2] in group1OfSimilarRelationsInOppositeDirectionForVerbParentAndChild) or \
-								 (k[2] in group2OfSimilarRelationsInOppositeDirectionForVerbParentAndChild and l[2] in group2OfSimilarRelationsInOppositeDirectionForVerbParentAndChild) or \
-								 (k[2] in group3OfSimilarRelationsInOppositeDirectionForVerbParentAndChild and l[2] in group3OfSimilarRelationsInOppositeDirectionForVerbParentAndChild) or \
-								 (k[2] in group4OfSimilarRelationsInOppositeDirectionForVerbParentAndChild and l[2] in group4OfSimilarRelationsInOppositeDirectionForVerbParentAndChild):
+				# search for equivalent parent-child pairs
+				evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentParentChildRelation(i, j, sourceWordParents, targetWordChildren, \
+					AlignedVerbs, existingalignments,\
+					srcPosTags, tarPosTags, srcLemmas,tarLemmas, groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0], \
+						groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1],\
 
-								 if (i, j) in evidenceCountMatrix:
-								 	evidenceCountMatrix[(i, j)] += max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
-								 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
-								 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
-								 else:
-								 	evidenceCountMatrix[(i, j)] = max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
-								 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
-								 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
+							group1OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0],\
+							group1OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1], \
 
+							group2OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0],\
+							group2OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1], \
 
-								 if (i, j) in relativeAlignmentsMatrix:
-								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+							group3OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0], \
+							group3OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1],\
 
-								 else:
-								 	relativeAlignmentsMatrix[(i,j)] = []
-								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+							group4OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0], \
+							group4OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1], \
+							evidenceCountMatrix,relativeAlignmentsMatrix)
 
 				# search for equivalent child-parent pairs
+				evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentParentChildRelation(i, j, sourceWordChildren, targetWordParents, \
+					AlignedVerbs, existingalignments,\
+					srcPosTags, tarPosTags, srcLemmas,tarLemmas, groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1], \
+						groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0],\
+							group1OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1],\
+							group1OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0], \
+							group2OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1],\
+							group2OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0], \
+							group3OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1], \
+							group3OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0],\
+							group4OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1], \
+							group4OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0], \
+							evidenceCountMatrix,relativeAlignmentsMatrix)
+
+				# search for equivalent child-parent pairs
+
 				for k in sourceWordChildren:
 					for l in targetWordParents:
 						if (k[0], l[0]) in existingalignments+AlignedVerbs or \
@@ -734,6 +789,7 @@ class Aligner:
 								tarLemmas[j-1] in stopwords:
 						continue
 
+					# getWeight = theta1 * wordSimilarity[(i, j)] + (1-theta1)*evidenceCountMatrix[(i, j)]
 
 					if(i, j) in evidenceCountMatrix and theta1*wordSimilarity[(i,j)] + \
 														(1-theta1)*evidenceCountMatrix[(i, j)] > maxOverallValueForCurrentPass:
@@ -741,12 +797,11 @@ class Aligner:
 														(1-theta1)*evidenceCountMatrix[(i, j)]
 						maxEvidenceCountForCurrentPass = evidenceCountMatrix[(i, j)]
 						indexPairWithStrongestTieForCurrentPass = [i, j]
-					
 			if maxEvidenceCountForCurrentPass > 0:
 				AlignedVerbs.append(indexPairWithStrongestTieForCurrentPass)
 				srcWordAlreadyAligned.append(indexPairWithStrongestTieForCurrentPass[0])
 				tarWordAlreadyAligned.append(indexPairWithStrongestTieForCurrentPass[1])
-				
+
 				for item in relativeAlignmentsMatrix[(indexPairWithStrongestTieForCurrentPass[0], \
 								indexPairWithStrongestTieForCurrentPass[1])]:
 						# item[0] and item[1] != 0 so that we should not store Root-0
@@ -763,11 +818,12 @@ class Aligner:
 
 
 	'''
-	Returns Aligned Nouns
+	Returns: Aligned nouns
 	'''
 
-	def align_Nouns(self, srcWordIndices, tarWordIndices, srcWords, tarWords, srcLemmas,\
-			 tarLemmas,  srcPosTags, tarPosTags, sourceParseResult,targetParseResult, existingalignments, 
+
+	def alignNouns(self, srcWordIndices, tarWordIndices, srcWords, tarWords, srcLemmas,\
+			 tarLemmas,  srcPosTags, tarPosTags, sourceDependencyParse,targetDependencyParse, existingalignments, 
 			 			srcWordAlreadyAligned, tarWordAlreadyAligned):
 
 
@@ -777,9 +833,6 @@ class Aligner:
 		relativeAlignmentsMatrix = {} # contains aligned Verbs with their similar child/parents 
 		wordSimilarity = {} # dictionary contains similarity score of two word indices(src and tar)
 
-		sourceDependencyParse = self.util.dependencyTreeWithOffSets(sourceParseResult)
-		targetDependencyParse = self.util.dependencyTreeWithOffSets(targetParseResult)
-
 		for i in srcWordIndices:
 
 			if i in srcWordAlreadyAligned or (srcPosTags[i-1][0].lower() != 'n' \
@@ -787,7 +840,7 @@ class Aligner:
 				continue
 
 			numberofNounsInSource += 1
-			
+
 			for j in tarWordIndices:
 
 				if j in tarWordAlreadyAligned or (tarPosTags[j-1][0].lower() != 'n' \
@@ -886,13 +939,14 @@ class Aligner:
 								relativeAlignmentsMatrix[(i,j)] = []
 								relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])			
 
+
 				groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild = [['nsubj'], ['amod', 'rcmod']]
 				groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild = [['ccomp', 'dobj', 'nsubjpass', 'rel', 'partmod'], ['infmod', 'partmod', 'rcmod']]
 				group1OfSimilarRelationsInOppositeDirectionForNounParentAndChild = [['conj_and'], ['conj_and']]
 				group2OfSimilarRelationsInOppositeDirectionForNounParentAndChild = [['conj_or'], ['conj_or']]
 				group3OfSimilarRelationsInOppositeDirectionForNounParentAndChild = [['conj_nor'], ['conj_nor']]
 				# search for equivalent parent-child relations
-				evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentRelationAlignNouns(i, j, sourceWordParents, targetWordChildren, \
+				evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentParentChildRelation(i, j, sourceWordParents, targetWordChildren, \
 									nounAlignments, existingalignments,\
 									srcPosTags, tarPosTags, srcLemmas,tarLemmas, groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0], \
 										groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1],\
@@ -907,7 +961,8 @@ class Aligner:
 											evidenceCountMatrix,relativeAlignmentsMatrix)
 				
 				# search for equivalent child-parent relations
-				evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentRelationAlignNouns(i, j, sourceWordChildren, targetWordParents, \
+				#here we iterate through sourceWordChildren(outerloop) and targetWordParents(inner loop) 
+ 				evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentParentChildRelation(i, j, sourceWordChildren, targetWordParents, \
 									nounAlignments, existingalignments,\
 									srcPosTags, tarPosTags, srcLemmas,tarLemmas, groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1], \
 										groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0],\
@@ -922,7 +977,6 @@ class Aligner:
 											evidenceCountMatrix,relativeAlignmentsMatrix)
 
 		# use collected stats to align
-		
 		for p in xrange(numberofNounsInSource):
 
 			maxEvidenceCountForCurrentPass = 0
@@ -967,50 +1021,238 @@ class Aligner:
 
 
 	'''
-	Auxillary verb to find equivalent parent-child / child-parent relation in align nouns
+	Auxillary function to find equivalent parent-child / child-parent relation used 
+	to reduce repeatation of code in align nouns and align adjective
 	'''
 
 
-	def findEquivalentRelationAlignNouns(self, i, j, sourceDepenency, targetDependency, nounAlignments, existingalignments,\
+	def findEquivalentParentChildRelation(self, i, j, sourceDepenency, targetDependency, Alignments, existingalignments,\
 									srcPosTags, tarPosTags, srcLemmas,tarLemmas, AdjParentAndChildSrc, AdjParentAndChildTar,\
-											OppDirecVerbParentAndChildSrc,OppDirecVerbParentAndChildTar, \
-											group1OppDirectNounParentAndChildSrc,group1OppDirectNounParentAndChildTar, \
+											OppDirecVerbParentAndChildSrc, OppDirecVerbParentAndChildTar, \
+											group1OppDirectNounParentAndChildSrc, group1OppDirectNounParentAndChildTar, \
 											group2OppDirectNounParentAndChildSrc, group2OppDirectNounParentAndChildTar,\
 											group3OppDirectNounParentAndChildSrc, group3OppDirectNounParentAndChildTar, \
-											evidenceCountMatrix,relativeAlignmentsMatrix ):
+											evidenceCountMatrix, relativeAlignmentsMatrix ):
 
 
 		for k in sourceDepenency:
-					for l in targetDependency:
-						if (k[0], l[0]) in existingalignments+nounAlignments or \
-								max( self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], \
-											l[1], tarPosTags[l[0]-1]),\
-									self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
-											srcPosTags[k[0]-1],tarLemmas[l[0]-1], tarPosTags[l[0]-1])) \
-														>= ppdbSim and \
-								 ((k[2] == l[2]) or \
-								 (k[2] in AdjParentAndChildSrc and l[2] in AdjParentAndChildTar) or \
-								 (k[2] in OppDirecVerbParentAndChildSrc and l[2] in OppDirecVerbParentAndChildTar) or \
-								 (k[2] in group1OppDirectNounParentAndChildSrc and l[2] in group1OppDirectNounParentAndChildTar) or \
-								 (k[2] in group2OppDirectNounParentAndChildSrc and l[2] in group2OppDirectNounParentAndChildTar) or \
-								 (k[2] in group3OppDirectNounParentAndChildSrc and k[2] in group3OppDirectNounParentAndChildTar)):
+			for l in targetDependency:
+				if (k[0], l[0]) in existingalignments+Alignments or \
+						max( self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], \
+									l[1], tarPosTags[l[0]-1]),\
+							self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
+									srcPosTags[k[0]-1],tarLemmas[l[0]-1], tarPosTags[l[0]-1])) \
+												>= ppdbSim and \
+						 ((k[2] == l[2]) or \
+						 (k[2] in AdjParentAndChildSrc and l[2] in AdjParentAndChildTar) or \
+						 (k[2] in OppDirecVerbParentAndChildSrc and l[2] in OppDirecVerbParentAndChildTar) or \
+						 (k[2] in group1OppDirectNounParentAndChildSrc and l[2] in group1OppDirectNounParentAndChildTar) or \
+						 (k[2] in group2OppDirectNounParentAndChildSrc and l[2] in group2OppDirectNounParentAndChildTar) or \
+						 (k[2] in group3OppDirectNounParentAndChildSrc and k[2] in group3OppDirectNounParentAndChildTar)):
 
-							if (i, j) in evidenceCountMatrix:
-								evidenceCountMatrix[(i, j)] += max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
-								 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
-								 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
-							else:
+					if (i, j) in evidenceCountMatrix:
+						evidenceCountMatrix[(i, j)] += max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
+						 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
+						 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
+					else:
 
-							 	evidenceCountMatrix[(i, j)] = max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
-							 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
-							 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
+					 	evidenceCountMatrix[(i, j)] = max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
+					 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
+					 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
 
 
-							if (i, j) in relativeAlignmentsMatrix:
-							 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+					if (i, j) in relativeAlignmentsMatrix:
+					 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
 
-							else:
-								relativeAlignmentsMatrix[(i,j)] = []
-								relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])	
+					else:
+						relativeAlignmentsMatrix[(i,j)] = []
+						relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])	
 
 		return evidenceCountMatrix, relativeAlignmentsMatrix	
+
+
+	'''
+	Returns Aligned adjectives
+	'''
+
+
+	def alignAdjective(self, srcWordIndices, tarWordIndices, srcWords, tarWords, srcLemmas,\
+				 tarLemmas,  srcPosTags, tarPosTags, sourceDependencyParse,targetDependencyParse, existingalignments, 
+				 			srcWordAlreadyAligned, tarWordAlreadyAligned):
+			
+
+			adjectiveAlignments= []
+			numberofAdjectivesInSource = 0 
+			evidenceCountMatrix = {}
+			relativeAlignmentsMatrix = {} # contains aligned Verbs with their similar child/parents 
+			wordSimilarity = {} # dictionary contains similarity score of two word indices(src and tar)
+
+			for i in srcWordIndices:
+				if i in srcWordAlreadyAligned or (srcPosTags[i-1][0].lower() != 'j'):
+					continue
+
+				numberofAdjectivesInSource += 1
+				# print "number of adjectives in source ", numberofAdjectivesInSource
+
+				for j in tarWordIndices:
+					if j in tarWordAlreadyAligned or (tarPosTags[j-1][0].lower() != 'j'):
+						continue
+
+					getSimilarityScore = max(self.word_similarity.computeWordSimilarityScore(srcWords[i-1], \
+								srcPosTags[i-1], tarWords[j-1], tarPosTags[j-1]), \
+										self.word_similarity.computeWordSimilarityScore(srcLemmas[i-1],\
+									 	srcPosTags[i-1], tarLemmas[j-1], tarPosTags[j-1]))
+					
+					if getSimilarityScore < ppdbSim:
+						continue
+					
+					wordSimilarity[(i,j)] = getSimilarityScore
+
+					sourceWordParents = self.util.findParents(sourceDependencyParse, i, srcWords[i-1])
+					sourceWordChildren = self.util.findChildren(sourceDependencyParse, i, srcWords[i-1])
+					targetWordParents = self.util.findParents(targetDependencyParse, j, tarWords[j-1])
+					targetWordChildren = self.util.findChildren(targetDependencyParse, j, tarWords[j-1])
+
+					# search for common children
+					for k in sourceWordChildren:
+						for l in targetWordChildren:
+							if (k[0], l[0]) in existingalignments+adjectiveAlignments or \
+									max( self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], \
+												l[1], tarPosTags[l[0]-1]),\
+										self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
+												srcPosTags[k[0]-1],tarLemmas[l[0]-1], tarPosTags[l[0]-1])) \
+															>= ppdbSim and (k[2] == l[2]):
+
+								if (i, j) in evidenceCountMatrix:
+									evidenceCountMatrix[(i, j)] += max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
+									 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
+									 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
+								else:
+
+								 	evidenceCountMatrix[(i, j)] = max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
+								 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
+								 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
+
+
+								if (i, j) in relativeAlignmentsMatrix:
+								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+
+								else:
+									relativeAlignmentsMatrix[(i,j)] = []
+									relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+
+					# search for common or equivalent parents
+					groupOfSimilarRelationsForNounParent = ['amod', 'rcmod']
+
+					for k in sourceWordParents:
+						for l in targetWordParents:
+							if (k[0], l[0]) in existingalignments+adjectiveAlignments or \
+									max( self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], \
+												l[1], tarPosTags[l[0]-1]),\
+										self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
+												srcPosTags[k[0]-1],tarLemmas[l[0]-1], tarPosTags[l[0]-1])) \
+															>= ppdbSim and \
+									 ((k[2] == l[2]) or \
+									 (k[2] in groupOfSimilarRelationsForNounParent and l[2] in groupOfSimilarRelationsForNounParent)):
+
+								if (i, j) in evidenceCountMatrix:
+									evidenceCountMatrix[(i, j)] += max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
+									 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
+									 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
+								else:
+
+								 	evidenceCountMatrix[(i, j)] = max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
+								 								tarPosTags[l[0]-1]), self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], \
+								 								srcPosTags[k[0]-1], tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
+								if (i, j) in relativeAlignmentsMatrix:
+								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+								else:
+									relativeAlignmentsMatrix[(i,j)] = []
+									relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+
+					groupOfSimilarRelationsInOppositeDirectionForNounParentAndChild = [['amod', 'rcmod'], ['nsubj']]
+					groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild = [['acomp'], ['cop', 'csubj']]
+					group1OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild = [['conj_and'], ['conj_and']]
+					group2OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild = [['conj_or'], ['conj_or']]
+					group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild = [['conj_nor'], ['conj_nor']]
+
+					#search for equivaent parent-child pair
+					evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentParentChildRelation(i, j, sourceWordParents, targetWordChildren, \
+									adjectiveAlignments, existingalignments,\
+									srcPosTags, tarPosTags, srcLemmas,tarLemmas, groupOfSimilarRelationsInOppositeDirectionForNounParentAndChild[0], \
+										groupOfSimilarRelationsInOppositeDirectionForNounParentAndChild[1],\
+
+											groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0],\
+											groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1], \
+
+											group1OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0],\
+											group1OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1], \
+
+											group2OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0], \
+											group2OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1],\
+
+											group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0], \
+											group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1], \
+											evidenceCountMatrix,relativeAlignmentsMatrix)
+					
+					#search for equivalent child-parent pair
+					evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentParentChildRelation(i, j, sourceWordChildren, 
+									targetWordParents, adjectiveAlignments, existingalignments,\
+									srcPosTags, tarPosTags, srcLemmas,tarLemmas, groupOfSimilarRelationsInOppositeDirectionForNounParentAndChild[1], \
+										groupOfSimilarRelationsInOppositeDirectionForNounParentAndChild[0],\
+
+											groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1],\
+											groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0], \
+
+											group1OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1],\
+											group1OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0], \
+
+											group2OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1], \
+											group2OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0],\
+
+											group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1], \
+											group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0], \
+											evidenceCountMatrix,relativeAlignmentsMatrix)
+
+			# use collected stats to align
+			for p in xrange(numberofAdjectivesInSource):
+
+				maxEvidenceCountForCurrentPass = 0
+				maxOverallValueForCurrentPass = 0
+				indexPairWithStrongestTieForCurrentPass = [-1, -1] # indexes of aligned nouns
+
+				for i in srcWordIndices:
+					if i in srcWordAlreadyAligned or srcPosTags[i-1][0].lower() != 'j' or \
+								srcLemmas[i-1] in stopwords:
+						continue
+
+					for j in tarWordIndices:
+						if j in tarWordAlreadyAligned or tarPosTags[j-1][0].lower() != 'j' or \
+									tarLemmas[j-1] in stopwords:
+							continue
+
+						if(i, j) in evidenceCountMatrix and theta1*wordSimilarity[(i,j)] + \
+															(1-theta1)*evidenceCountMatrix[(i, j)] > maxOverallValueForCurrentPass:
+							maxOverallValueForCurrentPass = theta1*wordSimilarity[(i,j)] + \
+															(1-theta1)*evidenceCountMatrix[(i, j)]
+							maxEvidenceCountForCurrentPass = evidenceCountMatrix[(i, j)]
+							indexPairWithStrongestTieForCurrentPass = [i, j]
+							
+				if maxEvidenceCountForCurrentPass > 0:
+					adjectiveAlignments.append(indexPairWithStrongestTieForCurrentPass)
+					srcWordAlreadyAligned.append(indexPairWithStrongestTieForCurrentPass[0])
+					tarWordAlreadyAligned.append(indexPairWithStrongestTieForCurrentPass[1])
+
+					for item in relativeAlignmentsMatrix[(indexPairWithStrongestTieForCurrentPass[0], \
+									indexPairWithStrongestTieForCurrentPass[1])]:
+							# item[0] and item[1] != 0 so that we should not store Root-0
+							if item[0] != 0 and item[1] != 0 and item[0] not in srcWordAlreadyAligned and \
+											item[1] not in tarWordAlreadyAligned:
+									adjectiveAlignments.append(item)
+									srcWordAlreadyAligned.append(item[0])
+									tarWordAlreadyAligned.append(item[1])
+				# no aligned adjective formed
+				else:
+					break
+		
+			return adjectiveAlignments			
