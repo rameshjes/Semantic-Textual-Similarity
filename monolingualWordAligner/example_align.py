@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 from wordAligner import *
 
-sentence1 = "They are washing clothes. I heard some noise. He ran quickly. I work on Sunday"
-sentence2 = "I have washed my clothes. They run very slowly. I am hearing songs. I am working tomorrow"
+sentence1 = "Ramesh and rubanraj are doing Masters in Autonomus System. Camel and cow gives milk "
+sentence2 = "Rubanraj and ramesh are doing their research and development project. Cow and camel produces milk"
 
 print "sentence1 = ", sentence1
 print "sentence2 = ", sentence2
