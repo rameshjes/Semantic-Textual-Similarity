@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 from wordAligner import *
 
-sentence1 = "UAE is really well-designed country in  the world. US is powerful country"
-sentence2 = "Really well designed is United Arab Emirates. But United States is more populated"
+sentence1 = "They are washing clothes. I heard some noise. He ran quickly. I work on Sunday"
+sentence2 = "I have washed my clothes. They run very slowly. I am hearing songs. I am working tomorrow"
 
 print "sentence1 = ", sentence1
 print "sentence2 = ", sentence2
