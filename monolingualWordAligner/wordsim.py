@@ -14,11 +14,12 @@ class WordSimilarity:
 		self.load_paraphraseDatabase()
 
 
-
 	'''
 	Input: Paraphrase database
 	Append tokens with similarity score(0.9)
 	'''
+
+
 	def load_paraphraseDatabase(self, FileName = 'Resources/ppdb-1.0-xxxl-lexical.extended.synonyms.uniquepairs'):
 
 		file = open(FileName,'r')
@@ -32,7 +33,6 @@ class WordSimilarity:
 			tokens[1] = tokens[1].strip()
 			self.ppdbDict[(tokens[0], tokens[1])] = self.ppdbSim
 			count += 1
-		print count
 
 
 	'''
@@ -64,7 +64,6 @@ class WordSimilarity:
 		vii. If both the words are present in PPDB then return then PPDBSim(similarity score)(0.9)
 
 	Returns: similarity score between two words
-
 	'''
 
 
