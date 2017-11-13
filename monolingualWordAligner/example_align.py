@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 from wordAligner import *
 
-sentence1 = "Ramesh and rubanraj are doing Masters in Autonomus System. He is very innocent guy. Susan is really clever."
-sentence2 = "They are too blameless people. Rubanraj and ramesh are doing their research and development project. The doctor is very intelligent."
+sentence1 = "I really do care. The woman is quite pretty"
+sentence2 = "He is doing really well. She looks quite beautiful"
 
 print "sentence1 = ", sentence1
 print "sentence2 = ", sentence2
