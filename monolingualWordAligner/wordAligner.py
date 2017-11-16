@@ -7,11 +7,17 @@ from wordsim import *
 class Aligner:
 
 	def __init__(self):
+
+
 		self.text_nor = Text_processing()
 		self.util = Util()
 		self.word_similarity = WordSimilarity()
 
+
+
 	def align_sentences(self,sentence1,sentence2):
+
+
 
 		sentence1ParseResult = self.text_nor.parser(sentence1)
 		sentence2ParseResult = self.text_nor.parser(sentence2)
@@ -33,7 +39,6 @@ class Aligner:
 
 		myWordAlignments = self.alignWords(sentence1LemmasAndPosTags, sentence2LemmasAndPosTags, 
 									sentence1ParseResult, sentence2ParseResult, self.sourceWords, self.targetWords)
-		
 		# # print "myWordAlignments ", myWordAlignments
 		align = []
 		for i in myWordAlignments:
@@ -55,7 +60,10 @@ class Aligner:
 	4. Align named entities
 	5. Align Main Verbs
 	6. Align Nouns
-	7. Align Adjective
+	7. Align Adjectives
+	8. Textual neighborhood 
+	9. Align Hyphenated Words(again to check if there are still list)
+	10. Dependencies neighborhood
 	'''
 
 
@@ -85,7 +93,7 @@ class Aligner:
 		# print "source Hyphenated Words"
 		checkSourceWordsInTarget = True # check if Source Words have any hyphen words
 		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
-							self.align_hyphenWords(self.sourceWordIndices, sourceWords,\
+							self.alignHyphenWords(self.sourceWordIndices, sourceWords,\
 									srcWordAlreadyAligned, alignments,\
 									tarWordAlreadyAligned, checkSourceWordsInTarget)
 
@@ -94,12 +102,12 @@ class Aligner:
 		print "source word aligned ", srcWordAlreadyAligned
 		print "target word aligned ", tarWordAlreadyAligned
 		print "********************************************"
-		print "target Hyphenated Words"
 		
+		print "target Hyphenated Words"
 		checkSourceWordsInTarget = False  # check if target Words have any hyphen words
-		alignments, tarWordAlreadyAligned, srcWordAlreadyAligned = \
-							self.align_hyphenWords(self.targetWordIndices, targetWords, tarWordAlreadyAligned, alignments, \
-									srcWordAlreadyAligned,checkSourceWordsInTarget)
+		alignments,  srcWordAlreadyAligned, tarWordAlreadyAligned, = \
+							self.alignHyphenWords(self.targetWordIndices, targetWords, srcWordAlreadyAligned, alignments, \
+									tarWordAlreadyAligned,checkSourceWordsInTarget)
 		
 		print "********************************************"
 		print "alignments in hyphen words target", alignments
@@ -108,7 +116,7 @@ class Aligner:
 		print "********************************************"
 
 		#4. align named entities
-		neAlignments = self.align_namedEntities(sourceSent, targetSent, sourceParseResult, \
+		neAlignments = self.alignNamedEntities(sourceSent, targetSent, sourceParseResult, \
 			    targetParseResult, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned) 
 		print "***********************************"
 		print "neAlignments ", neAlignments
@@ -129,9 +137,13 @@ class Aligner:
 		print "********************************************"
 
 		sourceDependencyParse = self.util.dependencyTreeWithOffSets(sourceParseResult)
-		targetDependencyParse = self.util.dependencyTreeWithOffSets(targetParseResult)
 
-		#. Align Main Verbs
+		targetDependencyParse = self.util.dependencyTreeWithOffSets(targetParseResult)
+		# print "*****************************"
+		# print "sourc D parse ", sourceDependencyParse
+		# print "target D parse ", targetDependencyParse
+		# print "*****************************"
+		#5. Align Main Verbs
 		aligned_verbs = self.alignMainVerbs(self.sourceWordIndices, self.targetWordIndices, sourceWords, targetWords,
 										self.sourceLemmas, self.targetLemmas, self.sourcePosTags, self.targetPosTags,
 											sourceDependencyParse, targetDependencyParse, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
@@ -148,7 +160,7 @@ class Aligner:
 					tarWordAlreadyAligned.append(item[1])
 
 
-
+		#6. Align Nouns
 		aligned_nouns = self.alignNouns(self.sourceWordIndices, self.targetWordIndices, sourceWords, targetWords,
 										self.sourceLemmas, self.targetLemmas, self.sourcePosTags, self.targetPosTags,
 											sourceDependencyParse, targetDependencyParse, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
@@ -162,7 +174,8 @@ class Aligner:
 					srcWordAlreadyAligned.append(item[0])
 				if item[1] not in tarWordAlreadyAligned:
 					tarWordAlreadyAligned.append(item[1])
- 
+ 		
+ 		#7. Align Adjectives
 		aligned_adjectives = self.alignAdjective(self.sourceWordIndices, self.targetWordIndices, sourceWords, targetWords,
 										self.sourceLemmas, self.targetLemmas, self.sourcePosTags, self.targetPosTags,
 											sourceDependencyParse, targetDependencyParse, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
@@ -177,6 +190,7 @@ class Aligner:
 				if item[1] not in tarWordAlreadyAligned:
 					tarWordAlreadyAligned.append(item[1])
 
+		#8. Align Adverbs
 		aligned_adverbs = self.alignAdverb(self.sourceWordIndices, self.targetWordIndices, sourceWords, targetWords,
 										self.sourceLemmas, self.targetLemmas, self.sourcePosTags, self.targetPosTags,
 											sourceDependencyParse, targetDependencyParse, alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
@@ -191,6 +205,73 @@ class Aligner:
 				if item[1] not in tarWordAlreadyAligned:
 					tarWordAlreadyAligned.append(item[1])
 
+		#9. Align Textual Neighborhood
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
+				self.alignTextualNeighborhoodContentWords(sourceSent, targetSent, self.sourceWordIndices,\
+					self.targetWordIndices,  sourceWords, targetWords, self.sourceLemmas,\
+				 		self.targetLemmas,  self.sourcePosTags, self.targetPosTags, alignments, \
+				 			srcWordAlreadyAligned, tarWordAlreadyAligned)
+		print "*******************************************"
+		print "output textual neighborhood ",
+		print "alignments ", alignments
+		print "source Word Al aligned ", srcWordAlreadyAligned
+		print "tar word al aligned ", tarWordAlreadyAligned
+		print "*******************************************"
+
+		# Check again for hyphenated words (after textual neighborhood)
+		checkSourceWordsInTarget = True # check if Source Words have any hyphen words
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
+							self.alignHyphenWordsUnigram(self.sourceWordIndices, sourceWords,targetSent,\
+									srcWordAlreadyAligned, alignments,\
+									tarWordAlreadyAligned, checkSourceWordsInTarget)
+
+		print "*******************************************"
+		print " output align source hyphenated words(second time)"
+		print "alignments ", alignments
+		print "source Word Al aligned ", srcWordAlreadyAligned
+		print "tar word al aligned ", tarWordAlreadyAligned
+		print "*******************************************"
+
+		checkSourceWordsInTarget = False  # check if target Words have any hyphen words
+		# print "target sent ", targetSent
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
+							self.alignHyphenWordsUnigram(self.targetWordIndices, targetWords,sourceSent,\
+									srcWordAlreadyAligned, alignments, \
+									tarWordAlreadyAligned,checkSourceWordsInTarget)
+
+		print "*******************************************"
+		print " output align target hyphenated words(second time)"
+		print "alignments ", alignments
+		print "source Word Al aligned ", srcWordAlreadyAligned
+		print "tar word al aligned ", tarWordAlreadyAligned
+		print "*******************************************"
+		print " self.targetWordIndices ", self.targetWordIndices
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
+					self.alignDependencyNeighborhood(sourceSent, targetSent, self.sourceWordIndices,\
+					self.targetWordIndices,  sourceWords, targetWords, self.sourceLemmas,\
+				 	self.targetLemmas,  self.sourcePosTags, self.targetPosTags, sourceDependencyParse,\
+				 	targetDependencyParse, alignments, \
+				 	srcWordAlreadyAligned, tarWordAlreadyAligned)
+
+		print "*******************************************"
+		print " output dependency neighborhood"
+		print "alignments ", alignments
+		print "source Word Al aligned ", srcWordAlreadyAligned
+		print "tar word al aligned ", tarWordAlreadyAligned
+		print "*******************************************"
+
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
+							self.alignTextualNeighborhoodPuncStopWords(self.sourceWordIndices,\
+					self.targetWordIndices,  sourceWords, targetWords, self.sourceLemmas,\
+				 		self.targetLemmas,  self.sourcePosTags, self.targetPosTags, alignments, \
+				 			srcWordAlreadyAligned, tarWordAlreadyAligned)
+
+		print "*******************************************"
+		print " output puncutations neighborhood"
+		print "alignments ", alignments
+		print "source Word Al aligned ", srcWordAlreadyAligned
+		print "tar word al aligned ", tarWordAlreadyAligned
+		print "*******************************************"
 
 		return alignments
 		
@@ -268,7 +349,11 @@ class Aligner:
 						alignments.append([commonWords[0][j]+1, commonWords[1][j]+1])
 						srcWordAlreadyAligned.append(commonWords[0][j]+1)
 						tarWordAlreadyAligned.append(commonWords[1][j]+1)
-		
+		# print "&&&*********************************************"
+		# print "alignments ", alignments
+		# print "source word Aligned ", srcWordAlreadyAligned
+		# print "target word aligned ", tarWordAlreadyAligned
+		# print "&&&*********************************************"
 		return alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
 
 
@@ -283,7 +368,7 @@ class Aligner:
 	'''
 
 
-	def align_hyphenWords(self, wordIndices, Words, srcWordAlreadyAligned, alignments,
+	def alignHyphenWords(self, wordIndices, Words, srcWordAlreadyAligned, alignments,
 							tarWordAlreadyAligned, flag):
 
 		
@@ -302,32 +387,31 @@ class Aligner:
 				#if flag true(means we check source words in target Words)
 
 				if flag:
-					# print "second if statement source"
 					commonNeighboringWords = self.util.get_commonNeighboringWords(tokens, self.targetWords)
 
 				else:
-					# print" second else statemetn"
-					commonNeighboringWords = self.util.get_commonNeighboringWords(tokens,self.sourceWords)
-
+					print "tokens in targ", tokens
+					commonNeighboringWords = self.util.get_commonNeighboringWords(self.sourceWords, tokens)
+					print "common list ", commonNeighboringWords
 				for pairs in commonNeighboringWords:
 
 					if len(pairs[0]) > 1:
-						# print "third if statement source"
-						for j in pairs[1]:
-							if flag:
+						
+						if flag:
+								for j in pairs[1]:
+									if[i, j+1] not in alignments:
 
-								if[i, j+1] not in alignments:
-
-									alignments.append([i,j+1])
-									srcWordAlreadyAligned.append(i)
-									tarWordAlreadyAligned.append(j+1)
-							else:
+										alignments.append([i,j+1])
+										srcWordAlreadyAligned.append(i)
+										tarWordAlreadyAligned.append(j+1)
+						else:
+								for j in pairs[0]:
 								# print"third else" 
-								if[j+1, i] not in alignments:
+									if[j+1, i] not in alignments:
 
-									alignments.append([j+1,i])
-									srcWordAlreadyAligned.append(j+1)
-									tarWordAlreadyAligned.append(i)
+										alignments.append([j+1,i])
+										srcWordAlreadyAligned.append(j+1)
+										tarWordAlreadyAligned.append(i)
 
 		return alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
 
@@ -344,7 +428,7 @@ class Aligner:
 	'''
 
 
-	def align_namedEntities(self, sourceSent, targetSent, sourceParseResult, targetParseResult, 
+	def alignNamedEntities(self, sourceSent, targetSent, sourceParseResult, targetParseResult, 
 					existingAlignments, srcWordAlreadyAligned, tarWordAlreadyAligned):
 		
 		
@@ -609,29 +693,56 @@ class Aligner:
 		relativeAlignmentsMatrix = {} # contains aligned Verbs with their similar child/parents 
 		wordSimilarity = {} # dictionary contains similarity score of two word indices(src and tar)
 
+		# sourceDependencyParse = self.util.dependencyTreeWithOffSets(sourceParseResult)
+		# targetDependencyParse = self.util.dependencyTreeWithOffSets(targetParseResult)
+
+		# print "targetDependencyParse ", targetDependencyParse
+
 		#construct the two matrices in following loop
+		# print "tar word Indices ", tarWordIndices
+		# print "srcwordAlreadyAligned ", srcWordAlreadyAligned
 		for i in srcWordIndices:
-			
+			# print "i ", i
+			# print "i in srcWordAlready Aligned ", i in srcWordAlreadyAligned
+			# print "sourcePOS TAgs != v ", srcPosTags[i-1][0].lower() != 'v'
+			# print "source Lemmas in stop words ", srcLemmas[i-1] in stopwords
+			# print "pos tags ", srcPosTags[i-1][0].lower()
+
 			if i in srcWordAlreadyAligned or srcPosTags[i-1][0].lower() != 'v' or srcLemmas[i-1] in stopwords:
+				# print "srcPOSTAgs, words inside ", srcPosTags[i-1][0].lower(), srcWords[i-1] 
 				continue
-
+			# print "srcPOSTAgs, words are verbs ", srcPosTags[i-1][0].lower(), srcWords[i-1] 
+			# print "src Lemmas ", srcLemmas[i-1]
 			numberofMainVerbsInSource += 1
-
+			# print "*********************************************"
+			# print "number Of verbs ", numberofMainVerbsInSource
 			for j in tarWordIndices:
-
+				# print "j", j
 				if j in tarWordAlreadyAligned or tarPosTags[j-1][0].lower() != 'v' or tarLemmas[j-1] in stopwords:
+					# print "tarPosTags, words inside", tarPosTags[j-1][0].lower(), tarWords[j-1]
 					continue
+				# print "tarPosTags, words are verbs ", tarPosTags[j-1][0].lower(), tarWords[j-1]
+				# print "target lemmas ", tarLemmas[j-1]
 				getSimilarityScore = max(self.word_similarity.computeWordSimilarityScore(srcWords[i-1], \
 						srcPosTags[i-1], tarWords[j-1], tarPosTags[j-1]), \
 								self.word_similarity.computeWordSimilarityScore(srcLemmas[i-1],\
 							 	srcPosTags[i-1], tarLemmas[j-1], tarPosTags[j-1]))
+				# print "similarity computations score ", res
 				if getSimilarityScore < ppdbSim:
 					
 					# print "score less than 0.9 "
 					continue
 			
 				wordSimilarity[(i,j)] = getSimilarityScore
-
+				# print "word Similarity (i,j) ", wordSimilarity
+				# print "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+				# print "source Parse ", sourceDependencyParse
+				# print "i ", i
+				# print "source Words ", srcWords[i-1]
+				# print "********************************************"
+				# print"target Parse ", targetDependencyParse
+				# print "*****************************************"
+				# print ""  
 				sourceWordParents = self.util.findParents(sourceDependencyParse, i, srcWords[i-1])
 				sourceWordChildren = self.util.findChildren(sourceDependencyParse, i, srcWords[i-1])
 				targetWordParents = self.util.findParents(targetDependencyParse, j, tarWords[j-1])
@@ -644,9 +755,27 @@ class Aligner:
 				group4OfSimilarRelationsForNounChild = ['iobj','prep_to']
 				groupOfSimilarRelationsForVerbChild = ['purpcl', 'xcomp']
 
+				# print "#########################################"
+				# print "sourceWordParents ", sourceWordParents
+				# print "targetWordParents ", targetWordParents
+				# print "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$444"
+				# print "**************************"
+				# print "sourceWordChildren ", sourceWordChildren
+				# print "*********************************************"
+				# print "target Word Children ", targetWordChildren
+				# print "source Word parents ", sourceWordParents
+				# print "target Word parents ", targetWordParents
+				# print "**************************"
 				for k in sourceWordChildren:
+					# print "k ", k
+					# print "k[0] ", k[0]
+					# print "k[2] ", k[2]
 
 					for l in targetWordChildren:
+						# print " l ", l[0]
+						# print "l[0] ", l[0]
+						# print "l[2] ", l[2]
+
 						if (k[0], l[0]) in existingalignments+AlignedVerbs or \
 								max( self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], tarPosTags[l[0]-1]),\
 									self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], srcPosTags[k[0]-1],tarLemmas[l[0]-1], tarPosTags[l[0]-1]) ) >= ppdbSim and \
@@ -676,12 +805,38 @@ class Aligner:
 								 	relativeAlignmentsMatrix[(i,j)] = []
 								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
 				
+				# print "***********************************************"
+				# print "commmon or equivalent children"
+				# print "relative Alignmens ", relativeAlignmentsMatrix
+				# print "evidence count matrix ", evidenceCountMatrix
+				# print "************************************************"
+
+				# print "evidence Count Matrix first tie ", evidenceCountMatrix
+				# # search for common or equivalent parents(children noun)
 				# considers only first orientation from paper
 				groupOfSimilarRelationsForNounParent = ['infmod', 'partmod', 'rcmod']
 				groupOfSimilarRelationsForVerbParent = ['purpcl', 'xcomp']
+
+				# print "&***************************************"
+				# print "source Word Parents ", sourceWordParents
+				# print "Target Word Parents ", targetWordParents
+				# print "&***************************************"
+
+				# print " evidence Count Matrix ", evidenceCountMatrix
+				# print "Relative Alignments ", relativeAlignmentsMatrix
 				# if no parent(means it is only Root) then compare last words in sentence
 				for k in sourceWordParents:
+					# print "source Word PArents ", k
+					# print "source Words", srcWords[k[0]-1]
 					for l in targetWordParents:
+						# print "target Word Parents ", l
+						# print "target Worsd ", tarWords[l[0] - 1]
+						# print "(k[0], l[0]) in existingalignments+AlignedVerbs ", (k[0], l[0]) in existingalignments+AlignedVerbs
+
+						# print "score compraison ", max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1],
+						# 			l[1], tarPosTags[l[0]-1]),\
+						# 			self.word_similarity.computeWordSimilarityScore(srcLemmas[k[0]-1], srcPosTags[k[0]-1], 
+						# 				tarLemmas[l[0]-1], tarPosTags[l[0]-1]))
 
 						if (k[0], l[0]) in existingalignments+AlignedVerbs or \
 								max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1],
@@ -691,7 +846,7 @@ class Aligner:
 								 (k[2] == l[2]) or \
 								 (k[2] in groupOfSimilarRelationsForNounParent and l[2] in groupOfSimilarRelationsForNounParent) or \
 								 (k[2] in groupOfSimilarRelationsForVerbChild and l[2] in groupOfSimilarRelationsForVerbChild):
-
+								 # print "here in common parents "
 								 if (i, j) in evidenceCountMatrix:
 
 								 	evidenceCountMatrix[(i, j)] += max(self.word_similarity.computeWordSimilarityScore(k[1], srcPosTags[k[0]-1], l[1], \
@@ -710,6 +865,13 @@ class Aligner:
 								 else:
 								 	relativeAlignmentsMatrix[(i,j)] = []
 								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+
+				# print "***********************************************"
+				# print "commmon or equivalent parents"
+				# print "relative Alignmens ", relativeAlignmentsMatrix
+				# print "evidence count matrix ", evidenceCountMatrix
+				# print "************************************************"
+
 
 				groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild = [['cop', 'csubj'], ['acomp']]
 				group1OfSimilarRelationsInOppositeDirectionForVerbParentAndChild = [['csubj'], ['csubjpass']]
@@ -751,6 +913,12 @@ class Aligner:
 							group4OfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0], \
 							evidenceCountMatrix,relativeAlignmentsMatrix)
 
+				# print "***********************************************"
+				# print "commmon or equivalent parent children pair"
+				# print "relative Alignmens ", relativeAlignmentsMatrix
+				# print "evidence count matrix ", evidenceCountMatrix
+				# print "************************************************"
+
 				# search for equivalent child-parent pairs
 
 				for k in sourceWordChildren:
@@ -785,6 +953,13 @@ class Aligner:
 								 	relativeAlignmentsMatrix[(i,j)] = []
 								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
 
+				# print "***********************************************"
+				# print "commmon or equivalent children parent pair"
+				# print "relative Alignmens ", relativeAlignmentsMatrix
+				# print "evidence count matrix ", evidenceCountMatrix
+				# print "************************************************"
+
+
 		# use collected stats to align
 		# print "number of Main Verbs in Source ", numberofMainVerbsInSource
 		# print "evidence Count Matrix ", evidenceCountMatrix
@@ -812,11 +987,17 @@ class Aligner:
 														(1-theta1)*evidenceCountMatrix[(i, j)]
 						maxEvidenceCountForCurrentPass = evidenceCountMatrix[(i, j)]
 						indexPairWithStrongestTieForCurrentPass = [i, j]
+						# print "collected stats to align "
+						# print "MaxOverAllValues ", maxOverallValueForCurrentPass
+						# print "maxEvidenceCountForCurrentPass ", maxEvidenceCountForCurrentPass
+
 			if maxEvidenceCountForCurrentPass > 0:
 				AlignedVerbs.append(indexPairWithStrongestTieForCurrentPass)
 				srcWordAlreadyAligned.append(indexPairWithStrongestTieForCurrentPass[0])
 				tarWordAlreadyAligned.append(indexPairWithStrongestTieForCurrentPass[1])
-
+				# print "************************"
+				# print "relative Alignments Matrix ", relativeAlignmentsMatrix
+				# print "indexPairWithStrongestTieForCurrent ", indexPairWithStrongestTieForCurrentPass
 				for item in relativeAlignmentsMatrix[(indexPairWithStrongestTieForCurrentPass[0], \
 								indexPairWithStrongestTieForCurrentPass[1])]:
 						# item[0] and item[1] != 0 so that we should not store Root-0
@@ -848,6 +1029,8 @@ class Aligner:
 		relativeAlignmentsMatrix = {} # contains aligned Verbs with their similar child/parents 
 		wordSimilarity = {} # dictionary contains similarity score of two word indices(src and tar)
 
+		# print "Inside Align nouns"
+
 		for i in srcWordIndices:
 
 			if i in srcWordAlreadyAligned or (srcPosTags[i-1][0].lower() != 'n' \
@@ -855,6 +1038,7 @@ class Aligner:
 				continue
 
 			numberofNounsInSource += 1
+			# print "number of Nouns in Source ", numberofNounsInSource
 
 			for j in tarWordIndices:
 
@@ -876,6 +1060,13 @@ class Aligner:
 				targetWordParents = self.util.findParents(targetDependencyParse, j, tarWords[j-1])
 				targetWordChildren = self.util.findChildren(targetDependencyParse, j, tarWords[j-1])
 
+				# print "***************************************"
+				# print "sourceWordParents ", sourceWordParents
+				# print "sourceWordChildren ", sourceWordChildren
+				# print "targetWordParents ", targetWordParents
+				# print "targetWordChildren ", targetWordChildren
+				# print "****************************************"
+				
 				#search for common or equivalent children
 				groupOfSimilarRelationsForNounChild = ['pos', 'nn' 'prep_of', 'prep_in', 'prep_at', 'prep_for']
 				groupOfSimilarRelationsForVerbChild = ['infmod', 'partmod', 'rcmod']
@@ -912,6 +1103,12 @@ class Aligner:
 								relativeAlignmentsMatrix[(i,j)] = []
 								relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
 
+				# print "****************************"
+				# print "Common or equivalent children"
+				# print "evidence Count Matrix ", evidenceCountMatrix
+				# print "relative Alignments Matrix ", relativeAlignmentsMatrix
+				# print "****************************"
+				
 				#search for common or equivalent parents
 
 				groupOfSimilarRelationsForNounParent = ['pos', 'nn', 'prep_of', 'prep_in', 'prep_at', 'prep_for']
@@ -954,6 +1151,11 @@ class Aligner:
 								relativeAlignmentsMatrix[(i,j)] = []
 								relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])			
 
+				# print "****************************"
+				# print "Common or equivalent parents"
+				# print "evidence Count Matrix ", evidenceCountMatrix
+				# print "relative Alignments Matrix ", relativeAlignmentsMatrix
+				# print "****************************"
 
 				groupOfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild = [['nsubj'], ['amod', 'rcmod']]
 				groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild = [['ccomp', 'dobj', 'nsubjpass', 'rel', 'partmod'], ['infmod', 'partmod', 'rcmod']]
@@ -975,6 +1177,12 @@ class Aligner:
 											group3OfSimilarRelationsInOppositeDirectionForNounParentAndChild[1], \
 											evidenceCountMatrix,relativeAlignmentsMatrix)
 				
+				# print "****************************"
+				# print "Common or equivalent parent-child"
+				# print "evidence Count Matrix ", evidenceCountMatrix
+				# print "relative Alignments Matrix ", relativeAlignmentsMatrix
+				# print "****************************"
+
 				# search for equivalent child-parent relations
 				#here we iterate through sourceWordChildren(outerloop) and targetWordParents(inner loop) 
  				evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentParentChildRelation(i, j, sourceWordChildren, targetWordParents, \
@@ -1037,7 +1245,7 @@ class Aligner:
 
 	'''
 	Auxillary function to find equivalent parent-child / child-parent relation used 
-	to reduce repeatation of code in align nouns and align adjective
+	to reduce repeatation of code in align nouns, align adjective and align verbs
 	'''
 
 
@@ -1128,6 +1336,13 @@ class Aligner:
 					targetWordParents = self.util.findParents(targetDependencyParse, j, tarWords[j-1])
 					targetWordChildren = self.util.findChildren(targetDependencyParse, j, tarWords[j-1])
 
+					# print "*****************************"
+					# print "source Word Parents ", sourceWordParents
+					# print "source Word Children ", sourceWordChildren
+					# print "target Word Parents ", targetWordParents
+					# print "target word children ", targetWordChildren
+					# print "*******************************"
+
 					# search for common children
 					for k in sourceWordChildren:
 						for l in targetWordChildren:
@@ -1151,10 +1366,19 @@ class Aligner:
 
 								if (i, j) in relativeAlignmentsMatrix:
 								 	relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+								 	# print "relative Alignments in common already present", relativeAlignmentsMatrix
 
 								else:
 									relativeAlignmentsMatrix[(i,j)] = []
 									relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+									# print "relative Alignments in common", relativeAlignmentsMatrix
+					# print "*************************************"
+					# print "Common children "
+					# print "evidence Count Matrix ", evidenceCountMatrix
+					# print "relative Alignments ", relativeAlignmentsMatrix
+					# print "********************************************"
+
+
 
 					# search for common or equivalent parents
 					groupOfSimilarRelationsForNounParent = ['amod', 'rcmod']
@@ -1184,6 +1408,12 @@ class Aligner:
 								else:
 									relativeAlignmentsMatrix[(i,j)] = []
 									relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])
+					
+					# print "*************************************"
+					# print "Common parents "
+					# print "evidence Count Matrix ", evidenceCountMatrix
+					# print "relative Alignments ", relativeAlignmentsMatrix
+					# print "********************************************"
 
 					groupOfSimilarRelationsInOppositeDirectionForNounParentAndChild = [['amod', 'rcmod'], ['nsubj']]
 					groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild = [['acomp'], ['cop', 'csubj']]
@@ -1192,6 +1422,7 @@ class Aligner:
 					group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild = [['conj_nor'], ['conj_nor']]
 
 					#search for equivaent parent-child pair
+
 					evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentParentChildRelation(i, j, sourceWordParents, targetWordChildren, \
 									adjectiveAlignments, existingalignments,\
 									srcPosTags, tarPosTags, srcLemmas,tarLemmas, groupOfSimilarRelationsInOppositeDirectionForNounParentAndChild[0], \
@@ -1199,18 +1430,23 @@ class Aligner:
 
 											groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild[0],\
 											groupOfSimilarRelationsInOppositeDirectionForVerbParentAndChild[1], \
-
 											group1OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0],\
 											group1OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1], \
-
 											group2OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0], \
 											group2OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1],\
-
 											group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0], \
 											group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1], \
 											evidenceCountMatrix,relativeAlignmentsMatrix)
-					
+
+
+					# print "*************************************"
+					# print "Common parent children "
+					# print "evidence Count Matrix ", evidenceCountMatrix
+					# print "relative Alignments ", relativeAlignmentsMatrix
+					# print "********************************************"
+
 					#search for equivalent child-parent pair
+
 					evidenceCountMatrix, relativeAlignmentsMatrix = self.findEquivalentParentChildRelation(i, j, sourceWordChildren, 
 									targetWordParents, adjectiveAlignments, existingalignments,\
 									srcPosTags, tarPosTags, srcLemmas,tarLemmas, groupOfSimilarRelationsInOppositeDirectionForNounParentAndChild[1], \
@@ -1228,6 +1464,12 @@ class Aligner:
 											group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[1], \
 											group3OfSimilarRelationsInOppositeDirectionForAdjectiveParentAndChild[0], \
 											evidenceCountMatrix,relativeAlignmentsMatrix)
+
+					# print "*************************************"
+					# print "Common children parent children"
+					# print "evidence Count Matrix ", evidenceCountMatrix
+					# print "relative Alignments ", relativeAlignmentsMatrix
+					# print "********************************************"
 
 			# use collected stats to align
 			for p in xrange(numberofAdjectivesInSource):
@@ -1270,7 +1512,7 @@ class Aligner:
 				else:
 					break
 		
-			return adjectiveAlignments			
+			return adjectiveAlignments
 
 
 	'''
@@ -1295,7 +1537,7 @@ class Aligner:
 					continue
 
 				numberofAdverbsInSource += 1
-				print "number of adverbs in source ", numberofAdverbsInSource
+				# print "number of adverbs in source ", numberofAdverbsInSource
 				for j in tarWordIndices:
 					if j in tarWordAlreadyAligned or (tarPosTags[j-1][0].lower() != 'r'):
 						continue
@@ -1315,12 +1557,12 @@ class Aligner:
 					targetWordParents = self.util.findParents(targetDependencyParse, j, tarWords[j-1])
 					targetWordChildren = self.util.findChildren(targetDependencyParse, j, tarWords[j-1])
 					
-					print "***************************"
-					print "source Word Parents ", sourceWordParents
-					print "source word children ", sourceWordChildren
-					print "target word parents ", targetWordParents
-					print "target word children ", targetWordChildren
-					print "***************************"
+					# print "***************************"
+					# print "source Word Parents ", sourceWordParents
+					# print "source word children ", sourceWordChildren
+					# print "target word parents ", targetWordParents
+					# print "target word children ", targetWordChildren
+					# print "***************************"
 					#search for common children
 					evidenceCountMatrix, relativeAlignmentsMatrix = self.findCommonRelation(i, j, \
 										sourceWordChildren, targetWordChildren, adverbAlignments, \
@@ -1429,7 +1671,7 @@ class Aligner:
 		in align adverbs
 	'''
 	
-	
+
 	def findCommonRelation(self, i, j, sourceDepenency, targetDependency, Alignments, existingalignments,\
 									srcPosTags, tarPosTags, srcLemmas,tarLemmas,
 											evidenceCountMatrix, relativeAlignmentsMatrix):
@@ -1511,3 +1753,412 @@ class Aligner:
 						relativeAlignmentsMatrix[(i,j)].append([k[0],l[0]])	
 
 		return evidenceCountMatrix, relativeAlignmentsMatrix	
+
+
+	'''
+	Returns textual neighborhood in 3 by 3 window
+	'''
+
+
+	def alignTextualNeighborhoodContentWords(self, sourceSent, targetSent, srcWordIndices, tarWordIndices, srcWords, tarWords, srcLemmas,\
+				 tarLemmas,  srcPosTags, tarPosTags, existingalignments, 
+				 			srcWordAlreadyAligned, tarWordAlreadyAligned):
+
+
+		wordSimilarities = {}
+		textualNeighborhoodSimilarities = {}
+		sourceWordIndicesBeingConsidered = []
+		targetWordIndicesBeingConsidered = []
+		print "stop words ", stopwords
+		print "******* inside textual neighborhood******************"
+		# print "source Word Already Aligned ", srcWordAlreadyAligned
+		# print "target Wod Already Aligned ", tarWordAlreadyAligned
+		for i in srcWordIndices:
+			if i in srcWordAlreadyAligned or srcLemmas[i-1] in stopwords + punctuations + ['\'s', '\'d', '\'ll']:
+				continue
+			print "i ", i
+			for j in tarWordIndices:
+
+				if j in tarWordAlreadyAligned or tarLemmas[j-1] in stopwords + punctuations + ['\'s', '\'d', '\'ll']:
+					# print "inside if lemma ", tarLemmas[j-1]
+
+					continue
+
+				print "j targetWordIndices ", j
+				# print "tar lemaa ", tarLemmas[j-1]
+				wordSimilarities[(i,j)] = max(self.word_similarity.computeWordSimilarityScore(srcWords[i-1], \
+								srcPosTags[i-1], tarWords[j-1], tarPosTags[j-1]), \
+										self.word_similarity.computeWordSimilarityScore(srcLemmas[i-1],\
+									 	srcPosTags[i-1], tarLemmas[j-1], tarPosTags[j-1]))
+
+				sourceWordIndicesBeingConsidered.append(i)
+				targetWordIndicesBeingConsidered.append(j)
+				# print "***** Neighborhood *********************"
+				# print "sourceWordIndicesBeingConsidered ", sourceWordIndicesBeingConsidered
+				# print "target Word Indices being consider ", targetWordIndicesBeingConsidered
+				# print "***** Neighborhood *********************"
+				# print "source ", sourceSent
+				# print "target ", targetSent
+				# print "*****************************************"
+				# print " src word index ", i
+				# print "tar word index ", j
+				# textual neighborhood wordSimilarities
+				sourceNeighborhood = self.util.findNeighborhoodSimilarities(sourceSent, i, 3, 3)
+				targetNeighborhood = self.util.findNeighborhoodSimilarities(targetSent, j, 3, 3)
+				# print "***** Neighborhood *********************"
+				# print "source Neighborhood ", sourceNeighborhood
+				# print "target Neighborhood ", targetNeighborhood
+				# print "****************************************"
+				# print "length of sourc eneighborhod[0] ", len(sourceNeighborhood[0])
+				evidence = 0
+				for k in xrange(len(sourceNeighborhood[0])):
+					for l in xrange(len(targetNeighborhood[0])):
+						if (sourceNeighborhood[1][k] not in stopwords + punctuations) and \
+						    ((sourceNeighborhood[0][k], targetNeighborhood[0][l]) in existingalignments or \
+						    		(self.word_similarity.computeWordSimilarityScore(sourceNeighborhood[1][k], \
+						    			'none', targetNeighborhood[1][l], 'none') >= ppdbSim)):
+
+						    # print "source neighborhood[1][k] ", sourceNeighborhood[1][k]
+						    # print "source neighborhood[0][k] ", sourceNeighborhood[0][k]
+						    # print "target Neighborhood[0][l] ", targetNeighborhood[0][l]
+						    # print "targetNeighborhood[1][l] ", targetNeighborhood[1][l]
+						    # print "evidence ", self.word_similarity.computeWordSimilarityScore(sourceNeighborhood[1][k], 'none', targetNeighborhood[1][l], 'none')
+						    evidence += self.word_similarity.computeWordSimilarityScore(sourceNeighborhood[1][k], \
+						    			'none', targetNeighborhood[1][l], 'none')
+				# print "evidence ", evidence
+				textualNeighborhoodSimilarities[(i, j)] = evidence
+		numOfUnalignedWordsInSource = len(sourceWordIndicesBeingConsidered)
+		# print "num Of Unaligned Words In Source ", numOfUnalignedWordsInSource
+		# print "tecutal nieghborhood similarity ", textualNeighborhoodSimilarities
+		# print "sourceWordIndicesBeingConsidered ", sourceWordIndicesBeingConsidered
+		# print "targetWordIndicesBeingConsidered ", targetWordIndicesBeingConsidered
+		# now align: find the best alignment in each iteration of the following loop and include in alignments if good enough
+		
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = self.computeBestAlignment(numOfUnalignedWordsInSource, sourceWordIndicesBeingConsidered,\
+								targetWordIndicesBeingConsidered, wordSimilarities, textualNeighborhoodSimilarities, srcLemmas,  \
+								 existingalignments, srcWordAlreadyAligned,\
+								tarWordAlreadyAligned)
+
+
+		return existingalignments, srcWordAlreadyAligned, tarWordAlreadyAligned
+
+
+	'''
+	Input: wordIndices(srcWordIndices/tarWordIndices) depends upon whether we check sourceWords
+				in targetWords, or other way 
+			Words(srcWordIndices/tarWordIndices) 
+			srcWordAlreadyAligned, alignments, tarWordAlreadyAligned,
+			source: source/target
+			flag: true, then we check sourceWords in targetWords,
+					else we check targetWords in sourceWords
+			we align hyphen words again to make sure that there are no missing ones(here 
+						we handle hyphen words that are unigram( while we aligned hyphen words
+							for first time that include bigram, trigram, etcetera))
+			Example: if sourceSent contains word "well-desgined"
+					and targetSent contains word "designed" (we consider them as similar)
+	Returns: aligned hyphen Words(alignments, srcWordAlreadyAligned, tarWordAlreadyAligned)
+	'''
+
+	
+	def alignHyphenWordsUnigram(self, wordIndices, Words, source, srcWordAlreadyAligned, alignments,
+							tarWordAlreadyAligned, flag):
+		
+
+		for i in wordIndices:
+			if flag:
+				# print "first if statement source"
+				if i in srcWordAlreadyAligned:
+					continue
+			else:
+				# print "i in target word ", tarWordAlreadyAligned
+				if i in tarWordAlreadyAligned:
+					# print "in target word"
+					continue
+
+			if '-' in Words[i-1] and Words[i-1] != '-':
+				tokens = Words[i-1].split('-')
+				#if flag true(means we check source words in target Words)
+
+				if flag:
+					commonNeighboringWords = self.util.get_commonNeighboringWords(tokens, self.targetWords)
+
+				else:
+					commonNeighboringWords = self.util.get_commonNeighboringWords(self.sourceWords, tokens)
+
+				for pairs in commonNeighboringWords:
+
+					#we check for source words
+					if flag:
+						#source[pairs[1][0]][3] gives us target word
+						if len(pairs[0]) == 1 and source[pairs[1][0]][3] not in stopwords:
+							for j in pairs[1]:
+								if [i, j+1] not in alignments and j+1 not in tarWordAlreadyAligned:
+									alignments.append([i, j+1])
+									srcWordAlreadyAligned.append(i)
+									tarWordAlreadyAligned.append(j+1)
+
+					#we check for target words
+					else:
+
+						if len(pairs[0]) == 1 and source[pairs[0][0]][3] not in stopwords:
+							for j in pairs[0]:
+								# print "[j+1, i ]", [j+1, i]
+								# print "[j+1, i] not in alignments", [j+1, i] not in alignments
+								# print "j+1 not in srcWordAlreadyAligned ", j+1 not in srcWordAlreadyAligned
+								if [j+1, i] not in alignments and j+1 not in srcWordAlreadyAligned:
+									alignments.append([j+1, i])
+									srcWordAlreadyAligned.append(j+1)
+									tarWordAlreadyAligned.append(i)
+
+		return alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
+
+
+	'''
+	Here we compare relation of parent and children for sourceparent with targetparent
+	and childparent with targetparent
+	'''
+
+
+	def alignDependencyNeighborhood(self, sourceSent, targetSent, srcWordIndices, tarWordIndices,\
+								 srcWords, tarWords, srcLemmas,\
+				 				tarLemmas,  srcPosTags, tarPosTags, srcDParse, tarDParse, existingalignments, 
+				 				srcWordAlreadyAligned, tarWordAlreadyAligned):
+
+		wordSimilarities = {}
+		dependencyNeighborhoodSimilarities = {}
+		sourceWordIndicesBeingConsidered = []
+		targetWordIndicesBeingConsidered = []
+		# sentence stop words cannot have dependencies therefore we filter them
+		# print "source word Indices ", srcWordIndices
+		# print "target word indices ", tarWordIndices
+		for i in srcWordIndices:
+			#only consider stop words in source words
+			if i in srcWordAlreadyAligned or srcLemmas[i-1] not in stopwords:
+				continue
+			# print "src lemma ", srcLemmas[i-1]
+			for j in tarWordIndices:
+				#only consider stop words in target words
+				if j in tarWordAlreadyAligned or tarLemmas[j-1] not in stopwords:
+					continue
+
+				# print "j targetWordIndices ", j
+				# print "tar lemaa ", tarLemmas[j-1]
+				if (srcLemmas[i-1] != tarLemmas[j-1]) and (self.word_similarity.computeWordSimilarityScore(srcWords[i-1], \
+								srcPosTags[i-1], tarWords[j-1], tarPosTags[j-1])< ppdbSim ):
+					continue
+
+				wordSimilarities[(i,j)] = max(self.word_similarity.computeWordSimilarityScore(srcWords[i-1], \
+					srcPosTags[i-1], tarWords[j-1], tarPosTags[j-1]), \
+							self.word_similarity.computeWordSimilarityScore(srcLemmas[i-1],\
+						 	srcPosTags[i-1], tarLemmas[j-1], tarPosTags[j-1]))
+				# print "word Similarities ", wordSimilarities
+
+				sourceWordIndicesBeingConsidered.append(i)
+				targetWordIndicesBeingConsidered.append(j)
+				# print "***************************************"
+				# print "source D Parse ", srcDParse
+				# print " i ", i
+				# print "src Words [i-1] ", srcWords[i-1]
+
+				sourceWordParents = self.util.findParents(srcDParse, i, srcWords[i-1])
+				sourceWordChildren = self.util.findChildren(srcDParse, i, srcWords[i-1])
+				
+				# print "sourceWordParents ", sourceWordParents
+				# print "sourceWordChildren", sourceWordChildren
+				# print "************************************"
+				# print "target D Parse ", tarDParse
+				# print " j ", j
+				# print "tar Words [j-1] ", tarWords[j-1]
+				targetWordParents = self.util.findParents(tarDParse, j, tarWords[j-1])
+				targetWordChildren = self.util.findChildren(tarDParse, j, tarWords[j-1])
+
+				# print "targetWordParents", targetWordParents
+				# print "targetWordChildren", targetWordChildren
+				# print "***************************************"
+
+				# print "exising alignments ", existingalignments
+				evidence = 0
+				for k in sourceWordParents:
+					for l in targetWordParents:
+						# print "k[0] l[0] parents", k[0], l[0]
+						if [k[0], l[0]] in existingalignments:
+							evidence += 1
+
+				for k in sourceWordChildren:
+					for l in targetWordChildren:
+						if [k[0], l[0]] in existingalignments:
+							evidence += 1
+				# print "i ", i
+				# print "j ", j
+				# print "evidence ", evidence
+
+				dependencyNeighborhoodSimilarities[(i, j)] = evidence
+
+		numOfUnalignedWordsInSource = len(sourceWordIndicesBeingConsidered)
+		# print "dependency Neighborhood ", dependencyNeighborhoodSimilarities
+		# alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = self.computeBestAlignment(numOfUnalignedWordsInSource, sourceWordIndicesBeingConsidered,\
+		# 						targetWordIndicesBeingConsidered, wordSimilarities, dependencyNeighborhoodSimilarities, srcLemmas,  \
+		# 						 existingalignments, srcWordAlreadyAligned,\
+		# 						tarWordAlreadyAligned)
+
+		for i in xrange(numOfUnalignedWordsInSource):
+			
+			highestWeightedSim = 0
+			bestWordSim = 0
+			bestSourceIndex = -1
+			bestTargetIndex = -1
+
+			for i in sourceWordIndicesBeingConsidered:
+				for j in targetWordIndicesBeingConsidered:
+					 	
+					if (i,j) not in wordSimilarities:
+						continue
+					# print "in word similarity ", (i,j)
+					theta2 = 1 - theta1
+
+					if theta1*wordSimilarities[(i, j)] + theta2*dependencyNeighborhoodSimilarities[(i, j)] > highestWeightedSim:
+						highestWeightedSim = theta1*wordSimilarities[(i, j)] + theta2*dependencyNeighborhoodSimilarities[(i, j)]
+						bestSourceIndex = i
+						bestTargetIndex = j
+						bestWordSim = wordSimilarities[(i, j)]
+						bestTextNeighborhoodSim = dependencyNeighborhoodSimilarities[(i, j)]
+
+			if bestWordSim>=ppdbSim and bestTextNeighborhoodSim > 0 and [bestSourceIndex, bestTargetIndex] not in existingalignments:
+				existingalignments.append([bestSourceIndex, bestTargetIndex])
+				srcWordAlreadyAligned.append(bestSourceIndex)
+				tarWordAlreadyAligned.append(bestTargetIndex)
+				# print "existing alignments ", existingalignments
+			if bestSourceIndex in sourceWordIndicesBeingConsidered:
+				sourceWordIndicesBeingConsidered.remove(bestSourceIndex)
+			if bestTargetIndex in targetWordIndicesBeingConsidered:
+				targetWordIndicesBeingConsidered.remove(bestTargetIndex)
+
+		return existingalignments, srcWordAlreadyAligned, tarWordAlreadyAligned
+
+
+	'''
+	Align textual neighborhood punctuations and stop words
+	'''
+
+
+	def  alignTextualNeighborhoodPuncStopWords(self, srcWordIndices, \
+									tarWordIndices, srcWords, tarWords, srcLemmas,\
+				 					tarLemmas,  srcPosTags, tarPosTags, existingalignments, 
+				 					srcWordAlreadyAligned, tarWordAlreadyAligned):
+
+
+		wordSimilarities = {}
+		textualNeighborhoodSimilarities = {}
+		sourceWordIndicesBeingConsidered = []
+		targetWordIndicesBeingConsidered = []
+		for i in srcWordIndices:
+
+			if i in srcWordAlreadyAligned or (srcLemmas[i-1] not in stopwords \
+									+ punctuations + ['\'s', '\'d', '\'ll']):
+				continue
+
+			for j in tarWordIndices:
+				if j in tarWordAlreadyAligned or (tarLemmas[j-1] not in stopwords \
+											+ punctuations + ['\'s', '\'d', '\'ll']):
+					continue
+
+				if self.word_similarity.computeWordSimilarityScore(srcLemmas[i-1], srcPosTags[i-1],\
+												tarLemmas[j-1], tarPosTags[j-1]) < ppdbSim:
+					continue
+
+				wordSimilarities[(i,j)] = max(self.word_similarity.computeWordSimilarityScore(srcWords[i-1], \
+					srcPosTags[i-1], tarWords[j-1], tarPosTags[j-1]), \
+							self.word_similarity.computeWordSimilarityScore(srcLemmas[i-1],\
+						 	srcPosTags[i-1], tarLemmas[j-1], tarPosTags[j-1]))
+
+				sourceWordIndicesBeingConsidered.append(i)
+				targetWordIndicesBeingConsidered.append(j)
+
+				evidence = 0
+				# check if word before punctuation/stop words is aligned
+				if [i-1, j-1] in existingalignments:
+					evidence += 1
+				# check if word after punctuation/stop words is aligned
+				if [i+1, j+1] in existingalignments:
+					evidence += 1
+
+				try:
+					textualNeighborhoodSimilarities[(i, j)] = evidence
+				except ZeroDivisionError:
+					textualNeighborhoodSimilarities[(i, j)] = 0
+				# print "	"
+		numOfUnalignedWordsInSource = len(sourceWordIndicesBeingConsidered)
+
+		alignments, srcWordAlreadyAligned, tarWordAlreadyAligned = \
+						self.computeBestAlignment(numOfUnalignedWordsInSource, \
+						sourceWordIndicesBeingConsidered,\
+						targetWordIndicesBeingConsidered, wordSimilarities, \
+						textualNeighborhoodSimilarities, srcLemmas,  \
+						existingalignments, srcWordAlreadyAligned,\
+						tarWordAlreadyAligned, flag = False)
+
+		return alignments, srcWordAlreadyAligned, tarWordAlreadyAligned
+
+
+	'''
+	This is auxillary function used in textual neighborhood similarities 
+	& dependency neighborhood similarities for stop words
+	'''
+
+
+	def computeBestAlignment(self, numOfUnalignedWordsInSource, sourceWordIndicesBeingConsidered,\
+								targetWordIndicesBeingConsidered, wordSimilarities, \
+								NeighborhoodSimilarities, srcLemmas, existingalignments, srcWordAlreadyAligned,\
+								tarWordAlreadyAligned, flag = True):
+
+
+		for i in xrange(numOfUnalignedWordsInSource):
+			
+			highestWeightedSim = 0
+			bestWordSim = 0
+			bestSourceIndex = -1
+			bestTargetIndex = -1
+
+			for i in sourceWordIndicesBeingConsidered:
+				if i in srcWordAlreadyAligned:
+					continue
+				# print "i ", i
+				for j in targetWordIndicesBeingConsidered:
+					if j in tarWordAlreadyAligned:
+						continue
+					# print "j ", j
+					# align only that are 	
+					if (i,j) not in wordSimilarities:
+						continue
+					# print "in word similarity ", (i,j)
+					theta2 = 1 - theta1
+
+					if theta1*wordSimilarities[(i, j)] + theta2*NeighborhoodSimilarities[(i, j)] > highestWeightedSim:
+						highestWeightedSim = theta1*wordSimilarities[(i, j)] + theta2*NeighborhoodSimilarities[(i, j)]
+						bestSourceIndex = i
+						bestTargetIndex = j
+						bestWordSim = wordSimilarities[(i, j)]
+						bestTextNeighborhoodSim = NeighborhoodSimilarities[(i, j)]
+			if flag:
+						
+				if bestWordSim>=ppdbSim and [bestSourceIndex, bestTargetIndex] not in existingalignments:
+					if srcLemmas[bestSourceIndex-1] not in stopwords:
+						existingalignments.append([bestSourceIndex, bestTargetIndex])
+						srcWordAlreadyAligned.append(bestSourceIndex)
+						tarWordAlreadyAligned.append(bestTargetIndex)
+						# print "existing alignments ", existingalignments
+
+			# else executes when alignTextualNeighborhoodPuncutationsAndStopWords calls			
+			else:
+				if bestWordSim>=ppdbSim and bestTextNeighborhoodSim > 0 and \
+						[bestSourceIndex, bestTargetIndex] not in existingalignments:
+						existingalignments.append([bestSourceIndex, bestTargetIndex])
+						srcWordAlreadyAligned.append(bestSourceIndex)
+						tarWordAlreadyAligned.append(bestTargetIndex)
+
+			if bestSourceIndex in sourceWordIndicesBeingConsidered:
+				sourceWordIndicesBeingConsidered.remove(bestSourceIndex)
+			if bestTargetIndex in targetWordIndicesBeingConsidered:
+				targetWordIndicesBeingConsidered.remove(bestTargetIndex)
+
+		return existingalignments, srcWordAlreadyAligned, tarWordAlreadyAligned
