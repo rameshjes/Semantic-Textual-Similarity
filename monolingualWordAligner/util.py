@@ -1,3 +1,5 @@
+from config import *
+
 class Util:
 
 
@@ -258,3 +260,27 @@ class Util:
 					 break
 
 		return childrenWithRelation
+
+
+	'''
+	Returns words withn (3,3) neighborhood window
+	'''
+
+	def findNeighborhoodSimilarities(self, sentenceDetails, wordIndex, leftSpan, rightSpan):
+
+
+		lemmas = []
+		wordIndices = []
+		sentenceLen = len(sentenceDetails)
+		startWordIndex = max(1, wordIndex - rightSpan)
+		endWordIndex = min(sentenceLen, wordIndex+rightSpan)
+		for item in sentenceDetails[startWordIndex-1:wordIndex-1]:
+			if item[3] not in stopwords + punctuations:
+				lemmas.append(item[3])
+				wordIndices.append(item[1])
+		for item in sentenceDetails[wordIndex:endWordIndex]:
+			if item[3] not in stopwords + punctuations:
+				lemmas.append(item[3])
+				wordIndices.append(item[1])
+
+		return [wordIndices, lemmas, wordIndex-startWordIndex, endWordIndex-wordIndex]
