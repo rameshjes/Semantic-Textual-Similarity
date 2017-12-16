@@ -5,6 +5,8 @@ import string
 import nltk
 from nltk.parse.stanford import StanfordDependencyParser
 from spacy import displacy
+import re 
+
 
 nlp = spacy.load('en')
 
@@ -77,8 +79,18 @@ class Text_processing_spacy:
 
 		self.count = 0
 		self.length_of_sentence = [] # stores length of each sentence
-		sentence = self.spacy_parser(sentence)
+
+		sentence = re.sub(r'([a-z]\.)([\d])', r'\1 \2', sentence)
+		sentence = re.sub(r'(\)\.)([\d])', r'\1 \2', sentence)
+		sentence = re.sub(r'([\d]\.)([\d])', r'\1 \2', sentence)
+		sentence = re.sub(r'([a-z]\.)([A-Z])', r'\1 \2', sentence)
+		sentence = re.sub(r'(\.)([A-Z]|[a-z])', r'\1 \2', sentence)
+
+		
+		
+		sentence = self.spacy_parser(unicode(sentence))
 		tokenized_sentence = [sent for sent in sentence.sents]
+		# print "tokenized sentences ", tokenized_sentence
 		# print "tokenized sentence ", tokenized_sentence
 		if (len(tokenized_sentence) == 1):
 			self.count += 1
@@ -333,16 +345,20 @@ class Text_processing_spacy:
 
 	def getCombineWordsParam(self, sentence):
 
+		print "tokenizer sentence ", sentence
+
+
+		
 		sentence = self.spacy_parser(unicode(sentence))
 		words_list = []
 		tokenized_words = [token.text for token in sentence]
 		# print "tokenized words ", tokenized_words
 		pos_tags = [token.pos_ for token in sentence]
 		named_entities = self.getNamedEntities(sentence, tokenized_words)
-		print "named entities ", named_entities
+		# print "named entities ", named_entities
 		lemma = [token.lemma_ for token in sentence]
-		print "lemas ", lemma
-		print ""
+		# print "lemas ", lemma
+		# print ""
 		if (self.count == 1):
 
 			for i in xrange(len(tokenized_words)):
@@ -391,8 +407,10 @@ class Text_processing_spacy:
 # if __name__ == '__main__':
 
 # 	spac = Text_processing_spacy()
-# 	sentence = "Really well designed is United Arab Emirates"
+# 	# sentence = "Directly: Refining, coding.  Because Refining is right before the Testing Phase and Coding is right after the Testing Phase.  Indirectly: Production, Maintenance.  Because Refining occurs before these last two stages in the Software Life Cycle."
 # 	# print spac.combine_lemmaAndPosTags(parse)
+# 	sentence = "Directly: Refining, coding.  Because Refining is right before the Testing Phase and Coding is right after the Testing Phase.  Indirectly: Production, Maintenance.  Because Refining occurs before these last two stages in the Software Life Cycle."
+# 	# print spac.combine_lemmaAndPosTags(parsBecause Refining is right before the testing and coding is right after the testing phase. Now I am not going"
 # 	pars = spac.parser(sentence)
 # 	print "dependencies ", pars['dependencies']
 # 	print ""
