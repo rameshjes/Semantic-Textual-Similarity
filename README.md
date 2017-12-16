@@ -16,7 +16,7 @@ This repository contains:
         
         Wiki contains theoretically concepts: https://github.com/rameshjesswani/Semantic-Textual-Similarity/wiki
         
-        Currently working on monolingual word-aligner in NLTK 
+        Currently working on monolingual word-aligner using NLTK and SPACY
 
 
 ## Guidelines for Monolingual Word Aligner
