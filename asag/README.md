@@ -57,3 +57,15 @@ https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/monoli
 https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/monolingualWordAligner/stanfordPOSTagger_setup.txt
 
 ```
+
+#### List of dependencies
+
+```
+pandas
+numpy
+scipy
+sklearn
+pickle
+
+
+```
