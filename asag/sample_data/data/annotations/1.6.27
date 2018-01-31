@@ -1,0 +1,995 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:-lrb-:-LRB-:17
+0	0:ROOT:ROOT:0	1:-rrb-:-RRB-:20
+0	0:ROOT:ROOT:0	1:accessible:JJ:16
+0	0:ROOT:ROOT:0	1:anywhere:RB:1
+0	0:ROOT:ROOT:0	1:be:VB:15
+0	0:ROOT:ROOT:0	1:declare:VBP:6
+0	0:ROOT:ROOT:0	1:depend:VBZ:8
+0	0:ROOT:ROOT:0	1:scope:NN:19
+0	0:ROOT:ROOT:0	1:they:PRP$:18
+0	0:ROOT:ROOT:0	1:they:PRP:13
+0	0:ROOT:ROOT:0	1:they:PRP:7
+0	0:ROOT:ROOT:0	1:to:TO:14
+0	0:ROOT:ROOT:0	1:want:VBP:12
+0	0:ROOT:ROOT:0	1:where:WRB:10
+0	0:ROOT:ROOT:0	1:where:WRB:4
+0	0:ROOT:ROOT:0	1:you:PRP:11
+0	0:ROOT:ROOT:0	1:you:PRP:5
+
+0	1:a:DT:7	0:ROOT:ROOT:0
+0	1:a:DT:7	1:-lrb-:-LRB-:17
+0	1:a:DT:7	1:-rrb-:-RRB-:20
+0	1:a:DT:7	1:accessible:JJ:16
+0	1:a:DT:7	1:anywhere:RB:1
+0	1:a:DT:7	1:be:VB:15
+0	1:a:DT:7	1:declare:VBP:6
+0	1:a:DT:7	1:depend:VBZ:8
+0	1:a:DT:7	1:scope:NN:19
+0	1:a:DT:7	1:they:PRP$:18
+0	1:a:DT:7	1:they:PRP:13
+0	1:a:DT:7	1:they:PRP:7
+0	1:a:DT:7	1:to:TO:14
+0	1:a:DT:7	1:want:VBP:12
+0	1:a:DT:7	1:where:WRB:10
+0	1:a:DT:7	1:where:WRB:4
+0	1:a:DT:7	1:you:PRP:11
+0	1:a:DT:7	1:you:PRP:5
+
+0	1:anywhere:RB:5	0:ROOT:ROOT:0
+0	1:anywhere:RB:5	1:-lrb-:-LRB-:17
+0	1:anywhere:RB:5	1:-rrb-:-RRB-:20
+0	1:anywhere:RB:5	1:accessible:JJ:16
+2	1:anywhere:RB:5	1:anywhere:RB:1
+0	1:anywhere:RB:5	1:be:VB:15
+0	1:anywhere:RB:5	1:declare:VBP:6
+0	1:anywhere:RB:5	1:depend:VBZ:8
+0	1:anywhere:RB:5	1:scope:NN:19
+0	1:anywhere:RB:5	1:they:PRP$:18
+0	1:anywhere:RB:5	1:they:PRP:13
+0	1:anywhere:RB:5	1:they:PRP:7
+0	1:anywhere:RB:5	1:to:TO:14
+0	1:anywhere:RB:5	1:want:VBP:12
+0	1:anywhere:RB:5	1:where:WRB:10
+0	1:anywhere:RB:5	1:where:WRB:4
+0	1:anywhere:RB:5	1:you:PRP:11
+0	1:anywhere:RB:5	1:you:PRP:5
+
+0	1:be:VB:3	0:ROOT:ROOT:0
+0	1:be:VB:3	1:-lrb-:-LRB-:17
+0	1:be:VB:3	1:-rrb-:-RRB-:20
+0	1:be:VB:3	1:accessible:JJ:16
+0	1:be:VB:3	1:anywhere:RB:1
+1	1:be:VB:3	1:be:VB:15
+0	1:be:VB:3	1:declare:VBP:6
+0	1:be:VB:3	1:depend:VBZ:8
+0	1:be:VB:3	1:scope:NN:19
+0	1:be:VB:3	1:they:PRP$:18
+0	1:be:VB:3	1:they:PRP:13
+0	1:be:VB:3	1:they:PRP:7
+0	1:be:VB:3	1:to:TO:14
+0	1:be:VB:3	1:want:VBP:12
+0	1:be:VB:3	1:where:WRB:10
+0	1:be:VB:3	1:where:WRB:4
+0	1:be:VB:3	1:you:PRP:11
+0	1:be:VB:3	1:you:PRP:5
+
+0	1:can:MD:2	0:ROOT:ROOT:0
+0	1:can:MD:2	1:-lrb-:-LRB-:17
+0	1:can:MD:2	1:-rrb-:-RRB-:20
+0	1:can:MD:2	1:accessible:JJ:16
+0	1:can:MD:2	1:anywhere:RB:1
+0	1:can:MD:2	1:be:VB:15
+0	1:can:MD:2	1:declare:VBP:6
+0	1:can:MD:2	1:depend:VBZ:8
+0	1:can:MD:2	1:scope:NN:19
+0	1:can:MD:2	1:they:PRP$:18
+0	1:can:MD:2	1:they:PRP:13
+0	1:can:MD:2	1:they:PRP:7
+0	1:can:MD:2	1:to:TO:14
+0	1:can:MD:2	1:want:VBP:12
+0	1:can:MD:2	1:where:WRB:10
+0	1:can:MD:2	1:where:WRB:4
+0	1:can:MD:2	1:you:PRP:11
+0	1:can:MD:2	1:you:PRP:5
+
+1	1:declare:VBN:4	0:ROOT:ROOT:0
+0	1:declare:VBN:4	1:-lrb-:-LRB-:17
+0	1:declare:VBN:4	1:-rrb-:-RRB-:20
+0	1:declare:VBN:4	1:accessible:JJ:16
+1	1:declare:VBN:4	1:anywhere:RB:1
+0	1:declare:VBN:4	1:be:VB:15
+1	1:declare:VBN:4	1:declare:VBP:6
+0	1:declare:VBN:4	1:depend:VBZ:8
+0	1:declare:VBN:4	1:scope:NN:19
+0	1:declare:VBN:4	1:they:PRP$:18
+0	1:declare:VBN:4	1:they:PRP:13
+0	1:declare:VBN:4	1:they:PRP:7
+0	1:declare:VBN:4	1:to:TO:14
+0	1:declare:VBN:4	1:want:VBP:12
+0	1:declare:VBN:4	1:where:WRB:10
+0	1:declare:VBN:4	1:where:WRB:4
+0	1:declare:VBN:4	1:you:PRP:11
+0	1:declare:VBN:4	1:you:PRP:5
+
+0	1:program:NN:8	0:ROOT:ROOT:0
+0	1:program:NN:8	1:-lrb-:-LRB-:17
+0	1:program:NN:8	1:-rrb-:-RRB-:20
+0	1:program:NN:8	1:accessible:JJ:16
+0	1:program:NN:8	1:anywhere:RB:1
+0	1:program:NN:8	1:be:VB:15
+0	1:program:NN:8	1:declare:VBP:6
+0	1:program:NN:8	1:depend:VBZ:8
+0	1:program:NN:8	1:scope:NN:19
+0	1:program:NN:8	1:they:PRP$:18
+1	1:program:NN:8	1:they:PRP:13
+1	1:program:NN:8	1:they:PRP:7
+0	1:program:NN:8	1:to:TO:14
+0	1:program:NN:8	1:want:VBP:12
+0	1:program:NN:8	1:where:WRB:10
+0	1:program:NN:8	1:where:WRB:4
+0	1:program:NN:8	1:you:PRP:11
+0	1:program:NN:8	1:you:PRP:5
+
+0	1:variable:NNS:1	0:ROOT:ROOT:0
+0	1:variable:NNS:1	1:-lrb-:-LRB-:17
+0	1:variable:NNS:1	1:-rrb-:-RRB-:20
+0	1:variable:NNS:1	1:accessible:JJ:16
+0	1:variable:NNS:1	1:anywhere:RB:1
+0	1:variable:NNS:1	1:be:VB:15
+0	1:variable:NNS:1	1:declare:VBP:6
+0	1:variable:NNS:1	1:depend:VBZ:8
+0	1:variable:NNS:1	1:scope:NN:19
+1	1:variable:NNS:1	1:they:PRP$:18
+1	1:variable:NNS:1	1:they:PRP:13
+1	1:variable:NNS:1	1:they:PRP:7
+0	1:variable:NNS:1	1:to:TO:14
+0	1:variable:NNS:1	1:want:VBP:12
+0	1:variable:NNS:1	1:where:WRB:10
+0	1:variable:NNS:1	1:where:WRB:4
+0	1:variable:NNS:1	1:you:PRP:11
+0	1:variable:NNS:1	1:you:PRP:5
+
+0	2:-lrb-:-LRB-:16	0:ROOT:ROOT:0
+1	2:-lrb-:-LRB-:16	1:-lrb-:-LRB-:17
+0	2:-lrb-:-LRB-:16	1:-rrb-:-RRB-:20
+0	2:-lrb-:-LRB-:16	1:accessible:JJ:16
+0	2:-lrb-:-LRB-:16	1:anywhere:RB:1
+0	2:-lrb-:-LRB-:16	1:be:VB:15
+0	2:-lrb-:-LRB-:16	1:declare:VBP:6
+0	2:-lrb-:-LRB-:16	1:depend:VBZ:8
+0	2:-lrb-:-LRB-:16	1:scope:NN:19
+0	2:-lrb-:-LRB-:16	1:they:PRP$:18
+0	2:-lrb-:-LRB-:16	1:they:PRP:13
+0	2:-lrb-:-LRB-:16	1:they:PRP:7
+0	2:-lrb-:-LRB-:16	1:to:TO:14
+0	2:-lrb-:-LRB-:16	1:want:VBP:12
+0	2:-lrb-:-LRB-:16	1:where:WRB:10
+0	2:-lrb-:-LRB-:16	1:where:WRB:4
+0	2:-lrb-:-LRB-:16	1:you:PRP:11
+0	2:-lrb-:-LRB-:16	1:you:PRP:5
+
+0	2:-lrb-:-LRB-:8	0:ROOT:ROOT:0
+1	2:-lrb-:-LRB-:8	1:-lrb-:-LRB-:17
+0	2:-lrb-:-LRB-:8	1:-rrb-:-RRB-:20
+0	2:-lrb-:-LRB-:8	1:accessible:JJ:16
+0	2:-lrb-:-LRB-:8	1:anywhere:RB:1
+0	2:-lrb-:-LRB-:8	1:be:VB:15
+0	2:-lrb-:-LRB-:8	1:declare:VBP:6
+0	2:-lrb-:-LRB-:8	1:depend:VBZ:8
+0	2:-lrb-:-LRB-:8	1:scope:NN:19
+0	2:-lrb-:-LRB-:8	1:they:PRP$:18
+0	2:-lrb-:-LRB-:8	1:they:PRP:13
+0	2:-lrb-:-LRB-:8	1:they:PRP:7
+0	2:-lrb-:-LRB-:8	1:to:TO:14
+0	2:-lrb-:-LRB-:8	1:want:VBP:12
+0	2:-lrb-:-LRB-:8	1:where:WRB:10
+0	2:-lrb-:-LRB-:8	1:where:WRB:4
+0	2:-lrb-:-LRB-:8	1:you:PRP:11
+0	2:-lrb-:-LRB-:8	1:you:PRP:5
+
+0	2:-rrb-:-RRB-:11	0:ROOT:ROOT:0
+0	2:-rrb-:-RRB-:11	1:-lrb-:-LRB-:17
+1	2:-rrb-:-RRB-:11	1:-rrb-:-RRB-:20
+0	2:-rrb-:-RRB-:11	1:accessible:JJ:16
+0	2:-rrb-:-RRB-:11	1:anywhere:RB:1
+0	2:-rrb-:-RRB-:11	1:be:VB:15
+0	2:-rrb-:-RRB-:11	1:declare:VBP:6
+0	2:-rrb-:-RRB-:11	1:depend:VBZ:8
+0	2:-rrb-:-RRB-:11	1:scope:NN:19
+0	2:-rrb-:-RRB-:11	1:they:PRP$:18
+0	2:-rrb-:-RRB-:11	1:they:PRP:13
+0	2:-rrb-:-RRB-:11	1:they:PRP:7
+0	2:-rrb-:-RRB-:11	1:to:TO:14
+0	2:-rrb-:-RRB-:11	1:want:VBP:12
+0	2:-rrb-:-RRB-:11	1:where:WRB:10
+0	2:-rrb-:-RRB-:11	1:where:WRB:4
+0	2:-rrb-:-RRB-:11	1:you:PRP:11
+0	2:-rrb-:-RRB-:11	1:you:PRP:5
+
+0	2:-rrb-:-RRB-:19	0:ROOT:ROOT:0
+0	2:-rrb-:-RRB-:19	1:-lrb-:-LRB-:17
+1	2:-rrb-:-RRB-:19	1:-rrb-:-RRB-:20
+0	2:-rrb-:-RRB-:19	1:accessible:JJ:16
+0	2:-rrb-:-RRB-:19	1:anywhere:RB:1
+0	2:-rrb-:-RRB-:19	1:be:VB:15
+0	2:-rrb-:-RRB-:19	1:declare:VBP:6
+0	2:-rrb-:-RRB-:19	1:depend:VBZ:8
+0	2:-rrb-:-RRB-:19	1:scope:NN:19
+0	2:-rrb-:-RRB-:19	1:they:PRP$:18
+0	2:-rrb-:-RRB-:19	1:they:PRP:13
+0	2:-rrb-:-RRB-:19	1:they:PRP:7
+0	2:-rrb-:-RRB-:19	1:to:TO:14
+0	2:-rrb-:-RRB-:19	1:want:VBP:12
+0	2:-rrb-:-RRB-:19	1:where:WRB:10
+0	2:-rrb-:-RRB-:19	1:where:WRB:4
+0	2:-rrb-:-RRB-:19	1:you:PRP:11
+0	2:-rrb-:-RRB-:19	1:you:PRP:5
+
+0	2:a:DT:6	0:ROOT:ROOT:0
+0	2:a:DT:6	1:-lrb-:-LRB-:17
+0	2:a:DT:6	1:-rrb-:-RRB-:20
+0	2:a:DT:6	1:accessible:JJ:16
+0	2:a:DT:6	1:anywhere:RB:1
+0	2:a:DT:6	1:be:VB:15
+0	2:a:DT:6	1:declare:VBP:6
+0	2:a:DT:6	1:depend:VBZ:8
+0	2:a:DT:6	1:scope:NN:19
+0	2:a:DT:6	1:they:PRP$:18
+0	2:a:DT:6	1:they:PRP:13
+0	2:a:DT:6	1:they:PRP:7
+0	2:a:DT:6	1:to:TO:14
+0	2:a:DT:6	1:want:VBP:12
+0	2:a:DT:6	1:where:WRB:10
+0	2:a:DT:6	1:where:WRB:4
+0	2:a:DT:6	1:you:PRP:11
+0	2:a:DT:6	1:you:PRP:5
+
+0	2:be:VB:3	0:ROOT:ROOT:0
+0	2:be:VB:3	1:-lrb-:-LRB-:17
+0	2:be:VB:3	1:-rrb-:-RRB-:20
+0	2:be:VB:3	1:accessible:JJ:16
+0	2:be:VB:3	1:anywhere:RB:1
+1	2:be:VB:3	1:be:VB:15
+0	2:be:VB:3	1:declare:VBP:6
+0	2:be:VB:3	1:depend:VBZ:8
+0	2:be:VB:3	1:scope:NN:19
+0	2:be:VB:3	1:they:PRP$:18
+0	2:be:VB:3	1:they:PRP:13
+0	2:be:VB:3	1:they:PRP:7
+0	2:be:VB:3	1:to:TO:14
+0	2:be:VB:3	1:want:VBP:12
+0	2:be:VB:3	1:where:WRB:10
+0	2:be:VB:3	1:where:WRB:4
+0	2:be:VB:3	1:you:PRP:11
+0	2:be:VB:3	1:you:PRP:5
+
+0	2:can:MD:2	0:ROOT:ROOT:0
+0	2:can:MD:2	1:-lrb-:-LRB-:17
+0	2:can:MD:2	1:-rrb-:-RRB-:20
+0	2:can:MD:2	1:accessible:JJ:16
+0	2:can:MD:2	1:anywhere:RB:1
+0	2:can:MD:2	1:be:VB:15
+0	2:can:MD:2	1:declare:VBP:6
+0	2:can:MD:2	1:depend:VBZ:8
+0	2:can:MD:2	1:scope:NN:19
+0	2:can:MD:2	1:they:PRP$:18
+0	2:can:MD:2	1:they:PRP:13
+0	2:can:MD:2	1:they:PRP:7
+0	2:can:MD:2	1:to:TO:14
+0	2:can:MD:2	1:want:VBP:12
+0	2:can:MD:2	1:where:WRB:10
+0	2:can:MD:2	1:where:WRB:4
+0	2:can:MD:2	1:you:PRP:11
+0	2:can:MD:2	1:you:PRP:5
+
+0	2:declare:VBN:4	0:ROOT:ROOT:0
+0	2:declare:VBN:4	1:-lrb-:-LRB-:17
+0	2:declare:VBN:4	1:-rrb-:-RRB-:20
+0	2:declare:VBN:4	1:accessible:JJ:16
+0	2:declare:VBN:4	1:anywhere:RB:1
+0	2:declare:VBN:4	1:be:VB:15
+2	2:declare:VBN:4	1:declare:VBP:6
+0	2:declare:VBN:4	1:depend:VBZ:8
+0	2:declare:VBN:4	1:scope:NN:19
+0	2:declare:VBN:4	1:they:PRP$:18
+0	2:declare:VBN:4	1:they:PRP:13
+0	2:declare:VBN:4	1:they:PRP:7
+0	2:declare:VBN:4	1:to:TO:14
+0	2:declare:VBN:4	1:want:VBP:12
+0	2:declare:VBN:4	1:where:WRB:10
+0	2:declare:VBN:4	1:where:WRB:4
+0	2:declare:VBN:4	1:you:PRP:11
+0	2:declare:VBN:4	1:you:PRP:5
+
+0	2:function:NN:7	0:ROOT:ROOT:0
+0	2:function:NN:7	1:-lrb-:-LRB-:17
+0	2:function:NN:7	1:-rrb-:-RRB-:20
+0	2:function:NN:7	1:accessible:JJ:16
+0	2:function:NN:7	1:anywhere:RB:1
+0	2:function:NN:7	1:be:VB:15
+0	2:function:NN:7	1:declare:VBP:6
+0	2:function:NN:7	1:depend:VBZ:8
+0	2:function:NN:7	1:scope:NN:19
+0	2:function:NN:7	1:they:PRP$:18
+1	2:function:NN:7	1:they:PRP:13
+1	2:function:NN:7	1:they:PRP:7
+0	2:function:NN:7	1:to:TO:14
+0	2:function:NN:7	1:want:VBP:12
+0	2:function:NN:7	1:where:WRB:10
+0	2:function:NN:7	1:where:WRB:4
+0	2:function:NN:7	1:you:PRP:11
+0	2:function:NN:7	1:you:PRP:5
+
+0	2:function:NNS:15	0:ROOT:ROOT:0
+0	2:function:NNS:15	1:-lrb-:-LRB-:17
+0	2:function:NNS:15	1:-rrb-:-RRB-:20
+0	2:function:NNS:15	1:accessible:JJ:16
+0	2:function:NNS:15	1:anywhere:RB:1
+0	2:function:NNS:15	1:be:VB:15
+0	2:function:NNS:15	1:declare:VBP:6
+0	2:function:NNS:15	1:depend:VBZ:8
+0	2:function:NNS:15	1:scope:NN:19
+1	2:function:NNS:15	1:they:PRP$:18
+1	2:function:NNS:15	1:they:PRP:13
+1	2:function:NNS:15	1:they:PRP:7
+0	2:function:NNS:15	1:to:TO:14
+0	2:function:NNS:15	1:want:VBP:12
+0	2:function:NNS:15	1:where:WRB:10
+0	2:function:NNS:15	1:where:WRB:4
+0	2:function:NNS:15	1:you:PRP:11
+0	2:function:NNS:15	1:you:PRP:5
+
+0	2:global:JJ:17	0:ROOT:ROOT:0
+0	2:global:JJ:17	1:-lrb-:-LRB-:17
+0	2:global:JJ:17	1:-rrb-:-RRB-:20
+0	2:global:JJ:17	1:accessible:JJ:16
+0	2:global:JJ:17	1:anywhere:RB:1
+0	2:global:JJ:17	1:be:VB:15
+0	2:global:JJ:17	1:declare:VBP:6
+0	2:global:JJ:17	1:depend:VBZ:8
+0	2:global:JJ:17	1:scope:NN:19
+0	2:global:JJ:17	1:they:PRP$:18
+0	2:global:JJ:17	1:they:PRP:13
+0	2:global:JJ:17	1:they:PRP:7
+0	2:global:JJ:17	1:to:TO:14
+0	2:global:JJ:17	1:want:VBP:12
+0	2:global:JJ:17	1:where:WRB:10
+0	2:global:JJ:17	1:where:WRB:4
+0	2:global:JJ:17	1:you:PRP:11
+0	2:global:JJ:17	1:you:PRP:5
+
+0	2:local:JJ:9	0:ROOT:ROOT:0
+0	2:local:JJ:9	1:-lrb-:-LRB-:17
+0	2:local:JJ:9	1:-rrb-:-RRB-:20
+0	2:local:JJ:9	1:accessible:JJ:16
+0	2:local:JJ:9	1:anywhere:RB:1
+0	2:local:JJ:9	1:be:VB:15
+0	2:local:JJ:9	1:declare:VBP:6
+0	2:local:JJ:9	1:depend:VBZ:8
+0	2:local:JJ:9	1:scope:NN:19
+0	2:local:JJ:9	1:they:PRP$:18
+0	2:local:JJ:9	1:they:PRP:13
+0	2:local:JJ:9	1:they:PRP:7
+0	2:local:JJ:9	1:to:TO:14
+0	2:local:JJ:9	1:want:VBP:12
+0	2:local:JJ:9	1:where:WRB:10
+0	2:local:JJ:9	1:where:WRB:4
+0	2:local:JJ:9	1:you:PRP:11
+0	2:local:JJ:9	1:you:PRP:5
+
+0	2:the:DT:14	0:ROOT:ROOT:0
+0	2:the:DT:14	1:-lrb-:-LRB-:17
+0	2:the:DT:14	1:-rrb-:-RRB-:20
+0	2:the:DT:14	1:accessible:JJ:16
+0	2:the:DT:14	1:anywhere:RB:1
+0	2:the:DT:14	1:be:VB:15
+0	2:the:DT:14	1:declare:VBP:6
+0	2:the:DT:14	1:depend:VBZ:8
+0	2:the:DT:14	1:scope:NN:19
+0	2:the:DT:14	1:they:PRP$:18
+0	2:the:DT:14	1:they:PRP:13
+0	2:the:DT:14	1:they:PRP:7
+0	2:the:DT:14	1:to:TO:14
+0	2:the:DT:14	1:want:VBP:12
+0	2:the:DT:14	1:where:WRB:10
+0	2:the:DT:14	1:where:WRB:4
+0	2:the:DT:14	1:you:PRP:11
+0	2:the:DT:14	1:you:PRP:5
+
+0	2:they:PRP:1	0:ROOT:ROOT:0
+0	2:they:PRP:1	1:-lrb-:-LRB-:17
+0	2:they:PRP:1	1:-rrb-:-RRB-:20
+0	2:they:PRP:1	1:accessible:JJ:16
+0	2:they:PRP:1	1:anywhere:RB:1
+0	2:they:PRP:1	1:be:VB:15
+0	2:they:PRP:1	1:declare:VBP:6
+0	2:they:PRP:1	1:depend:VBZ:8
+0	2:they:PRP:1	1:scope:NN:19
+1	2:they:PRP:1	1:they:PRP$:18
+1	2:they:PRP:1	1:they:PRP:13
+2	2:they:PRP:1	1:they:PRP:7
+0	2:they:PRP:1	1:to:TO:14
+0	2:they:PRP:1	1:want:VBP:12
+0	2:they:PRP:1	1:where:WRB:10
+0	2:they:PRP:1	1:where:WRB:4
+0	2:they:PRP:1	1:you:PRP:11
+0	2:they:PRP:1	1:you:PRP:5
+
+0	2:variable:NNS:10	0:ROOT:ROOT:0
+0	2:variable:NNS:10	1:-lrb-:-LRB-:17
+0	2:variable:NNS:10	1:-rrb-:-RRB-:20
+0	2:variable:NNS:10	1:accessible:JJ:16
+0	2:variable:NNS:10	1:anywhere:RB:1
+0	2:variable:NNS:10	1:be:VB:15
+0	2:variable:NNS:10	1:declare:VBP:6
+0	2:variable:NNS:10	1:depend:VBZ:8
+0	2:variable:NNS:10	1:scope:NN:19
+1	2:variable:NNS:10	1:they:PRP$:18
+1	2:variable:NNS:10	1:they:PRP:13
+1	2:variable:NNS:10	1:they:PRP:7
+0	2:variable:NNS:10	1:to:TO:14
+0	2:variable:NNS:10	1:want:VBP:12
+0	2:variable:NNS:10	1:where:WRB:10
+0	2:variable:NNS:10	1:where:WRB:4
+0	2:variable:NNS:10	1:you:PRP:11
+0	2:variable:NNS:10	1:you:PRP:5
+
+0	2:variable:NNS:18	0:ROOT:ROOT:0
+0	2:variable:NNS:18	1:-lrb-:-LRB-:17
+0	2:variable:NNS:18	1:-rrb-:-RRB-:20
+0	2:variable:NNS:18	1:accessible:JJ:16
+0	2:variable:NNS:18	1:anywhere:RB:1
+0	2:variable:NNS:18	1:be:VB:15
+0	2:variable:NNS:18	1:declare:VBP:6
+0	2:variable:NNS:18	1:depend:VBZ:8
+0	2:variable:NNS:18	1:scope:NN:19
+1	2:variable:NNS:18	1:they:PRP$:18
+1	2:variable:NNS:18	1:they:PRP:13
+1	2:variable:NNS:18	1:they:PRP:7
+0	2:variable:NNS:18	1:to:TO:14
+0	2:variable:NNS:18	1:want:VBP:12
+0	2:variable:NNS:18	1:where:WRB:10
+0	2:variable:NNS:18	1:where:WRB:4
+0	2:variable:NNS:18	1:you:PRP:11
+0	2:variable:NNS:18	1:you:PRP:5
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	rel(1:declare:VBP:6, 1:where:WRB:4)
+1	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	advmod(1:declare:VBN:4, 1:anywhere:RB:5)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	amod(2:variable:NNS:10, 2:local:JJ:9)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	amod(2:variable:NNS:18, 2:global:JJ:17)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	appos(2:function:NN:7, 2:variable:NNS:10)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	appos(2:function:NNS:15, 2:variable:NNS:18)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	aux(1:declare:VBN:4, 1:can:MD:2)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	aux(2:declare:VBN:4, 2:can:MD:2)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	auxpass(1:declare:VBN:4, 1:be:VB:3)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	auxpass(2:declare:VBN:4, 2:be:VB:3)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	conj_or(2:declare:VBN:4, 2:declare:VBN:4)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	det(1:program:NN:8, 1:a:DT:7)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	det(1:program:NN:8, 1:a:DT:7)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	det(1:program:NN:8, 1:a:DT:7)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	det(1:program:NN:8, 1:a:DT:7)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	det(1:program:NN:8, 1:a:DT:7)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	det(1:program:NN:8, 1:a:DT:7)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	det(1:program:NN:8, 1:a:DT:7)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	det(1:program:NN:8, 1:a:DT:7)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	det(1:program:NN:8, 1:a:DT:7)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	det(1:program:NN:8, 1:a:DT:7)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	det(1:program:NN:8, 1:a:DT:7)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	det(1:program:NN:8, 1:a:DT:7)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	det(1:program:NN:8, 1:a:DT:7)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	det(1:program:NN:8, 1:a:DT:7)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	det(1:program:NN:8, 1:a:DT:7)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	det(1:program:NN:8, 1:a:DT:7)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	det(1:program:NN:8, 1:a:DT:7)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	det(1:program:NN:8, 1:a:DT:7)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	det(1:program:NN:8, 1:a:DT:7)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	det(1:program:NN:8, 1:a:DT:7)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	det(2:function:NN:7, 2:a:DT:6)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	det(2:function:NN:7, 2:a:DT:6)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	det(2:function:NN:7, 2:a:DT:6)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	det(2:function:NN:7, 2:a:DT:6)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	det(2:function:NN:7, 2:a:DT:6)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	det(2:function:NN:7, 2:a:DT:6)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	det(2:function:NN:7, 2:a:DT:6)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	det(2:function:NN:7, 2:a:DT:6)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	det(2:function:NN:7, 2:a:DT:6)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	det(2:function:NN:7, 2:a:DT:6)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	det(2:function:NN:7, 2:a:DT:6)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	det(2:function:NN:7, 2:a:DT:6)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	det(2:function:NN:7, 2:a:DT:6)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	det(2:function:NN:7, 2:a:DT:6)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	det(2:function:NN:7, 2:a:DT:6)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	det(2:function:NN:7, 2:a:DT:6)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	det(2:function:NN:7, 2:a:DT:6)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	det(2:function:NN:7, 2:a:DT:6)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	det(2:function:NN:7, 2:a:DT:6)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	det(2:function:NN:7, 2:a:DT:6)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	det(2:function:NNS:15, 2:the:DT:14)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	det(2:function:NNS:15, 2:the:DT:14)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	det(2:function:NNS:15, 2:the:DT:14)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	det(2:function:NNS:15, 2:the:DT:14)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	det(2:function:NNS:15, 2:the:DT:14)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	det(2:function:NNS:15, 2:the:DT:14)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	det(2:function:NNS:15, 2:the:DT:14)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	det(2:function:NNS:15, 2:the:DT:14)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	det(2:function:NNS:15, 2:the:DT:14)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	det(2:function:NNS:15, 2:the:DT:14)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	det(2:function:NNS:15, 2:the:DT:14)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	det(2:function:NNS:15, 2:the:DT:14)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	det(2:function:NNS:15, 2:the:DT:14)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	det(2:function:NNS:15, 2:the:DT:14)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	det(2:function:NNS:15, 2:the:DT:14)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	det(2:function:NNS:15, 2:the:DT:14)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	det(2:function:NNS:15, 2:the:DT:14)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	det(2:function:NNS:15, 2:the:DT:14)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	det(2:function:NNS:15, 2:the:DT:14)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	det(2:function:NNS:15, 2:the:DT:14)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	nsubjpass(1:declare:VBN:4, 1:variable:NNS:1)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	nsubjpass(2:declare:VBN:4, 2:they:PRP:1)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	prep_in(1:declare:VBN:4, 1:program:NN:8)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	prep_inside(2:declare:VBN:4, 2:function:NN:7)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	prep_inside(2:declare:VBN:4, 2:variable:NNS:10)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	prep_outside(2:declare:VBN:4, 2:function:NNS:15)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	prep_outside(2:declare:VBN:4, 2:variable:NNS:18)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	punct(2:variable:NNS:10, 2:-lrb-:-LRB-:8)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	punct(2:variable:NNS:10, 2:-rrb-:-RRB-:11)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	punct(2:variable:NNS:18, 2:-lrb-:-LRB-:16)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	punct(2:variable:NNS:18, 2:-rrb-:-RRB-:19)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	root(0:ROOT:ROOT:0, 1:declare:VBN:4)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	advmod(1:declare:VBP:6, 1:where:WRB:4)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	advmod(1:want:VBP:12, 1:where:WRB:10)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	aux(1:accessible:JJ:16, 1:to:TO:14)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	ccomp(1:declare:VBP:6, 1:depend:VBZ:8)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	conj_but(1:anywhere:RB:1, 1:declare:VBP:6)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	cop(1:accessible:JJ:16, 1:be:VB:15)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	dep(1:-lrb-:-LRB-:17, 1:scope:NN:19)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	dep(1:accessible:JJ:16, 1:-lrb-:-LRB-:17)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	nsubj(1:accessible:JJ:16, 1:they:PRP:13)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	nsubj(1:declare:VBP:6, 1:you:PRP:5)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	nsubj(1:depend:VBZ:8, 1:they:PRP:7)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	nsubj(1:want:VBP:12, 1:you:PRP:11)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	poss(1:scope:NN:19, 1:they:PRP$:18)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	prepc_on(1:depend:VBZ:8, 1:want:VBP:12)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	punct(1:-lrb-:-LRB-:17, 1:-rrb-:-RRB-:20)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	rcmod(1:anywhere:RB:1, 1:declare:VBP:6)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	rel(1:declare:VBP:6, 1:where:WRB:4)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	root(0:ROOT:ROOT:0, 1:anywhere:RB:1)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	root(0:ROOT:ROOT:0, 1:declare:VBP:6)
+0	root(0:ROOT:ROOT:0, 2:declare:VBN:4)	xcomp(1:want:VBP:12, 1:accessible:JJ:16)

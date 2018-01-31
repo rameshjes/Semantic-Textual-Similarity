@@ -1,0 +1,30 @@
+11.10 It uses the divide and conqure technique recursively and then when merging back together it compares each element together in a sorted list, this is done by reversing the divide and conquer technique
+11.10 A merge sort works by removing all items to sepperate memory locations and merging them back together in order.
+11.10 It divides the array into two halves, sorts each half, then merges the two halves together.
+11.10 Divide into two sublists and then those sublists break into length 1, then merges the sublists sorted. 
+11.10 Merge sort uses the "divide and conquer" idea where it divides the array in half multiple times and then joins each element of the array back into one sorted array. This is one of the best sorting algorithms besides Quicksort.
+11.10 divides the line in half coninuously until you get to only a single value then recombine the values to form a sorted line.
+11.10 Continually split array in half, sort each side of the halves, then put them back together once organized.
+11.10 merge sort splits the array of elements into smaller arrays until the arrays reach size 1 and then the merge sort merges the smaller arrays into arrays of size 2 then it moves to the next step and merges the next arrays.
+11.10 By divide and conquer.
+11.10 Break a single array down into many arrays with individual elements, then sort the elements as you reconstruct them back into a single array.
+11.10 Merge sort breaks the array in half, and continues to do so until it has 2 elements to compare and sorts them, after doing so it "merges" back as it keeps on sorting the algorithm as it does so.
+11.10 Merge sort divides the problem in half, organizes each half, then brings the two halves together again.
+11.10 Take an array and split it into two, then solve these simpler problems and merge the two answers in correct order.
+11.10 A merge sort recursively divides the array into half until only one element remains, then it sorts the data on its way out of the recursive call by merging the cells.
+11.10 Merge sort recursively divides an array into two arrays until all arrays have 1 element, at which point it merges the 1 element arrays into larger sorted arrays, the final returned array being the sorted version of the initial array.
+11.10 Merge sort continuously breaks an array in half then sorts the arrays as it concatenates them back together into one sorted array.
+11.10 It takes an array, splits itself in half, sorts the two halves (either by recursion or iteration) and compares them together giving a third array a full sorted list with both halves rejoined. 
+11.10 it splits a large array into small arrays and recurs until the array is a size of 1, and then merges all of the arrays back together until the source array is completely sourted.
+11.10 Mergesort divides the array into smaller halves and then combines the sorted subarrays into one sorted array.
+11.10 merge sort breaks the array down in halves until it is comparing two values, sorts those two values, then merges that back with the other broken down parts that it sorted, each level merging more sets together till you return back to your whole array in order.
+11.10 Divides the data into twor separate arrays, sorts the two arrays and merges them back to back together recursively. 
+11.10 Take the initial array and split it into two, temporary, smaller arrays, sort the two smaller arrays, and merge them back into a single array.
+11.10 merge sort divides the data into halves until data of one element is reached and then merges each element together according to its placement in comparison to the rest of the data
+11.10 merge sort uses the divide and conquer strategy, sorting an array in parts, then merging the sorted parts back together.
+11.10 Divide recursuivly big array into two arrays, sort two array and merge them togather recuruivly.
+11.10 divides an array in half and sorts each half by calling its self, thus dividing each half again and again and sorting it until the array is sorted. then putting the elements back in the original array sorted.
+11.10 Merge sort takes an array and splits it in half and sends each half back to itself recursively and merges and sorts the two halves when it starts going back up.
+11.10 merge sort splits an array into two halves and then sorts the two smaller arrays, and then merges them back together to form a sorted array
+11.10 the merge sort continually divides the array (or set of containers) into halves, until it reaches the point where there is just one element left, then merges each of the sets of two sorted arrays (containers).
+11.10 merge sort splits an array of elements into smaller and smaller array's till the value of 1 is reached.

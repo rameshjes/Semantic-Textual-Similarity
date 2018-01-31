@@ -1,0 +1,229 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+0	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:construction:NN:3
+0	0:ROOT:ROOT:0	1:elaboration:NN:1
+0	0:ROOT:ROOT:0	1:transition:NN:6
+
+0	1:-lrb-:-LRB-:10	0:ROOT:ROOT:0
+0	1:-lrb-:-LRB-:10	1:construction:NN:3
+0	1:-lrb-:-LRB-:10	1:elaboration:NN:1
+0	1:-lrb-:-LRB-:10	1:transition:NN:6
+
+0	1:-lrb-:-LRB-:19	0:ROOT:ROOT:0
+0	1:-lrb-:-LRB-:19	1:construction:NN:3
+0	1:-lrb-:-LRB-:19	1:elaboration:NN:1
+0	1:-lrb-:-LRB-:19	1:transition:NN:6
+
+0	1:-rrb-:-RRB-:13	0:ROOT:ROOT:0
+0	1:-rrb-:-RRB-:13	1:construction:NN:3
+0	1:-rrb-:-RRB-:13	1:elaboration:NN:1
+0	1:-rrb-:-RRB-:13	1:transition:NN:6
+
+0	1:-rrb-:-RRB-:22	0:ROOT:ROOT:0
+0	1:-rrb-:-RRB-:22	1:construction:NN:3
+0	1:-rrb-:-RRB-:22	1:elaboration:NN:1
+0	1:-rrb-:-RRB-:22	1:transition:NN:6
+
+0	1:5:CD:12	0:ROOT:ROOT:0
+0	1:5:CD:12	1:construction:NN:3
+0	1:5:CD:12	1:elaboration:NN:1
+0	1:5:CD:12	1:transition:NN:6
+
+0	1:7:CD:21	0:ROOT:ROOT:0
+0	1:7:CD:21	1:construction:NN:3
+0	1:7:CD:21	1:elaboration:NN:1
+0	1:7:CD:21	1:transition:NN:6
+
+2	1:both:CC:6	0:ROOT:ROOT:0
+0	1:both:CC:6	1:construction:NN:3
+0	1:both:CC:6	1:elaboration:NN:1
+0	1:both:CC:6	1:transition:NN:6
+
+0	1:can:MD:4	0:ROOT:ROOT:0
+0	1:can:MD:4	1:construction:NN:3
+0	1:can:MD:4	1:elaboration:NN:1
+0	1:can:MD:4	1:transition:NN:6
+
+0	1:coding:JJ:8	0:ROOT:ROOT:0
+1	1:coding:JJ:8	1:construction:NN:3
+0	1:coding:JJ:8	1:elaboration:NN:1
+0	1:coding:JJ:8	1:transition:NN:6
+
+0	1:influence:VB:5	0:ROOT:ROOT:0
+0	1:influence:VB:5	1:construction:NN:3
+0	1:influence:VB:5	1:elaboration:NN:1
+0	1:influence:VB:5	1:transition:NN:6
+
+0	1:phase:NN:11	0:ROOT:ROOT:0
+1	1:phase:NN:11	1:construction:NN:3
+1	1:phase:NN:11	1:elaboration:NN:1
+1	1:phase:NN:11	1:transition:NN:6
+
+0	1:phase:NN:20	0:ROOT:ROOT:0
+1	1:phase:NN:20	1:construction:NN:3
+1	1:phase:NN:20	1:elaboration:NN:1
+1	1:phase:NN:20	1:transition:NN:6
+
+0	1:refinement:NN:17	0:ROOT:ROOT:0
+0	1:refinement:NN:17	1:construction:NN:3
+1	1:refinement:NN:17	1:elaboration:NN:1
+1	1:refinement:NN:17	1:transition:NN:6
+
+0	1:solution:NN:16	0:ROOT:ROOT:0
+0	1:solution:NN:16	1:construction:NN:3
+0	1:solution:NN:16	1:elaboration:NN:1
+0	1:solution:NN:16	1:transition:NN:6
+
+0	1:stage:NN:18	0:ROOT:ROOT:0
+0	1:stage:NN:18	1:construction:NN:3
+2	1:stage:NN:18	1:elaboration:NN:1
+1	1:stage:NN:18	1:transition:NN:6
+
+0	1:stage:NN:3	0:ROOT:ROOT:0
+0	1:stage:NN:3	1:construction:NN:3
+0	1:stage:NN:3	1:elaboration:NN:1
+0	1:stage:NN:3	1:transition:NN:6
+
+0	1:stage:NN:9	0:ROOT:ROOT:0
+2	1:stage:NN:9	1:construction:NN:3
+0	1:stage:NN:9	1:elaboration:NN:1
+0	1:stage:NN:9	1:transition:NN:6
+
+0	1:testing:NN:2	0:ROOT:ROOT:0
+0	1:testing:NN:2	1:construction:NN:3
+0	1:testing:NN:2	1:elaboration:NN:1
+0	1:testing:NN:2	1:transition:NN:6
+
+0	1:the:DT:1	0:ROOT:ROOT:0
+0	1:the:DT:1	1:construction:NN:3
+0	1:the:DT:1	1:elaboration:NN:1
+0	1:the:DT:1	1:transition:NN:6
+
+0	1:the:DT:15	0:ROOT:ROOT:0
+0	1:the:DT:15	1:construction:NN:3
+0	1:the:DT:15	1:elaboration:NN:1
+0	1:the:DT:15	1:transition:NN:6
+
+0	1:the:DT:7	0:ROOT:ROOT:0
+0	1:the:DT:7	1:construction:NN:3
+0	1:the:DT:7	1:elaboration:NN:1
+0	1:the:DT:7	1:transition:NN:6
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	aux(1:influence:VB:5, 1:can:MD:4)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	aux(1:influence:VB:5, 1:can:MD:4)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	aux(1:influence:VB:5, 1:can:MD:4)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	aux(1:influence:VB:5, 1:can:MD:4)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	dep(1:both:CC:6, 1:phase:NN:11)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	dep(1:both:CC:6, 1:phase:NN:11)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	dep(1:both:CC:6, 1:phase:NN:11)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	dep(1:both:CC:6, 1:phase:NN:11)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	dep(1:both:CC:6, 1:stage:NN:9)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	dep(1:both:CC:6, 1:stage:NN:9)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	dep(1:both:CC:6, 1:stage:NN:9)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	dep(1:both:CC:6, 1:stage:NN:9)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	det(1:stage:NN:18, 1:the:DT:15)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	det(1:stage:NN:18, 1:the:DT:15)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	det(1:stage:NN:18, 1:the:DT:15)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	det(1:stage:NN:18, 1:the:DT:15)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	det(1:stage:NN:3, 1:the:DT:1)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	det(1:stage:NN:3, 1:the:DT:1)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	det(1:stage:NN:3, 1:the:DT:1)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	det(1:stage:NN:3, 1:the:DT:1)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	det(1:stage:NN:9, 1:the:DT:7)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	det(1:stage:NN:9, 1:the:DT:7)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	det(1:stage:NN:9, 1:the:DT:7)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	det(1:stage:NN:9, 1:the:DT:7)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	num(1:phase:NN:11, 1:5:CD:12)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	num(1:phase:NN:11, 1:5:CD:12)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	num(1:phase:NN:11, 1:5:CD:12)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	num(1:phase:NN:11, 1:5:CD:12)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	num(1:phase:NN:20, 1:7:CD:21)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	num(1:phase:NN:20, 1:7:CD:21)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	num(1:phase:NN:20, 1:7:CD:21)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	num(1:phase:NN:20, 1:7:CD:21)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	prep(1:influence:VB:5, 1:both:CC:6)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	prep(1:influence:VB:5, 1:both:CC:6)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	prep(1:influence:VB:5, 1:both:CC:6)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	prep(1:influence:VB:5, 1:both:CC:6)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	appos(1:elaboration:NN:1, 1:construction:NN:3)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	appos(1:elaboration:NN:1, 1:transition:NN:6)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	conj_and(1:construction:NN:3, 1:transition:NN:6)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	root(0:ROOT:ROOT:0, 1:elaboration:NN:1)

@@ -1,0 +1,85 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:as:IN:8
+0	0:ROOT:ROOT:0	1:as:RB:6
+0	0:ROOT:ROOT:0	1:be:VB:3
+0	0:ROOT:ROOT:0	1:be:VBZ:11
+0	0:ROOT:ROOT:0	1:can:MD:2
+0	0:ROOT:ROOT:0	1:constructor:NNS:5
+0	0:ROOT:ROOT:0	1:different:JJ:12
+0	0:ROOT:ROOT:0	1:infinite:JJ:4
+0	0:ROOT:ROOT:0	1:long:RB:7
+0	0:ROOT:ROOT:0	1:signature:NN:10
+0	0:ROOT:ROOT:0	1:the:DT:9
+0	0:ROOT:ROOT:0	1:there:EX:1
+
+0	1:number:NN:2	0:ROOT:ROOT:0
+0	1:number:NN:2	1:as:IN:8
+0	1:number:NN:2	1:as:RB:6
+0	1:number:NN:2	1:be:VB:3
+0	1:number:NN:2	1:be:VBZ:11
+0	1:number:NN:2	1:can:MD:2
+2	1:number:NN:2	1:constructor:NNS:5
+0	1:number:NN:2	1:different:JJ:12
+0	1:number:NN:2	1:infinite:JJ:4
+0	1:number:NN:2	1:long:RB:7
+0	1:number:NN:2	1:signature:NN:10
+0	1:number:NN:2	1:the:DT:9
+0	1:number:NN:2	1:there:EX:1
+
+0	1:unlimited:JJ:1	0:ROOT:ROOT:0
+0	1:unlimited:JJ:1	1:as:IN:8
+0	1:unlimited:JJ:1	1:as:RB:6
+0	1:unlimited:JJ:1	1:be:VB:3
+0	1:unlimited:JJ:1	1:be:VBZ:11
+0	1:unlimited:JJ:1	1:can:MD:2
+0	1:unlimited:JJ:1	1:constructor:NNS:5
+0	1:unlimited:JJ:1	1:different:JJ:12
+2	1:unlimited:JJ:1	1:infinite:JJ:4
+0	1:unlimited:JJ:1	1:long:RB:7
+0	1:unlimited:JJ:1	1:signature:NN:10
+0	1:unlimited:JJ:1	1:the:DT:9
+0	1:unlimited:JJ:1	1:there:EX:1
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	advmod(1:different:JJ:12, 1:long:RB:7)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	advmod(1:long:RB:7, 1:as:RB:6)
+1	amod(1:number:NN:2, 1:unlimited:JJ:1)	amod(1:constructor:NNS:5, 1:infinite:JJ:4)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	aux(1:constructor:NNS:5, 1:can:MD:2)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	cop(1:constructor:NNS:5, 1:be:VB:3)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	cop(1:different:JJ:12, 1:be:VBZ:11)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	dep(1:constructor:NNS:5, 1:different:JJ:12)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	dep(1:different:JJ:12, 1:as:IN:8)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	det(1:signature:NN:10, 1:the:DT:9)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	expl(1:constructor:NNS:5, 1:there:EX:1)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	nsubj(1:different:JJ:12, 1:signature:NN:10)
+0	amod(1:number:NN:2, 1:unlimited:JJ:1)	root(0:ROOT:ROOT:0, 1:constructor:NNS:5)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	advmod(1:different:JJ:12, 1:long:RB:7)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	advmod(1:long:RB:7, 1:as:RB:6)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	amod(1:constructor:NNS:5, 1:infinite:JJ:4)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	aux(1:constructor:NNS:5, 1:can:MD:2)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	cop(1:constructor:NNS:5, 1:be:VB:3)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	cop(1:different:JJ:12, 1:be:VBZ:11)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	dep(1:constructor:NNS:5, 1:different:JJ:12)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	dep(1:different:JJ:12, 1:as:IN:8)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	det(1:signature:NN:10, 1:the:DT:9)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	expl(1:constructor:NNS:5, 1:there:EX:1)
+0	root(0:ROOT:ROOT:0, 1:number:NN:2)	nsubj(1:different:JJ:12, 1:signature:NN:10)
+1	root(0:ROOT:ROOT:0, 1:number:NN:2)	root(0:ROOT:ROOT:0, 1:constructor:NNS:5)

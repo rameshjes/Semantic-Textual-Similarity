@@ -1,0 +1,260 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+0	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:allow:VB:1
+0	0:ROOT:ROOT:0	1:class:NNS:6
+0	0:ROOT:ROOT:0	1:compiler:NN:2
+0	0:ROOT:ROOT:0	1:elsewhere:RB:9
+0	0:ROOT:ROOT:0	1:recognize:VB:4
+0	0:ROOT:ROOT:0	1:the:DT:5
+0	0:ROOT:ROOT:0	1:to:TO:3
+0	0:ROOT:ROOT:0	1:use:VBN:8
+0	0:ROOT:ROOT:0	1:when:WRB:7
+
+0	1:a:DT:3	0:ROOT:ROOT:0
+0	1:a:DT:3	1:allow:VB:1
+0	1:a:DT:3	1:class:NNS:6
+0	1:a:DT:3	1:compiler:NN:2
+0	1:a:DT:3	1:elsewhere:RB:9
+0	1:a:DT:3	1:recognize:VB:4
+1	1:a:DT:3	1:the:DT:5
+0	1:a:DT:3	1:to:TO:3
+0	1:a:DT:3	1:use:VBN:8
+0	1:a:DT:3	1:when:WRB:7
+
+0	1:class:NN:4	0:ROOT:ROOT:0
+0	1:class:NN:4	1:allow:VB:1
+2	1:class:NN:4	1:class:NNS:6
+0	1:class:NN:4	1:compiler:NN:2
+0	1:class:NN:4	1:elsewhere:RB:9
+0	1:class:NN:4	1:recognize:VB:4
+0	1:class:NN:4	1:the:DT:5
+0	1:class:NN:4	1:to:TO:3
+0	1:class:NN:4	1:use:VBN:8
+0	1:class:NN:4	1:when:WRB:7
+
+0	1:datum:NN:8	0:ROOT:ROOT:0
+0	1:datum:NN:8	1:allow:VB:1
+0	1:datum:NN:8	1:class:NNS:6
+0	1:datum:NN:8	1:compiler:NN:2
+0	1:datum:NN:8	1:elsewhere:RB:9
+0	1:datum:NN:8	1:recognize:VB:4
+0	1:datum:NN:8	1:the:DT:5
+0	1:datum:NN:8	1:to:TO:3
+0	1:datum:NN:8	1:use:VBN:8
+0	1:datum:NN:8	1:when:WRB:7
+
+0	1:function:NN:12	0:ROOT:ROOT:0
+0	1:function:NN:12	1:allow:VB:1
+0	1:function:NN:12	1:class:NNS:6
+0	1:function:NN:12	1:compiler:NN:2
+0	1:function:NN:12	1:elsewhere:RB:9
+0	1:function:NN:12	1:recognize:VB:4
+0	1:function:NN:12	1:the:DT:5
+0	1:function:NN:12	1:to:TO:3
+0	1:function:NN:12	1:use:VBN:8
+0	1:function:NN:12	1:when:WRB:7
+
+0	1:include:VBG:7	0:ROOT:ROOT:0
+0	1:include:VBG:7	1:allow:VB:1
+0	1:include:VBG:7	1:class:NNS:6
+0	1:include:VBG:7	1:compiler:NN:2
+0	1:include:VBG:7	1:elsewhere:RB:9
+0	1:include:VBG:7	1:recognize:VB:4
+0	1:include:VBG:7	1:the:DT:5
+0	1:include:VBG:7	1:to:TO:3
+0	1:include:VBG:7	1:use:VBN:8
+0	1:include:VBG:7	1:when:WRB:7
+
+0	1:interface:NN:5	0:ROOT:ROOT:0
+0	1:interface:NN:5	1:allow:VB:1
+1	1:interface:NN:5	1:class:NNS:6
+0	1:interface:NN:5	1:compiler:NN:2
+0	1:interface:NN:5	1:elsewhere:RB:9
+2	1:interface:NN:5	1:recognize:VB:4
+0	1:interface:NN:5	1:the:DT:5
+0	1:interface:NN:5	1:to:TO:3
+0	1:interface:NN:5	1:use:VBN:8
+0	1:interface:NN:5	1:when:WRB:7
+
+0	1:member:NN:11	0:ROOT:ROOT:0
+0	1:member:NN:11	1:allow:VB:1
+0	1:member:NN:11	1:class:NNS:6
+0	1:member:NN:11	1:compiler:NN:2
+0	1:member:NN:11	1:elsewhere:RB:9
+0	1:member:NN:11	1:recognize:VB:4
+0	1:member:NN:11	1:the:DT:5
+0	1:member:NN:11	1:to:TO:3
+0	1:member:NN:11	1:use:VBN:8
+0	1:member:NN:11	1:when:WRB:7
+
+0	1:member:NNS:9	0:ROOT:ROOT:0
+0	1:member:NNS:9	1:allow:VB:1
+0	1:member:NNS:9	1:class:NNS:6
+0	1:member:NNS:9	1:compiler:NN:2
+0	1:member:NNS:9	1:elsewhere:RB:9
+0	1:member:NNS:9	1:recognize:VB:4
+0	1:member:NNS:9	1:the:DT:5
+0	1:member:NNS:9	1:to:TO:3
+0	1:member:NNS:9	1:use:VBN:8
+0	1:member:NNS:9	1:when:WRB:7
+
+0	1:prototype:NNS:13	0:ROOT:ROOT:0
+0	1:prototype:NNS:13	1:allow:VB:1
+0	1:prototype:NNS:13	1:class:NNS:6
+0	1:prototype:NNS:13	1:compiler:NN:2
+0	1:prototype:NNS:13	1:elsewhere:RB:9
+0	1:prototype:NNS:13	1:recognize:VB:4
+0	1:prototype:NNS:13	1:the:DT:5
+0	1:prototype:NNS:13	1:to:TO:3
+0	1:prototype:NNS:13	1:use:VBN:8
+0	1:prototype:NNS:13	1:when:WRB:7
+
+0	1:store:VB:2	0:ROOT:ROOT:0
+0	1:store:VB:2	1:allow:VB:1
+0	1:store:VB:2	1:class:NNS:6
+0	1:store:VB:2	1:compiler:NN:2
+0	1:store:VB:2	1:elsewhere:RB:9
+1	1:store:VB:2	1:recognize:VB:4
+0	1:store:VB:2	1:the:DT:5
+0	1:store:VB:2	1:to:TO:3
+0	1:store:VB:2	1:use:VBN:8
+0	1:store:VB:2	1:when:WRB:7
+
+0	1:to:TO:1	0:ROOT:ROOT:0
+0	1:to:TO:1	1:allow:VB:1
+0	1:to:TO:1	1:class:NNS:6
+0	1:to:TO:1	1:compiler:NN:2
+0	1:to:TO:1	1:elsewhere:RB:9
+0	1:to:TO:1	1:recognize:VB:4
+0	1:to:TO:1	1:the:DT:5
+1	1:to:TO:1	1:to:TO:3
+0	1:to:TO:1	1:use:VBN:8
+0	1:to:TO:1	1:when:WRB:7
+
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	aux(1:store:VB:2, 1:to:TO:1)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	aux(1:store:VB:2, 1:to:TO:1)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	aux(1:store:VB:2, 1:to:TO:1)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	aux(1:store:VB:2, 1:to:TO:1)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	aux(1:store:VB:2, 1:to:TO:1)	det(1:class:NNS:6, 1:the:DT:5)
+0	aux(1:store:VB:2, 1:to:TO:1)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	aux(1:store:VB:2, 1:to:TO:1)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	aux(1:store:VB:2, 1:to:TO:1)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	aux(1:store:VB:2, 1:to:TO:1)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	conj_and(1:member:NNS:9, 1:prototype:NNS:13)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	conj_and(1:member:NNS:9, 1:prototype:NNS:13)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	conj_and(1:member:NNS:9, 1:prototype:NNS:13)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	conj_and(1:member:NNS:9, 1:prototype:NNS:13)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	conj_and(1:member:NNS:9, 1:prototype:NNS:13)	det(1:class:NNS:6, 1:the:DT:5)
+0	conj_and(1:member:NNS:9, 1:prototype:NNS:13)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	conj_and(1:member:NNS:9, 1:prototype:NNS:13)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	conj_and(1:member:NNS:9, 1:prototype:NNS:13)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	conj_and(1:member:NNS:9, 1:prototype:NNS:13)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	dep(1:store:VB:2, 1:include:VBG:7)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	dep(1:store:VB:2, 1:include:VBG:7)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	dep(1:store:VB:2, 1:include:VBG:7)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	dep(1:store:VB:2, 1:include:VBG:7)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	dep(1:store:VB:2, 1:include:VBG:7)	det(1:class:NNS:6, 1:the:DT:5)
+0	dep(1:store:VB:2, 1:include:VBG:7)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	dep(1:store:VB:2, 1:include:VBG:7)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	dep(1:store:VB:2, 1:include:VBG:7)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	dep(1:store:VB:2, 1:include:VBG:7)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	det(1:interface:NN:5, 1:a:DT:3)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	det(1:interface:NN:5, 1:a:DT:3)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	det(1:interface:NN:5, 1:a:DT:3)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	det(1:interface:NN:5, 1:a:DT:3)	aux(1:recognize:VB:4, 1:to:TO:3)
+1	det(1:interface:NN:5, 1:a:DT:3)	det(1:class:NNS:6, 1:the:DT:5)
+0	det(1:interface:NN:5, 1:a:DT:3)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	det(1:interface:NN:5, 1:a:DT:3)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	det(1:interface:NN:5, 1:a:DT:3)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	det(1:interface:NN:5, 1:a:DT:3)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	dobj(1:store:VB:2, 1:interface:NN:5)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	dobj(1:store:VB:2, 1:interface:NN:5)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	dobj(1:store:VB:2, 1:interface:NN:5)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	dobj(1:store:VB:2, 1:interface:NN:5)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	dobj(1:store:VB:2, 1:interface:NN:5)	det(1:class:NNS:6, 1:the:DT:5)
+0	dobj(1:store:VB:2, 1:interface:NN:5)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+1	dobj(1:store:VB:2, 1:interface:NN:5)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	dobj(1:store:VB:2, 1:interface:NN:5)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	dobj(1:store:VB:2, 1:interface:NN:5)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	nn(1:interface:NN:5, 1:class:NN:4)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	nn(1:interface:NN:5, 1:class:NN:4)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	nn(1:interface:NN:5, 1:class:NN:4)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	nn(1:interface:NN:5, 1:class:NN:4)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	nn(1:interface:NN:5, 1:class:NN:4)	det(1:class:NNS:6, 1:the:DT:5)
+0	nn(1:interface:NN:5, 1:class:NN:4)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	nn(1:interface:NN:5, 1:class:NN:4)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	nn(1:interface:NN:5, 1:class:NN:4)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	nn(1:interface:NN:5, 1:class:NN:4)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	nn(1:member:NNS:9, 1:datum:NN:8)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	nn(1:member:NNS:9, 1:datum:NN:8)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	nn(1:member:NNS:9, 1:datum:NN:8)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	nn(1:member:NNS:9, 1:datum:NN:8)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	nn(1:member:NNS:9, 1:datum:NN:8)	det(1:class:NNS:6, 1:the:DT:5)
+0	nn(1:member:NNS:9, 1:datum:NN:8)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	nn(1:member:NNS:9, 1:datum:NN:8)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	nn(1:member:NNS:9, 1:datum:NN:8)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	nn(1:member:NNS:9, 1:datum:NN:8)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	nn(1:prototype:NNS:13, 1:function:NN:12)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	nn(1:prototype:NNS:13, 1:function:NN:12)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	nn(1:prototype:NNS:13, 1:function:NN:12)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	nn(1:prototype:NNS:13, 1:function:NN:12)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	nn(1:prototype:NNS:13, 1:function:NN:12)	det(1:class:NNS:6, 1:the:DT:5)
+0	nn(1:prototype:NNS:13, 1:function:NN:12)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	nn(1:prototype:NNS:13, 1:function:NN:12)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	nn(1:prototype:NNS:13, 1:function:NN:12)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	nn(1:prototype:NNS:13, 1:function:NN:12)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	nn(1:prototype:NNS:13, 1:member:NN:11)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	nn(1:prototype:NNS:13, 1:member:NN:11)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	nn(1:prototype:NNS:13, 1:member:NN:11)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	nn(1:prototype:NNS:13, 1:member:NN:11)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	nn(1:prototype:NNS:13, 1:member:NN:11)	det(1:class:NNS:6, 1:the:DT:5)
+0	nn(1:prototype:NNS:13, 1:member:NN:11)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	nn(1:prototype:NNS:13, 1:member:NN:11)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	nn(1:prototype:NNS:13, 1:member:NN:11)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	nn(1:prototype:NNS:13, 1:member:NN:11)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	pobj(1:include:VBG:7, 1:member:NNS:9)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	pobj(1:include:VBG:7, 1:member:NNS:9)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	pobj(1:include:VBG:7, 1:member:NNS:9)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	pobj(1:include:VBG:7, 1:member:NNS:9)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	pobj(1:include:VBG:7, 1:member:NNS:9)	det(1:class:NNS:6, 1:the:DT:5)
+0	pobj(1:include:VBG:7, 1:member:NNS:9)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	pobj(1:include:VBG:7, 1:member:NNS:9)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	pobj(1:include:VBG:7, 1:member:NNS:9)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	pobj(1:include:VBG:7, 1:member:NNS:9)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	pobj(1:include:VBG:7, 1:prototype:NNS:13)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	pobj(1:include:VBG:7, 1:prototype:NNS:13)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	pobj(1:include:VBG:7, 1:prototype:NNS:13)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	pobj(1:include:VBG:7, 1:prototype:NNS:13)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	pobj(1:include:VBG:7, 1:prototype:NNS:13)	det(1:class:NNS:6, 1:the:DT:5)
+0	pobj(1:include:VBG:7, 1:prototype:NNS:13)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	pobj(1:include:VBG:7, 1:prototype:NNS:13)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	pobj(1:include:VBG:7, 1:prototype:NNS:13)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+0	pobj(1:include:VBG:7, 1:prototype:NNS:13)	xcomp(1:allow:VB:1, 1:recognize:VB:4)
+0	root(0:ROOT:ROOT:0, 1:store:VB:2)	advcl(1:recognize:VB:4, 1:use:VBN:8)
+0	root(0:ROOT:ROOT:0, 1:store:VB:2)	advmod(1:use:VBN:8, 1:elsewhere:RB:9)
+0	root(0:ROOT:ROOT:0, 1:store:VB:2)	advmod(1:use:VBN:8, 1:when:WRB:7)
+0	root(0:ROOT:ROOT:0, 1:store:VB:2)	aux(1:recognize:VB:4, 1:to:TO:3)
+0	root(0:ROOT:ROOT:0, 1:store:VB:2)	det(1:class:NNS:6, 1:the:DT:5)
+0	root(0:ROOT:ROOT:0, 1:store:VB:2)	dobj(1:allow:VB:1, 1:compiler:NN:2)
+0	root(0:ROOT:ROOT:0, 1:store:VB:2)	dobj(1:recognize:VB:4, 1:class:NNS:6)
+0	root(0:ROOT:ROOT:0, 1:store:VB:2)	root(0:ROOT:ROOT:0, 1:allow:VB:1)
+1	root(0:ROOT:ROOT:0, 1:store:VB:2)	xcomp(1:allow:VB:1, 1:recognize:VB:4)

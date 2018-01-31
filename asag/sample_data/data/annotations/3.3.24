@@ -1,0 +1,548 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:call:NNS:12
+0	0:ROOT:ROOT:0	1:complier:NN:2
+0	0:ROOT:ROOT:0	1:copy:NNS:4
+0	0:ROOT:ROOT:0	1:function:NN:11
+0	0:ROOT:ROOT:0	1:function:NNS:20
+0	0:ROOT:ROOT:0	1:function:NNS:7
+0	0:ROOT:ROOT:0	1:include:VBZ:3
+0	0:ROOT:ROOT:0	1:inline:JJ:6
+0	0:ROOT:ROOT:0	1:making:NN:10
+0	0:ROOT:ROOT:0	1:only:RB:16
+0	0:ROOT:ROOT:0	1:small:JJ:19
+0	0:ROOT:ROOT:0	1:the:DT:1
+0	0:ROOT:ROOT:0	1:usually:RB:15
+0	0:ROOT:ROOT:0	1:very:RB:18
+0	0:ROOT:ROOT:0	1:with:IN:17
+
+0	1:a:DT:13	0:ROOT:ROOT:0
+0	1:a:DT:13	1:call:NNS:12
+0	1:a:DT:13	1:complier:NN:2
+0	1:a:DT:13	1:copy:NNS:4
+0	1:a:DT:13	1:function:NN:11
+0	1:a:DT:13	1:function:NNS:20
+0	1:a:DT:13	1:function:NNS:7
+0	1:a:DT:13	1:include:VBZ:3
+0	1:a:DT:13	1:inline:JJ:6
+0	1:a:DT:13	1:making:NN:10
+0	1:a:DT:13	1:only:RB:16
+0	1:a:DT:13	1:small:JJ:19
+1	1:a:DT:13	1:the:DT:1
+0	1:a:DT:13	1:usually:RB:15
+0	1:a:DT:13	1:very:RB:18
+0	1:a:DT:13	1:with:IN:17
+
+0	1:a:DT:3	0:ROOT:ROOT:0
+0	1:a:DT:3	1:call:NNS:12
+0	1:a:DT:3	1:complier:NN:2
+0	1:a:DT:3	1:copy:NNS:4
+0	1:a:DT:3	1:function:NN:11
+0	1:a:DT:3	1:function:NNS:20
+0	1:a:DT:3	1:function:NNS:7
+0	1:a:DT:3	1:include:VBZ:3
+0	1:a:DT:3	1:inline:JJ:6
+0	1:a:DT:3	1:making:NN:10
+0	1:a:DT:3	1:only:RB:16
+0	1:a:DT:3	1:small:JJ:19
+1	1:a:DT:3	1:the:DT:1
+0	1:a:DT:3	1:usually:RB:15
+0	1:a:DT:3	1:very:RB:18
+0	1:a:DT:3	1:with:IN:17
+
+0	1:be:VBZ:16	0:ROOT:ROOT:0
+0	1:be:VBZ:16	1:call:NNS:12
+0	1:be:VBZ:16	1:complier:NN:2
+0	1:be:VBZ:16	1:copy:NNS:4
+0	1:be:VBZ:16	1:function:NN:11
+0	1:be:VBZ:16	1:function:NNS:20
+0	1:be:VBZ:16	1:function:NNS:7
+0	1:be:VBZ:16	1:include:VBZ:3
+0	1:be:VBZ:16	1:inline:JJ:6
+0	1:be:VBZ:16	1:making:NN:10
+0	1:be:VBZ:16	1:only:RB:16
+0	1:be:VBZ:16	1:small:JJ:19
+0	1:be:VBZ:16	1:the:DT:1
+0	1:be:VBZ:16	1:usually:RB:15
+0	1:be:VBZ:16	1:very:RB:18
+0	1:be:VBZ:16	1:with:IN:17
+
+0	1:call:NN:15	0:ROOT:ROOT:0
+2	1:call:NN:15	1:call:NNS:12
+0	1:call:NN:15	1:complier:NN:2
+0	1:call:NN:15	1:copy:NNS:4
+0	1:call:NN:15	1:function:NN:11
+0	1:call:NN:15	1:function:NNS:20
+0	1:call:NN:15	1:function:NNS:7
+0	1:call:NN:15	1:include:VBZ:3
+0	1:call:NN:15	1:inline:JJ:6
+0	1:call:NN:15	1:making:NN:10
+0	1:call:NN:15	1:only:RB:16
+0	1:call:NN:15	1:small:JJ:19
+0	1:call:NN:15	1:the:DT:1
+0	1:call:NN:15	1:usually:RB:15
+0	1:call:NN:15	1:very:RB:18
+0	1:call:NN:15	1:with:IN:17
+
+0	1:code:NN:8	0:ROOT:ROOT:0
+0	1:code:NN:8	1:call:NNS:12
+0	1:code:NN:8	1:complier:NN:2
+0	1:code:NN:8	1:copy:NNS:4
+1	1:code:NN:8	1:function:NN:11
+1	1:code:NN:8	1:function:NNS:20
+2	1:code:NN:8	1:function:NNS:7
+0	1:code:NN:8	1:include:VBZ:3
+0	1:code:NN:8	1:inline:JJ:6
+0	1:code:NN:8	1:making:NN:10
+0	1:code:NN:8	1:only:RB:16
+0	1:code:NN:8	1:small:JJ:19
+0	1:code:NN:8	1:the:DT:1
+0	1:code:NN:8	1:usually:RB:15
+0	1:code:NN:8	1:very:RB:18
+0	1:code:NN:8	1:with:IN:17
+
+0	1:copy:NN:4	0:ROOT:ROOT:0
+0	1:copy:NN:4	1:call:NNS:12
+0	1:copy:NN:4	1:complier:NN:2
+2	1:copy:NN:4	1:copy:NNS:4
+0	1:copy:NN:4	1:function:NN:11
+0	1:copy:NN:4	1:function:NNS:20
+0	1:copy:NN:4	1:function:NNS:7
+0	1:copy:NN:4	1:include:VBZ:3
+0	1:copy:NN:4	1:inline:JJ:6
+0	1:copy:NN:4	1:making:NN:10
+0	1:copy:NN:4	1:only:RB:16
+0	1:copy:NN:4	1:small:JJ:19
+0	1:copy:NN:4	1:the:DT:1
+0	1:copy:NN:4	1:usually:RB:15
+0	1:copy:NN:4	1:very:RB:18
+0	1:copy:NN:4	1:with:IN:17
+
+0	1:every:DT:10	0:ROOT:ROOT:0
+0	1:every:DT:10	1:call:NNS:12
+0	1:every:DT:10	1:complier:NN:2
+0	1:every:DT:10	1:copy:NNS:4
+0	1:every:DT:10	1:function:NN:11
+0	1:every:DT:10	1:function:NNS:20
+0	1:every:DT:10	1:function:NNS:7
+0	1:every:DT:10	1:include:VBZ:3
+0	1:every:DT:10	1:inline:JJ:6
+0	1:every:DT:10	1:making:NN:10
+0	1:every:DT:10	1:only:RB:16
+0	1:every:DT:10	1:small:JJ:19
+1	1:every:DT:10	1:the:DT:1
+0	1:every:DT:10	1:usually:RB:15
+0	1:every:DT:10	1:very:RB:18
+0	1:every:DT:10	1:with:IN:17
+
+0	1:function:NN:14	0:ROOT:ROOT:0
+0	1:function:NN:14	1:call:NNS:12
+0	1:function:NN:14	1:complier:NN:2
+0	1:function:NN:14	1:copy:NNS:4
+2	1:function:NN:14	1:function:NN:11
+1	1:function:NN:14	1:function:NNS:20
+1	1:function:NN:14	1:function:NNS:7
+0	1:function:NN:14	1:include:VBZ:3
+0	1:function:NN:14	1:inline:JJ:6
+0	1:function:NN:14	1:making:NN:10
+0	1:function:NN:14	1:only:RB:16
+0	1:function:NN:14	1:small:JJ:19
+0	1:function:NN:14	1:the:DT:1
+0	1:function:NN:14	1:usually:RB:15
+0	1:function:NN:14	1:very:RB:18
+0	1:function:NN:14	1:with:IN:17
+
+0	1:function:NN:7	0:ROOT:ROOT:0
+0	1:function:NN:7	1:call:NNS:12
+0	1:function:NN:7	1:complier:NN:2
+0	1:function:NN:7	1:copy:NNS:4
+1	1:function:NN:7	1:function:NN:11
+1	1:function:NN:7	1:function:NNS:20
+2	1:function:NN:7	1:function:NNS:7
+0	1:function:NN:7	1:include:VBZ:3
+0	1:function:NN:7	1:inline:JJ:6
+0	1:function:NN:7	1:making:NN:10
+0	1:function:NN:7	1:only:RB:16
+0	1:function:NN:7	1:small:JJ:19
+0	1:function:NN:7	1:the:DT:1
+0	1:function:NN:7	1:usually:RB:15
+0	1:function:NN:7	1:very:RB:18
+0	1:function:NN:7	1:with:IN:17
+
+0	1:it:PRP:1	0:ROOT:ROOT:0
+1	1:it:PRP:1	1:call:NNS:12
+2	1:it:PRP:1	1:complier:NN:2
+0	1:it:PRP:1	1:copy:NNS:4
+1	1:it:PRP:1	1:function:NN:11
+1	1:it:PRP:1	1:function:NNS:20
+1	1:it:PRP:1	1:function:NNS:7
+0	1:it:PRP:1	1:include:VBZ:3
+0	1:it:PRP:1	1:inline:JJ:6
+0	1:it:PRP:1	1:making:NN:10
+0	1:it:PRP:1	1:only:RB:16
+0	1:it:PRP:1	1:small:JJ:19
+0	1:it:PRP:1	1:the:DT:1
+0	1:it:PRP:1	1:usually:RB:15
+0	1:it:PRP:1	1:very:RB:18
+0	1:it:PRP:1	1:with:IN:17
+
+0	1:make:VBN:17	0:ROOT:ROOT:0
+0	1:make:VBN:17	1:call:NNS:12
+0	1:make:VBN:17	1:complier:NN:2
+0	1:make:VBN:17	1:copy:NNS:4
+0	1:make:VBN:17	1:function:NN:11
+0	1:make:VBN:17	1:function:NNS:20
+0	1:make:VBN:17	1:function:NNS:7
+0	1:make:VBN:17	1:include:VBZ:3
+0	1:make:VBN:17	1:inline:JJ:6
+2	1:make:VBN:17	1:making:NN:10
+0	1:make:VBN:17	1:only:RB:16
+0	1:make:VBN:17	1:small:JJ:19
+0	1:make:VBN:17	1:the:DT:1
+0	1:make:VBN:17	1:usually:RB:15
+0	1:make:VBN:17	1:very:RB:18
+0	1:make:VBN:17	1:with:IN:17
+
+0	1:make:VBZ:2	0:ROOT:ROOT:0
+0	1:make:VBZ:2	1:call:NNS:12
+0	1:make:VBZ:2	1:complier:NN:2
+0	1:make:VBZ:2	1:copy:NNS:4
+0	1:make:VBZ:2	1:function:NN:11
+0	1:make:VBZ:2	1:function:NNS:20
+0	1:make:VBZ:2	1:function:NNS:7
+2	1:make:VBZ:2	1:include:VBZ:3
+0	1:make:VBZ:2	1:inline:JJ:6
+0	1:make:VBZ:2	1:making:NN:10
+0	1:make:VBZ:2	1:only:RB:16
+0	1:make:VBZ:2	1:small:JJ:19
+0	1:make:VBZ:2	1:the:DT:1
+0	1:make:VBZ:2	1:usually:RB:15
+0	1:make:VBZ:2	1:very:RB:18
+0	1:make:VBZ:2	1:with:IN:17
+
+0	1:place:NN:11	0:ROOT:ROOT:0
+0	1:place:NN:11	1:call:NNS:12
+0	1:place:NN:11	1:complier:NN:2
+0	1:place:NN:11	1:copy:NNS:4
+0	1:place:NN:11	1:function:NN:11
+0	1:place:NN:11	1:function:NNS:20
+0	1:place:NN:11	1:function:NNS:7
+0	1:place:NN:11	1:include:VBZ:3
+0	1:place:NN:11	1:inline:JJ:6
+0	1:place:NN:11	1:making:NN:10
+0	1:place:NN:11	1:only:RB:16
+0	1:place:NN:11	1:small:JJ:19
+0	1:place:NN:11	1:the:DT:1
+0	1:place:NN:11	1:usually:RB:15
+0	1:place:NN:11	1:very:RB:18
+0	1:place:NN:11	1:with:IN:17
+
+0	1:the:DT:6	0:ROOT:ROOT:0
+0	1:the:DT:6	1:call:NNS:12
+0	1:the:DT:6	1:complier:NN:2
+0	1:the:DT:6	1:copy:NNS:4
+0	1:the:DT:6	1:function:NN:11
+0	1:the:DT:6	1:function:NNS:20
+0	1:the:DT:6	1:function:NNS:7
+0	1:the:DT:6	1:include:VBZ:3
+0	1:the:DT:6	1:inline:JJ:6
+0	1:the:DT:6	1:making:NN:10
+0	1:the:DT:6	1:only:RB:16
+0	1:the:DT:6	1:small:JJ:19
+1	1:the:DT:6	1:the:DT:1
+0	1:the:DT:6	1:usually:RB:15
+0	1:the:DT:6	1:very:RB:18
+0	1:the:DT:6	1:with:IN:17
+
+0	1:where:WRB:12	0:ROOT:ROOT:0
+0	1:where:WRB:12	1:call:NNS:12
+0	1:where:WRB:12	1:complier:NN:2
+0	1:where:WRB:12	1:copy:NNS:4
+0	1:where:WRB:12	1:function:NN:11
+0	1:where:WRB:12	1:function:NNS:20
+0	1:where:WRB:12	1:function:NNS:7
+0	1:where:WRB:12	1:include:VBZ:3
+0	1:where:WRB:12	1:inline:JJ:6
+0	1:where:WRB:12	1:making:NN:10
+0	1:where:WRB:12	1:only:RB:16
+0	1:where:WRB:12	1:small:JJ:19
+0	1:where:WRB:12	1:the:DT:1
+0	1:where:WRB:12	1:usually:RB:15
+0	1:where:WRB:12	1:very:RB:18
+0	1:where:WRB:12	1:with:IN:17
+
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	dep(1:with:IN:17, 1:only:RB:16)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	det(1:complier:NN:2, 1:the:DT:1)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	nn(1:call:NNS:12, 1:function:NN:11)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	nn(1:call:NNS:12, 1:making:NN:10)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	advmod(1:make:VBN:17, 1:where:WRB:12)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	dep(1:with:IN:17, 1:only:RB:16)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	det(1:complier:NN:2, 1:the:DT:1)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	nn(1:call:NNS:12, 1:function:NN:11)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	nn(1:call:NNS:12, 1:making:NN:10)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	auxpass(1:make:VBN:17, 1:be:VBZ:16)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	det(1:call:NN:15, 1:a:DT:13)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	det(1:call:NN:15, 1:a:DT:13)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	det(1:call:NN:15, 1:a:DT:13)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	det(1:call:NN:15, 1:a:DT:13)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	det(1:call:NN:15, 1:a:DT:13)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	det(1:call:NN:15, 1:a:DT:13)	dep(1:with:IN:17, 1:only:RB:16)
+0	det(1:call:NN:15, 1:a:DT:13)	det(1:complier:NN:2, 1:the:DT:1)
+0	det(1:call:NN:15, 1:a:DT:13)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	det(1:call:NN:15, 1:a:DT:13)	nn(1:call:NNS:12, 1:function:NN:11)
+0	det(1:call:NN:15, 1:a:DT:13)	nn(1:call:NNS:12, 1:making:NN:10)
+0	det(1:call:NN:15, 1:a:DT:13)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	det(1:call:NN:15, 1:a:DT:13)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	det(1:call:NN:15, 1:a:DT:13)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	det(1:call:NN:15, 1:a:DT:13)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	det(1:call:NN:15, 1:a:DT:13)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	det(1:call:NN:15, 1:a:DT:13)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	det(1:code:NN:8, 1:the:DT:6)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	det(1:code:NN:8, 1:the:DT:6)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	det(1:code:NN:8, 1:the:DT:6)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	det(1:code:NN:8, 1:the:DT:6)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	det(1:code:NN:8, 1:the:DT:6)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	det(1:code:NN:8, 1:the:DT:6)	dep(1:with:IN:17, 1:only:RB:16)
+0	det(1:code:NN:8, 1:the:DT:6)	det(1:complier:NN:2, 1:the:DT:1)
+0	det(1:code:NN:8, 1:the:DT:6)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	det(1:code:NN:8, 1:the:DT:6)	nn(1:call:NNS:12, 1:function:NN:11)
+0	det(1:code:NN:8, 1:the:DT:6)	nn(1:call:NNS:12, 1:making:NN:10)
+0	det(1:code:NN:8, 1:the:DT:6)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	det(1:code:NN:8, 1:the:DT:6)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	det(1:code:NN:8, 1:the:DT:6)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	det(1:code:NN:8, 1:the:DT:6)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	det(1:code:NN:8, 1:the:DT:6)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	det(1:code:NN:8, 1:the:DT:6)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	det(1:copy:NN:4, 1:a:DT:3)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	det(1:copy:NN:4, 1:a:DT:3)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	det(1:copy:NN:4, 1:a:DT:3)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	det(1:copy:NN:4, 1:a:DT:3)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	det(1:copy:NN:4, 1:a:DT:3)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	det(1:copy:NN:4, 1:a:DT:3)	dep(1:with:IN:17, 1:only:RB:16)
+0	det(1:copy:NN:4, 1:a:DT:3)	det(1:complier:NN:2, 1:the:DT:1)
+0	det(1:copy:NN:4, 1:a:DT:3)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	det(1:copy:NN:4, 1:a:DT:3)	nn(1:call:NNS:12, 1:function:NN:11)
+0	det(1:copy:NN:4, 1:a:DT:3)	nn(1:call:NNS:12, 1:making:NN:10)
+0	det(1:copy:NN:4, 1:a:DT:3)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	det(1:copy:NN:4, 1:a:DT:3)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	det(1:copy:NN:4, 1:a:DT:3)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	det(1:copy:NN:4, 1:a:DT:3)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	det(1:copy:NN:4, 1:a:DT:3)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	det(1:copy:NN:4, 1:a:DT:3)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	det(1:place:NN:11, 1:every:DT:10)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	det(1:place:NN:11, 1:every:DT:10)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	det(1:place:NN:11, 1:every:DT:10)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	det(1:place:NN:11, 1:every:DT:10)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	det(1:place:NN:11, 1:every:DT:10)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	det(1:place:NN:11, 1:every:DT:10)	dep(1:with:IN:17, 1:only:RB:16)
+0	det(1:place:NN:11, 1:every:DT:10)	det(1:complier:NN:2, 1:the:DT:1)
+0	det(1:place:NN:11, 1:every:DT:10)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	det(1:place:NN:11, 1:every:DT:10)	nn(1:call:NNS:12, 1:function:NN:11)
+0	det(1:place:NN:11, 1:every:DT:10)	nn(1:call:NNS:12, 1:making:NN:10)
+0	det(1:place:NN:11, 1:every:DT:10)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	det(1:place:NN:11, 1:every:DT:10)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	det(1:place:NN:11, 1:every:DT:10)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	det(1:place:NN:11, 1:every:DT:10)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	det(1:place:NN:11, 1:every:DT:10)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	det(1:place:NN:11, 1:every:DT:10)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	dep(1:with:IN:17, 1:only:RB:16)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	det(1:complier:NN:2, 1:the:DT:1)
+1	dobj(1:make:VBZ:2, 1:copy:NN:4)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	nn(1:call:NNS:12, 1:function:NN:11)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	nn(1:call:NNS:12, 1:making:NN:10)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	dobj(1:make:VBZ:2, 1:copy:NN:4)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	nn(1:call:NN:15, 1:function:NN:14)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	nn(1:call:NN:15, 1:function:NN:14)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	nn(1:call:NN:15, 1:function:NN:14)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	nn(1:call:NN:15, 1:function:NN:14)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	nn(1:call:NN:15, 1:function:NN:14)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	nn(1:call:NN:15, 1:function:NN:14)	dep(1:with:IN:17, 1:only:RB:16)
+0	nn(1:call:NN:15, 1:function:NN:14)	det(1:complier:NN:2, 1:the:DT:1)
+0	nn(1:call:NN:15, 1:function:NN:14)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+1	nn(1:call:NN:15, 1:function:NN:14)	nn(1:call:NNS:12, 1:function:NN:11)
+0	nn(1:call:NN:15, 1:function:NN:14)	nn(1:call:NNS:12, 1:making:NN:10)
+0	nn(1:call:NN:15, 1:function:NN:14)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	nn(1:call:NN:15, 1:function:NN:14)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	nn(1:call:NN:15, 1:function:NN:14)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	nn(1:call:NN:15, 1:function:NN:14)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	nn(1:call:NN:15, 1:function:NN:14)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	nn(1:call:NN:15, 1:function:NN:14)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	nn(1:code:NN:8, 1:function:NN:7)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	nn(1:code:NN:8, 1:function:NN:7)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	nn(1:code:NN:8, 1:function:NN:7)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	nn(1:code:NN:8, 1:function:NN:7)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	nn(1:code:NN:8, 1:function:NN:7)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	nn(1:code:NN:8, 1:function:NN:7)	dep(1:with:IN:17, 1:only:RB:16)
+0	nn(1:code:NN:8, 1:function:NN:7)	det(1:complier:NN:2, 1:the:DT:1)
+0	nn(1:code:NN:8, 1:function:NN:7)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	nn(1:code:NN:8, 1:function:NN:7)	nn(1:call:NNS:12, 1:function:NN:11)
+0	nn(1:code:NN:8, 1:function:NN:7)	nn(1:call:NNS:12, 1:making:NN:10)
+0	nn(1:code:NN:8, 1:function:NN:7)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	nn(1:code:NN:8, 1:function:NN:7)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	nn(1:code:NN:8, 1:function:NN:7)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	nn(1:code:NN:8, 1:function:NN:7)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	nn(1:code:NN:8, 1:function:NN:7)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	nn(1:code:NN:8, 1:function:NN:7)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	dep(1:with:IN:17, 1:only:RB:16)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	det(1:complier:NN:2, 1:the:DT:1)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	nn(1:call:NNS:12, 1:function:NN:11)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	nn(1:call:NNS:12, 1:making:NN:10)
+1	nsubj(1:make:VBZ:2, 1:it:PRP:1)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	nsubj(1:make:VBZ:2, 1:it:PRP:1)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	dep(1:with:IN:17, 1:only:RB:16)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	det(1:complier:NN:2, 1:the:DT:1)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	nn(1:call:NNS:12, 1:function:NN:11)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	nn(1:call:NNS:12, 1:making:NN:10)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	nsubjpass(1:make:VBN:17, 1:call:NN:15)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	dep(1:with:IN:17, 1:only:RB:16)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	det(1:complier:NN:2, 1:the:DT:1)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	nn(1:call:NNS:12, 1:function:NN:11)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	nn(1:call:NNS:12, 1:making:NN:10)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	prep_in(1:code:NN:8, 1:place:NN:11)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	dep(1:with:IN:17, 1:only:RB:16)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	det(1:complier:NN:2, 1:the:DT:1)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	nn(1:call:NNS:12, 1:function:NN:11)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	nn(1:call:NNS:12, 1:making:NN:10)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+1	prep_of(1:copy:NN:4, 1:code:NN:8)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	prep_of(1:copy:NN:4, 1:code:NN:8)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	dep(1:with:IN:17, 1:only:RB:16)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	det(1:complier:NN:2, 1:the:DT:1)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	nn(1:call:NNS:12, 1:function:NN:11)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	nn(1:call:NNS:12, 1:making:NN:10)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	pobj(1:with:IN:17, 1:function:NNS:20)
+1	rcmod(1:place:NN:11, 1:make:VBN:17)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	rcmod(1:place:NN:11, 1:make:VBN:17)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	dep(1:with:IN:17, 1:only:RB:16)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	det(1:complier:NN:2, 1:the:DT:1)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	nn(1:call:NNS:12, 1:function:NN:11)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	nn(1:call:NNS:12, 1:making:NN:10)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	rel(1:make:VBN:17, 1:where:WRB:12)	root(0:ROOT:ROOT:0, 1:usually:RB:15)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	advmod(1:small:JJ:19, 1:very:RB:18)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	amod(1:function:NNS:20, 1:small:JJ:19)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	amod(1:function:NNS:7, 1:inline:JJ:6)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	conj_but(1:include:VBZ:3, 1:usually:RB:15)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	dep(1:include:VBZ:3, 1:with:IN:17)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	dep(1:with:IN:17, 1:only:RB:16)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	det(1:complier:NN:2, 1:the:DT:1)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	dobj(1:include:VBZ:3, 1:copy:NNS:4)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	nn(1:call:NNS:12, 1:function:NN:11)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	nn(1:call:NNS:12, 1:making:NN:10)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	nsubj(1:include:VBZ:3, 1:complier:NN:2)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	pobj(1:with:IN:17, 1:function:NNS:20)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	prep_instead_of(1:include:VBZ:3, 1:call:NNS:12)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	prep_of(1:copy:NNS:4, 1:function:NNS:7)
+1	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	root(0:ROOT:ROOT:0, 1:include:VBZ:3)
+0	root(0:ROOT:ROOT:0, 1:make:VBZ:2)	root(0:ROOT:ROOT:0, 1:usually:RB:15)

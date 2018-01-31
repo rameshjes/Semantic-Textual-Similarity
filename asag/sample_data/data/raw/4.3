@@ -1,0 +1,30 @@
+4.3 by reference only
+4.3 a reference pointer to an element in the array.
+4.3 Arrays are passed to functions by reference.
+4.3 -Arrays are passed by reference <br><br>      -Individual array elements passed by value<br><br>      -Functions that take arrays as arguments <br><br>      -Function prototypes may include parameter names<br><br>      -const array parameters
+4.3 Arrays are passed by reference.
+4.3 you must pass the array and its size to the function. Ex. function(array, size);
+4.3 Usually the same way you pass anything else... you do not have to specify the length of a char array, just pass it to the function by sending the name of the array. <br>Example:<br>char str[20];<br>isPalindrome(str); // this sends the char array to the function isPalindrome.<br><br>Otherwise, would need to send the length of the array as well.
+4.3 you pass a pointer to the first item and also pass the size.
+4.3 By reference.
+4.3 In two parts, the array itself, and it's size, so that the function it's being passed to can avoid out of bounds errors.
+4.3 Specify array name without brackets. Array size is normally passed as another argument so the function can process the specific number of elements in the array. Arrays are passed by reference. Individual array elements passed by value. Functions that take arrays as arguments.<br><br><br>
+4.3 Arrays are passed by reference.
+4.3 the same way but with [] at the declaration and the actual function.
+4.3 specify the array name without brackets.
+4.3 by reference
+4.3 You pass the name of the array to the function.<br>So for:<br>int bin [10];<br>you pass it to an array like so:<br>jingle(bin);<br>but jingle must be declared correctly in order to receive an array, either with prototype<br>void jingle (int []);<br>or with the definition in its initialization:<br>void jingle (int array[]);<br><br>It's also worth noting that arrays are passed to function by reference, so as to not copy large arrays over and over and burn memory.  This gives the function complete control over the array however.
+4.3 They are called by the function then the function must loop through the array to get the set of characters. 
+4.3 by reference by default, unless you specify const, at which the later will make the array unmodifiable.
+4.3 The function recieves both the array and the array size as parameters.<br>function(arrayName, arraySize)
+4.3 specifying array name and passing as reference in an argument into the function
+4.3 1st you must specify the array name without brackets and then the array name and size are passed as two arguments in the function call.
+4.3 arrays are passed by reference, passing the starting address of array. programmer specifies the array name without brackets and passes the array size as another argument so the function can process the specific number of elements in the array
+4.3 by reference only
+4.3 by reference
+4.3 by reference
+4.3 by refrence
+4.3 function( int [], int length)
+4.3 by reference
+4.3 by reference
+4.3 The function reads the variables, stores them. then returns the what ever the variable reads. The function then prints the content of the array. 

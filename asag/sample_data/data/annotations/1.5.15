@@ -1,0 +1,666 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+0	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:a:DT:1
+0	0:ROOT:ROOT:0	1:a:DT:12
+0	0:ROOT:ROOT:0	1:a:DT:4
+0	0:ROOT:ROOT:0	1:be:VB:19
+0	0:ROOT:ROOT:0	1:be:VBZ:3
+0	0:ROOT:ROOT:0	1:be:VBZ:7
+0	0:ROOT:ROOT:0	1:can:MD:18
+0	0:ROOT:ROOT:0	1:change:VB:10
+0	0:ROOT:ROOT:0	1:computer:NN:13
+0	0:ROOT:ROOT:0	1:memory:NN:16
+0	0:ROOT:ROOT:0	1:program:NNS:22
+0	0:ROOT:ROOT:0	1:s:JJ:15
+0	0:ROOT:ROOT:0	1:subject:JJ:8
+0	0:ROOT:ROOT:0	1:that:WDT:17
+0	0:ROOT:ROOT:0	1:that:WDT:6
+0	0:ROOT:ROOT:0	1:to:TO:9
+0	0:ROOT:ROOT:0	1:use:VBN:20
+0	0:ROOT:ROOT:0	1:value:NN:5
+0	0:ROOT:ROOT:0	1:variable:NN:2
+0	0:ROOT:ROOT:0	2:Programs:NNP:1
+0	0:ROOT:ROOT:0	2:act:VB:14
+0	0:ROOT:ROOT:0	2:can:MD:2
+0	0:ROOT:ROOT:0	2:change:VB:3
+0	0:ROOT:ROOT:0	2:directly:RB:17
+0	0:ROOT:ROOT:0	2:it:PRP:11
+0	0:ROOT:ROOT:0	2:it:PRP:16
+0	0:ROOT:ROOT:0	2:later:RB:12
+0	0:ROOT:ROOT:0	2:recall:VB:10
+0	0:ROOT:ROOT:0	2:the:DT:4
+0	0:ROOT:ROOT:0	2:the:DT:7
+0	0:ROOT:ROOT:0	2:value:NN:5
+0	0:ROOT:ROOT:0	2:variable:NN:8
+
+0	1:a:DT:1	0:ROOT:ROOT:0
+1	1:a:DT:1	1:a:DT:1
+1	1:a:DT:1	1:a:DT:12
+2	1:a:DT:1	1:a:DT:4
+0	1:a:DT:1	1:be:VB:19
+0	1:a:DT:1	1:be:VBZ:3
+0	1:a:DT:1	1:be:VBZ:7
+0	1:a:DT:1	1:can:MD:18
+0	1:a:DT:1	1:change:VB:10
+0	1:a:DT:1	1:computer:NN:13
+0	1:a:DT:1	1:memory:NN:16
+0	1:a:DT:1	1:program:NNS:22
+0	1:a:DT:1	1:s:JJ:15
+0	1:a:DT:1	1:subject:JJ:8
+0	1:a:DT:1	1:that:WDT:17
+0	1:a:DT:1	1:that:WDT:6
+0	1:a:DT:1	1:to:TO:9
+0	1:a:DT:1	1:use:VBN:20
+0	1:a:DT:1	1:value:NN:5
+0	1:a:DT:1	1:variable:NN:2
+0	1:a:DT:1	2:Programs:NNP:1
+0	1:a:DT:1	2:act:VB:14
+0	1:a:DT:1	2:can:MD:2
+0	1:a:DT:1	2:change:VB:3
+0	1:a:DT:1	2:directly:RB:17
+0	1:a:DT:1	2:it:PRP:11
+0	1:a:DT:1	2:it:PRP:16
+0	1:a:DT:1	2:later:RB:12
+0	1:a:DT:1	2:recall:VB:10
+1	1:a:DT:1	2:the:DT:4
+1	1:a:DT:1	2:the:DT:7
+0	1:a:DT:1	2:value:NN:5
+0	1:a:DT:1	2:variable:NN:8
+
+0	1:a:DT:8	0:ROOT:ROOT:0
+1	1:a:DT:8	1:a:DT:1
+1	1:a:DT:8	1:a:DT:12
+1	1:a:DT:8	1:a:DT:4
+0	1:a:DT:8	1:be:VB:19
+0	1:a:DT:8	1:be:VBZ:3
+0	1:a:DT:8	1:be:VBZ:7
+0	1:a:DT:8	1:can:MD:18
+0	1:a:DT:8	1:change:VB:10
+0	1:a:DT:8	1:computer:NN:13
+0	1:a:DT:8	1:memory:NN:16
+0	1:a:DT:8	1:program:NNS:22
+0	1:a:DT:8	1:s:JJ:15
+0	1:a:DT:8	1:subject:JJ:8
+0	1:a:DT:8	1:that:WDT:17
+0	1:a:DT:8	1:that:WDT:6
+0	1:a:DT:8	1:to:TO:9
+0	1:a:DT:8	1:use:VBN:20
+0	1:a:DT:8	1:value:NN:5
+0	1:a:DT:8	1:variable:NN:2
+0	1:a:DT:8	2:Programs:NNP:1
+0	1:a:DT:8	2:act:VB:14
+0	1:a:DT:8	2:can:MD:2
+0	1:a:DT:8	2:change:VB:3
+0	1:a:DT:8	2:directly:RB:17
+0	1:a:DT:8	2:it:PRP:11
+0	1:a:DT:8	2:it:PRP:16
+0	1:a:DT:8	2:later:RB:12
+0	1:a:DT:8	2:recall:VB:10
+2	1:a:DT:8	2:the:DT:4
+1	1:a:DT:8	2:the:DT:7
+0	1:a:DT:8	2:value:NN:5
+0	1:a:DT:8	2:variable:NN:8
+
+0	1:can:MD:6	0:ROOT:ROOT:0
+0	1:can:MD:6	1:a:DT:1
+0	1:can:MD:6	1:a:DT:12
+0	1:can:MD:6	1:a:DT:4
+0	1:can:MD:6	1:be:VB:19
+0	1:can:MD:6	1:be:VBZ:3
+0	1:can:MD:6	1:be:VBZ:7
+1	1:can:MD:6	1:can:MD:18
+0	1:can:MD:6	1:change:VB:10
+0	1:can:MD:6	1:computer:NN:13
+0	1:can:MD:6	1:memory:NN:16
+0	1:can:MD:6	1:program:NNS:22
+0	1:can:MD:6	1:s:JJ:15
+0	1:can:MD:6	1:subject:JJ:8
+0	1:can:MD:6	1:that:WDT:17
+0	1:can:MD:6	1:that:WDT:6
+0	1:can:MD:6	1:to:TO:9
+0	1:can:MD:6	1:use:VBN:20
+0	1:can:MD:6	1:value:NN:5
+0	1:can:MD:6	1:variable:NN:2
+0	1:can:MD:6	2:Programs:NNP:1
+0	1:can:MD:6	2:act:VB:14
+2	1:can:MD:6	2:can:MD:2
+0	1:can:MD:6	2:change:VB:3
+0	1:can:MD:6	2:directly:RB:17
+0	1:can:MD:6	2:it:PRP:11
+0	1:can:MD:6	2:it:PRP:16
+0	1:can:MD:6	2:later:RB:12
+0	1:can:MD:6	2:recall:VB:10
+0	1:can:MD:6	2:the:DT:4
+0	1:can:MD:6	2:the:DT:7
+0	1:can:MD:6	2:value:NN:5
+0	1:can:MD:6	2:variable:NN:8
+
+0	1:location:NN:2	0:ROOT:ROOT:0
+0	1:location:NN:2	1:a:DT:1
+0	1:location:NN:2	1:a:DT:12
+0	1:location:NN:2	1:a:DT:4
+0	1:location:NN:2	1:be:VB:19
+0	1:location:NN:2	1:be:VBZ:3
+0	1:location:NN:2	1:be:VBZ:7
+0	1:location:NN:2	1:can:MD:18
+0	1:location:NN:2	1:change:VB:10
+0	1:location:NN:2	1:computer:NN:13
+1	1:location:NN:2	1:memory:NN:16
+0	1:location:NN:2	1:program:NNS:22
+0	1:location:NN:2	1:s:JJ:15
+0	1:location:NN:2	1:subject:JJ:8
+0	1:location:NN:2	1:that:WDT:17
+0	1:location:NN:2	1:that:WDT:6
+0	1:location:NN:2	1:to:TO:9
+0	1:location:NN:2	1:use:VBN:20
+2	1:location:NN:2	1:value:NN:5
+0	1:location:NN:2	1:variable:NN:2
+0	1:location:NN:2	2:Programs:NNP:1
+0	1:location:NN:2	2:act:VB:14
+0	1:location:NN:2	2:can:MD:2
+0	1:location:NN:2	2:change:VB:3
+0	1:location:NN:2	2:directly:RB:17
+1	1:location:NN:2	2:it:PRP:11
+1	1:location:NN:2	2:it:PRP:16
+0	1:location:NN:2	2:later:RB:12
+0	1:location:NN:2	2:recall:VB:10
+0	1:location:NN:2	2:the:DT:4
+0	1:location:NN:2	2:the:DT:7
+0	1:location:NN:2	2:value:NN:5
+0	1:location:NN:2	2:variable:NN:8
+
+0	1:memory:NN:4	0:ROOT:ROOT:0
+0	1:memory:NN:4	1:a:DT:1
+0	1:memory:NN:4	1:a:DT:12
+0	1:memory:NN:4	1:a:DT:4
+0	1:memory:NN:4	1:be:VB:19
+0	1:memory:NN:4	1:be:VBZ:3
+0	1:memory:NN:4	1:be:VBZ:7
+0	1:memory:NN:4	1:can:MD:18
+0	1:memory:NN:4	1:change:VB:10
+0	1:memory:NN:4	1:computer:NN:13
+2	1:memory:NN:4	1:memory:NN:16
+0	1:memory:NN:4	1:program:NNS:22
+0	1:memory:NN:4	1:s:JJ:15
+0	1:memory:NN:4	1:subject:JJ:8
+0	1:memory:NN:4	1:that:WDT:17
+0	1:memory:NN:4	1:that:WDT:6
+0	1:memory:NN:4	1:to:TO:9
+0	1:memory:NN:4	1:use:VBN:20
+0	1:memory:NN:4	1:value:NN:5
+0	1:memory:NN:4	1:variable:NN:2
+0	1:memory:NN:4	2:Programs:NNP:1
+0	1:memory:NN:4	2:act:VB:14
+0	1:memory:NN:4	2:can:MD:2
+0	1:memory:NN:4	2:change:VB:3
+0	1:memory:NN:4	2:directly:RB:17
+1	1:memory:NN:4	2:it:PRP:11
+1	1:memory:NN:4	2:it:PRP:16
+0	1:memory:NN:4	2:later:RB:12
+0	1:memory:NN:4	2:recall:VB:10
+0	1:memory:NN:4	2:the:DT:4
+0	1:memory:NN:4	2:the:DT:7
+0	1:memory:NN:4	2:value:NN:5
+0	1:memory:NN:4	2:variable:NN:8
+
+0	1:store:VB:7	0:ROOT:ROOT:0
+0	1:store:VB:7	1:a:DT:1
+0	1:store:VB:7	1:a:DT:12
+0	1:store:VB:7	1:a:DT:4
+0	1:store:VB:7	1:be:VB:19
+0	1:store:VB:7	1:be:VBZ:3
+0	1:store:VB:7	1:be:VBZ:7
+0	1:store:VB:7	1:can:MD:18
+1	1:store:VB:7	1:change:VB:10
+0	1:store:VB:7	1:computer:NN:13
+0	1:store:VB:7	1:memory:NN:16
+0	1:store:VB:7	1:program:NNS:22
+0	1:store:VB:7	1:s:JJ:15
+0	1:store:VB:7	1:subject:JJ:8
+0	1:store:VB:7	1:that:WDT:17
+0	1:store:VB:7	1:that:WDT:6
+0	1:store:VB:7	1:to:TO:9
+0	1:store:VB:7	1:use:VBN:20
+0	1:store:VB:7	1:value:NN:5
+0	1:store:VB:7	1:variable:NN:2
+0	1:store:VB:7	2:Programs:NNP:1
+0	1:store:VB:7	2:act:VB:14
+0	1:store:VB:7	2:can:MD:2
+0	1:store:VB:7	2:change:VB:3
+0	1:store:VB:7	2:directly:RB:17
+0	1:store:VB:7	2:it:PRP:11
+0	1:store:VB:7	2:it:PRP:16
+0	1:store:VB:7	2:later:RB:12
+2	1:store:VB:7	2:recall:VB:10
+0	1:store:VB:7	2:the:DT:4
+0	1:store:VB:7	2:the:DT:7
+0	1:store:VB:7	2:value:NN:5
+0	1:store:VB:7	2:variable:NN:8
+
+0	1:that:WDT:5	0:ROOT:ROOT:0
+0	1:that:WDT:5	1:a:DT:1
+0	1:that:WDT:5	1:a:DT:12
+0	1:that:WDT:5	1:a:DT:4
+0	1:that:WDT:5	1:be:VB:19
+0	1:that:WDT:5	1:be:VBZ:3
+0	1:that:WDT:5	1:be:VBZ:7
+0	1:that:WDT:5	1:can:MD:18
+0	1:that:WDT:5	1:change:VB:10
+0	1:that:WDT:5	1:computer:NN:13
+0	1:that:WDT:5	1:memory:NN:16
+0	1:that:WDT:5	1:program:NNS:22
+0	1:that:WDT:5	1:s:JJ:15
+0	1:that:WDT:5	1:subject:JJ:8
+1	1:that:WDT:5	1:that:WDT:17
+1	1:that:WDT:5	1:that:WDT:6
+0	1:that:WDT:5	1:to:TO:9
+0	1:that:WDT:5	1:use:VBN:20
+0	1:that:WDT:5	1:value:NN:5
+0	1:that:WDT:5	1:variable:NN:2
+0	1:that:WDT:5	2:Programs:NNP:1
+0	1:that:WDT:5	2:act:VB:14
+0	1:that:WDT:5	2:can:MD:2
+0	1:that:WDT:5	2:change:VB:3
+0	1:that:WDT:5	2:directly:RB:17
+0	1:that:WDT:5	2:it:PRP:11
+0	1:that:WDT:5	2:it:PRP:16
+0	1:that:WDT:5	2:later:RB:12
+0	1:that:WDT:5	2:recall:VB:10
+0	1:that:WDT:5	2:the:DT:4
+0	1:that:WDT:5	2:the:DT:7
+0	1:that:WDT:5	2:value:NN:5
+0	1:that:WDT:5	2:variable:NN:8
+
+0	1:value:NN:9	0:ROOT:ROOT:0
+0	1:value:NN:9	1:a:DT:1
+0	1:value:NN:9	1:a:DT:12
+0	1:value:NN:9	1:a:DT:4
+0	1:value:NN:9	1:be:VB:19
+0	1:value:NN:9	1:be:VBZ:3
+0	1:value:NN:9	1:be:VBZ:7
+0	1:value:NN:9	1:can:MD:18
+0	1:value:NN:9	1:change:VB:10
+0	1:value:NN:9	1:computer:NN:13
+0	1:value:NN:9	1:memory:NN:16
+0	1:value:NN:9	1:program:NNS:22
+0	1:value:NN:9	1:s:JJ:15
+0	1:value:NN:9	1:subject:JJ:8
+0	1:value:NN:9	1:that:WDT:17
+0	1:value:NN:9	1:that:WDT:6
+0	1:value:NN:9	1:to:TO:9
+0	1:value:NN:9	1:use:VBN:20
+1	1:value:NN:9	1:value:NN:5
+1	1:value:NN:9	1:variable:NN:2
+0	1:value:NN:9	2:Programs:NNP:1
+0	1:value:NN:9	2:act:VB:14
+0	1:value:NN:9	2:can:MD:2
+0	1:value:NN:9	2:change:VB:3
+0	1:value:NN:9	2:directly:RB:17
+2	1:value:NN:9	2:it:PRP:11
+1	1:value:NN:9	2:it:PRP:16
+0	1:value:NN:9	2:later:RB:12
+0	1:value:NN:9	2:recall:VB:10
+0	1:value:NN:9	2:the:DT:4
+0	1:value:NN:9	2:the:DT:7
+1	1:value:NN:9	2:value:NN:5
+1	1:value:NN:9	2:variable:NN:8
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+0	aux(1:store:VB:7, 1:can:MD:6)	advmod(2:act:VB:14, 2:directly:RB:17)
+0	aux(1:store:VB:7, 1:can:MD:6)	advmod(2:recall:VB:10, 2:later:RB:12)
+0	aux(1:store:VB:7, 1:can:MD:6)	agent(1:use:VBN:20, 1:program:NNS:22)
+0	aux(1:store:VB:7, 1:can:MD:6)	amod(1:memory:NN:16, 1:s:JJ:15)
+0	aux(1:store:VB:7, 1:can:MD:6)	aux(1:change:VB:10, 1:to:TO:9)
+0	aux(1:store:VB:7, 1:can:MD:6)	aux(1:use:VBN:20, 1:can:MD:18)
+0	aux(1:store:VB:7, 1:can:MD:6)	aux(2:change:VB:3, 2:can:MD:2)
+0	aux(1:store:VB:7, 1:can:MD:6)	auxpass(1:use:VBN:20, 1:be:VB:19)
+0	aux(1:store:VB:7, 1:can:MD:6)	conj_and(2:change:VB:3, 2:act:VB:14)
+0	aux(1:store:VB:7, 1:can:MD:6)	conj_and(2:change:VB:3, 2:recall:VB:10)
+0	aux(1:store:VB:7, 1:can:MD:6)	conj_or(2:recall:VB:10, 2:act:VB:14)
+0	aux(1:store:VB:7, 1:can:MD:6)	cop(1:subject:JJ:8, 1:be:VBZ:7)
+0	aux(1:store:VB:7, 1:can:MD:6)	cop(1:value:NN:5, 1:be:VBZ:3)
+0	aux(1:store:VB:7, 1:can:MD:6)	det(1:computer:NN:13, 1:a:DT:12)
+0	aux(1:store:VB:7, 1:can:MD:6)	det(1:value:NN:5, 1:a:DT:4)
+0	aux(1:store:VB:7, 1:can:MD:6)	det(1:variable:NN:2, 1:a:DT:1)
+0	aux(1:store:VB:7, 1:can:MD:6)	det(2:value:NN:5, 2:the:DT:4)
+0	aux(1:store:VB:7, 1:can:MD:6)	det(2:variable:NN:8, 2:the:DT:7)
+0	aux(1:store:VB:7, 1:can:MD:6)	dobj(2:act:VB:14, 2:it:PRP:11)
+0	aux(1:store:VB:7, 1:can:MD:6)	dobj(2:change:VB:3, 2:value:NN:5)
+0	aux(1:store:VB:7, 1:can:MD:6)	dobj(2:recall:VB:10, 2:it:PRP:11)
+0	aux(1:store:VB:7, 1:can:MD:6)	nsubj(1:subject:JJ:8, 1:value:NN:5)
+0	aux(1:store:VB:7, 1:can:MD:6)	nsubj(1:value:NN:5, 1:variable:NN:2)
+0	aux(1:store:VB:7, 1:can:MD:6)	nsubj(2:change:VB:3, 2:Programs:NNP:1)
+0	aux(1:store:VB:7, 1:can:MD:6)	nsubj(2:recall:VB:10, 2:Programs:NNP:1)
+0	aux(1:store:VB:7, 1:can:MD:6)	nsubjpass(1:use:VBN:20, 1:memory:NN:16)
+0	aux(1:store:VB:7, 1:can:MD:6)	poss(1:memory:NN:16, 1:computer:NN:13)
+0	aux(1:store:VB:7, 1:can:MD:6)	prep_in(1:change:VB:10, 1:memory:NN:16)
+0	aux(1:store:VB:7, 1:can:MD:6)	prep_of(2:value:NN:5, 2:variable:NN:8)
+0	aux(1:store:VB:7, 1:can:MD:6)	prep_on(2:act:VB:14, 2:it:PRP:16)
+0	aux(1:store:VB:7, 1:can:MD:6)	rcmod(1:memory:NN:16, 1:use:VBN:20)
+0	aux(1:store:VB:7, 1:can:MD:6)	rcmod(1:value:NN:5, 1:subject:JJ:8)
+0	aux(1:store:VB:7, 1:can:MD:6)	rel(1:subject:JJ:8, 1:that:WDT:6)
+0	aux(1:store:VB:7, 1:can:MD:6)	rel(1:use:VBN:20, 1:that:WDT:17)
+0	aux(1:store:VB:7, 1:can:MD:6)	root(0:ROOT:ROOT:0, 1:value:NN:5)
+0	aux(1:store:VB:7, 1:can:MD:6)	root(0:ROOT:ROOT:0, 2:change:VB:3)
+0	aux(1:store:VB:7, 1:can:MD:6)	root(0:ROOT:ROOT:0, 2:recall:VB:10)
+0	aux(1:store:VB:7, 1:can:MD:6)	xcomp(1:subject:JJ:8, 1:change:VB:10)
+0	det(1:location:NN:2, 1:a:DT:1)	advmod(2:act:VB:14, 2:directly:RB:17)
+0	det(1:location:NN:2, 1:a:DT:1)	advmod(2:recall:VB:10, 2:later:RB:12)
+0	det(1:location:NN:2, 1:a:DT:1)	agent(1:use:VBN:20, 1:program:NNS:22)
+0	det(1:location:NN:2, 1:a:DT:1)	amod(1:memory:NN:16, 1:s:JJ:15)
+0	det(1:location:NN:2, 1:a:DT:1)	aux(1:change:VB:10, 1:to:TO:9)
+0	det(1:location:NN:2, 1:a:DT:1)	aux(1:use:VBN:20, 1:can:MD:18)
+0	det(1:location:NN:2, 1:a:DT:1)	aux(2:change:VB:3, 2:can:MD:2)
+0	det(1:location:NN:2, 1:a:DT:1)	auxpass(1:use:VBN:20, 1:be:VB:19)
+0	det(1:location:NN:2, 1:a:DT:1)	conj_and(2:change:VB:3, 2:act:VB:14)
+0	det(1:location:NN:2, 1:a:DT:1)	conj_and(2:change:VB:3, 2:recall:VB:10)
+0	det(1:location:NN:2, 1:a:DT:1)	conj_or(2:recall:VB:10, 2:act:VB:14)
+0	det(1:location:NN:2, 1:a:DT:1)	cop(1:subject:JJ:8, 1:be:VBZ:7)
+0	det(1:location:NN:2, 1:a:DT:1)	cop(1:value:NN:5, 1:be:VBZ:3)
+0	det(1:location:NN:2, 1:a:DT:1)	det(1:computer:NN:13, 1:a:DT:12)
+0	det(1:location:NN:2, 1:a:DT:1)	det(1:value:NN:5, 1:a:DT:4)
+0	det(1:location:NN:2, 1:a:DT:1)	det(1:variable:NN:2, 1:a:DT:1)
+0	det(1:location:NN:2, 1:a:DT:1)	det(2:value:NN:5, 2:the:DT:4)
+0	det(1:location:NN:2, 1:a:DT:1)	det(2:variable:NN:8, 2:the:DT:7)
+0	det(1:location:NN:2, 1:a:DT:1)	dobj(2:act:VB:14, 2:it:PRP:11)
+0	det(1:location:NN:2, 1:a:DT:1)	dobj(2:change:VB:3, 2:value:NN:5)
+0	det(1:location:NN:2, 1:a:DT:1)	dobj(2:recall:VB:10, 2:it:PRP:11)
+0	det(1:location:NN:2, 1:a:DT:1)	nsubj(1:subject:JJ:8, 1:value:NN:5)
+0	det(1:location:NN:2, 1:a:DT:1)	nsubj(1:value:NN:5, 1:variable:NN:2)
+0	det(1:location:NN:2, 1:a:DT:1)	nsubj(2:change:VB:3, 2:Programs:NNP:1)
+0	det(1:location:NN:2, 1:a:DT:1)	nsubj(2:recall:VB:10, 2:Programs:NNP:1)
+0	det(1:location:NN:2, 1:a:DT:1)	nsubjpass(1:use:VBN:20, 1:memory:NN:16)
+0	det(1:location:NN:2, 1:a:DT:1)	poss(1:memory:NN:16, 1:computer:NN:13)
+0	det(1:location:NN:2, 1:a:DT:1)	prep_in(1:change:VB:10, 1:memory:NN:16)
+0	det(1:location:NN:2, 1:a:DT:1)	prep_of(2:value:NN:5, 2:variable:NN:8)
+0	det(1:location:NN:2, 1:a:DT:1)	prep_on(2:act:VB:14, 2:it:PRP:16)
+0	det(1:location:NN:2, 1:a:DT:1)	rcmod(1:memory:NN:16, 1:use:VBN:20)
+0	det(1:location:NN:2, 1:a:DT:1)	rcmod(1:value:NN:5, 1:subject:JJ:8)
+0	det(1:location:NN:2, 1:a:DT:1)	rel(1:subject:JJ:8, 1:that:WDT:6)
+0	det(1:location:NN:2, 1:a:DT:1)	rel(1:use:VBN:20, 1:that:WDT:17)
+0	det(1:location:NN:2, 1:a:DT:1)	root(0:ROOT:ROOT:0, 1:value:NN:5)
+0	det(1:location:NN:2, 1:a:DT:1)	root(0:ROOT:ROOT:0, 2:change:VB:3)
+0	det(1:location:NN:2, 1:a:DT:1)	root(0:ROOT:ROOT:0, 2:recall:VB:10)
+0	det(1:location:NN:2, 1:a:DT:1)	xcomp(1:subject:JJ:8, 1:change:VB:10)
+0	det(1:value:NN:9, 1:a:DT:8)	advmod(2:act:VB:14, 2:directly:RB:17)
+0	det(1:value:NN:9, 1:a:DT:8)	advmod(2:recall:VB:10, 2:later:RB:12)
+0	det(1:value:NN:9, 1:a:DT:8)	agent(1:use:VBN:20, 1:program:NNS:22)
+0	det(1:value:NN:9, 1:a:DT:8)	amod(1:memory:NN:16, 1:s:JJ:15)
+0	det(1:value:NN:9, 1:a:DT:8)	aux(1:change:VB:10, 1:to:TO:9)
+0	det(1:value:NN:9, 1:a:DT:8)	aux(1:use:VBN:20, 1:can:MD:18)
+0	det(1:value:NN:9, 1:a:DT:8)	aux(2:change:VB:3, 2:can:MD:2)
+0	det(1:value:NN:9, 1:a:DT:8)	auxpass(1:use:VBN:20, 1:be:VB:19)
+0	det(1:value:NN:9, 1:a:DT:8)	conj_and(2:change:VB:3, 2:act:VB:14)
+0	det(1:value:NN:9, 1:a:DT:8)	conj_and(2:change:VB:3, 2:recall:VB:10)
+0	det(1:value:NN:9, 1:a:DT:8)	conj_or(2:recall:VB:10, 2:act:VB:14)
+0	det(1:value:NN:9, 1:a:DT:8)	cop(1:subject:JJ:8, 1:be:VBZ:7)
+0	det(1:value:NN:9, 1:a:DT:8)	cop(1:value:NN:5, 1:be:VBZ:3)
+0	det(1:value:NN:9, 1:a:DT:8)	det(1:computer:NN:13, 1:a:DT:12)
+0	det(1:value:NN:9, 1:a:DT:8)	det(1:value:NN:5, 1:a:DT:4)
+0	det(1:value:NN:9, 1:a:DT:8)	det(1:variable:NN:2, 1:a:DT:1)
+0	det(1:value:NN:9, 1:a:DT:8)	det(2:value:NN:5, 2:the:DT:4)
+0	det(1:value:NN:9, 1:a:DT:8)	det(2:variable:NN:8, 2:the:DT:7)
+0	det(1:value:NN:9, 1:a:DT:8)	dobj(2:act:VB:14, 2:it:PRP:11)
+0	det(1:value:NN:9, 1:a:DT:8)	dobj(2:change:VB:3, 2:value:NN:5)
+0	det(1:value:NN:9, 1:a:DT:8)	dobj(2:recall:VB:10, 2:it:PRP:11)
+0	det(1:value:NN:9, 1:a:DT:8)	nsubj(1:subject:JJ:8, 1:value:NN:5)
+0	det(1:value:NN:9, 1:a:DT:8)	nsubj(1:value:NN:5, 1:variable:NN:2)
+0	det(1:value:NN:9, 1:a:DT:8)	nsubj(2:change:VB:3, 2:Programs:NNP:1)
+0	det(1:value:NN:9, 1:a:DT:8)	nsubj(2:recall:VB:10, 2:Programs:NNP:1)
+0	det(1:value:NN:9, 1:a:DT:8)	nsubjpass(1:use:VBN:20, 1:memory:NN:16)
+0	det(1:value:NN:9, 1:a:DT:8)	poss(1:memory:NN:16, 1:computer:NN:13)
+0	det(1:value:NN:9, 1:a:DT:8)	prep_in(1:change:VB:10, 1:memory:NN:16)
+0	det(1:value:NN:9, 1:a:DT:8)	prep_of(2:value:NN:5, 2:variable:NN:8)
+0	det(1:value:NN:9, 1:a:DT:8)	prep_on(2:act:VB:14, 2:it:PRP:16)
+0	det(1:value:NN:9, 1:a:DT:8)	rcmod(1:memory:NN:16, 1:use:VBN:20)
+0	det(1:value:NN:9, 1:a:DT:8)	rcmod(1:value:NN:5, 1:subject:JJ:8)
+0	det(1:value:NN:9, 1:a:DT:8)	rel(1:subject:JJ:8, 1:that:WDT:6)
+0	det(1:value:NN:9, 1:a:DT:8)	rel(1:use:VBN:20, 1:that:WDT:17)
+0	det(1:value:NN:9, 1:a:DT:8)	root(0:ROOT:ROOT:0, 1:value:NN:5)
+0	det(1:value:NN:9, 1:a:DT:8)	root(0:ROOT:ROOT:0, 2:change:VB:3)
+0	det(1:value:NN:9, 1:a:DT:8)	root(0:ROOT:ROOT:0, 2:recall:VB:10)
+0	det(1:value:NN:9, 1:a:DT:8)	xcomp(1:subject:JJ:8, 1:change:VB:10)
+0	dobj(1:store:VB:7, 1:value:NN:9)	advmod(2:act:VB:14, 2:directly:RB:17)
+0	dobj(1:store:VB:7, 1:value:NN:9)	advmod(2:recall:VB:10, 2:later:RB:12)
+0	dobj(1:store:VB:7, 1:value:NN:9)	agent(1:use:VBN:20, 1:program:NNS:22)
+0	dobj(1:store:VB:7, 1:value:NN:9)	amod(1:memory:NN:16, 1:s:JJ:15)
+0	dobj(1:store:VB:7, 1:value:NN:9)	aux(1:change:VB:10, 1:to:TO:9)
+0	dobj(1:store:VB:7, 1:value:NN:9)	aux(1:use:VBN:20, 1:can:MD:18)
+0	dobj(1:store:VB:7, 1:value:NN:9)	aux(2:change:VB:3, 2:can:MD:2)
+0	dobj(1:store:VB:7, 1:value:NN:9)	auxpass(1:use:VBN:20, 1:be:VB:19)
+0	dobj(1:store:VB:7, 1:value:NN:9)	conj_and(2:change:VB:3, 2:act:VB:14)
+0	dobj(1:store:VB:7, 1:value:NN:9)	conj_and(2:change:VB:3, 2:recall:VB:10)
+0	dobj(1:store:VB:7, 1:value:NN:9)	conj_or(2:recall:VB:10, 2:act:VB:14)
+0	dobj(1:store:VB:7, 1:value:NN:9)	cop(1:subject:JJ:8, 1:be:VBZ:7)
+0	dobj(1:store:VB:7, 1:value:NN:9)	cop(1:value:NN:5, 1:be:VBZ:3)
+0	dobj(1:store:VB:7, 1:value:NN:9)	det(1:computer:NN:13, 1:a:DT:12)
+0	dobj(1:store:VB:7, 1:value:NN:9)	det(1:value:NN:5, 1:a:DT:4)
+0	dobj(1:store:VB:7, 1:value:NN:9)	det(1:variable:NN:2, 1:a:DT:1)
+0	dobj(1:store:VB:7, 1:value:NN:9)	det(2:value:NN:5, 2:the:DT:4)
+0	dobj(1:store:VB:7, 1:value:NN:9)	det(2:variable:NN:8, 2:the:DT:7)
+0	dobj(1:store:VB:7, 1:value:NN:9)	dobj(2:act:VB:14, 2:it:PRP:11)
+0	dobj(1:store:VB:7, 1:value:NN:9)	dobj(2:change:VB:3, 2:value:NN:5)
+0	dobj(1:store:VB:7, 1:value:NN:9)	dobj(2:recall:VB:10, 2:it:PRP:11)
+0	dobj(1:store:VB:7, 1:value:NN:9)	nsubj(1:subject:JJ:8, 1:value:NN:5)
+0	dobj(1:store:VB:7, 1:value:NN:9)	nsubj(1:value:NN:5, 1:variable:NN:2)
+0	dobj(1:store:VB:7, 1:value:NN:9)	nsubj(2:change:VB:3, 2:Programs:NNP:1)
+0	dobj(1:store:VB:7, 1:value:NN:9)	nsubj(2:recall:VB:10, 2:Programs:NNP:1)
+0	dobj(1:store:VB:7, 1:value:NN:9)	nsubjpass(1:use:VBN:20, 1:memory:NN:16)
+0	dobj(1:store:VB:7, 1:value:NN:9)	poss(1:memory:NN:16, 1:computer:NN:13)
+0	dobj(1:store:VB:7, 1:value:NN:9)	prep_in(1:change:VB:10, 1:memory:NN:16)
+0	dobj(1:store:VB:7, 1:value:NN:9)	prep_of(2:value:NN:5, 2:variable:NN:8)
+0	dobj(1:store:VB:7, 1:value:NN:9)	prep_on(2:act:VB:14, 2:it:PRP:16)
+0	dobj(1:store:VB:7, 1:value:NN:9)	rcmod(1:memory:NN:16, 1:use:VBN:20)
+0	dobj(1:store:VB:7, 1:value:NN:9)	rcmod(1:value:NN:5, 1:subject:JJ:8)
+0	dobj(1:store:VB:7, 1:value:NN:9)	rel(1:subject:JJ:8, 1:that:WDT:6)
+0	dobj(1:store:VB:7, 1:value:NN:9)	rel(1:use:VBN:20, 1:that:WDT:17)
+0	dobj(1:store:VB:7, 1:value:NN:9)	root(0:ROOT:ROOT:0, 1:value:NN:5)
+0	dobj(1:store:VB:7, 1:value:NN:9)	root(0:ROOT:ROOT:0, 2:change:VB:3)
+0	dobj(1:store:VB:7, 1:value:NN:9)	root(0:ROOT:ROOT:0, 2:recall:VB:10)
+0	dobj(1:store:VB:7, 1:value:NN:9)	xcomp(1:subject:JJ:8, 1:change:VB:10)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	advmod(2:act:VB:14, 2:directly:RB:17)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	advmod(2:recall:VB:10, 2:later:RB:12)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	agent(1:use:VBN:20, 1:program:NNS:22)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	amod(1:memory:NN:16, 1:s:JJ:15)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	aux(1:change:VB:10, 1:to:TO:9)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	aux(1:use:VBN:20, 1:can:MD:18)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	aux(2:change:VB:3, 2:can:MD:2)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	auxpass(1:use:VBN:20, 1:be:VB:19)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	conj_and(2:change:VB:3, 2:act:VB:14)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	conj_and(2:change:VB:3, 2:recall:VB:10)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	conj_or(2:recall:VB:10, 2:act:VB:14)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	cop(1:subject:JJ:8, 1:be:VBZ:7)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	cop(1:value:NN:5, 1:be:VBZ:3)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	det(1:computer:NN:13, 1:a:DT:12)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	det(1:value:NN:5, 1:a:DT:4)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	det(1:variable:NN:2, 1:a:DT:1)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	det(2:value:NN:5, 2:the:DT:4)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	det(2:variable:NN:8, 2:the:DT:7)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	dobj(2:act:VB:14, 2:it:PRP:11)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	dobj(2:change:VB:3, 2:value:NN:5)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	dobj(2:recall:VB:10, 2:it:PRP:11)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	nsubj(1:subject:JJ:8, 1:value:NN:5)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	nsubj(1:value:NN:5, 1:variable:NN:2)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	nsubj(2:change:VB:3, 2:Programs:NNP:1)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	nsubj(2:recall:VB:10, 2:Programs:NNP:1)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	nsubjpass(1:use:VBN:20, 1:memory:NN:16)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	poss(1:memory:NN:16, 1:computer:NN:13)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	prep_in(1:change:VB:10, 1:memory:NN:16)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	prep_of(2:value:NN:5, 2:variable:NN:8)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	prep_on(2:act:VB:14, 2:it:PRP:16)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	rcmod(1:memory:NN:16, 1:use:VBN:20)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	rcmod(1:value:NN:5, 1:subject:JJ:8)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	rel(1:subject:JJ:8, 1:that:WDT:6)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	rel(1:use:VBN:20, 1:that:WDT:17)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	root(0:ROOT:ROOT:0, 1:value:NN:5)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	root(0:ROOT:ROOT:0, 2:change:VB:3)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	root(0:ROOT:ROOT:0, 2:recall:VB:10)
+0	nsubj(1:store:VB:7, 1:memory:NN:4)	xcomp(1:subject:JJ:8, 1:change:VB:10)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	advmod(2:act:VB:14, 2:directly:RB:17)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	advmod(2:recall:VB:10, 2:later:RB:12)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	agent(1:use:VBN:20, 1:program:NNS:22)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	amod(1:memory:NN:16, 1:s:JJ:15)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	aux(1:change:VB:10, 1:to:TO:9)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	aux(1:use:VBN:20, 1:can:MD:18)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	aux(2:change:VB:3, 2:can:MD:2)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	auxpass(1:use:VBN:20, 1:be:VB:19)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	conj_and(2:change:VB:3, 2:act:VB:14)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	conj_and(2:change:VB:3, 2:recall:VB:10)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	conj_or(2:recall:VB:10, 2:act:VB:14)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	cop(1:subject:JJ:8, 1:be:VBZ:7)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	cop(1:value:NN:5, 1:be:VBZ:3)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	det(1:computer:NN:13, 1:a:DT:12)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	det(1:value:NN:5, 1:a:DT:4)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	det(1:variable:NN:2, 1:a:DT:1)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	det(2:value:NN:5, 2:the:DT:4)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	det(2:variable:NN:8, 2:the:DT:7)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	dobj(2:act:VB:14, 2:it:PRP:11)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	dobj(2:change:VB:3, 2:value:NN:5)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	dobj(2:recall:VB:10, 2:it:PRP:11)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	nsubj(1:subject:JJ:8, 1:value:NN:5)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	nsubj(1:value:NN:5, 1:variable:NN:2)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	nsubj(2:change:VB:3, 2:Programs:NNP:1)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	nsubj(2:recall:VB:10, 2:Programs:NNP:1)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	nsubjpass(1:use:VBN:20, 1:memory:NN:16)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	poss(1:memory:NN:16, 1:computer:NN:13)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	prep_in(1:change:VB:10, 1:memory:NN:16)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	prep_of(2:value:NN:5, 2:variable:NN:8)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	prep_on(2:act:VB:14, 2:it:PRP:16)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	rcmod(1:memory:NN:16, 1:use:VBN:20)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	rcmod(1:value:NN:5, 1:subject:JJ:8)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	rel(1:subject:JJ:8, 1:that:WDT:6)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	rel(1:use:VBN:20, 1:that:WDT:17)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	root(0:ROOT:ROOT:0, 1:value:NN:5)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	root(0:ROOT:ROOT:0, 2:change:VB:3)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	root(0:ROOT:ROOT:0, 2:recall:VB:10)
+0	prep_in(1:location:NN:2, 1:memory:NN:4)	xcomp(1:subject:JJ:8, 1:change:VB:10)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	advmod(2:act:VB:14, 2:directly:RB:17)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	advmod(2:recall:VB:10, 2:later:RB:12)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	agent(1:use:VBN:20, 1:program:NNS:22)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	amod(1:memory:NN:16, 1:s:JJ:15)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	aux(1:change:VB:10, 1:to:TO:9)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	aux(1:use:VBN:20, 1:can:MD:18)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	aux(2:change:VB:3, 2:can:MD:2)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	auxpass(1:use:VBN:20, 1:be:VB:19)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	conj_and(2:change:VB:3, 2:act:VB:14)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	conj_and(2:change:VB:3, 2:recall:VB:10)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	conj_or(2:recall:VB:10, 2:act:VB:14)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	cop(1:subject:JJ:8, 1:be:VBZ:7)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	cop(1:value:NN:5, 1:be:VBZ:3)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	det(1:computer:NN:13, 1:a:DT:12)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	det(1:value:NN:5, 1:a:DT:4)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	det(1:variable:NN:2, 1:a:DT:1)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	det(2:value:NN:5, 2:the:DT:4)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	det(2:variable:NN:8, 2:the:DT:7)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	dobj(2:act:VB:14, 2:it:PRP:11)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	dobj(2:change:VB:3, 2:value:NN:5)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	dobj(2:recall:VB:10, 2:it:PRP:11)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	nsubj(1:subject:JJ:8, 1:value:NN:5)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	nsubj(1:value:NN:5, 1:variable:NN:2)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	nsubj(2:change:VB:3, 2:Programs:NNP:1)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	nsubj(2:recall:VB:10, 2:Programs:NNP:1)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	nsubjpass(1:use:VBN:20, 1:memory:NN:16)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	poss(1:memory:NN:16, 1:computer:NN:13)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	prep_in(1:change:VB:10, 1:memory:NN:16)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	prep_of(2:value:NN:5, 2:variable:NN:8)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	prep_on(2:act:VB:14, 2:it:PRP:16)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	rcmod(1:memory:NN:16, 1:use:VBN:20)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	rcmod(1:value:NN:5, 1:subject:JJ:8)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	rel(1:subject:JJ:8, 1:that:WDT:6)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	rel(1:use:VBN:20, 1:that:WDT:17)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	root(0:ROOT:ROOT:0, 1:value:NN:5)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	root(0:ROOT:ROOT:0, 2:change:VB:3)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	root(0:ROOT:ROOT:0, 2:recall:VB:10)
+0	rcmod(1:memory:NN:4, 1:store:VB:7)	xcomp(1:subject:JJ:8, 1:change:VB:10)
+0	rel(1:store:VB:7, 1:that:WDT:5)	advmod(2:act:VB:14, 2:directly:RB:17)
+0	rel(1:store:VB:7, 1:that:WDT:5)	advmod(2:recall:VB:10, 2:later:RB:12)
+0	rel(1:store:VB:7, 1:that:WDT:5)	agent(1:use:VBN:20, 1:program:NNS:22)
+0	rel(1:store:VB:7, 1:that:WDT:5)	amod(1:memory:NN:16, 1:s:JJ:15)
+0	rel(1:store:VB:7, 1:that:WDT:5)	aux(1:change:VB:10, 1:to:TO:9)
+0	rel(1:store:VB:7, 1:that:WDT:5)	aux(1:use:VBN:20, 1:can:MD:18)
+0	rel(1:store:VB:7, 1:that:WDT:5)	aux(2:change:VB:3, 2:can:MD:2)
+0	rel(1:store:VB:7, 1:that:WDT:5)	auxpass(1:use:VBN:20, 1:be:VB:19)
+0	rel(1:store:VB:7, 1:that:WDT:5)	conj_and(2:change:VB:3, 2:act:VB:14)
+0	rel(1:store:VB:7, 1:that:WDT:5)	conj_and(2:change:VB:3, 2:recall:VB:10)
+0	rel(1:store:VB:7, 1:that:WDT:5)	conj_or(2:recall:VB:10, 2:act:VB:14)
+0	rel(1:store:VB:7, 1:that:WDT:5)	cop(1:subject:JJ:8, 1:be:VBZ:7)
+0	rel(1:store:VB:7, 1:that:WDT:5)	cop(1:value:NN:5, 1:be:VBZ:3)
+0	rel(1:store:VB:7, 1:that:WDT:5)	det(1:computer:NN:13, 1:a:DT:12)
+0	rel(1:store:VB:7, 1:that:WDT:5)	det(1:value:NN:5, 1:a:DT:4)
+0	rel(1:store:VB:7, 1:that:WDT:5)	det(1:variable:NN:2, 1:a:DT:1)
+0	rel(1:store:VB:7, 1:that:WDT:5)	det(2:value:NN:5, 2:the:DT:4)
+0	rel(1:store:VB:7, 1:that:WDT:5)	det(2:variable:NN:8, 2:the:DT:7)
+0	rel(1:store:VB:7, 1:that:WDT:5)	dobj(2:act:VB:14, 2:it:PRP:11)
+0	rel(1:store:VB:7, 1:that:WDT:5)	dobj(2:change:VB:3, 2:value:NN:5)
+0	rel(1:store:VB:7, 1:that:WDT:5)	dobj(2:recall:VB:10, 2:it:PRP:11)
+0	rel(1:store:VB:7, 1:that:WDT:5)	nsubj(1:subject:JJ:8, 1:value:NN:5)
+0	rel(1:store:VB:7, 1:that:WDT:5)	nsubj(1:value:NN:5, 1:variable:NN:2)
+0	rel(1:store:VB:7, 1:that:WDT:5)	nsubj(2:change:VB:3, 2:Programs:NNP:1)
+0	rel(1:store:VB:7, 1:that:WDT:5)	nsubj(2:recall:VB:10, 2:Programs:NNP:1)
+0	rel(1:store:VB:7, 1:that:WDT:5)	nsubjpass(1:use:VBN:20, 1:memory:NN:16)
+0	rel(1:store:VB:7, 1:that:WDT:5)	poss(1:memory:NN:16, 1:computer:NN:13)
+0	rel(1:store:VB:7, 1:that:WDT:5)	prep_in(1:change:VB:10, 1:memory:NN:16)
+0	rel(1:store:VB:7, 1:that:WDT:5)	prep_of(2:value:NN:5, 2:variable:NN:8)
+0	rel(1:store:VB:7, 1:that:WDT:5)	prep_on(2:act:VB:14, 2:it:PRP:16)
+0	rel(1:store:VB:7, 1:that:WDT:5)	rcmod(1:memory:NN:16, 1:use:VBN:20)
+0	rel(1:store:VB:7, 1:that:WDT:5)	rcmod(1:value:NN:5, 1:subject:JJ:8)
+0	rel(1:store:VB:7, 1:that:WDT:5)	rel(1:subject:JJ:8, 1:that:WDT:6)
+0	rel(1:store:VB:7, 1:that:WDT:5)	rel(1:use:VBN:20, 1:that:WDT:17)
+0	rel(1:store:VB:7, 1:that:WDT:5)	root(0:ROOT:ROOT:0, 1:value:NN:5)
+0	rel(1:store:VB:7, 1:that:WDT:5)	root(0:ROOT:ROOT:0, 2:change:VB:3)
+0	rel(1:store:VB:7, 1:that:WDT:5)	root(0:ROOT:ROOT:0, 2:recall:VB:10)
+0	rel(1:store:VB:7, 1:that:WDT:5)	xcomp(1:subject:JJ:8, 1:change:VB:10)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	advmod(2:act:VB:14, 2:directly:RB:17)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	advmod(2:recall:VB:10, 2:later:RB:12)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	agent(1:use:VBN:20, 1:program:NNS:22)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	amod(1:memory:NN:16, 1:s:JJ:15)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	aux(1:change:VB:10, 1:to:TO:9)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	aux(1:use:VBN:20, 1:can:MD:18)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	aux(2:change:VB:3, 2:can:MD:2)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	auxpass(1:use:VBN:20, 1:be:VB:19)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	conj_and(2:change:VB:3, 2:act:VB:14)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	conj_and(2:change:VB:3, 2:recall:VB:10)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	conj_or(2:recall:VB:10, 2:act:VB:14)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	cop(1:subject:JJ:8, 1:be:VBZ:7)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	cop(1:value:NN:5, 1:be:VBZ:3)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	det(1:computer:NN:13, 1:a:DT:12)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	det(1:value:NN:5, 1:a:DT:4)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	det(1:variable:NN:2, 1:a:DT:1)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	det(2:value:NN:5, 2:the:DT:4)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	det(2:variable:NN:8, 2:the:DT:7)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	dobj(2:act:VB:14, 2:it:PRP:11)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	dobj(2:change:VB:3, 2:value:NN:5)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	dobj(2:recall:VB:10, 2:it:PRP:11)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	nsubj(1:subject:JJ:8, 1:value:NN:5)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	nsubj(1:value:NN:5, 1:variable:NN:2)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	nsubj(2:change:VB:3, 2:Programs:NNP:1)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	nsubj(2:recall:VB:10, 2:Programs:NNP:1)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	nsubjpass(1:use:VBN:20, 1:memory:NN:16)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	poss(1:memory:NN:16, 1:computer:NN:13)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	prep_in(1:change:VB:10, 1:memory:NN:16)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	prep_of(2:value:NN:5, 2:variable:NN:8)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	prep_on(2:act:VB:14, 2:it:PRP:16)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	rcmod(1:memory:NN:16, 1:use:VBN:20)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	rcmod(1:value:NN:5, 1:subject:JJ:8)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	rel(1:subject:JJ:8, 1:that:WDT:6)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	rel(1:use:VBN:20, 1:that:WDT:17)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	root(0:ROOT:ROOT:0, 1:value:NN:5)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	root(0:ROOT:ROOT:0, 2:change:VB:3)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	root(0:ROOT:ROOT:0, 2:recall:VB:10)
+0	root(0:ROOT:ROOT:0, 1:location:NN:2)	xcomp(1:subject:JJ:8, 1:change:VB:10)

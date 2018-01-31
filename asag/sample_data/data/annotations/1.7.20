@@ -1,0 +1,255 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+2	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:always:RB:4
+0	0:ROOT:ROOT:0	1:at:IN:6
+0	0:ROOT:ROOT:0	1:body:NN:3
+0	0:ROOT:ROOT:0	1:execute:VBZ:5
+0	0:ROOT:ROOT:0	1:least:JJS:7
+0	0:ROOT:ROOT:0	1:loop:NN:2
+0	0:ROOT:ROOT:0	1:once:RB:8
+0	0:ROOT:ROOT:0	1:the:DT:1
+
+0	1:a:SYM:4	0:ROOT:ROOT:0
+0	1:a:SYM:4	1:always:RB:4
+0	1:a:SYM:4	1:at:IN:6
+0	1:a:SYM:4	1:body:NN:3
+0	1:a:SYM:4	1:execute:VBZ:5
+0	1:a:SYM:4	1:least:JJS:7
+0	1:a:SYM:4	1:loop:NN:2
+0	1:a:SYM:4	1:once:RB:8
+1	1:a:SYM:4	1:the:DT:1
+
+0	1:at:IN:11	0:ROOT:ROOT:0
+0	1:at:IN:11	1:always:RB:4
+2	1:at:IN:11	1:at:IN:6
+0	1:at:IN:11	1:body:NN:3
+0	1:at:IN:11	1:execute:VBZ:5
+0	1:at:IN:11	1:least:JJS:7
+0	1:at:IN:11	1:loop:NN:2
+0	1:at:IN:11	1:once:RB:8
+0	1:at:IN:11	1:the:DT:1
+
+0	1:block:NN:2	0:ROOT:ROOT:0
+0	1:block:NN:2	1:always:RB:4
+0	1:block:NN:2	1:at:IN:6
+2	1:block:NN:2	1:body:NN:3
+0	1:block:NN:2	1:execute:VBZ:5
+0	1:block:NN:2	1:least:JJS:7
+0	1:block:NN:2	1:loop:NN:2
+0	1:block:NN:2	1:once:RB:8
+0	1:block:NN:2	1:the:DT:1
+
+0	1:do:VBP:5	0:ROOT:ROOT:0
+0	1:do:VBP:5	1:always:RB:4
+0	1:do:VBP:5	1:at:IN:6
+0	1:do:VBP:5	1:body:NN:3
+0	1:do:VBP:5	1:execute:VBZ:5
+0	1:do:VBP:5	1:least:JJS:7
+0	1:do:VBP:5	1:loop:NN:2
+0	1:do:VBP:5	1:once:RB:8
+0	1:do:VBP:5	1:the:DT:1
+
+0	1:execute:VB:10	0:ROOT:ROOT:0
+0	1:execute:VB:10	1:always:RB:4
+0	1:execute:VB:10	1:at:IN:6
+0	1:execute:VB:10	1:body:NN:3
+2	1:execute:VB:10	1:execute:VBZ:5
+0	1:execute:VB:10	1:least:JJS:7
+0	1:execute:VB:10	1:loop:NN:2
+0	1:execute:VB:10	1:once:RB:8
+0	1:execute:VB:10	1:the:DT:1
+
+0	1:inside:IN:3	0:ROOT:ROOT:0
+0	1:inside:IN:3	1:always:RB:4
+0	1:inside:IN:3	1:at:IN:6
+0	1:inside:IN:3	1:body:NN:3
+0	1:inside:IN:3	1:execute:VBZ:5
+0	1:inside:IN:3	1:least:JJS:7
+0	1:inside:IN:3	1:loop:NN:2
+0	1:inside:IN:3	1:once:RB:8
+0	1:inside:IN:3	1:the:DT:1
+
+0	1:least:JJS:12	0:ROOT:ROOT:0
+0	1:least:JJS:12	1:always:RB:4
+0	1:least:JJS:12	1:at:IN:6
+0	1:least:JJS:12	1:body:NN:3
+0	1:least:JJS:12	1:execute:VBZ:5
+2	1:least:JJS:12	1:least:JJS:7
+0	1:least:JJS:12	1:loop:NN:2
+0	1:least:JJS:12	1:once:RB:8
+0	1:least:JJS:12	1:the:DT:1
+
+0	1:once:RB:13	0:ROOT:ROOT:0
+0	1:once:RB:13	1:always:RB:4
+0	1:once:RB:13	1:at:IN:6
+0	1:once:RB:13	1:body:NN:3
+0	1:once:RB:13	1:execute:VBZ:5
+0	1:once:RB:13	1:least:JJS:7
+0	1:once:RB:13	1:loop:NN:2
+2	1:once:RB:13	1:once:RB:8
+0	1:once:RB:13	1:the:DT:1
+
+0	1:statement:NN:8	0:ROOT:ROOT:0
+0	1:statement:NN:8	1:always:RB:4
+0	1:statement:NN:8	1:at:IN:6
+0	1:statement:NN:8	1:body:NN:3
+0	1:statement:NN:8	1:execute:VBZ:5
+0	1:statement:NN:8	1:least:JJS:7
+2	1:statement:NN:8	1:loop:NN:2
+0	1:statement:NN:8	1:once:RB:8
+0	1:statement:NN:8	1:the:DT:1
+
+0	1:the:DT:1	0:ROOT:ROOT:0
+0	1:the:DT:1	1:always:RB:4
+0	1:the:DT:1	1:at:IN:6
+0	1:the:DT:1	1:body:NN:3
+0	1:the:DT:1	1:execute:VBZ:5
+0	1:the:DT:1	1:least:JJS:7
+0	1:the:DT:1	1:loop:NN:2
+0	1:the:DT:1	1:once:RB:8
+2	1:the:DT:1	1:the:DT:1
+
+0	1:while:IN:7	0:ROOT:ROOT:0
+0	1:while:IN:7	1:always:RB:4
+0	1:while:IN:7	1:at:IN:6
+0	1:while:IN:7	1:body:NN:3
+0	1:while:IN:7	1:execute:VBZ:5
+0	1:while:IN:7	1:least:JJS:7
+0	1:while:IN:7	1:loop:NN:2
+0	1:while:IN:7	1:once:RB:8
+0	1:while:IN:7	1:the:DT:1
+
+0	1:will:MD:9	0:ROOT:ROOT:0
+2	1:will:MD:9	1:always:RB:4
+0	1:will:MD:9	1:at:IN:6
+0	1:will:MD:9	1:body:NN:3
+0	1:will:MD:9	1:execute:VBZ:5
+0	1:will:MD:9	1:least:JJS:7
+0	1:will:MD:9	1:loop:NN:2
+0	1:will:MD:9	1:once:RB:8
+0	1:will:MD:9	1:the:DT:1
+
+
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	advcl(1:do:VBP:5, 1:execute:VB:10)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	advcl(1:do:VBP:5, 1:execute:VB:10)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	advcl(1:do:VBP:5, 1:execute:VB:10)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	advcl(1:do:VBP:5, 1:execute:VB:10)	dep(1:at:IN:6, 1:least:JJS:7)
+0	advcl(1:do:VBP:5, 1:execute:VB:10)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	advcl(1:do:VBP:5, 1:execute:VB:10)	det(1:body:NN:3, 1:the:DT:1)
+0	advcl(1:do:VBP:5, 1:execute:VB:10)	nn(1:body:NN:3, 1:loop:NN:2)
+0	advcl(1:do:VBP:5, 1:execute:VB:10)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	advmod(1:execute:VB:10, 1:at:IN:11)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+1	advmod(1:execute:VB:10, 1:at:IN:11)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	advmod(1:execute:VB:10, 1:at:IN:11)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	advmod(1:execute:VB:10, 1:at:IN:11)	dep(1:at:IN:6, 1:least:JJS:7)
+0	advmod(1:execute:VB:10, 1:at:IN:11)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	advmod(1:execute:VB:10, 1:at:IN:11)	det(1:body:NN:3, 1:the:DT:1)
+0	advmod(1:execute:VB:10, 1:at:IN:11)	nn(1:body:NN:3, 1:loop:NN:2)
+0	advmod(1:execute:VB:10, 1:at:IN:11)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	advmod(1:execute:VB:10, 1:once:RB:13)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	advmod(1:execute:VB:10, 1:once:RB:13)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+1	advmod(1:execute:VB:10, 1:once:RB:13)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	advmod(1:execute:VB:10, 1:once:RB:13)	dep(1:at:IN:6, 1:least:JJS:7)
+0	advmod(1:execute:VB:10, 1:once:RB:13)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	advmod(1:execute:VB:10, 1:once:RB:13)	det(1:body:NN:3, 1:the:DT:1)
+0	advmod(1:execute:VB:10, 1:once:RB:13)	nn(1:body:NN:3, 1:loop:NN:2)
+0	advmod(1:execute:VB:10, 1:once:RB:13)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	aux(1:execute:VB:10, 1:will:MD:9)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	aux(1:execute:VB:10, 1:will:MD:9)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	aux(1:execute:VB:10, 1:will:MD:9)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	aux(1:execute:VB:10, 1:will:MD:9)	dep(1:at:IN:6, 1:least:JJS:7)
+0	aux(1:execute:VB:10, 1:will:MD:9)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	aux(1:execute:VB:10, 1:will:MD:9)	det(1:body:NN:3, 1:the:DT:1)
+0	aux(1:execute:VB:10, 1:will:MD:9)	nn(1:body:NN:3, 1:loop:NN:2)
+0	aux(1:execute:VB:10, 1:will:MD:9)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	dep(1:at:IN:11, 1:least:JJS:12)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	dep(1:at:IN:11, 1:least:JJS:12)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	dep(1:at:IN:11, 1:least:JJS:12)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+1	dep(1:at:IN:11, 1:least:JJS:12)	dep(1:at:IN:6, 1:least:JJS:7)
+0	dep(1:at:IN:11, 1:least:JJS:12)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	dep(1:at:IN:11, 1:least:JJS:12)	det(1:body:NN:3, 1:the:DT:1)
+0	dep(1:at:IN:11, 1:least:JJS:12)	nn(1:body:NN:3, 1:loop:NN:2)
+0	dep(1:at:IN:11, 1:least:JJS:12)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	dep(1:inside:IN:3, 1:a:SYM:4)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	dep(1:inside:IN:3, 1:a:SYM:4)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	dep(1:inside:IN:3, 1:a:SYM:4)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	dep(1:inside:IN:3, 1:a:SYM:4)	dep(1:at:IN:6, 1:least:JJS:7)
+0	dep(1:inside:IN:3, 1:a:SYM:4)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	dep(1:inside:IN:3, 1:a:SYM:4)	det(1:body:NN:3, 1:the:DT:1)
+0	dep(1:inside:IN:3, 1:a:SYM:4)	nn(1:body:NN:3, 1:loop:NN:2)
+0	dep(1:inside:IN:3, 1:a:SYM:4)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	det(1:block:NN:2, 1:the:DT:1)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	det(1:block:NN:2, 1:the:DT:1)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	det(1:block:NN:2, 1:the:DT:1)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	det(1:block:NN:2, 1:the:DT:1)	dep(1:at:IN:6, 1:least:JJS:7)
+0	det(1:block:NN:2, 1:the:DT:1)	dep(1:body:NN:3, 1:execute:VBZ:5)
+1	det(1:block:NN:2, 1:the:DT:1)	det(1:body:NN:3, 1:the:DT:1)
+0	det(1:block:NN:2, 1:the:DT:1)	nn(1:body:NN:3, 1:loop:NN:2)
+0	det(1:block:NN:2, 1:the:DT:1)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	mark(1:execute:VB:10, 1:while:IN:7)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	mark(1:execute:VB:10, 1:while:IN:7)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	mark(1:execute:VB:10, 1:while:IN:7)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	mark(1:execute:VB:10, 1:while:IN:7)	dep(1:at:IN:6, 1:least:JJS:7)
+0	mark(1:execute:VB:10, 1:while:IN:7)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	mark(1:execute:VB:10, 1:while:IN:7)	det(1:body:NN:3, 1:the:DT:1)
+0	mark(1:execute:VB:10, 1:while:IN:7)	nn(1:body:NN:3, 1:loop:NN:2)
+0	mark(1:execute:VB:10, 1:while:IN:7)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	nsubj(1:do:VBP:5, 1:block:NN:2)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	nsubj(1:do:VBP:5, 1:block:NN:2)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	nsubj(1:do:VBP:5, 1:block:NN:2)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	nsubj(1:do:VBP:5, 1:block:NN:2)	dep(1:at:IN:6, 1:least:JJS:7)
+0	nsubj(1:do:VBP:5, 1:block:NN:2)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	nsubj(1:do:VBP:5, 1:block:NN:2)	det(1:body:NN:3, 1:the:DT:1)
+0	nsubj(1:do:VBP:5, 1:block:NN:2)	nn(1:body:NN:3, 1:loop:NN:2)
+0	nsubj(1:do:VBP:5, 1:block:NN:2)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	nsubj(1:execute:VB:10, 1:statement:NN:8)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	nsubj(1:execute:VB:10, 1:statement:NN:8)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	nsubj(1:execute:VB:10, 1:statement:NN:8)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	nsubj(1:execute:VB:10, 1:statement:NN:8)	dep(1:at:IN:6, 1:least:JJS:7)
+0	nsubj(1:execute:VB:10, 1:statement:NN:8)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	nsubj(1:execute:VB:10, 1:statement:NN:8)	det(1:body:NN:3, 1:the:DT:1)
+0	nsubj(1:execute:VB:10, 1:statement:NN:8)	nn(1:body:NN:3, 1:loop:NN:2)
+0	nsubj(1:execute:VB:10, 1:statement:NN:8)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	parataxis(1:do:VBP:5, 1:execute:VB:10)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	parataxis(1:do:VBP:5, 1:execute:VB:10)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	parataxis(1:do:VBP:5, 1:execute:VB:10)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	parataxis(1:do:VBP:5, 1:execute:VB:10)	dep(1:at:IN:6, 1:least:JJS:7)
+0	parataxis(1:do:VBP:5, 1:execute:VB:10)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	parataxis(1:do:VBP:5, 1:execute:VB:10)	det(1:body:NN:3, 1:the:DT:1)
+0	parataxis(1:do:VBP:5, 1:execute:VB:10)	nn(1:body:NN:3, 1:loop:NN:2)
+0	parataxis(1:do:VBP:5, 1:execute:VB:10)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	prep(1:block:NN:2, 1:inside:IN:3)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	prep(1:block:NN:2, 1:inside:IN:3)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	prep(1:block:NN:2, 1:inside:IN:3)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	prep(1:block:NN:2, 1:inside:IN:3)	dep(1:at:IN:6, 1:least:JJS:7)
+0	prep(1:block:NN:2, 1:inside:IN:3)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	prep(1:block:NN:2, 1:inside:IN:3)	det(1:body:NN:3, 1:the:DT:1)
+0	prep(1:block:NN:2, 1:inside:IN:3)	nn(1:body:NN:3, 1:loop:NN:2)
+0	prep(1:block:NN:2, 1:inside:IN:3)	root(0:ROOT:ROOT:0, 1:body:NN:3)
+0	root(0:ROOT:ROOT:0, 1:do:VBP:5)	advmod(1:execute:VBZ:5, 1:always:RB:4)
+0	root(0:ROOT:ROOT:0, 1:do:VBP:5)	advmod(1:execute:VBZ:5, 1:at:IN:6)
+0	root(0:ROOT:ROOT:0, 1:do:VBP:5)	advmod(1:execute:VBZ:5, 1:once:RB:8)
+0	root(0:ROOT:ROOT:0, 1:do:VBP:5)	dep(1:at:IN:6, 1:least:JJS:7)
+0	root(0:ROOT:ROOT:0, 1:do:VBP:5)	dep(1:body:NN:3, 1:execute:VBZ:5)
+0	root(0:ROOT:ROOT:0, 1:do:VBP:5)	det(1:body:NN:3, 1:the:DT:1)
+0	root(0:ROOT:ROOT:0, 1:do:VBP:5)	nn(1:body:NN:3, 1:loop:NN:2)
+0	root(0:ROOT:ROOT:0, 1:do:VBP:5)	root(0:ROOT:ROOT:0, 1:body:NN:3)

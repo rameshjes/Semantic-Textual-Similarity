@@ -1,0 +1,536 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+0	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:maintenance:NN:11
+0	0:ROOT:ROOT:0	1:production:NN:6
+0	0:ROOT:ROOT:0	1:refining:NN:2
+0	0:ROOT:ROOT:0	1:stage:VBP:12
+0	0:ROOT:ROOT:0	1:step:NN:3
+0	0:ROOT:ROOT:0	1:step:NN:7
+0	0:ROOT:ROOT:0	1:the:DT:1
+0	0:ROOT:ROOT:0	1:the:DT:10
+0	0:ROOT:ROOT:0	1:the:DT:5
+
+0	1:-lrb-:-LRB-:10	0:ROOT:ROOT:0
+0	1:-lrb-:-LRB-:10	1:maintenance:NN:11
+0	1:-lrb-:-LRB-:10	1:production:NN:6
+0	1:-lrb-:-LRB-:10	1:refining:NN:2
+0	1:-lrb-:-LRB-:10	1:stage:VBP:12
+0	1:-lrb-:-LRB-:10	1:step:NN:3
+0	1:-lrb-:-LRB-:10	1:step:NN:7
+0	1:-lrb-:-LRB-:10	1:the:DT:1
+0	1:-lrb-:-LRB-:10	1:the:DT:10
+0	1:-lrb-:-LRB-:10	1:the:DT:5
+
+0	1:-lrb-:-LRB-:19	0:ROOT:ROOT:0
+0	1:-lrb-:-LRB-:19	1:maintenance:NN:11
+0	1:-lrb-:-LRB-:19	1:production:NN:6
+0	1:-lrb-:-LRB-:19	1:refining:NN:2
+0	1:-lrb-:-LRB-:19	1:stage:VBP:12
+0	1:-lrb-:-LRB-:19	1:step:NN:3
+0	1:-lrb-:-LRB-:19	1:step:NN:7
+0	1:-lrb-:-LRB-:19	1:the:DT:1
+0	1:-lrb-:-LRB-:19	1:the:DT:10
+0	1:-lrb-:-LRB-:19	1:the:DT:5
+
+0	1:-rrb-:-RRB-:13	0:ROOT:ROOT:0
+0	1:-rrb-:-RRB-:13	1:maintenance:NN:11
+0	1:-rrb-:-RRB-:13	1:production:NN:6
+0	1:-rrb-:-RRB-:13	1:refining:NN:2
+0	1:-rrb-:-RRB-:13	1:stage:VBP:12
+0	1:-rrb-:-RRB-:13	1:step:NN:3
+0	1:-rrb-:-RRB-:13	1:step:NN:7
+0	1:-rrb-:-RRB-:13	1:the:DT:1
+0	1:-rrb-:-RRB-:13	1:the:DT:10
+0	1:-rrb-:-RRB-:13	1:the:DT:5
+
+0	1:-rrb-:-RRB-:22	0:ROOT:ROOT:0
+0	1:-rrb-:-RRB-:22	1:maintenance:NN:11
+0	1:-rrb-:-RRB-:22	1:production:NN:6
+0	1:-rrb-:-RRB-:22	1:refining:NN:2
+0	1:-rrb-:-RRB-:22	1:stage:VBP:12
+0	1:-rrb-:-RRB-:22	1:step:NN:3
+0	1:-rrb-:-RRB-:22	1:step:NN:7
+0	1:-rrb-:-RRB-:22	1:the:DT:1
+0	1:-rrb-:-RRB-:22	1:the:DT:10
+0	1:-rrb-:-RRB-:22	1:the:DT:5
+
+0	1:5:CD:12	0:ROOT:ROOT:0
+0	1:5:CD:12	1:maintenance:NN:11
+0	1:5:CD:12	1:production:NN:6
+0	1:5:CD:12	1:refining:NN:2
+0	1:5:CD:12	1:stage:VBP:12
+0	1:5:CD:12	1:step:NN:3
+0	1:5:CD:12	1:step:NN:7
+0	1:5:CD:12	1:the:DT:1
+0	1:5:CD:12	1:the:DT:10
+0	1:5:CD:12	1:the:DT:5
+
+0	1:7:CD:21	0:ROOT:ROOT:0
+0	1:7:CD:21	1:maintenance:NN:11
+0	1:7:CD:21	1:production:NN:6
+0	1:7:CD:21	1:refining:NN:2
+0	1:7:CD:21	1:stage:VBP:12
+0	1:7:CD:21	1:step:NN:3
+0	1:7:CD:21	1:step:NN:7
+0	1:7:CD:21	1:the:DT:1
+0	1:7:CD:21	1:the:DT:10
+0	1:7:CD:21	1:the:DT:5
+
+0	1:both:CC:6	0:ROOT:ROOT:0
+0	1:both:CC:6	1:maintenance:NN:11
+0	1:both:CC:6	1:production:NN:6
+0	1:both:CC:6	1:refining:NN:2
+0	1:both:CC:6	1:stage:VBP:12
+0	1:both:CC:6	1:step:NN:3
+0	1:both:CC:6	1:step:NN:7
+0	1:both:CC:6	1:the:DT:1
+0	1:both:CC:6	1:the:DT:10
+0	1:both:CC:6	1:the:DT:5
+
+0	1:can:MD:4	0:ROOT:ROOT:0
+0	1:can:MD:4	1:maintenance:NN:11
+0	1:can:MD:4	1:production:NN:6
+0	1:can:MD:4	1:refining:NN:2
+0	1:can:MD:4	1:stage:VBP:12
+0	1:can:MD:4	1:step:NN:3
+0	1:can:MD:4	1:step:NN:7
+0	1:can:MD:4	1:the:DT:1
+0	1:can:MD:4	1:the:DT:10
+0	1:can:MD:4	1:the:DT:5
+
+0	1:coding:JJ:8	0:ROOT:ROOT:0
+0	1:coding:JJ:8	1:maintenance:NN:11
+2	1:coding:JJ:8	1:production:NN:6
+0	1:coding:JJ:8	1:refining:NN:2
+0	1:coding:JJ:8	1:stage:VBP:12
+0	1:coding:JJ:8	1:step:NN:3
+0	1:coding:JJ:8	1:step:NN:7
+0	1:coding:JJ:8	1:the:DT:1
+0	1:coding:JJ:8	1:the:DT:10
+0	1:coding:JJ:8	1:the:DT:5
+
+0	1:influence:VB:5	0:ROOT:ROOT:0
+0	1:influence:VB:5	1:maintenance:NN:11
+0	1:influence:VB:5	1:production:NN:6
+0	1:influence:VB:5	1:refining:NN:2
+0	1:influence:VB:5	1:stage:VBP:12
+0	1:influence:VB:5	1:step:NN:3
+0	1:influence:VB:5	1:step:NN:7
+0	1:influence:VB:5	1:the:DT:1
+0	1:influence:VB:5	1:the:DT:10
+0	1:influence:VB:5	1:the:DT:5
+
+0	1:phase:NN:11	0:ROOT:ROOT:0
+0	1:phase:NN:11	1:maintenance:NN:11
+0	1:phase:NN:11	1:production:NN:6
+0	1:phase:NN:11	1:refining:NN:2
+0	1:phase:NN:11	1:stage:VBP:12
+1	1:phase:NN:11	1:step:NN:3
+1	1:phase:NN:11	1:step:NN:7
+0	1:phase:NN:11	1:the:DT:1
+0	1:phase:NN:11	1:the:DT:10
+0	1:phase:NN:11	1:the:DT:5
+
+0	1:phase:NN:20	0:ROOT:ROOT:0
+0	1:phase:NN:20	1:maintenance:NN:11
+0	1:phase:NN:20	1:production:NN:6
+0	1:phase:NN:20	1:refining:NN:2
+0	1:phase:NN:20	1:stage:VBP:12
+1	1:phase:NN:20	1:step:NN:3
+1	1:phase:NN:20	1:step:NN:7
+0	1:phase:NN:20	1:the:DT:1
+0	1:phase:NN:20	1:the:DT:10
+0	1:phase:NN:20	1:the:DT:5
+
+0	1:refinement:NN:17	0:ROOT:ROOT:0
+0	1:refinement:NN:17	1:maintenance:NN:11
+0	1:refinement:NN:17	1:production:NN:6
+2	1:refinement:NN:17	1:refining:NN:2
+0	1:refinement:NN:17	1:stage:VBP:12
+0	1:refinement:NN:17	1:step:NN:3
+0	1:refinement:NN:17	1:step:NN:7
+0	1:refinement:NN:17	1:the:DT:1
+0	1:refinement:NN:17	1:the:DT:10
+0	1:refinement:NN:17	1:the:DT:5
+
+0	1:solution:NN:16	0:ROOT:ROOT:0
+0	1:solution:NN:16	1:maintenance:NN:11
+0	1:solution:NN:16	1:production:NN:6
+0	1:solution:NN:16	1:refining:NN:2
+0	1:solution:NN:16	1:stage:VBP:12
+0	1:solution:NN:16	1:step:NN:3
+0	1:solution:NN:16	1:step:NN:7
+0	1:solution:NN:16	1:the:DT:1
+0	1:solution:NN:16	1:the:DT:10
+0	1:solution:NN:16	1:the:DT:5
+
+0	1:stage:NN:18	0:ROOT:ROOT:0
+0	1:stage:NN:18	1:maintenance:NN:11
+0	1:stage:NN:18	1:production:NN:6
+0	1:stage:NN:18	1:refining:NN:2
+0	1:stage:NN:18	1:stage:VBP:12
+2	1:stage:NN:18	1:step:NN:3
+0	1:stage:NN:18	1:step:NN:7
+0	1:stage:NN:18	1:the:DT:1
+0	1:stage:NN:18	1:the:DT:10
+0	1:stage:NN:18	1:the:DT:5
+
+0	1:stage:NN:3	0:ROOT:ROOT:0
+0	1:stage:NN:3	1:maintenance:NN:11
+0	1:stage:NN:3	1:production:NN:6
+0	1:stage:NN:3	1:refining:NN:2
+0	1:stage:NN:3	1:stage:VBP:12
+0	1:stage:NN:3	1:step:NN:3
+0	1:stage:NN:3	1:step:NN:7
+0	1:stage:NN:3	1:the:DT:1
+0	1:stage:NN:3	1:the:DT:10
+0	1:stage:NN:3	1:the:DT:5
+
+0	1:stage:NN:9	0:ROOT:ROOT:0
+0	1:stage:NN:9	1:maintenance:NN:11
+0	1:stage:NN:9	1:production:NN:6
+0	1:stage:NN:9	1:refining:NN:2
+0	1:stage:NN:9	1:stage:VBP:12
+0	1:stage:NN:9	1:step:NN:3
+2	1:stage:NN:9	1:step:NN:7
+0	1:stage:NN:9	1:the:DT:1
+0	1:stage:NN:9	1:the:DT:10
+0	1:stage:NN:9	1:the:DT:5
+
+0	1:testing:NN:2	0:ROOT:ROOT:0
+2	1:testing:NN:2	1:maintenance:NN:11
+0	1:testing:NN:2	1:production:NN:6
+0	1:testing:NN:2	1:refining:NN:2
+0	1:testing:NN:2	1:stage:VBP:12
+0	1:testing:NN:2	1:step:NN:3
+0	1:testing:NN:2	1:step:NN:7
+0	1:testing:NN:2	1:the:DT:1
+0	1:testing:NN:2	1:the:DT:10
+0	1:testing:NN:2	1:the:DT:5
+
+0	1:the:DT:1	0:ROOT:ROOT:0
+0	1:the:DT:1	1:maintenance:NN:11
+0	1:the:DT:1	1:production:NN:6
+0	1:the:DT:1	1:refining:NN:2
+0	1:the:DT:1	1:stage:VBP:12
+0	1:the:DT:1	1:step:NN:3
+0	1:the:DT:1	1:step:NN:7
+1	1:the:DT:1	1:the:DT:1
+2	1:the:DT:1	1:the:DT:10
+1	1:the:DT:1	1:the:DT:5
+
+0	1:the:DT:15	0:ROOT:ROOT:0
+0	1:the:DT:15	1:maintenance:NN:11
+0	1:the:DT:15	1:production:NN:6
+0	1:the:DT:15	1:refining:NN:2
+0	1:the:DT:15	1:stage:VBP:12
+0	1:the:DT:15	1:step:NN:3
+0	1:the:DT:15	1:step:NN:7
+2	1:the:DT:15	1:the:DT:1
+1	1:the:DT:15	1:the:DT:10
+1	1:the:DT:15	1:the:DT:5
+
+0	1:the:DT:7	0:ROOT:ROOT:0
+0	1:the:DT:7	1:maintenance:NN:11
+0	1:the:DT:7	1:production:NN:6
+0	1:the:DT:7	1:refining:NN:2
+0	1:the:DT:7	1:stage:VBP:12
+0	1:the:DT:7	1:step:NN:3
+0	1:the:DT:7	1:step:NN:7
+1	1:the:DT:7	1:the:DT:1
+1	1:the:DT:7	1:the:DT:10
+2	1:the:DT:7	1:the:DT:5
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	det(1:step:NN:3, 1:the:DT:1)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	det(1:step:NN:7, 1:the:DT:5)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	nn(1:step:NN:3, 1:refining:NN:2)
+1	amod(1:stage:NN:9, 1:coding:JJ:8)	nn(1:step:NN:7, 1:production:NN:6)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	amod(1:stage:NN:9, 1:coding:JJ:8)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	det(1:step:NN:3, 1:the:DT:1)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	det(1:step:NN:7, 1:the:DT:5)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	nn(1:step:NN:3, 1:refining:NN:2)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	nn(1:step:NN:7, 1:production:NN:6)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	appos(1:stage:NN:18, 1:phase:NN:20)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	det(1:step:NN:3, 1:the:DT:1)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	det(1:step:NN:7, 1:the:DT:5)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	nn(1:step:NN:3, 1:refining:NN:2)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	nn(1:step:NN:7, 1:production:NN:6)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	appos(1:stage:NN:9, 1:phase:NN:11)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	aux(1:influence:VB:5, 1:can:MD:4)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	aux(1:influence:VB:5, 1:can:MD:4)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	aux(1:influence:VB:5, 1:can:MD:4)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	aux(1:influence:VB:5, 1:can:MD:4)	det(1:step:NN:3, 1:the:DT:1)
+0	aux(1:influence:VB:5, 1:can:MD:4)	det(1:step:NN:7, 1:the:DT:5)
+0	aux(1:influence:VB:5, 1:can:MD:4)	nn(1:step:NN:3, 1:refining:NN:2)
+0	aux(1:influence:VB:5, 1:can:MD:4)	nn(1:step:NN:7, 1:production:NN:6)
+0	aux(1:influence:VB:5, 1:can:MD:4)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	aux(1:influence:VB:5, 1:can:MD:4)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	aux(1:influence:VB:5, 1:can:MD:4)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	aux(1:influence:VB:5, 1:can:MD:4)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	det(1:step:NN:3, 1:the:DT:1)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	det(1:step:NN:7, 1:the:DT:5)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	nn(1:step:NN:3, 1:refining:NN:2)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	nn(1:step:NN:7, 1:production:NN:6)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	conj_and(1:both:CC:6, 1:phase:NN:20)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+1	conj_and(1:both:CC:6, 1:stage:NN:18)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	det(1:step:NN:3, 1:the:DT:1)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	det(1:step:NN:7, 1:the:DT:5)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	nn(1:step:NN:3, 1:refining:NN:2)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	nn(1:step:NN:7, 1:production:NN:6)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	conj_and(1:both:CC:6, 1:stage:NN:18)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	dep(1:both:CC:6, 1:phase:NN:11)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	dep(1:both:CC:6, 1:phase:NN:11)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	dep(1:both:CC:6, 1:phase:NN:11)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	dep(1:both:CC:6, 1:phase:NN:11)	det(1:step:NN:3, 1:the:DT:1)
+0	dep(1:both:CC:6, 1:phase:NN:11)	det(1:step:NN:7, 1:the:DT:5)
+0	dep(1:both:CC:6, 1:phase:NN:11)	nn(1:step:NN:3, 1:refining:NN:2)
+0	dep(1:both:CC:6, 1:phase:NN:11)	nn(1:step:NN:7, 1:production:NN:6)
+0	dep(1:both:CC:6, 1:phase:NN:11)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	dep(1:both:CC:6, 1:phase:NN:11)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	dep(1:both:CC:6, 1:phase:NN:11)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	dep(1:both:CC:6, 1:phase:NN:11)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	dep(1:both:CC:6, 1:stage:NN:9)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	dep(1:both:CC:6, 1:stage:NN:9)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	dep(1:both:CC:6, 1:stage:NN:9)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	dep(1:both:CC:6, 1:stage:NN:9)	det(1:step:NN:3, 1:the:DT:1)
+0	dep(1:both:CC:6, 1:stage:NN:9)	det(1:step:NN:7, 1:the:DT:5)
+0	dep(1:both:CC:6, 1:stage:NN:9)	nn(1:step:NN:3, 1:refining:NN:2)
+0	dep(1:both:CC:6, 1:stage:NN:9)	nn(1:step:NN:7, 1:production:NN:6)
+0	dep(1:both:CC:6, 1:stage:NN:9)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	dep(1:both:CC:6, 1:stage:NN:9)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	dep(1:both:CC:6, 1:stage:NN:9)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+1	dep(1:both:CC:6, 1:stage:NN:9)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	det(1:stage:NN:18, 1:the:DT:15)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	det(1:stage:NN:18, 1:the:DT:15)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	det(1:stage:NN:18, 1:the:DT:15)	det(1:maintenance:NN:11, 1:the:DT:10)
+1	det(1:stage:NN:18, 1:the:DT:15)	det(1:step:NN:3, 1:the:DT:1)
+0	det(1:stage:NN:18, 1:the:DT:15)	det(1:step:NN:7, 1:the:DT:5)
+0	det(1:stage:NN:18, 1:the:DT:15)	nn(1:step:NN:3, 1:refining:NN:2)
+0	det(1:stage:NN:18, 1:the:DT:15)	nn(1:step:NN:7, 1:production:NN:6)
+0	det(1:stage:NN:18, 1:the:DT:15)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	det(1:stage:NN:18, 1:the:DT:15)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	det(1:stage:NN:18, 1:the:DT:15)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	det(1:stage:NN:18, 1:the:DT:15)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	det(1:stage:NN:3, 1:the:DT:1)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	det(1:stage:NN:3, 1:the:DT:1)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	det(1:stage:NN:3, 1:the:DT:1)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	det(1:stage:NN:3, 1:the:DT:1)	det(1:step:NN:3, 1:the:DT:1)
+0	det(1:stage:NN:3, 1:the:DT:1)	det(1:step:NN:7, 1:the:DT:5)
+0	det(1:stage:NN:3, 1:the:DT:1)	nn(1:step:NN:3, 1:refining:NN:2)
+0	det(1:stage:NN:3, 1:the:DT:1)	nn(1:step:NN:7, 1:production:NN:6)
+0	det(1:stage:NN:3, 1:the:DT:1)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	det(1:stage:NN:3, 1:the:DT:1)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	det(1:stage:NN:3, 1:the:DT:1)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	det(1:stage:NN:3, 1:the:DT:1)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	det(1:stage:NN:9, 1:the:DT:7)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	det(1:stage:NN:9, 1:the:DT:7)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	det(1:stage:NN:9, 1:the:DT:7)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	det(1:stage:NN:9, 1:the:DT:7)	det(1:step:NN:3, 1:the:DT:1)
+1	det(1:stage:NN:9, 1:the:DT:7)	det(1:step:NN:7, 1:the:DT:5)
+0	det(1:stage:NN:9, 1:the:DT:7)	nn(1:step:NN:3, 1:refining:NN:2)
+0	det(1:stage:NN:9, 1:the:DT:7)	nn(1:step:NN:7, 1:production:NN:6)
+0	det(1:stage:NN:9, 1:the:DT:7)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	det(1:stage:NN:9, 1:the:DT:7)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	det(1:stage:NN:9, 1:the:DT:7)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	det(1:stage:NN:9, 1:the:DT:7)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	det(1:step:NN:3, 1:the:DT:1)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	det(1:step:NN:7, 1:the:DT:5)
+1	nn(1:stage:NN:18, 1:refinement:NN:17)	nn(1:step:NN:3, 1:refining:NN:2)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	nn(1:step:NN:7, 1:production:NN:6)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	nn(1:stage:NN:18, 1:refinement:NN:17)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	det(1:step:NN:3, 1:the:DT:1)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	det(1:step:NN:7, 1:the:DT:5)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	nn(1:step:NN:3, 1:refining:NN:2)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	nn(1:step:NN:7, 1:production:NN:6)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	nn(1:stage:NN:18, 1:solution:NN:16)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	det(1:step:NN:3, 1:the:DT:1)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	det(1:step:NN:7, 1:the:DT:5)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	nn(1:step:NN:3, 1:refining:NN:2)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	nn(1:step:NN:7, 1:production:NN:6)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	nn(1:stage:NN:3, 1:testing:NN:2)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	det(1:step:NN:3, 1:the:DT:1)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	det(1:step:NN:7, 1:the:DT:5)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	nn(1:step:NN:3, 1:refining:NN:2)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	nn(1:step:NN:7, 1:production:NN:6)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	nsubj(1:influence:VB:5, 1:stage:NN:3)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	num(1:phase:NN:11, 1:5:CD:12)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	num(1:phase:NN:11, 1:5:CD:12)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	num(1:phase:NN:11, 1:5:CD:12)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	num(1:phase:NN:11, 1:5:CD:12)	det(1:step:NN:3, 1:the:DT:1)
+0	num(1:phase:NN:11, 1:5:CD:12)	det(1:step:NN:7, 1:the:DT:5)
+0	num(1:phase:NN:11, 1:5:CD:12)	nn(1:step:NN:3, 1:refining:NN:2)
+0	num(1:phase:NN:11, 1:5:CD:12)	nn(1:step:NN:7, 1:production:NN:6)
+0	num(1:phase:NN:11, 1:5:CD:12)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	num(1:phase:NN:11, 1:5:CD:12)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	num(1:phase:NN:11, 1:5:CD:12)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	num(1:phase:NN:11, 1:5:CD:12)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	num(1:phase:NN:20, 1:7:CD:21)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	num(1:phase:NN:20, 1:7:CD:21)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	num(1:phase:NN:20, 1:7:CD:21)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	num(1:phase:NN:20, 1:7:CD:21)	det(1:step:NN:3, 1:the:DT:1)
+0	num(1:phase:NN:20, 1:7:CD:21)	det(1:step:NN:7, 1:the:DT:5)
+0	num(1:phase:NN:20, 1:7:CD:21)	nn(1:step:NN:3, 1:refining:NN:2)
+0	num(1:phase:NN:20, 1:7:CD:21)	nn(1:step:NN:7, 1:production:NN:6)
+0	num(1:phase:NN:20, 1:7:CD:21)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	num(1:phase:NN:20, 1:7:CD:21)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	num(1:phase:NN:20, 1:7:CD:21)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	num(1:phase:NN:20, 1:7:CD:21)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	prep(1:influence:VB:5, 1:both:CC:6)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	prep(1:influence:VB:5, 1:both:CC:6)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	prep(1:influence:VB:5, 1:both:CC:6)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	prep(1:influence:VB:5, 1:both:CC:6)	det(1:step:NN:3, 1:the:DT:1)
+0	prep(1:influence:VB:5, 1:both:CC:6)	det(1:step:NN:7, 1:the:DT:5)
+0	prep(1:influence:VB:5, 1:both:CC:6)	nn(1:step:NN:3, 1:refining:NN:2)
+0	prep(1:influence:VB:5, 1:both:CC:6)	nn(1:step:NN:7, 1:production:NN:6)
+0	prep(1:influence:VB:5, 1:both:CC:6)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	prep(1:influence:VB:5, 1:both:CC:6)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	prep(1:influence:VB:5, 1:both:CC:6)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	prep(1:influence:VB:5, 1:both:CC:6)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	det(1:step:NN:3, 1:the:DT:1)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	det(1:step:NN:7, 1:the:DT:5)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	nn(1:step:NN:3, 1:refining:NN:2)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	nn(1:step:NN:7, 1:production:NN:6)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	prep(1:influence:VB:5, 1:phase:NN:20)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	det(1:step:NN:3, 1:the:DT:1)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	det(1:step:NN:7, 1:the:DT:5)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	nn(1:step:NN:3, 1:refining:NN:2)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	nn(1:step:NN:7, 1:production:NN:6)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	prep(1:influence:VB:5, 1:stage:NN:18)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	det(1:step:NN:3, 1:the:DT:1)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	det(1:step:NN:7, 1:the:DT:5)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	nn(1:step:NN:3, 1:refining:NN:2)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	nn(1:step:NN:7, 1:production:NN:6)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	punct(1:phase:NN:11, 1:-lrb-:-LRB-:10)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	det(1:step:NN:3, 1:the:DT:1)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	det(1:step:NN:7, 1:the:DT:5)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	nn(1:step:NN:3, 1:refining:NN:2)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	nn(1:step:NN:7, 1:production:NN:6)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	punct(1:phase:NN:11, 1:-rrb-:-RRB-:13)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	det(1:step:NN:3, 1:the:DT:1)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	det(1:step:NN:7, 1:the:DT:5)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	nn(1:step:NN:3, 1:refining:NN:2)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	nn(1:step:NN:7, 1:production:NN:6)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	punct(1:phase:NN:20, 1:-lrb-:-LRB-:19)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	det(1:step:NN:3, 1:the:DT:1)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	det(1:step:NN:7, 1:the:DT:5)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	nn(1:step:NN:3, 1:refining:NN:2)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	nn(1:step:NN:7, 1:production:NN:6)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	punct(1:phase:NN:20, 1:-rrb-:-RRB-:22)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	conj_and(1:step:NN:3, 1:maintenance:NN:11)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	conj_and(1:step:NN:3, 1:step:NN:7)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	det(1:maintenance:NN:11, 1:the:DT:10)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	det(1:step:NN:3, 1:the:DT:1)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	det(1:step:NN:7, 1:the:DT:5)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	nn(1:step:NN:3, 1:refining:NN:2)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	nn(1:step:NN:7, 1:production:NN:6)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	nsubj(1:stage:VBP:12, 1:maintenance:NN:11)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	nsubj(1:stage:VBP:12, 1:step:NN:3)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	nsubj(1:stage:VBP:12, 1:step:NN:7)
+0	root(0:ROOT:ROOT:0, 1:influence:VB:5)	root(0:ROOT:ROOT:0, 1:stage:VBP:12)

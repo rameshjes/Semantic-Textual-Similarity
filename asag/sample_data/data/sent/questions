@@ -1,0 +1,87 @@
+1.1 What is the role of a prototype program in problem solving? <STOP>
+1.2 What stages in the software life cycle are influenced by the testing stage? <STOP>
+1.3 What are the main advantages associated with object-oriented programming? <STOP>
+1.4 Where do C plus plus programs begin to execute? <STOP>
+1.5 What is a variable? <STOP>
+1.6 Where are variables declared in a C plus plus program? <STOP>
+1.7 What is the main difference between a while and a do ... while statement? <STOP>
+2.1 What is typically included in a class definition? <STOP>
+2.2 What is the difference between a data member and a local variable inside a member function? <STOP>
+2.3 What is the difference between a constructor and a function? <STOP>
+2.4 When does C plus plus create a default constructor? <STOP>
+2.5 How many constructors can be created for a class? <STOP>
+2.6 What is the difference between a function prototype and a function definition? <STOP>
+2.7 What is the role of a header-file? <STOP>
+3.1 What does a function signature include? <STOP>
+3.2 What is the scope of global variables? <STOP>
+3.3 How does the compiler handle inline functions? <STOP>
+3.4 What is the main advantage associated with function arguments that are passed by reference? <STOP>
+3.5 How are overloaded functions differentiated by the compiler? <STOP>
+3.6 When defining a recursive function, what are possible causes for infinite recursion? <STOP>
+3.7 What are the similarities between iteration and recursion? <STOP>
+4.1 What are the two different ways of specifying the length of an array? <STOP>
+4.2 What is the main difference between strings declared using the type string versus strings declared using an array of characters? <STOP>
+4.3 How are arrays passed to functions? <STOP>
+4.4 What is the difference between an array declared as static, and one that is not? <STOP>
+4.5 How many dimensions need to be specified when passing a multi-dimensional array as an argument to a function? <STOP>
+4.6 Using an index outside the bounds of the array generates an error. <STOP> Is this a compilation error or a run-time error? <STOP>
+4.7 How are bi-dimensional arrays stored in memory, by rows or by columns? <STOP>
+5.1 In one sentence, what is the main idea implemented by insertion sort? <STOP>
+5.2 In one sentence, what is the main idea implemented by selection sort? <STOP>
+5.3 What is the number of operations for insertion sort under a best-case scenario, and what is the best-case scenario? <STOP>
+5.4 What is the base case for a recursive implementation of merge sort? <STOP>
+6.1 What is a pointer? <STOP>
+6.2 What does the address -LRB- ADDRESS -RRB- operator return? <STOP>
+6.3 What does the star -LRB- STAR -RRB- operator return? <STOP>
+6.4 How can an array be addressed in pointer or offset notation? <STOP>
+6.5 What does the sizeof operator return? <STOP>
+6.6 What are the different ways to pass a pointer to a function? <STOP>
+6.7 What is a function pointer? <STOP>
+7.1 What is a linked list? <STOP>
+7.2 What is the main advantage of linked lists over arrays? <STOP>
+7.3 What is the main advantage of arrays over linked lists? <STOP>
+7.4 How are linked lists passed as arguments to a function? <STOP>
+7.5 What is the difference between a circular linked list and a basic linked list? <STOP>
+7.6 What is the main advantage of a doubly-linked list over a basic linked list? <STOP>
+7.7 What is the main disadvantage of a doubly-linked list over a basic linked list? <STOP>
+8.1 What is a stack? <STOP>
+8.2 What are the two main functions defined by a stack? <STOP>
+8.3 How can you implement a stack with an array? <STOP>
+8.4 How can you implement a stack with a list? <STOP>
+8.5 Which implementation -LRB- array-based vs. list-based -RRB- is preferred, and why? <STOP>
+8.6 How are infix expressions evaluated by computers? <STOP>
+8.7 What operations would you need to perform to find a given element on a stack? <STOP>
+9.1 What is a queue? <STOP>
+9.2 What are the two main functions defined by a queue? <STOP>
+9.3 How can you implement a queue with an array? <STOP>
+9.4 How can you implement a queue with a list? <STOP>
+9.5 Which implementation -LRB- array-based vs. list-based -RRB- is preferred for a queue, and why? <STOP>
+9.6 What is the stack operation corresponding to the enqueue operation in queues? <STOP>
+9.7 What data structure is more appropriate for scheduling printing jobs at a printer, a stack or a queue? <STOP>
+10.1 What is a tree? <STOP>
+10.2 What is the height of a tree? <STOP>
+10.3 What is a leaf? <STOP>
+10.4 What is a binary tree? <STOP>
+10.5 What is a binary search tree? <STOP>
+10.6 What is the inorder traversal of a binary tree? <STOP>
+10.7 How many comparisons does it take to find an element in a binary search tree? <STOP>
+11.1 What are the elements typically included in a class definition? <STOP>
+11.2 What are the access-specifiers that can be used in a C plus plus class definition? <STOP>
+11.3 How are objects initialized when they are created? <STOP>
+11.4 What is a function signature? <STOP>
+11.5 What is a recursive function? <STOP>
+11.6 What is the alternative way to solve a problem that could be solved through recursive functions? <STOP>
+11.7 What is the difference between an array that is declared as static and one that is not? <STOP>
+11.8 What is the main difference between a string of characters that is read into a variable of type string versus a variable of type char []? <STOP>
+11.9 Briefly describe the divide-and-conquer paradigm. <STOP>
+11.10 Briefly describe in one sentence how does merge sort work? <STOP>
+12.1 What is a pointer? <STOP>
+12.2 What is the experimental approach for measuring the running time of an algorithm? <STOP>
+12.3 Order the following functions by their running time: n to the power of 2; log -LRB- log n -RRB- ; 2 to the power of -LRB- log n -RRB- ; n!; n to the power of 3. <STOP>
+12.4 Briefly, how does selection sort work? <STOP>
+12.5 What is the advantage of linked lists over arrays? <STOP>
+12.6 What is a queue? <STOP>
+12.7 What are the main operations associated with a stack? <STOP>
+12.8 What is the Euler tour traversal of a tree? <STOP>
+12.9 How do you delete a node from a binary search tree? <STOP>
+12.10 How many steps does it take to search a node in a binary search tree? <STOP>

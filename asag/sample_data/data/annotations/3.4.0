@@ -1,0 +1,494 @@
+#### Node-Node alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Node
+
+0	0:ROOT:ROOT:0	0:ROOT:ROOT:0
+0	0:ROOT:ROOT:0	1:!have:VB:17
+0	0:ROOT:ROOT:0	1:-lrb-:-LRB-:7
+0	0:ROOT:ROOT:0	1:-rrb-:-RRB-:12
+0	0:ROOT:ROOT:0	1:amount:NNS:21
+0	0:ROOT:ROOT:0	1:be:VBZ:10
+0	0:ROOT:ROOT:0	1:because:IN:13
+0	0:ROOT:ROOT:0	1:better:JJR:5
+0	0:ROOT:ROOT:0	1:copy:VB:19
+0	0:ROOT:ROOT:0	1:datum:NNS:23
+0	0:ROOT:ROOT:0	1:do:VBZ:15
+0	0:ROOT:ROOT:0	1:faster:JJR:11
+2	0:ROOT:ROOT:0	1:have:VBZ:4
+0	0:ROOT:ROOT:0	1:it:PRP:14
+0	0:ROOT:ROOT:0	1:it:PRP:9
+0	0:ROOT:ROOT:0	1:large:JJ:20
+0	0:ROOT:ROOT:0	1:mean:VBZ:8
+0	0:ROOT:ROOT:0	1:overall:RB:1
+0	0:ROOT:ROOT:0	1:performance:NN:6
+0	0:ROOT:ROOT:0	1:program:NN:3
+0	0:ROOT:ROOT:0	1:the:DT:2
+0	0:ROOT:ROOT:0	1:to:TO:18
+
+0	1:avoid:VBZ:2	0:ROOT:ROOT:0
+2	1:avoid:VBZ:2	1:!have:VB:17
+0	1:avoid:VBZ:2	1:-lrb-:-LRB-:7
+0	1:avoid:VBZ:2	1:-rrb-:-RRB-:12
+0	1:avoid:VBZ:2	1:amount:NNS:21
+0	1:avoid:VBZ:2	1:be:VBZ:10
+0	1:avoid:VBZ:2	1:because:IN:13
+0	1:avoid:VBZ:2	1:better:JJR:5
+0	1:avoid:VBZ:2	1:copy:VB:19
+0	1:avoid:VBZ:2	1:datum:NNS:23
+0	1:avoid:VBZ:2	1:do:VBZ:15
+0	1:avoid:VBZ:2	1:faster:JJR:11
+0	1:avoid:VBZ:2	1:have:VBZ:4
+0	1:avoid:VBZ:2	1:it:PRP:14
+0	1:avoid:VBZ:2	1:it:PRP:9
+0	1:avoid:VBZ:2	1:large:JJ:20
+0	1:avoid:VBZ:2	1:mean:VBZ:8
+0	1:avoid:VBZ:2	1:overall:RB:1
+0	1:avoid:VBZ:2	1:performance:NN:6
+0	1:avoid:VBZ:2	1:program:NN:3
+0	1:avoid:VBZ:2	1:the:DT:2
+0	1:avoid:VBZ:2	1:to:TO:18
+
+0	1:call:VBG:10	0:ROOT:ROOT:0
+0	1:call:VBG:10	1:!have:VB:17
+0	1:call:VBG:10	1:-lrb-:-LRB-:7
+0	1:call:VBG:10	1:-rrb-:-RRB-:12
+0	1:call:VBG:10	1:amount:NNS:21
+0	1:call:VBG:10	1:be:VBZ:10
+0	1:call:VBG:10	1:because:IN:13
+0	1:call:VBG:10	1:better:JJR:5
+0	1:call:VBG:10	1:copy:VB:19
+0	1:call:VBG:10	1:datum:NNS:23
+0	1:call:VBG:10	1:do:VBZ:15
+0	1:call:VBG:10	1:faster:JJR:11
+0	1:call:VBG:10	1:have:VBZ:4
+0	1:call:VBG:10	1:it:PRP:14
+0	1:call:VBG:10	1:it:PRP:9
+0	1:call:VBG:10	1:large:JJ:20
+0	1:call:VBG:10	1:mean:VBZ:8
+0	1:call:VBG:10	1:overall:RB:1
+0	1:call:VBG:10	1:performance:NN:6
+0	1:call:VBG:10	1:program:NN:3
+0	1:call:VBG:10	1:the:DT:2
+0	1:call:VBG:10	1:to:TO:18
+
+0	1:copy:NNS:4	0:ROOT:ROOT:0
+0	1:copy:NNS:4	1:!have:VB:17
+0	1:copy:NNS:4	1:-lrb-:-LRB-:7
+0	1:copy:NNS:4	1:-rrb-:-RRB-:12
+0	1:copy:NNS:4	1:amount:NNS:21
+0	1:copy:NNS:4	1:be:VBZ:10
+0	1:copy:NNS:4	1:because:IN:13
+0	1:copy:NNS:4	1:better:JJR:5
+1	1:copy:NNS:4	1:copy:VB:19
+0	1:copy:NNS:4	1:datum:NNS:23
+0	1:copy:NNS:4	1:do:VBZ:15
+0	1:copy:NNS:4	1:faster:JJR:11
+0	1:copy:NNS:4	1:have:VBZ:4
+1	1:copy:NNS:4	1:it:PRP:14
+1	1:copy:NNS:4	1:it:PRP:9
+0	1:copy:NNS:4	1:large:JJ:20
+0	1:copy:NNS:4	1:mean:VBZ:8
+0	1:copy:NNS:4	1:overall:RB:1
+0	1:copy:NNS:4	1:performance:NN:6
+0	1:copy:NNS:4	1:program:NN:3
+0	1:copy:NNS:4	1:the:DT:2
+0	1:copy:NNS:4	1:to:TO:18
+
+0	1:datum:NN:7	0:ROOT:ROOT:0
+0	1:datum:NN:7	1:!have:VB:17
+0	1:datum:NN:7	1:-lrb-:-LRB-:7
+0	1:datum:NN:7	1:-rrb-:-RRB-:12
+0	1:datum:NN:7	1:amount:NNS:21
+0	1:datum:NN:7	1:be:VBZ:10
+0	1:datum:NN:7	1:because:IN:13
+0	1:datum:NN:7	1:better:JJR:5
+0	1:datum:NN:7	1:copy:VB:19
+2	1:datum:NN:7	1:datum:NNS:23
+0	1:datum:NN:7	1:do:VBZ:15
+0	1:datum:NN:7	1:faster:JJR:11
+0	1:datum:NN:7	1:have:VBZ:4
+1	1:datum:NN:7	1:it:PRP:14
+1	1:datum:NN:7	1:it:PRP:9
+0	1:datum:NN:7	1:large:JJ:20
+0	1:datum:NN:7	1:mean:VBZ:8
+0	1:datum:NN:7	1:overall:RB:1
+0	1:datum:NN:7	1:performance:NN:6
+0	1:datum:NN:7	1:program:NN:3
+0	1:datum:NN:7	1:the:DT:2
+0	1:datum:NN:7	1:to:TO:18
+
+0	1:function:NNS:11	0:ROOT:ROOT:0
+0	1:function:NNS:11	1:!have:VB:17
+0	1:function:NNS:11	1:-lrb-:-LRB-:7
+0	1:function:NNS:11	1:-rrb-:-RRB-:12
+0	1:function:NNS:11	1:amount:NNS:21
+0	1:function:NNS:11	1:be:VBZ:10
+0	1:function:NNS:11	1:because:IN:13
+0	1:function:NNS:11	1:better:JJR:5
+0	1:function:NNS:11	1:copy:VB:19
+0	1:function:NNS:11	1:datum:NNS:23
+0	1:function:NNS:11	1:do:VBZ:15
+0	1:function:NNS:11	1:faster:JJR:11
+0	1:function:NNS:11	1:have:VBZ:4
+1	1:function:NNS:11	1:it:PRP:14
+1	1:function:NNS:11	1:it:PRP:9
+0	1:function:NNS:11	1:large:JJ:20
+0	1:function:NNS:11	1:mean:VBZ:8
+0	1:function:NNS:11	1:overall:RB:1
+0	1:function:NNS:11	1:performance:NN:6
+0	1:function:NNS:11	1:program:NN:3
+0	1:function:NNS:11	1:the:DT:2
+0	1:function:NNS:11	1:to:TO:18
+
+0	1:it:PRP:1	0:ROOT:ROOT:0
+0	1:it:PRP:1	1:!have:VB:17
+0	1:it:PRP:1	1:-lrb-:-LRB-:7
+0	1:it:PRP:1	1:-rrb-:-RRB-:12
+1	1:it:PRP:1	1:amount:NNS:21
+0	1:it:PRP:1	1:be:VBZ:10
+0	1:it:PRP:1	1:because:IN:13
+0	1:it:PRP:1	1:better:JJR:5
+0	1:it:PRP:1	1:copy:VB:19
+1	1:it:PRP:1	1:datum:NNS:23
+0	1:it:PRP:1	1:do:VBZ:15
+0	1:it:PRP:1	1:faster:JJR:11
+0	1:it:PRP:1	1:have:VBZ:4
+2	1:it:PRP:1	1:it:PRP:14
+1	1:it:PRP:1	1:it:PRP:9
+0	1:it:PRP:1	1:large:JJ:20
+0	1:it:PRP:1	1:mean:VBZ:8
+0	1:it:PRP:1	1:overall:RB:1
+1	1:it:PRP:1	1:performance:NN:6
+2	1:it:PRP:1	1:program:NN:3
+0	1:it:PRP:1	1:the:DT:2
+0	1:it:PRP:1	1:to:TO:18
+
+0	1:large:JJ:6	0:ROOT:ROOT:0
+0	1:large:JJ:6	1:!have:VB:17
+0	1:large:JJ:6	1:-lrb-:-LRB-:7
+0	1:large:JJ:6	1:-rrb-:-RRB-:12
+0	1:large:JJ:6	1:amount:NNS:21
+0	1:large:JJ:6	1:be:VBZ:10
+0	1:large:JJ:6	1:because:IN:13
+0	1:large:JJ:6	1:better:JJR:5
+0	1:large:JJ:6	1:copy:VB:19
+0	1:large:JJ:6	1:datum:NNS:23
+0	1:large:JJ:6	1:do:VBZ:15
+0	1:large:JJ:6	1:faster:JJR:11
+0	1:large:JJ:6	1:have:VBZ:4
+0	1:large:JJ:6	1:it:PRP:14
+0	1:large:JJ:6	1:it:PRP:9
+2	1:large:JJ:6	1:large:JJ:20
+0	1:large:JJ:6	1:mean:VBZ:8
+0	1:large:JJ:6	1:overall:RB:1
+0	1:large:JJ:6	1:performance:NN:6
+0	1:large:JJ:6	1:program:NN:3
+0	1:large:JJ:6	1:the:DT:2
+0	1:large:JJ:6	1:to:TO:18
+
+0	1:make:VBG:3	0:ROOT:ROOT:0
+0	1:make:VBG:3	1:!have:VB:17
+0	1:make:VBG:3	1:-lrb-:-LRB-:7
+0	1:make:VBG:3	1:-rrb-:-RRB-:12
+0	1:make:VBG:3	1:amount:NNS:21
+0	1:make:VBG:3	1:be:VBZ:10
+0	1:make:VBG:3	1:because:IN:13
+0	1:make:VBG:3	1:better:JJR:5
+2	1:make:VBG:3	1:copy:VB:19
+0	1:make:VBG:3	1:datum:NNS:23
+0	1:make:VBG:3	1:do:VBZ:15
+0	1:make:VBG:3	1:faster:JJR:11
+0	1:make:VBG:3	1:have:VBZ:4
+0	1:make:VBG:3	1:it:PRP:14
+0	1:make:VBG:3	1:it:PRP:9
+0	1:make:VBG:3	1:large:JJ:20
+0	1:make:VBG:3	1:mean:VBZ:8
+0	1:make:VBG:3	1:overall:RB:1
+0	1:make:VBG:3	1:performance:NN:6
+0	1:make:VBG:3	1:program:NN:3
+0	1:make:VBG:3	1:the:DT:2
+0	1:make:VBG:3	1:to:TO:18
+
+0	1:structure:NNS:8	0:ROOT:ROOT:0
+0	1:structure:NNS:8	1:!have:VB:17
+0	1:structure:NNS:8	1:-lrb-:-LRB-:7
+0	1:structure:NNS:8	1:-rrb-:-RRB-:12
+2	1:structure:NNS:8	1:amount:NNS:21
+0	1:structure:NNS:8	1:be:VBZ:10
+0	1:structure:NNS:8	1:because:IN:13
+0	1:structure:NNS:8	1:better:JJR:5
+0	1:structure:NNS:8	1:copy:VB:19
+1	1:structure:NNS:8	1:datum:NNS:23
+0	1:structure:NNS:8	1:do:VBZ:15
+0	1:structure:NNS:8	1:faster:JJR:11
+0	1:structure:NNS:8	1:have:VBZ:4
+1	1:structure:NNS:8	1:it:PRP:14
+1	1:structure:NNS:8	1:it:PRP:9
+0	1:structure:NNS:8	1:large:JJ:20
+0	1:structure:NNS:8	1:mean:VBZ:8
+0	1:structure:NNS:8	1:overall:RB:1
+0	1:structure:NNS:8	1:performance:NN:6
+0	1:structure:NNS:8	1:program:NN:3
+0	1:structure:NNS:8	1:the:DT:2
+0	1:structure:NNS:8	1:to:TO:18
+
+0	1:when:WRB:9	0:ROOT:ROOT:0
+0	1:when:WRB:9	1:!have:VB:17
+0	1:when:WRB:9	1:-lrb-:-LRB-:7
+0	1:when:WRB:9	1:-rrb-:-RRB-:12
+0	1:when:WRB:9	1:amount:NNS:21
+0	1:when:WRB:9	1:be:VBZ:10
+0	1:when:WRB:9	1:because:IN:13
+0	1:when:WRB:9	1:better:JJR:5
+0	1:when:WRB:9	1:copy:VB:19
+0	1:when:WRB:9	1:datum:NNS:23
+0	1:when:WRB:9	1:do:VBZ:15
+0	1:when:WRB:9	1:faster:JJR:11
+0	1:when:WRB:9	1:have:VBZ:4
+0	1:when:WRB:9	1:it:PRP:14
+0	1:when:WRB:9	1:it:PRP:9
+0	1:when:WRB:9	1:large:JJ:20
+0	1:when:WRB:9	1:mean:VBZ:8
+0	1:when:WRB:9	1:overall:RB:1
+0	1:when:WRB:9	1:performance:NN:6
+0	1:when:WRB:9	1:program:NN:3
+0	1:when:WRB:9	1:the:DT:2
+0	1:when:WRB:9	1:to:TO:18
+
+
+
+#### Edge-Edge alignments ######
+#
+#  Many to Many relationship
+#  Not all nodes may be matched
+#
+################################
+
+;Edge
+
+
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	aux(1:copy:VB:19, 1:to:TO:18)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	det(1:program:NN:3, 1:the:DT:2)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	mark(1:!have:VB:17, 1:because:IN:13)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	advcl(1:make:VBG:3, 1:call:VBG:10)	xsubj(1:copy:VB:19, 1:it:PRP:14)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	aux(1:copy:VB:19, 1:to:TO:18)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	det(1:program:NN:3, 1:the:DT:2)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	mark(1:!have:VB:17, 1:because:IN:13)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	advmod(1:call:VBG:10, 1:when:WRB:9)	xsubj(1:copy:VB:19, 1:it:PRP:14)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+1	amod(1:structure:NNS:8, 1:large:JJ:6)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	aux(1:copy:VB:19, 1:to:TO:18)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	det(1:program:NN:3, 1:the:DT:2)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	mark(1:!have:VB:17, 1:because:IN:13)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	amod(1:structure:NNS:8, 1:large:JJ:6)	xsubj(1:copy:VB:19, 1:it:PRP:14)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	aux(1:copy:VB:19, 1:to:TO:18)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	det(1:program:NN:3, 1:the:DT:2)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	mark(1:!have:VB:17, 1:because:IN:13)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	dobj(1:call:VBG:10, 1:function:NNS:11)	xsubj(1:copy:VB:19, 1:it:PRP:14)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	aux(1:copy:VB:19, 1:to:TO:18)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	det(1:program:NN:3, 1:the:DT:2)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	mark(1:!have:VB:17, 1:because:IN:13)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	dobj(1:make:VBG:3, 1:copy:NNS:4)	xsubj(1:copy:VB:19, 1:it:PRP:14)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	aux(1:copy:VB:19, 1:to:TO:18)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	det(1:program:NN:3, 1:the:DT:2)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	mark(1:!have:VB:17, 1:because:IN:13)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+1	nn(1:structure:NNS:8, 1:datum:NN:7)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	nn(1:structure:NNS:8, 1:datum:NN:7)	xsubj(1:copy:VB:19, 1:it:PRP:14)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	aux(1:copy:VB:19, 1:to:TO:18)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	det(1:program:NN:3, 1:the:DT:2)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	mark(1:!have:VB:17, 1:because:IN:13)
+1	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	nsubj(1:avoid:VBZ:2, 1:it:PRP:1)	xsubj(1:copy:VB:19, 1:it:PRP:14)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	aux(1:copy:VB:19, 1:to:TO:18)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	det(1:program:NN:3, 1:the:DT:2)
+1	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	mark(1:!have:VB:17, 1:because:IN:13)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	prep_of(1:copy:NNS:4, 1:structure:NNS:8)	xsubj(1:copy:VB:19, 1:it:PRP:14)
+1	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	aux(1:copy:VB:19, 1:to:TO:18)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	det(1:program:NN:3, 1:the:DT:2)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	mark(1:!have:VB:17, 1:because:IN:13)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	root(0:ROOT:ROOT:0, 1:avoid:VBZ:2)	xsubj(1:copy:VB:19, 1:it:PRP:14)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	advcl(1:have:VBZ:4, 1:!have:VB:17)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	advmod(1:have:VBZ:4, 1:overall:RB:1)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	amod(1:amount:NNS:21, 1:large:JJ:20)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	amod(1:performance:NN:6, 1:better:JJR:5)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	aux(1:!have:VB:17, 1:do:VBZ:15)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	aux(1:copy:VB:19, 1:to:TO:18)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	ccomp(1:mean:VBZ:8, 1:faster:JJR:11)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	cop(1:faster:JJR:11, 1:be:VBZ:10)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	dep(1:performance:NN:6, 1:mean:VBZ:8)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	det(1:program:NN:3, 1:the:DT:2)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	dobj(1:copy:VB:19, 1:amount:NNS:21)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	dobj(1:have:VBZ:4, 1:performance:NN:6)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	mark(1:!have:VB:17, 1:because:IN:13)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	nsubj(1:!have:VB:17, 1:it:PRP:14)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	nsubj(1:faster:JJR:11, 1:it:PRP:9)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	nsubj(1:have:VBZ:4, 1:program:NN:3)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	prep_of(1:amount:NNS:21, 1:datum:NNS:23)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	punct(1:mean:VBZ:8, 1:-lrb-:-LRB-:7)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	punct(1:mean:VBZ:8, 1:-rrb-:-RRB-:12)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	root(0:ROOT:ROOT:0, 1:have:VBZ:4)
+1	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	xcomp(1:!have:VB:17, 1:copy:VB:19)
+0	xcomp(1:avoid:VBZ:2, 1:make:VBG:3)	xsubj(1:copy:VB:19, 1:it:PRP:14)
