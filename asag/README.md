@@ -74,6 +74,6 @@ pickle
 
 To run the asag pipeline
 ```
-python -m asasg.short_answer_grader.trainAndApplyGrader nltk   #To train and apply grader using NLTK
+python -m asag.short_answer_grader.trainAndApplyGrader nltk   #To train and apply grader using NLTK
 python -m asag.short_answer_grader.trainAndApplyGrader spacy #To train and grader using Spacy
 ```
