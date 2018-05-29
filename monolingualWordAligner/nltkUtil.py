@@ -12,10 +12,12 @@ class Text_processing:
 
 	def __init__(self):
 		
-		self.constituent_parse_tree = StanfordParser()
-		self.stanford_dependency = StanfordDependencyParser()
+		# user need to download Stanford Parser, NER and POS tagger from stanford website
+		self.constituent_parse_tree = StanfordParser()  #user need to set as environment variable
+		self.stanford_dependency = StanfordDependencyParser() #user need to set as environment variable
 		self.lemma = WordNetLemmatizer()
 		self.home = '/home/ramesh'
+		#user needs to download stanford packages and change directory
 		self.ner = StanfordNERTagger(self.home + '/stanford-ner-2017-06-09/classifiers/english.all.3class.distsim.crf.ser.gz',self.home + '/stanford-ner-2017-06-09/stanford-ner.jar')
 		self.pos_tag = StanfordPOSTagger(self.home + '/stanford-postagger-2017-06-09/models/english-bidirectional-distsim.tagger',self.home + '/stanford-postagger-2017-06-09/stanford-postagger-3.8.0.jar')
 		self.CharacterOffsetEnd = 0 

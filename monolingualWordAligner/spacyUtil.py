@@ -86,8 +86,6 @@ class Text_processing_spacy:
 		sentence = re.sub(r'([a-z]\.)([A-Z])', r'\1 \2', sentence)
 		sentence = re.sub(r'(\.)([A-Z]|[a-z])', r'\1 \2', sentence)
 
-		
-		
 		sentence = self.spacy_parser(unicode(sentence))
 		tokenized_sentence = [sent for sent in sentence.sents]
 		# print "tokenized sentences ", tokenized_sentence
@@ -208,14 +206,8 @@ class Text_processing_spacy:
 
 			#convert to string and add 1, as index starts from 0
 			token_index = tokenized_words.index(str(token)) + 1 
-			# print "token ", token
-			# print "index ", token_index
-			# print "==========================================="
 			token_head_text_index = tokenized_words.index(str(token.head.text)) + 1
-			# print "token head ", token.head.text
-			# print "token text ", token_head_text_index
-			# print "==========================================="
-			# print "token start char ", token.start_char
+
 			#if text and head is same word, we replace its head by "root"
 			#so that our output looks similar as of stanford parser
 			if token.head.text ==token.text:
@@ -224,7 +216,6 @@ class Text_processing_spacy:
 			else:
 				dependency_tree.append([token.dep_,  token.head.text +"-",  \
 								token.text + "-"])
-		# print "dependency tree ", dependency_tree
 
 		return dependency_tree
 
@@ -334,6 +325,7 @@ class Text_processing_spacy:
 
 	def getCharOffSet(self, sentence, word):
 
+
 		# word containing '.' causes problem in counting
 		sentence = str(sentence)
 		CharacterOffsetBegin = sentence.find(word)
@@ -344,9 +336,6 @@ class Text_processing_spacy:
 
 
 	def getCombineWordsParam(self, sentence):
-
-		print "tokenizer sentence ", sentence
-
 
 		
 		sentence = self.spacy_parser(unicode(sentence))
@@ -402,17 +391,3 @@ class Text_processing_spacy:
 			self.parseResult['dependencies'].append(self.getDependencies(sentence, tokenized_words))
 
 		return self.parseResult
-
-
-# if __name__ == '__main__':
-
-# 	spac = Text_processing_spacy()
-# 	# sentence = "Directly: Refining, coding.  Because Refining is right before the Testing Phase and Coding is right after the Testing Phase.  Indirectly: Production, Maintenance.  Because Refining occurs before these last two stages in the Software Life Cycle."
-# 	# print spac.combine_lemmaAndPosTags(parse)
-# 	sentence = "Directly: Refining, coding.  Because Refining is right before the Testing Phase and Coding is right after the Testing Phase.  Indirectly: Production, Maintenance.  Because Refining occurs before these last two stages in the Software Life Cycle."
-# 	# print spac.combine_lemmaAndPosTags(parsBecause Refining is right before the testing and coding is right after the testing phase. Now I am not going"
-# 	pars = spac.parser(sentence)
-# 	print "dependencies ", pars['dependencies']
-# 	print ""
-# 	lemma_posTag = spac.combine_lemmaAndPosTags(pars)
-# 	print "lemma and pos tag ", lemma_posTag
