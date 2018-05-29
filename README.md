@@ -23,10 +23,11 @@ This repository contains:
 
 ## Guidelines for Monolingual Word Aligner
 
+It can used as individual module. For more usage, check here: [Word Aligner using NLTK and Spacy](https://github.com/rameshjesswani/Semantic-Textual-Similarity/tree/master/monolingualWordAligner)
+
 ```
 Install nltk library(procedure given below)
 Setup Stanford Parser, NER, PosTagger(link to setup in nltk given below)
-
 
 ```
 ### Installation
