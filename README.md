@@ -30,6 +30,12 @@ Install nltk library(procedure given below)
 Setup Stanford Parser, NER, PosTagger(link to setup in nltk given below)
 
 ```
+
+## Guidelines for ASAG 
+
+Details about Asag can be found here: [ASAG](https://github.com/rameshjesswani/Semantic-Textual-Similarity/tree/master/asag)
+
+
 ### Installation
 
 #### NLTK requires Python versions 2.7, 3.4, or 3.5
