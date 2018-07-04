@@ -1,6 +1,6 @@
 # Semantic Textual Similarity using Natural Language Processing(NLP)
 
-We re-implement automatic short answer grader using Sultan et al.(2016) approach:
+We re-implement automatic short answer grader using Sultan et al.(2016)[Fast and Easy Short Answer Grading with High Accuracy](http://www.aclweb.org/anthology/N16-1123) approach:
 
         We re-implement using two NLP libararies; NLTK and Spacy
         
@@ -74,6 +74,6 @@ pickle
 
 To run the asag pipeline
 ```
-python -m asasg.short_answer_grader.trainAndApplyGrader nltk   #To train and apply grader using NLTK
+python -m asag.short_answer_grader.trainAndApplyGrader nltk   #To train and apply grader using NLTK
 python -m asag.short_answer_grader.trainAndApplyGrader spacy #To train and grader using Spacy
 ```
