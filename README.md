@@ -114,3 +114,7 @@ https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/monoli
 # MindMap
 
 ![Mind map](https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/nlp_basics/NaturalLanguageProcessing_mindmap.png)
+
+# General NLP Pipeline
+
+![General Nlp pipeline](https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/nlp_basics/GeneralNlpPipeline.jpg)
