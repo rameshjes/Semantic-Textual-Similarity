@@ -1,4 +1,4 @@
-# Word Aligner Algorithm from Sultan et. al(2014)
+# Word Aligner Algorithm from Sultan et. al(2014)[Back to Basics for Monolingual Alignment](http://www.aclweb.org/anthology/Q14-1018)
 
 ### Implemented using NLTK and SPACY Libraries
 

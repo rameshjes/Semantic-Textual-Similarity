@@ -1,5 +1,11 @@
 # Semantic Textual Similarity using Natural Language Processing(NLP)
 
+## Abstract 
+
+Semantic textual similarity computes the equivalence of two sentences on the basis of its conceptual similarity. It is widely used in natural languages processing tasks such as essay scoring, machine translation, text classification, information extraction, and question answering. This project focuses on one of the applications of semantic textual similarity known as automatic short answer grading (ASAG). It assigns a grade to a response provided by a student by comparing with one or more model answers. In particular, we selected one of the state-of-the-art short answer grading approaches that use Stanford CoreNLP library, and we used the same approach with the help of two open source libraries; Natural Language ToolKit (NLTK) and Spacy. For evaluation, Texas dataset and an in-house benchmarking ASAG dataset based on Mathematics for Robotics and Control (MRC) course were considered. Performances among all three libraries were evaluated using Pearson correlation coefficient, root mean square error (RMSE), and the speed. Results based on Texas dataset showed that Stanford CoreNLP library has better Pearson correlation coefficient(0.66) and lowest RMSE(0.85) than NLTK and Spacy libraries. While using MRC dataset, all 3 libraries showed the comparative results on evaluated metrics.
+
+## Contents of Repository
+
 This repository contains:
 
         Exercises related to textual similarity using NLTK and SPACY libraries that can help for short answer grading
@@ -23,12 +29,19 @@ This repository contains:
 
 ## Guidelines for Monolingual Word Aligner
 
+It can used as individual module. For more usage, check here: [Word Aligner using NLTK and Spacy](https://github.com/rameshjesswani/Semantic-Textual-Similarity/tree/master/monolingualWordAligner)
+
 ```
 Install nltk library(procedure given below)
 Setup Stanford Parser, NER, PosTagger(link to setup in nltk given below)
 
-
 ```
+
+## Guidelines for ASAG 
+
+Details about Asag can be found here: [ASAG](https://github.com/rameshjesswani/Semantic-Textual-Similarity/tree/master/asag)
+
+
 ### Installation
 
 #### NLTK requires Python versions 2.7, 3.4, or 3.5
