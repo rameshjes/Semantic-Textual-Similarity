@@ -118,3 +118,16 @@ https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/monoli
 # General NLP Pipeline
 
 ![General Nlp pipeline](https://github.com/rameshjesswani/Semantic-Textual-Similarity/blob/master/nlp_basics/GeneralNlpPipeline.jpg)
+
+# Bibtex
+
+```
+@unpublished{[RnD]Kumar,
+	Authors = {Ramesh Kumar},
+	Month = {January},
+	Note = {WS17
+	H-BRS - Evaluation of Semantic Textual Similarity Approaches for Automatic Short Answer Grading
+Ploeger, Nair supervising},
+	Title = {Evaluation of Semantic Textual Similarity Approaches for Automatic Short Answer Grading},
+	Year = {2017/18}}
+```
