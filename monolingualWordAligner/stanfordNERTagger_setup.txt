@@ -1,4 +1,4 @@
-Guideline for setup stanford NER Tagger 
+Guideline to setup stanford NER Tagger 
 
 Go to command line::
 	export STANFORDTOOLSDIR=$HOME
