@@ -66,7 +66,7 @@ numpy
 scipy
 sklearn
 pickle
-
+xlsxwriter
 
 ```
 
