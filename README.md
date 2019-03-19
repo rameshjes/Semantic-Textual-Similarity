@@ -61,7 +61,7 @@ nltk.download()
 
 #### SPACY is compatible with 64-bit CPYTHON 2.6+/3.3+ and runs on Unix/Linux, macOS/OS X and WINDOWS
 
-Install SPACY library
+Install SPACY(code works with version 2.0.12) library
 
 ```
 pip install -U spacy
